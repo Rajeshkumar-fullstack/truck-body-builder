@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 60" width="250" height="60" aria-label="BharatBenz Logo">
+  <!-- BharatBenz Faceted Shield / Star Emblem -->
+  <g transform="translate(10, 8)">
+    <polygon points="22,2 42,12 42,32 22,42 2,32 2,12" fill="#1A1F2C" stroke="#D50000" stroke-width="2.5" />
+    <!-- Dynamic chrome/red inner motif -->
+    <polygon points="22,6 38,15 38,29 22,38 6,29 6,15" fill="#2B3345" />
+    <polygon points="22,8 22,22 10,22" fill="#D50000" />
+    <polygon points="22,22 22,36 34,22" fill="#D50000" />
+    <circle cx="22" cy="22" r="3" fill="#FFFFFF" />
+  </g>
+  <!-- Brand Typography -->
+  <g transform="translate(62, 16)">
+    <text x="0" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-weight="900" font-size="19" letter-spacing="2.5" fill="currentColor">BHARAT<tspan fill="#D50000">BENZ</tspan></text>
+    <text x="0" y="32" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-weight="600" font-size="8.5" letter-spacing="2.8" fill="#D50000">DAIMLER INDIA COMMERCIAL</text>
+  </g>
+</svg>

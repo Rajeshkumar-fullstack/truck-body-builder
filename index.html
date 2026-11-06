@@ -1,0 +1,1882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Truck Body Builder | Heavy Commercial Vehicle Fabrication & Manufacturing</title>
+  <meta name="description" content="Premier industrial truck body builder and commercial vehicle fabrication company. Specializing in tippers, containers, tankers, trailers, and custom commercial bodies.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo/favicon.svg">
+  <link rel="alternate icon" href="assets/images/logo/logo-compact.svg">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/liquid-chrome.css">
+  <link rel="stylesheet" href="assets/css/premium-motion.css">
+</head>
+<body>
+
+  <!-- LIQUID CHROME 3D LOGO REVEAL INTRO OVERLAY -->
+  <div class="liquid-chrome-intro" id="liquidChromeIntro" role="dialog" aria-modal="true" aria-label="Truck Body Builder Liquid Chrome Logo Reveal">
+    <!-- Fluid Chrome Animation Canvas -->
+    <canvas class="liquid-chrome-canvas" id="liquidChromeCanvas"></canvas>
+
+    <!-- Ambient Studio Caustics Lighting -->
+    <div class="intro-ambient-lighting"></div>
+
+    <!-- Skip Intro Button -->
+    <button class="intro-skip-btn" id="introSkipBtn" type="button" aria-label="Skip Logo Reveal Animation">
+      Skip Intro <i class="fas fa-forward ms-1"></i>
+    </button>
+
+    <!-- Central Stage -->
+    <div class="intro-stage">
+      <div class="chrome-logo-reveal-wrapper">
+        
+        <!-- 3D Liquid Chrome Emblem Container -->
+        <div class="chrome-emblem-container">
+          <svg class="chrome-emblem-svg" id="chromeEmblemSvg" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <!-- Chrome Metal Gradient -->
+              <linearGradient id="chromeMetalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#FFFFFF" />
+                <stop offset="20%" stop-color="#E2E8F0" />
+                <stop offset="45%" stop-color="#94A3B8" />
+                <stop offset="50%" stop-color="#334155" />
+                <stop offset="55%" stop-color="#64748B" />
+                <stop offset="85%" stop-color="#CBD5E1" />
+                <stop offset="100%" stop-color="#FFFFFF" />
+              </linearGradient>
+
+              <!-- Industrial Orange Chrome Gradient -->
+              <linearGradient id="chromeOrangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#FFF2E5" />
+                <stop offset="25%" stop-color="#FFA866" />
+                <stop offset="50%" stop-color="#F07824" />
+                <stop offset="55%" stop-color="#B84E00" />
+                <stop offset="80%" stop-color="#FF9347" />
+                <stop offset="100%" stop-color="#FFF5EB" />
+              </linearGradient>
+
+              <!-- Dark Steel Bevel Gradient -->
+              <linearGradient id="chromeBevelGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#243447" />
+                <stop offset="100%" stop-color="#0E1620" />
+              </linearGradient>
+
+              <!-- Dynamic Liquid Turbulence & Displacement Filter -->
+              <filter id="liquidChromeFilter" x="-20%" y="-20%" width="140%" height="140%">
+                <feTurbulence id="liquidTurbulence" type="fractalNoise" baseFrequency="0.08" numOctaves="3" result="noise" />
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="18" xChannelSelector="R" yChannelSelector="G" result="displaced" />
+                <feSpecularLighting in="displaced" surfaceScale="5" specularConstant="1.2" specularExponent="20" lighting-color="#ffffff" result="specLight">
+                  <fePointLight x="70" y="30" z="80" />
+                </feSpecularLighting>
+                <feComposite in="specLight" in2="displaced" operator="in" result="specComp" />
+                <feMerge>
+                  <feMergeNode in="displaced" />
+                  <feMergeNode in="specComp" />
+                </feMerge>
+              </filter>
+            </defs>
+
+            <!-- Outer Chrome Shield Hexagon Bevel -->
+            <path d="M70 6 L124 37 L124 103 L70 134 L16 103 L16 37 Z" 
+                  fill="url(#chromeBevelGrad)" 
+                  stroke="url(#chromeMetalGrad)" 
+                  stroke-width="3" 
+                  filter="url(#liquidChromeFilter)" />
+            
+            <!-- Inner Orange Metallic Rim -->
+            <path d="M70 14 L117 41 L117 99 L70 126 L23 99 L23 41 Z" 
+                  fill="none" 
+                  stroke="url(#chromeOrangeGrad)" 
+                  stroke-width="2" 
+                  opacity="0.9" />
+
+            <!-- Industrial Gear Elements in Background -->
+            <g opacity="0.4" stroke="url(#chromeMetalGrad)" stroke-width="2.5" fill="none">
+              <circle cx="70" cy="70" r="54" stroke-dasharray="8 5" stroke-linecap="round" />
+              <circle cx="70" cy="70" r="47" stroke-width="1" stroke="url(#chromeOrangeGrad)" opacity="0.7" />
+            </g>
+
+            <!-- Heavy Commercial Truck Body Silhouette -->
+            <g transform="translate(24, 34) scale(0.66)">
+              <!-- Highway Speed Foundation -->
+              <path d="M 2 105 L 140 105" stroke="url(#chromeOrangeGrad)" stroke-width="4.5" stroke-linecap="round" />
+              <path d="M 18 115 L 120 115" stroke="url(#chromeMetalGrad)" stroke-width="2" stroke-linecap="round" opacity="0.8" />
+
+              <!-- Commercial Tipper Cargo Box with Heavy Structural Ribs -->
+              <path d="M 8 32 L 85 32 L 85 96 L 8 96 Z" fill="url(#chromeMetalGrad)" stroke="#FFFFFF" stroke-width="1.2" />
+              <!-- Structural Stiffener Ribs -->
+              <line x1="25" y1="36" x2="25" y2="92" stroke="#17232F" stroke-width="3.5" />
+              <line x1="45" y1="36" x2="45" y2="92" stroke="#17232F" stroke-width="3.5" />
+              <line x1="65" y1="36" x2="65" y2="92" stroke="#17232F" stroke-width="3.5" />
+
+              <!-- Heavy Commercial Cab-Over Unit -->
+              <path d="M 88 44 L 112 44 L 132 66 L 132 96 L 88 96 Z" fill="url(#chromeMetalGrad)" stroke="#FFFFFF" stroke-width="1.2" />
+              <!-- Aerodynamic Sun Visor Deflector -->
+              <path d="M 106 39 L 134 56" stroke="url(#chromeOrangeGrad)" stroke-width="3.5" stroke-linecap="round" />
+              <!-- Cab Window Glass -->
+              <polygon points="93,52 108,52 122,66 93,66" fill="url(#chromeOrangeGrad)" opacity="0.9" />
+
+              <!-- Heavy Axles & Wheels (Tandem Dual Rear + Front Steer) -->
+              <circle cx="28" cy="98" r="14" fill="#0E1620" stroke="url(#chromeMetalGrad)" stroke-width="3" />
+              <circle cx="28" cy="98" r="5.5" fill="url(#chromeOrangeGrad)" />
+              <circle cx="60" cy="98" r="14" fill="#0E1620" stroke="url(#chromeMetalGrad)" stroke-width="3" />
+              <circle cx="60" cy="98" r="5.5" fill="url(#chromeOrangeGrad)" />
+              <circle cx="114" cy="98" r="14" fill="#0E1620" stroke="url(#chromeMetalGrad)" stroke-width="3" />
+              <circle cx="114" cy="98" r="5.5" fill="url(#chromeOrangeGrad)" />
+            </g>
+          </svg>
+        </div>
+
+        <!-- Liquid Chrome Typography -->
+        <div class="chrome-typography" id="chromeTypography">
+          <div class="chrome-light-sweep" id="chromeLightSweep"></div>
+          <h1 class="chrome-brand-title">
+            <span class="chrome-word-metal">TRUCK BODY</span>
+            <span class="chrome-word-orange">BUILDER</span>
+          </h1>
+          <div class="chrome-brand-subtitle" id="chromeSubtitle">
+            <span class="chrome-sub-dot"></span>
+            BUILD • FABRICATE • DELIVER
+            <span class="chrome-sub-dot"></span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="site-header" id="siteHeader">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container navbar-container">
+        <!-- Brand Logo (Left) -->
+        <a class="navbar-brand navbar-brand-industrial" href="index.html" aria-label="Truck Body Builder Homepage">
+          <div class="brand-logo-wrap">
+            <img src="assets/images/logo/logo-main.svg" alt="Truck Body Builder - Commercial Vehicle Fabrication" class="brand-logo-main">
+            <div class="brand-logo-sheen"></div>
+            <span class="sparkle-particle sparkle-1"></span>
+            <span class="sparkle-particle sparkle-2"></span>
+            <span class="sparkle-particle sparkle-3"></span>
+          </div>
+        </a>
+
+        <!-- Mobile Controls (Dark/Light Mode, RTL & Hamburger) -->
+        <div class="mobile-nav-controls d-lg-none">
+          <button class="header-icon-btn theme-toggle-btn" type="button" title="Toggle Dark/Light Mode" aria-label="Toggle Theme">
+            <i class="fas fa-moon"></i>
+          </button>
+          <button class="header-icon-btn rtl-toggle-btn" type="button" title="Toggle RTL/LTR" aria-label="Toggle RTL">
+            <span class="rtl-text">RTL</span>
+          </button>
+          <!-- Cart Icon with Live Badge (Mobile) -->
+          <a href="cart.html" class="header-icon-btn cart-icon-btn position-relative" title="View Shopping Cart" aria-label="Shopping Cart">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count-badge badge bg-warning text-dark position-absolute top-0 start-100 translate-middle rounded-pill" style="display: none; font-size: 0.65rem; padding: 0.25em 0.5em;">0</span>
+          </a>
+          <button class="navbar-toggler" type="button" id="navbarDrawerToggler" aria-label="Toggle navigation drawer" aria-expanded="false" aria-controls="navbarDrawer">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <!-- Navigation Drawer & Menu (Centered on Desktop, Slide-in Drawer on Mobile) -->
+        <div class="navbar-drawer" id="navbarDrawer">
+          <!-- Mobile Drawer Header -->
+          <div class="drawer-header d-lg-none">
+            <div class="drawer-brand">
+              <a href="index.html" class="drawer-brand-link text-decoration-none" aria-label="Truck Body Builder Homepage">
+                <img src="assets/images/logo/logo-main.svg" alt="Truck Body Builder" class="drawer-logo-img">
+              </a>
+            </div>
+            <button type="button" class="drawer-close-btn" id="navbarDrawerClose" aria-label="Close navigation drawer">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+
+          <!-- Centered Navigation Links on Desktop -->
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Home
+              </a>
+              <ul class="dropdown-menu dropdown-menu-industrial">
+                <li><a class="dropdown-item active" href="index.html"><i class="fas fa-industry"></i> Home 1</a></li>
+                <li><a class="dropdown-item" href="home-2.html"><i class="fas fa-tools"></i> Home 2</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="shop.html">Shop</a>
+            </li>
+<li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+
+          <!-- Desktop & Mobile Header Actions (Right) -->
+          <div class="header-actions">
+            <!-- Theme & RTL Toggles (Desktop only >=992px) -->
+            <button class="header-icon-btn theme-toggle-btn d-none d-lg-inline-flex" type="button" title="Toggle Dark/Light Mode" aria-label="Toggle Theme">
+              <i class="fas fa-moon"></i>
+            </button>
+            <button class="header-icon-btn rtl-toggle-btn d-none d-lg-inline-flex" type="button" title="Toggle RTL/LTR" aria-label="Toggle RTL">
+              <span class="rtl-text">RTL</span>
+            </button>
+
+            <!-- CTA "Get a Quote" -->
+            <!-- Cart Icon with Live Badge (Desktop) -->
+            <a href="cart.html" class="header-icon-btn cart-icon-btn position-relative d-none d-lg-inline-flex" title="View Shopping Cart" aria-label="Shopping Cart">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-count-badge badge bg-warning text-dark position-absolute top-0 start-100 translate-middle rounded-pill" style="display: none; font-size: 0.65rem; padding: 0.25em 0.5em;">0</span>
+            </a>
+<a href="contact.html" class="btn btn-industrial nav-cta-btn">
+              <i class="fas fa-file-invoice"></i> Get a Quote
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Backdrop Overlay (<992px) -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+  <main>
+    <!-- ADVANCED AUTO-ROTATING HERO CAROUSEL -->
+    <section class="hero-carousel-section" id="heroCarousel" aria-label="Commercial Truck Body Manufacturing Showcase">
+      <div class="hero-ambient-mesh"></div>
+      <div class="hero-slides-wrapper">
+
+        <!-- Slide 1: Premium Heavy Commercial Truck (Mercedes-Benz Actros CGI Style) -->
+        <div class="hero-slide active" data-slide-index="0">
+          <div class="hero-slide-media">
+            <img src="assets/images/hero/slide-1.jpg" 
+                 alt="Heavy Commercial Truck Body Engineering" 
+                 class="hero-slide-img" 
+                 loading="eager"
+                 onerror="this.onerror=null; this.src='assets/images/hero/slide-1.jpg';">
+          </div>
+          <div class="hero-slide-overlay"></div>
+          <div class="container hero-slide-content">
+            <div class="row align-items-center g-4 g-xl-5">
+              <!-- Left Column: Main Content (~57%) -->
+              <div class="col-lg-7 col-xl-7 hero-col-left">
+                <div class="hero-badge animate-item">
+                  <i class="fas fa-industry text-orange me-2"></i> CUSTOM SPECIAL VEHICLE FABRICATION
+                </div>
+                <h1 class="hero-heading animate-item">
+                  ADVANCED TRUCK BODY<br>
+                  <span class="highlight-orange">ENGINEERING</span> & HEAVY SOLUTIONS
+                </h1>
+                <p class="hero-subtitle animate-item text-white">
+                  Transforming raw chassis into <strong class="text-white">ultra-high-yield commercial assets</strong>. Designed with <span class="tech-highlight">Hardox 450</span> abrasion-resistant steel, aerodynamic contouring, and automated robotic manufacturing for demanding mining, logistics, and bulk transport.
+                </p>
+                <div class="hero-buttons animate-item">
+                  <a href="shop.html?category=custom&openQuote=true" class="btn btn-hero-primary btn-magnetic">
+                    <i class="fas fa-sliders-h me-2"></i> CONFIGURE CUSTOM BUILD
+                  </a>
+                  <a href="gallery.html" class="btn btn-hero-secondary btn-magnetic">
+                    <i class="fas fa-images me-2"></i> VIEW PROJECT GALLERY
+                  </a>
+                </div>
+                <!-- Clean Open Statistics (No Boxes, No Cards, Horizontal Layout) -->
+                <div class="hero-stats-open animate-item">
+                  <div class="hero-stat-unit-item">
+                    <div class="hero-stat-val">600 <span class="hero-stat-unit">MPa</span></div>
+                    <div class="hero-stat-desc">High-Tensile Subframes</div>
+                  </div>
+                  <div class="hero-stat-sep"></div>
+                  <div class="hero-stat-unit-item">
+                    <div class="hero-stat-val">AIS 093</div>
+                    <div class="hero-stat-desc">Standard Compliance</div>
+                  </div>
+                  <div class="hero-stat-sep"></div>
+                  <div class="hero-stat-unit-item">
+                    <div class="hero-stat-val">100<span class="hero-stat-unit">%</span></div>
+                    <div class="hero-stat-desc">NDT Radiography</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right Column: Interactive Multi-Image Vehicle Showcase (~43%) -->
+              <div class="col-lg-5 col-xl-5 hero-col-right animate-item">
+                <div class="hero-visual-showcase">
+                  <div class="showcase-header">
+                    <div class="showcase-live-pill">
+                      <span class="live-dot"></span> LIVE FACTORY BENCHMARK
+                    </div>
+                    <span class="showcase-homologation">
+                      <i class="fas fa-shield-alt text-orange me-1"></i> ARAI Approved
+                    </span>
+                  </div>
+
+                  <!-- Main Featured Spotlight -->
+                  <div class="showcase-featured-stage">
+                    <img src="assets/images/gallery/project-1.jpg" 
+                         alt="Heavy Mining Rock Tipper" 
+                         class="showcase-stage-img">
+                    <span class="showcase-badge-float">
+                      <i class="fas fa-certificate text-orange"></i> 24 Cu.M Tub
+                    </span>
+                    <span class="showcase-spec-float">
+                      <i class="fas fa-shield-alt"></i> Hardox 500 Tuf
+                    </span>
+                    <div class="showcase-overlay-bar">
+                      <div>
+                        <h4 class="showcase-vehicle-title">Heavy Mining Rock Tipper</h4>
+                        <p class="showcase-vehicle-sub"><i class="fas fa-check-circle text-orange me-1"></i> Severe-Duty Quarry &amp; Mining Spec</p>
+                      </div>
+                      <a href="gallery.html" class="showcase-zoom-btn" title="View Full Project in Gallery">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- Multi-Image Thumbnails: Different Configurations -->
+                  <div class="showcase-thumbs-wrap">
+                    <div class="showcase-thumbs-label">
+                      <span><i class="fas fa-images text-orange me-1"></i> BUILD CONFIGURATIONS</span>
+                      <span class="hint">Click to switch image</span>
+                    </div>
+                    <div class="showcase-thumbs-grid">
+                      <div class="showcase-thumb-item active" 
+                           data-img="assets/images/gallery/project-1.jpg" 
+                           data-title="Heavy Mining Rock Tipper" 
+                           data-sub="Severe-Duty Quarry &amp; Mining Spec" 
+                           data-badge="24 Cu.M Tub" 
+                           data-spec="Hardox 500 Tuf">
+                        <img src="assets/images/gallery/project-1.jpg" alt="Rock Tipper">
+                        <span class="thumb-caption">Rock Tub</span>
+                      </div>
+                      <div class="showcase-thumb-item" 
+                           data-img="assets/images/gallery/project-8.jpg" 
+                           data-title="Half-Pipe Quarry Dumper" 
+                           data-sub="Aerodynamic Aggregate Haulage" 
+                           data-badge="Half-Pipe U" 
+                           data-spec="Strenx 700">
+                        <img src="assets/images/gallery/project-8.jpg" alt="Half-Pipe Tipper">
+                        <span class="thumb-caption">Half-Pipe</span>
+                      </div>
+                      <div class="showcase-thumb-item" 
+                           data-img="assets/images/products/tipper-body.jpg" 
+                           data-title="Multi-Axle Heavy Tipper Body" 
+                           data-sub="Hyva 50T Multi-Stage Hydraulics" 
+                           data-badge="50-Ton Ram" 
+                           data-spec="AIS-093 Ready">
+                        <img src="assets/images/products/tipper-body.jpg" alt="Tipper Body">
+                        <span class="thumb-caption">50T Tipper</span>
+                      </div>
+                      <div class="showcase-thumb-item" 
+                           data-img="assets/images/gallery/project-4.jpg" 
+                           data-title="Industrial Oven-Baked Coating" 
+                           data-sub="SA 2.5 Shot Blast + 120µm PU" 
+                           data-badge="PU Coating" 
+                           data-spec="Corrosion-Proof">
+                        <img src="assets/images/gallery/project-4.jpg" alt="Baked Coating Finish">
+                        <span class="thumb-caption">Finish</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Bottom Action Link -->
+                  <div class="showcase-footer-action">
+                    <a href="gallery.html" class="showcase-action-link">
+                      <span>View Complete Project Showcase</span>
+                      <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <span class="showcase-count-pill">12+ Builds</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2: Professional Cargo Transportation Truck (Bastian Transporte Style) -->
+        <div class="hero-slide" data-slide-index="1">
+          <div class="hero-slide-media">
+            <img src="assets/images/hero/slide-2.jpg" 
+                 alt="Professional Cargo Transportation Truck" 
+                 class="hero-slide-img" 
+                 loading="eager"
+                 onerror="this.onerror=null; this.src='assets/images/hero/slide-1.jpg';">
+          </div>
+          <div class="hero-slide-overlay"></div>
+          <div class="container hero-slide-content">
+            <div class="row align-items-center g-4 g-xl-5">
+              <!-- Left Column: Main Content (~57%) -->
+              <div class="col-lg-7 col-xl-7 hero-col-left">
+                <div class="hero-badge animate-item">
+                  <i class="fas fa-cogs text-orange me-2"></i> ADVANCED AUTOMATED MANUFACTURING
+                </div>
+                <h1 class="hero-heading animate-item">
+                  PRECISION <span class="highlight-orange">ENGINEERING.</span><br>
+                  SUPERIOR QUALITY.
+                </h1>
+                <p class="hero-subtitle animate-item text-white">
+                  Advanced fabrication and custom-built truck body solutions. Engineered with high-precision <span class="tech-highlight">CNC laser profiling</span>, <strong class="text-white">800-ton hydraulic press forming</strong>, and automated submerged arc welding.
+                </p>
+                <div class="hero-buttons animate-item">
+                  <a href="services.html" class="btn btn-hero-primary btn-magnetic">
+                    <i class="fas fa-tools me-2"></i> OUR FABRICATION SERVICES
+                  </a>
+                  <a href="service-details.html?service=fabrication" class="btn btn-hero-secondary btn-magnetic">
+                    <i class="fas fa-clipboard-check me-2"></i> EXPLORE CAPABILITIES
+                  </a>
+                </div>
+                <!-- Clean Open Statistics (No Boxes, No Cards, Horizontal Layout) -->
+                <div class="hero-stats-open animate-item">
+                  <div class="hero-stat-unit-item">
+                    <div class="hero-stat-val">12 <span class="hero-stat-unit">kW</span></div>
+                    <div class="hero-stat-desc">Fiber Laser Accuracy</div>
+                  </div>
+                  <div class="hero-stat-sep"></div>
+                  <div class="hero-stat-unit-item">
+                    <div class="hero-stat-val">800 <span class="hero-stat-unit">Ton</span></div>
+                    <div class="hero-stat-desc">Hydraulic Press Brakes</div>
+                  </div>
+                  <div class="hero-stat-sep"></div>
+                  <div class="hero-stat-unit-item">
+                    <div class="hero-stat-val">ISO 9001</div>
+                    <div class="hero-stat-desc">Certified Precision</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right Column: Interactive Multi-Image Vehicle Showcase (~43%) -->
+              <div class="col-lg-5 col-xl-5 hero-col-right animate-item">
+                <div class="hero-visual-showcase">
+                  <div class="showcase-header">
+                    <div class="showcase-live-pill">
+                      <span class="live-dot"></span> LOGISTICS &amp; COLD CHAIN
+                    </div>
+                    <span class="showcase-homologation">
+                      <i class="fas fa-shield-alt text-orange me-1"></i> ISO 9001:2015
+                    </span>
+                  </div>
+
+                  <!-- Main Featured Spotlight -->
+                  <div class="showcase-featured-stage">
+                    <img src="assets/images/gallery/project-2.jpg" 
+                         alt="Closed Corrugated Express Cargo Container" 
+                         class="showcase-stage-img">
+                    <span class="showcase-badge-float">
+                      <i class="fas fa-certificate text-orange"></i> High-Cube Box
+                    </span>
+                    <span class="showcase-spec-float">
+                      <i class="fas fa-shield-alt"></i> IP67 Weatherproof
+                    </span>
+                    <div class="showcase-overlay-bar">
+                      <div>
+                        <h4 class="showcase-vehicle-title">High-Cube Express Container</h4>
+                        <p class="showcase-vehicle-sub"><i class="fas fa-check-circle text-orange me-1"></i> High-Tensile Corrugated Logistics Body</p>
+                      </div>
+                      <a href="gallery.html" class="showcase-zoom-btn" title="View Full Project in Gallery">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- Multi-Image Thumbnails: Different Configurations -->
+                  <div class="showcase-thumbs-wrap">
+                    <div class="showcase-thumbs-label">
+                      <span><i class="fas fa-images text-orange me-1"></i> BUILD CONFIGURATIONS</span>
+                      <span class="hint">Click to switch image</span>
+                    </div>
+                    <div class="showcase-thumbs-grid">
+                      <div class="showcase-thumb-item active" 
+                           data-img="assets/images/gallery/project-2.jpg" 
+                           data-title="High-Cube Express Container" 
+                           data-sub="High-Tensile Corrugated Logistics Body" 
+                           data-badge="High-Cube Box" 
+                           data-spec="IP67 Sealed">
+                        <img src="assets/images/gallery/project-2.jpg" alt="Express Container">
+                        <span class="thumb-caption">Container</span>
+                      </div>
+                      <div class="showcase-thumb-item" 
+                           data-img="assets/images/gallery/project-6.jpg" 
+                           data-title="Refrigerated Cold Chain Reefer" 
+                           data-sub="100mm Polyurethane Core (-25°C Spec)" 
+                           data-badge="Reefer Box" 
+                           data-spec="-25°C Cold">
+                        <img src="assets/images/gallery/project-6.jpg" alt="Reefer Body">
+                        <span class="thumb-caption">Reefer</span>
+                      </div>
+                      <div class="showcase-thumb-item" 
+                           data-img="assets/images/products/container-body.jpg?v=2" 
+                           data-title="Heavy Corrugated Dry Freight Box" 
+                           data-sub="Dual Cam SS-304 Rear Lock Rods" 
+                           data-badge="Dry Cargo" 
+                           data-spec="+18% Volume">
+                        <img src="assets/images/products/container-body.jpg?v=2" alt="Cargo Body">
+                        <span class="thumb-caption">Dry Box</span>
+                      </div>
+                      <div class="showcase-thumb-item" 
+                           data-img="assets/images/gallery/project-12.jpg" 
+                           data-title="Automated CNC Laser Cutting Rig" 
+                           data-sub="12kW Fiber Laser Tolerances &plusmn;0.1mm" 
+                           data-badge="Precision CNC" 
+                           data-spec="Robotic Rig">
+                        <img src="assets/images/gallery/project-12.jpg" alt="CNC Laser Rig">
+                        <span class="thumb-caption">CNC Rig</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Bottom Action Link -->
+                  <div class="showcase-footer-action">
+                    <a href="gallery.html" class="showcase-action-link">
+                      <span>Explore Container Fleet Models</span>
+                      <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <span class="showcase-count-pill">ISO 9001</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3: Modern Heavy-Duty Tipper & Commercial Truck -->
+        <div class="hero-slide" data-slide-index="2">
+          <div class="hero-slide-media">
+            <img src="assets/images/hero/slide-3.jpg" 
+                 alt="Modern Heavy-Duty Tipper Truck in Transportation Environment" 
+                 class="hero-slide-img" 
+                 loading="eager"
+                 onerror="this.onerror=null; this.src='assets/images/hero/slide-1.jpg';">
+          </div>
+          <div class="hero-slide-overlay"></div>
+          <div class="container hero-slide-content">
+            <div class="row align-items-center g-4 g-xl-5">
+              <!-- Left Column: Main Content (~57%) -->
+              <div class="col-lg-7 col-xl-7 hero-col-left">
+                <div class="hero-badge animate-item">
+                  <i class="fas fa-dumpster text-orange me-2"></i> MINING, AGGREGATE & FREIGHT TIPPERS
+                </div>
+                <h1 class="hero-heading animate-item">
+                  BUILT TO CARRY YOUR<br>
+                  <span class="highlight-orange">BUSINESS</span> FORWARD.
+                </h1>
+                <p class="hero-subtitle animate-item text-white">
+                  Durable container, tipper and customized truck body solutions. Engineered with genuine <span class="tech-highlight">Hardox 450</span> wear plates and <strong class="text-white">ultra-rigid corrugated logistics sidewalls</strong>.
+                </p>
+                <div class="hero-buttons animate-item">
+                  <a href="gallery.html" class="btn btn-hero-primary btn-magnetic">
+                    <i class="fas fa-boxes me-2"></i> VIEW PROJECT GALLERY
+                  </a>
+                  <a href="service-details.html?spec=tipper-body" class="btn btn-hero-secondary btn-magnetic">
+                    <i class="fas fa-clipboard-list me-2"></i> VIEW SPECIFICATIONS
+                  </a>
+                </div>
+                <!-- Clean Open Statistics (No Boxes, No Cards, Horizontal Layout) -->
+                <div class="hero-stats-open animate-item">
+                  <div class="hero-stat-unit-item">
+                    <div class="hero-stat-val">1,450 <span class="hero-stat-unit">kg</span></div>
+                    <div class="hero-stat-desc">Tare Weight Savings</div>
+                  </div>
+                  <div class="hero-stat-sep"></div>
+                  <div class="hero-stat-unit-item">
+                    <div class="hero-stat-val">Hardox 450</div>
+                    <div class="hero-stat-desc">Abrasion Resistance</div>
+                  </div>
+                  <div class="hero-stat-sep"></div>
+                  <div class="hero-stat-unit-item">
+                    <div class="hero-stat-val">50 <span class="hero-stat-unit">Ton</span></div>
+                    <div class="hero-stat-desc">Hyva Tipping Capacity</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right Column: Interactive Multi-Image Vehicle Showcase (~43%) -->
+              <div class="col-lg-5 col-xl-5 hero-col-right animate-item">
+                <div class="hero-visual-showcase">
+                  <div class="showcase-header">
+                    <div class="showcase-live-pill">
+                      <span class="live-dot"></span> LIVE FACTORY BENCHMARK
+                    </div>
+                    <span class="showcase-homologation">
+                      <i class="fas fa-shield-alt text-orange me-1"></i> AIS-093 Ready
+                    </span>
+                  </div>
+
+                  <!-- Main Featured Spotlight -->
+                  <div class="showcase-featured-stage">
+                    <img src="assets/images/products/tipper-body.jpg" 
+                         alt="Multi-Axle Rock Tipper 24 Cu.M" 
+                         class="showcase-stage-img">
+                    <span class="showcase-badge-float">
+                      <i class="fas fa-certificate text-orange"></i> 24 Cu.M Scoop
+                    </span>
+                    <span class="showcase-spec-float">
+                      <i class="fas fa-shield-alt"></i> Hardox 500 Tuf
+                    </span>
+                    <div class="showcase-overlay-bar">
+                      <div>
+                        <h4 class="showcase-vehicle-title">Multi-Axle Rock Tipper 24 Cu.M</h4>
+                        <p class="showcase-vehicle-sub"><i class="fas fa-check-circle text-orange me-1"></i> Severe-Duty Quarrying &amp; Aggregate Haulage</p>
+                      </div>
+                      <a href="gallery.html" class="showcase-zoom-btn" title="View Full Project in Gallery">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- Multi-Image Thumbnails: Different Configurations -->
+                  <div class="showcase-thumbs-wrap">
+                    <div class="showcase-thumbs-label">
+                      <span><i class="fas fa-images text-orange me-1"></i> BUILD CONFIGURATIONS</span>
+                      <span class="hint">Click to switch image</span>
+                    </div>
+                    <div class="showcase-thumbs-grid">
+                      <div class="showcase-thumb-item active" 
+                           data-img="assets/images/products/tipper-body.jpg" 
+                           data-title="Multi-Axle Rock Tipper 24 Cu.M" 
+                           data-sub="Severe-Duty Quarrying &amp; Aggregate Haulage" 
+                           data-badge="24 Cu.M Scoop" 
+                           data-spec="Hardox 500 Tuf">
+                        <img src="assets/images/products/tipper-body.jpg" alt="Rock Tipper">
+                        <span class="thumb-caption">24 Cu.M</span>
+                      </div>
+                      <div class="showcase-thumb-item" 
+                           data-img="assets/images/gallery/project-8.jpg" 
+                           data-title="Half-Pipe Quarry Dumper" 
+                           data-sub="Automatic Pneumatic Cam Locks" 
+                           data-badge="Half-Pipe" 
+                           data-spec="700 MPa Yield">
+                        <img src="assets/images/gallery/project-8.jpg" alt="Half Pipe Quarry">
+                        <span class="thumb-caption">Half-Pipe</span>
+                      </div>
+                      <div class="showcase-thumb-item" 
+                           data-img="assets/images/gallery/project-1.jpg" 
+                           data-title="Heavy Mining Rock Tub" 
+                           data-sub="Rolled Channel Subframe 225x75x8mm" 
+                           data-badge="Mining Tub" 
+                           data-spec="50T Hydraulics">
+                        <img src="assets/images/gallery/project-1.jpg" alt="Mining Rock Tub">
+                        <span class="thumb-caption">Mining Tub</span>
+                      </div>
+                      <div class="showcase-thumb-item" 
+                           data-img="assets/images/gallery/project-11.jpg" 
+                           data-title="Heavy Petroleum Road Tanker" 
+                           data-sub="High-Payload Petroleum &amp; Fuel Hauler" 
+                           data-badge="Petroleum Tank" 
+                           data-spec="PESO Certified">
+                        <img src="assets/images/gallery/project-11.jpg" alt="Petroleum Tanker">
+                        <span class="thumb-caption">Tanker</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Bottom Action Link -->
+                  <div class="showcase-footer-action">
+                    <a href="gallery.html" class="showcase-action-link">
+                      <span>View All Quarry &amp; Heavy Tippers</span>
+                      <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <span class="showcase-count-pill">AIS-093</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 4: Truck Body Manufacturing & Fabrication Workshop (French | West | Vaughan Style) -->
+        <div class="hero-slide" data-slide-index="3">
+          <div class="hero-slide-media">
+            <img src="assets/images/hero/slide-4.jpg" 
+                 alt="Truck Body Manufacturing and Fabrication Workshop" 
+                 class="hero-slide-img" 
+                 loading="eager"
+                 onerror="this.onerror=null; this.src='assets/images/hero/slide-1.jpg';">
+          </div>
+          <div class="hero-slide-overlay"></div>
+          <div class="container hero-slide-content">
+            <div class="row align-items-center g-4 g-xl-5">
+              <!-- Left Column: Main Content (~57%) -->
+              <div class="col-lg-7 col-xl-7 hero-col-left">
+                <div class="hero-badge animate-item">
+                  <i class="fas fa-drafting-compass text-orange me-2"></i> BESPOKE COMMERCIAL ENGINEERING
+                </div>
+                <h1 class="hero-heading animate-item">
+                  YOUR VISION. OUR<br>
+                  <span class="highlight-orange">FABRICATION EXPERTISE.</span>
+                </h1>
+                <p class="hero-subtitle animate-item text-white">
+                  Professional commercial vehicle body design, modification and heavy manufacturing. From <span class="tech-highlight">3D CAD &amp; FEA stress simulations</span> to <strong class="text-white">ARAI-certified multi-axle chassis integration</strong>.
+                </p>
+                <div class="hero-buttons animate-item">
+                  <a href="shop.html?category=custom&openQuote=true" class="btn btn-hero-primary btn-magnetic">
+                    <i class="fas fa-pencil-ruler me-2"></i> START CUSTOM BUILD
+                  </a>
+                  <a href="service-details.html?service=design" class="btn btn-hero-secondary btn-magnetic">
+                    <i class="fas fa-phone me-2"></i> SPEAK WITH CHIEF ENGINEER
+                  </a>
+                </div>
+                <!-- Clean Open Statistics (No Boxes, No Cards, Horizontal Layout) -->
+                <div class="hero-stats-open animate-item">
+                  <div class="hero-stat-unit-item">
+                    <div class="hero-stat-val">100<span class="hero-stat-unit">%</span></div>
+                    <div class="hero-stat-desc">FEA Stress Validated</div>
+                  </div>
+                  <div class="hero-stat-sep"></div>
+                  <div class="hero-stat-unit-item">
+                    <div class="hero-stat-val">ARAI</div>
+                    <div class="hero-stat-desc">Homologation Support</div>
+                  </div>
+                  <div class="hero-stat-sep"></div>
+                  <div class="hero-stat-unit-item">
+                    <div class="hero-stat-val">28+ <span class="hero-stat-unit">Yrs</span></div>
+                    <div class="hero-stat-desc">Engineering Heritage</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right Column: Interactive Multi-Image Vehicle Showcase (~43%) -->
+              <div class="col-lg-5 col-xl-5 hero-col-right animate-item">
+                <div class="hero-visual-showcase">
+                  <div class="showcase-header">
+                    <div class="showcase-live-pill">
+                      <span class="live-dot"></span> BESPOKE FABRICATION
+                    </div>
+                    <span class="showcase-homologation">
+                      <i class="fas fa-shield-alt text-orange me-1"></i> Custom Homologated
+                    </span>
+                  </div>
+
+                  <!-- Main Featured Spotlight -->
+                  <div class="showcase-featured-stage">
+                    <img src="assets/images/products/custom-body.jpg" 
+                         alt="Custom Special Vehicle Engineering" 
+                         class="showcase-stage-img">
+                    <span class="showcase-badge-float">
+                      <i class="fas fa-certificate text-orange"></i> Custom Prototype
+                    </span>
+                    <span class="showcase-spec-float">
+                      <i class="fas fa-shield-alt"></i> 5-Yr Warranty
+                    </span>
+                    <div class="showcase-overlay-bar">
+                      <div>
+                        <h4 class="showcase-vehicle-title">Custom Special Vehicle Engineering</h4>
+                        <p class="showcase-vehicle-sub"><i class="fas fa-check-circle text-orange me-1"></i> Bespoke Commercial Vehicle Modifications &amp; Prototypes</p>
+                      </div>
+                      <a href="gallery.html" class="showcase-zoom-btn" title="View Full Project in Gallery">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- Multi-Image Thumbnails: Different Configurations -->
+                  <div class="showcase-thumbs-wrap">
+                    <div class="showcase-thumbs-label">
+                      <span><i class="fas fa-images text-orange me-1"></i> BUILD CONFIGURATIONS</span>
+                      <span class="hint">Click to switch image</span>
+                    </div>
+                    <div class="showcase-thumbs-grid">
+                      <div class="showcase-thumb-item active" 
+                           data-img="assets/images/products/custom-body.jpg" 
+                           data-title="Custom Special Vehicle Engineering" 
+                           data-sub="Bespoke Commercial Vehicle Modifications &amp; Prototypes" 
+                           data-badge="Custom Build" 
+                           data-spec="5-Yr Warranty">
+                        <img src="assets/images/products/custom-body.jpg" alt="Custom Body">
+                        <span class="thumb-caption">Special Build</span>
+                      </div>
+                      <div class="showcase-thumb-item" 
+                           data-img="assets/images/gallery/project-3.jpg" 
+                           data-title="Lowbed Machinery Equipment Carrier" 
+                           data-sub="Multi-Axle Heavy Machinery Transport" 
+                           data-badge="Lowbed Trailer" 
+                           data-spec="70-Ton Rated">
+                        <img src="assets/images/gallery/project-3.jpg" alt="Lowbed Trailer">
+                        <span class="thumb-caption">Lowbed</span>
+                      </div>
+                      <div class="showcase-thumb-item" 
+                           data-img="assets/images/gallery/project-10.jpg" 
+                           data-title="Chassis &amp; Wheelbase Modification" 
+                           data-sub="Wheelbase Lengthened / Shortened (ARAI Approved)" 
+                           data-badge="Chassis Mod" 
+                           data-spec="FEA Tested">
+                        <img src="assets/images/gallery/project-10.jpg" alt="Wheelbase Mod">
+                        <span class="thumb-caption">Chassis Mod</span>
+                      </div>
+                      <div class="showcase-thumb-item" 
+                           data-img="assets/images/products/trailer-body.jpg" 
+                           data-title="Heavy Semi-Trailer Chassis Platform" 
+                           data-sub="Robotic Submerged Arc Welded Subframe" 
+                           data-badge="Semi-Trailer" 
+                           data-spec="Robotic SAW">
+                        <img src="assets/images/products/trailer-body.jpg" alt="Trailer Body">
+                        <span class="thumb-caption">Trailer</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Bottom Action Link -->
+                  <div class="showcase-footer-action">
+                    <a href="gallery.html" class="showcase-action-link">
+                      <span>Explore Custom Engineering Portfolio</span>
+                      <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <span class="showcase-count-pill">ARAI Ready</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Carousel Navigation Controls -->
+      <button class="hero-nav-btn hero-nav-prev" id="heroPrevBtn" aria-label="Previous Slide">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="hero-nav-btn hero-nav-next" id="heroNextBtn" aria-label="Next Slide">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+
+      <!-- Carousel Bottom Bar (Dots + Slide Counter + Progress Bar) -->
+      <div class="hero-carousel-bottom">
+        <div class="container d-flex justify-content-between align-items-center">
+          <div class="hero-dots" id="heroDots" role="tablist" aria-label="Hero Slides">
+            <button class="hero-dot active" data-slide-to="0" role="tab" aria-label="Slide 1"></button>
+            <button class="hero-dot" data-slide-to="1" role="tab" aria-label="Slide 2"></button>
+            <button class="hero-dot" data-slide-to="2" role="tab" aria-label="Slide 3"></button>
+            <button class="hero-dot" data-slide-to="3" role="tab" aria-label="Slide 4"></button>
+          </div>
+
+          <div class="hero-slide-counter">
+            <span class="current-slide" id="heroCurrentSlide">01</span>
+            <span class="divider">/</span>
+            <span class="total-slides">04</span>
+          </div>
+        </div>
+
+        <!-- Animated Slide Progress Bar -->
+        <div class="hero-progress-track">
+          <div class="hero-progress-bar" id="heroProgressBar"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INDUSTRIAL INFINITE STREAMING TICKER MARQUEE -->
+    <div class="industrial-ticker-wrap" aria-label="Commercial Engineering Capabilities Ticker">
+      <div class="industrial-ticker-content">
+        <span class="ticker-item"><span>TRUCK BODY FABRICATION</span> <span class="ticker-star">✦</span></span>
+        <span class="ticker-item"><span class="ticker-orange">HEAVY-DUTY ENGINEERING</span> <span class="ticker-star">✦</span></span>
+        <span class="ticker-item"><span class="ticker-chrome">CUSTOM TRUCK SOLUTIONS</span> <span class="ticker-star">✦</span></span>
+        <span class="ticker-item"><span class="ticker-orange">PRECISION MANUFACTURING</span> <span class="ticker-star">✦</span></span>
+        <span class="ticker-item"><span>INDUSTRIAL EXCELLENCE</span> <span class="ticker-star">✦</span></span>
+        <span class="ticker-item"><span class="ticker-chrome">AIS-093 CERTIFIED FABRICATION</span> <span class="ticker-star">✦</span></span>
+        <span class="ticker-item"><span class="ticker-orange">HARDOX 450 WEAR PLATES</span> <span class="ticker-star">✦</span></span>
+        <span class="ticker-item"><span>TURNKEY FLEET DELIVERY</span> <span class="ticker-star">✦</span></span>
+      </div>
+      <div class="industrial-ticker-content" aria-hidden="true">
+        <span class="ticker-item"><span>TRUCK BODY FABRICATION</span> <span class="ticker-star">✦</span></span>
+        <span class="ticker-item"><span class="ticker-orange">HEAVY-DUTY ENGINEERING</span> <span class="ticker-star">✦</span></span>
+        <span class="ticker-item"><span class="ticker-chrome">CUSTOM TRUCK SOLUTIONS</span> <span class="ticker-star">✦</span></span>
+        <span class="ticker-item"><span class="ticker-orange">PRECISION MANUFACTURING</span> <span class="ticker-star">✦</span></span>
+        <span class="ticker-item"><span>INDUSTRIAL EXCELLENCE</span> <span class="ticker-star">✦</span></span>
+        <span class="ticker-item"><span class="ticker-chrome">AIS-093 CERTIFIED FABRICATION</span> <span class="ticker-star">✦</span></span>
+        <span class="ticker-item"><span class="ticker-orange">HARDOX 450 WEAR PLATES</span> <span class="ticker-star">✦</span></span>
+        <span class="ticker-item"><span>TURNKEY FLEET DELIVERY</span> <span class="ticker-star">✦</span></span>
+      </div>
+    </div>
+
+    <!-- INDUSTRIAL STATS BANNER -->
+    <section class="stats-banner">
+      <div class="container">
+        <div class="row g-4 text-center text-md-start">
+          <div class="col-6 col-md-3">
+            <div class="stat-box">
+              <div class="stat-number"><span class="stat-counter" data-target="28">28</span><span class="plus">+</span></div>
+              <div class="stat-label">Years of Manufacturing</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="stat-box">
+              <div class="stat-number"><span class="stat-counter" data-target="14500">14500</span><span class="plus">+</span></div>
+              <div class="stat-label">Bodies Fabricated</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="stat-box">
+              <div class="stat-number"><span class="stat-counter" data-target="99">99</span><span class="plus">.4%</span></div>
+              <div class="stat-label">Delivery Precision</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="stat-box">
+              <div class="stat-number"><span class="stat-counter" data-target="650">650</span><span class="plus">+</span></div>
+              <div class="stat-label">Fleet Owners Trust Us</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPANY INTRODUCTION -->
+    <section class="py-5 bg-white">
+      <div class="container py-lg-4">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <div class="position-relative overflow-hidden rounded shadow-lg" style="border: 1px solid rgba(23, 35, 47, 0.12);">
+              <img src="assets/images/about/facility-1.jpg" 
+                   alt="Automated Commercial Vehicle Body Manufacturing Facility" 
+                   class="w-100" 
+                   style="height: 440px; object-fit: cover; display: block;" 
+                   loading="lazy"
+                   onerror="this.onerror=null; this.src='assets/images/about/facility-2.jpg';">
+              
+              <!-- Top-Left Industrial Tag -->
+              <div class="position-absolute top-0 start-0 m-3 d-inline-flex align-items-center gap-2 px-3 py-1 rounded" style="background: rgba(16, 25, 34, 0.82); backdrop-filter: blur(8px); border: 1px solid rgba(240, 120, 36, 0.5); color: #FFA559; font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;">
+                <i class="fas fa-industry text-orange"></i> Heavy Fabrication Facility
+              </div>
+
+              <!-- Bottom-Right Modern Metric Badge -->
+              <div class="p-3 rounded position-absolute bottom-0 end-0 m-3 d-none d-sm-block shadow" style="background: rgba(16, 25, 34, 0.88); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.14); border-left: 4px solid var(--industrial-orange);">
+                <div class="d-flex align-items-center gap-3">
+                  <div class="d-flex align-items-center justify-content-center rounded" style="width: 40px; height: 40px; background: rgba(240, 120, 36, 0.18); border: 1px solid rgba(240, 120, 36, 0.35);">
+                    <i class="fas fa-warehouse text-orange fs-5" style="color: var(--industrial-orange);"></i>
+                  </div>
+                  <div>
+                    <div class="h5 mb-0 text-white fw-bold">120,000 Sq. Ft.</div>
+                    <small class="text-light opacity-80" style="font-size: 0.78rem;">Modern Heavy Fabrication Facility</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="section-subtitle">About Our Manufacturing</div>
+            <h2 class="section-title">Pioneering Commercial Vehicle Body Building Since 1998</h2>
+            <p class="section-desc mb-3">
+              We engineer purpose-built truck bodies engineered for durability, optimum payload ratio, and maximum aerodynamic fuel efficiency. From heavy mining tippers and refrigerated insulated reefers to dry freight containers, we deliver uncompromising fabrication standards.
+            </p>
+            <p class="text-muted mb-4">
+              Equipped with CNC laser cutting, automated submerged arc welding (SAW), 800-ton hydraulic press brakes, and a climate-controlled blast-and-paint booth, our facility meets stringent automotive OEM tolerances.
+            </p>
+            <div class="row g-3 mb-4">
+              <div class="col-sm-6">
+                <div class="d-flex align-items-center gap-2">
+                  <i class="fas fa-check-square text-orange fs-5" style="color: var(--industrial-orange);"></i>
+                  <span class="fw-bold">OEM Chassis Approved</span>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-center gap-2">
+                  <i class="fas fa-check-square text-orange fs-5" style="color: var(--industrial-orange);"></i>
+                  <span class="fw-bold">High Tensile Hardox & Strenx Steel</span>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-center gap-2">
+                  <i class="fas fa-check-square text-orange fs-5" style="color: var(--industrial-orange);"></i>
+                  <span class="fw-bold">FEA Structural Stress Analysis</span>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-center gap-2">
+                  <i class="fas fa-check-square text-orange fs-5" style="color: var(--industrial-orange);"></i>
+                  <span class="fw-bold">Polyurethane Epoxied Paint Systems</span>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex gap-3 flex-wrap">
+              <a href="about.html" class="btn btn-industrial">Learn Company History</a>
+              <a href="services.html" class="btn btn-outline-steel">Explore Capabilities</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OEM CHASSIS COMPATIBILITY -->
+    <section class="py-4 border-top border-bottom bg-white">
+      <div class="container py-2">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-4 text-center text-lg-start">
+            <span class="text-uppercase fw-bold small text-orange" style="color: var(--industrial-orange); letter-spacing: 1.5px;">Chassis Engineering</span>
+            <h3 class="h4 fw-bold mb-1" style="color: var(--deep-steel);">Built for Leading Commercial OEM Brands</h3>
+            <p class="small text-muted mb-0">Engineered to factory BBG guidelines and ARAI norms without voiding chassis manufacturer warranty.</p>
+          </div>
+          <div class="col-lg-8">
+            <div class="row g-3 text-center">
+              <div class="col-6 col-sm-4">
+                <div class="oem-brand-card shadow-sm h-100">
+                  <div class="oem-brand-logo-wrap">
+                    <img src="assets/images/brands/tata-motors.svg" alt="Tata Motors Commercial Vehicles" class="oem-brand-logo" loading="lazy">
+                  </div>
+                  <h6 class="oem-brand-name">Tata Motors</h6>
+                  <small class="oem-brand-desc">Signa, Prima &amp; Ultra Series (4×2 to 10×4)</small>
+                </div>
+              </div>
+              <div class="col-6 col-sm-4">
+                <div class="oem-brand-card shadow-sm h-100">
+                  <div class="oem-brand-logo-wrap">
+                    <img src="assets/images/brands/ashok-leyland.svg" alt="Ashok Leyland Commercial Vehicles" class="oem-brand-logo" loading="lazy">
+                  </div>
+                  <h6 class="oem-brand-name">Ashok Leyland</h6>
+                  <small class="oem-brand-desc">AVTR Modular Platform (19T to 55T Tractor)</small>
+                </div>
+              </div>
+              <div class="col-6 col-sm-4">
+                <div class="oem-brand-card shadow-sm h-100">
+                  <div class="oem-brand-logo-wrap">
+                    <img src="assets/images/brands/bharatbenz.svg" alt="BharatBenz Commercial Vehicles" class="oem-brand-logo" loading="lazy">
+                  </div>
+                  <h6 class="oem-brand-name">BharatBenz</h6>
+                  <small class="oem-brand-desc">Heavy Construction &amp; Long Haul (1623 to 3528)</small>
+                </div>
+              </div>
+              <div class="col-6 col-sm-4">
+                <div class="oem-brand-card shadow-sm h-100">
+                  <div class="oem-brand-logo-wrap">
+                    <img src="assets/images/brands/eicher.svg" alt="Eicher Trucks &amp; Buses" class="oem-brand-logo" loading="lazy">
+                  </div>
+                  <h6 class="oem-brand-name">Eicher Trucks</h6>
+                  <small class="oem-brand-desc">Pro 3000, 6000 &amp; 8000 Series Rigid &amp; Tippers</small>
+                </div>
+              </div>
+              <div class="col-6 col-sm-4">
+                <div class="oem-brand-card shadow-sm h-100">
+                  <div class="oem-brand-logo-wrap">
+                    <img src="assets/images/brands/volvo-scania.svg" alt="Volvo &amp; Scania Commercial Vehicles" class="oem-brand-logo" loading="lazy">
+                  </div>
+                  <h6 class="oem-brand-name">Volvo &amp; Scania</h6>
+                  <small class="oem-brand-desc">Heavy Mining FMX &amp; Heavy Haulage Tractors</small>
+                </div>
+              </div>
+              <div class="col-6 col-sm-4">
+                <div class="oem-brand-card shadow-sm h-100">
+                  <div class="oem-brand-logo-wrap">
+                    <img src="assets/images/brands/mahindra-isuzu.svg" alt="Mahindra &amp; Isuzu Commercial Vehicles" class="oem-brand-logo" loading="lazy">
+                  </div>
+                  <h6 class="oem-brand-name">Mahindra &amp; Isuzu</h6>
+                  <small class="oem-brand-desc">Blazo X &amp; D-Max Heavy Duty Commercial Lines</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUCK BODY TYPES SHOWCASE -->
+    <section class="py-5" style="background-color: var(--light-bg);">
+      <div class="container py-lg-4">
+        <div class="section-header text-center mx-auto" style="max-width: 750px;">
+          <div class="section-subtitle">Commercial Vehicle Product Range</div>
+          <h2 class="section-title">Engineered Truck Body Types</h2>
+          <p class="section-desc mx-auto">
+            Explore our industrial commercial body types fabricated to fit Tata Motors, Ashok Leyland, BharatBenz, Eicher, Mahindra, and Volvo chassis.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- 1. Open Truck Body -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card h-100 d-flex flex-column">
+              <div class="product-thumb-wrapper">
+                <span class="product-tag">Heavy Haulage</span>
+                <img src="assets/images/products/open-body.jpg" alt="Open Truck Body" class="product-thumb">
+              </div>
+              <div class="product-body d-flex flex-column flex-grow-1">
+                <h3 class="product-title">Open Truck Body</h3>
+                <p class="product-desc">Heavy-duty dropside and fixed-side cargo bodies built with corrugated high-tensile steel panels.</p>
+                <div class="product-specs mb-3">
+                  <div class="spec-row"><span>Payload:</span> <strong>9T - 40T</strong></div>
+                  <div class="spec-row"><span>Floor:</span> <strong>Chequered 4-6mm</strong></div>
+                  <div class="spec-row"><span>Chassis Fit:</span> <strong>Multi-Axle</strong></div>
+                </div>
+                <div class="product-footer mt-auto d-flex gap-2">
+                  <a href="shop.html?search=Open+Body" class="btn btn-sm btn-industrial flex-grow-1"><i class="fas fa-shopping-cart me-1"></i> Order / Shop</a>
+                  <a href="service-details.html?product=open-body" class="btn btn-sm btn-outline-steel px-3" title="Technical Specs"><i class="fas fa-info-circle"></i> Specs</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Closed Container Body -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card h-100 d-flex flex-column">
+              <div class="product-thumb-wrapper">
+                <span class="product-tag tag-orange">Logistics</span>
+                <img src="assets/images/products/container-body.jpg?v=2" alt="Closed Container Truck Body" class="product-thumb">
+              </div>
+              <div class="product-body d-flex flex-column flex-grow-1">
+                <h3 class="product-title">Closed Container Body</h3>
+                <p class="product-desc">All-weather corrugated steel logistics containers with leak-proof roofing and high-security cam locks.</p>
+                <div class="product-specs mb-3">
+                  <div class="spec-row"><span>Volume:</span> <strong>Up to 1200 cu.ft</strong></div>
+                  <div class="spec-row"><span>Wall:</span> <strong>Corrugated MS / GI</strong></div>
+                  <div class="spec-row"><span>Usage:</span> <strong>FMCG & E-Commerce</strong></div>
+                </div>
+                <div class="product-footer mt-auto d-flex gap-2">
+                  <a href="shop.html?search=Container+Body" class="btn btn-sm btn-industrial flex-grow-1"><i class="fas fa-shopping-cart me-1"></i> Order / Shop</a>
+                  <a href="service-details.html?product=container-body" class="btn btn-sm btn-outline-steel px-3" title="Technical Specs"><i class="fas fa-info-circle"></i> Specs</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Tipper Truck Body -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card h-100 d-flex flex-column">
+              <div class="product-thumb-wrapper">
+                <span class="product-tag">Mining & Quarry</span>
+                <img src="assets/images/products/tipper-body.jpg" alt="Tipper Truck Body" class="product-thumb">
+              </div>
+              <div class="product-body d-flex flex-column flex-grow-1">
+                <h3 class="product-title">Tipper Truck Body</h3>
+                <p class="product-desc">Hardox-lined rock and scoop tip bodies with Italian hydraulic telescopic multi-stage tipping cylinders.</p>
+                <div class="product-specs mb-3">
+                  <div class="spec-row"><span>Capacity:</span> <strong>14m³ - 24m³</strong></div>
+                  <div class="spec-row"><span>Hydraulics:</span> <strong>Hyva / Penta</strong></div>
+                  <div class="spec-row"><span>Application:</span> <strong>Mining & Aggregates</strong></div>
+                </div>
+                <div class="product-footer mt-auto d-flex gap-2">
+                  <a href="shop.html?search=Tipper+Body" class="btn btn-sm btn-industrial flex-grow-1"><i class="fas fa-shopping-cart me-1"></i> Order / Shop</a>
+                  <a href="service-details.html?product=tipper-body" class="btn btn-sm btn-outline-steel px-3" title="Technical Specs"><i class="fas fa-info-circle"></i> Specs</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Trailer Body -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card h-100 d-flex flex-column">
+              <div class="product-thumb-wrapper">
+                <span class="product-tag">Interstate</span>
+                <img src="assets/images/products/trailer-body.jpg" alt="Trailer Body" class="product-thumb">
+              </div>
+              <div class="product-body d-flex flex-column flex-grow-1">
+                <h3 class="product-title">Trailer Body</h3>
+                <p class="product-desc">Skeletal and flatbed semi-trailers, 2-axle and 3-axle configurations with heavy air suspension options.</p>
+                <div class="product-specs mb-3">
+                  <div class="spec-row"><span>Length:</span> <strong>40ft & 50ft Bed</strong></div>
+                  <div class="spec-row"><span>Suspension:</span> <strong>Mechanical / Air</strong></div>
+                  <div class="spec-row"><span>Axles:</span> <strong>York / BPW</strong></div>
+                </div>
+                <div class="product-footer mt-auto d-flex gap-2">
+                  <a href="shop.html?search=Trailer+Body" class="btn btn-sm btn-industrial flex-grow-1"><i class="fas fa-shopping-cart me-1"></i> Order / Shop</a>
+                  <a href="service-details.html?product=trailer-body" class="btn btn-sm btn-outline-steel px-3" title="Technical Specs"><i class="fas fa-info-circle"></i> Specs</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. Tanker Body -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card h-100 d-flex flex-column">
+              <div class="product-thumb-wrapper">
+                <span class="product-tag">Liquid Logistics</span>
+                <img src="assets/images/products/tanker-body.jpg" alt="Liquid Tanker Body" class="product-thumb">
+              </div>
+              <div class="product-body d-flex flex-column flex-grow-1">
+                <h3 class="product-title">Tanker Body</h3>
+                <p class="product-desc">SS304/SS316 food-grade milk tankers, chemical carriers, and petroleum fuel tankers with surge baffles.</p>
+                <div class="product-specs mb-3">
+                  <div class="spec-row"><span>Capacity:</span> <strong>12,000L - 40,000L</strong></div>
+                  <div class="spec-row"><span>Material:</span> <strong>SS304 / High Alloy</strong></div>
+                  <div class="spec-row"><span>Safety:</span> <strong>Emergency Cut-off</strong></div>
+                </div>
+                <div class="product-footer mt-auto d-flex gap-2">
+                  <a href="shop.html?search=Tanker+Body" class="btn btn-sm btn-industrial flex-grow-1"><i class="fas fa-shopping-cart me-1"></i> Order / Shop</a>
+                  <a href="service-details.html?product=tanker-body" class="btn btn-sm btn-outline-steel px-3" title="Technical Specs"><i class="fas fa-info-circle"></i> Specs</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. Refrigerated Truck Body -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card h-100 d-flex flex-column">
+              <div class="product-thumb-wrapper">
+                <span class="product-tag tag-orange">Cold Chain</span>
+                <img src="assets/images/products/refrigerated-body.jpg" alt="Refrigerated Truck Body" class="product-thumb">
+              </div>
+              <div class="product-body d-flex flex-column flex-grow-1">
+                <h3 class="product-title">Refrigerated Body</h3>
+                <p class="product-desc">Insulated PUF sandwich panel reefer bodies maintaining -25°C for dairy, meat, ice-cream, and pharma.</p>
+                <div class="product-specs mb-3">
+                  <div class="spec-row"><span>Insulation:</span> <strong>PUF 100-120mm</strong></div>
+                  <div class="spec-row"><span>Temp Range:</span> <strong>+15°C down to -25°C</strong></div>
+                  <div class="spec-row"><span>Skin:</span> <strong>Food-Grade GRP</strong></div>
+                </div>
+                <div class="product-footer mt-auto d-flex gap-2">
+                  <a href="shop.html?search=Refrigerated+Body" class="btn btn-sm btn-industrial flex-grow-1"><i class="fas fa-shopping-cart me-1"></i> Order / Shop</a>
+                  <a href="service-details.html?product=refrigerated-body" class="btn btn-sm btn-outline-steel px-3" title="Technical Specs"><i class="fas fa-info-circle"></i> Specs</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7. Flatbed Truck Body -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card h-100 d-flex flex-column">
+              <div class="product-thumb-wrapper">
+                <span class="product-tag">Heavy Plant</span>
+                <img src="assets/images/products/flatbed-body.jpg" alt="Flatbed Truck Body" class="product-thumb">
+              </div>
+              <div class="product-body d-flex flex-column flex-grow-1">
+                <h3 class="product-title">Flatbed Truck Body</h3>
+                <p class="product-desc">Heavy equipment platform bodies with lashing winches, heavy headboard shield, and high point-load capacity.</p>
+                <div class="product-specs mb-3">
+                  <div class="spec-row"><span>Deck:</span> <strong>Heavy Chequered Plate</strong></div>
+                  <div class="spec-row"><span>Tie-downs:</span> <strong>Integrated Winches</strong></div>
+                  <div class="spec-row"><span>Payload:</span> <strong>Up to 55 Tons</strong></div>
+                </div>
+                <div class="product-footer mt-auto d-flex gap-2">
+                  <a href="shop.html?search=Flatbed+Body" class="btn btn-sm btn-industrial flex-grow-1"><i class="fas fa-shopping-cart me-1"></i> Order / Shop</a>
+                  <a href="service-details.html?product=flatbed-body" class="btn btn-sm btn-outline-steel px-3" title="Technical Specs"><i class="fas fa-info-circle"></i> Specs</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8. Custom Fabricated Truck Body -->
+          <div class="col-md-6 col-lg-3">
+            <div class="product-card h-100 d-flex flex-column">
+              <div class="product-thumb-wrapper">
+                <span class="product-tag">Custom Built</span>
+                <img src="assets/images/products/custom-body.jpg" alt="Custom Fabricated Truck Body" class="product-thumb">
+              </div>
+              <div class="product-body d-flex flex-column flex-grow-1">
+                <h3 class="product-title">Custom Fabricated Body</h3>
+                <p class="product-desc">Bespoke heavy recovery breakdown trucks, mobile service workshops, and specialized municipal vehicles.</p>
+                <div class="product-specs mb-3">
+                  <div class="spec-row"><span>Engineering:</span> <strong>Custom CAD & FEA</strong></div>
+                  <div class="spec-row"><span>Chassis Fit:</span> <strong>Any Commercial Make</strong></div>
+                  <div class="spec-row"><span>Homologation:</span> <strong>ARAI & RTO Certified</strong></div>
+                </div>
+                <div class="product-footer mt-auto d-flex gap-2">
+                  <a href="shop.html?search=Fabricated+Body&openQuote=true" class="btn btn-sm btn-industrial flex-grow-1"><i class="fas fa-shopping-cart me-1"></i> Order / Shop</a>
+                  <a href="service-details.html?product=custom-body" class="btn btn-sm btn-outline-steel px-3" title="Technical Specs"><i class="fas fa-info-circle"></i> Specs</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-5">
+          <a href="gallery.html" class="btn btn-steel btn-lg">
+            <i class="fas fa-images me-2"></i> View Project Gallery
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- MANUF°CTURING CAPABILITIES & SERVICES -->
+    <section class="py-5 bg-white">
+      <div class="container py-lg-4">
+        <div class="row align-items-center mb-5">
+          <div class="col-lg-7">
+            <div class="section-subtitle">Heavy Industrial Services</div>
+            <h2 class="section-title">Comprehensive Vehicle Fabrication & Engineering</h2>
+          </div>
+          <div class="col-lg-5 text-lg-end">
+            <a href="services.html" class="btn btn-outline-steel">View All Services <i class="fas fa-arrow-right ms-2"></i></a>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <!-- 1. Truck Body Fabrication -->
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card has-thumb h-100">
+              <div class="service-thumb-wrapper">
+                <img src="assets/images/services/service-fabrication.jpg" alt="Truck Body Fabrication" class="service-thumb">
+                <div class="service-thumb-icon">
+                  <i class="fas fa-hammer"></i>
+                </div>
+              </div>
+              <div class="service-card-body">
+                <h3 class="service-title">Truck Body Fabrication</h3>
+                <p class="service-text">Complete ground-up manufacturing for all commercial vehicles conforming to AIS 093 & ARAI regulatory safety standards.</p>
+                <div class="mt-auto pt-2">
+                  <a href="service-details.html?service=fabrication" class="service-link">Read Details <i class="fas fa-chevron-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Custom Truck Body Design -->
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card has-thumb h-100">
+              <div class="service-thumb-wrapper">
+                <img src="assets/images/services/service-design.jpg" alt="Custom Truck Body Design" class="service-thumb">
+                <div class="service-thumb-icon">
+                  <i class="fas fa-drafting-compass"></i>
+                </div>
+              </div>
+              <div class="service-card-body">
+                <h3 class="service-title">Custom Truck Body Design</h3>
+                <p class="service-text">3D CAD design, weight distribution modeling, FEA stress simulation, and specialized tailored chassis packaging.</p>
+                <div class="mt-auto pt-2">
+                  <a href="service-details.html?service=design" class="service-link">Read Details <i class="fas fa-chevron-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Welding & Metal Fabrication -->
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card has-thumb h-100">
+              <div class="service-thumb-wrapper">
+                <img src="assets/images/services/service-welding.jpg" alt="Welding & Metal Fabrication" class="service-thumb">
+                <div class="service-thumb-icon">
+                  <i class="fas fa-fire"></i>
+                </div>
+              </div>
+              <div class="service-card-body">
+                <h3 class="service-title">Welding & Metal Fabrication</h3>
+                <p class="service-text">Certified MIG, TIG, and automated submerged arc welding on IS 2062, Domex, and Hardox wear-resistant alloy plates.</p>
+                <div class="mt-auto pt-2">
+                  <a href="service-details.html?service=welding" class="service-link">Read Details <i class="fas fa-chevron-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Truck Body Repair -->
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card has-thumb h-100">
+              <div class="service-thumb-wrapper">
+                <img src="assets/images/services/service-repair.jpg" alt="Truck Body Repair" class="service-thumb">
+                <div class="service-thumb-icon">
+                  <i class="fas fa-wrench"></i>
+                </div>
+              </div>
+              <div class="service-card-body">
+                <h3 class="service-title">Truck Body Repair</h3>
+                <p class="service-text">Major structural accident rehabilitation, side-panel replacement, chassis straightening, and hydraulic ram servicing.</p>
+                <div class="mt-auto pt-2">
+                  <a href="service-details.html?service=repair" class="service-link">Read Details <i class="fas fa-chevron-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. Industrial Painting -->
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card has-thumb h-100">
+              <div class="service-thumb-wrapper">
+                <img src="assets/images/services/service-painting.jpg" alt="Industrial Painting" class="service-thumb">
+                <div class="service-thumb-icon">
+                  <i class="fas fa-paint-roller"></i>
+                </div>
+              </div>
+              <div class="service-card-body">
+                <h3 class="service-title">Industrial Painting</h3>
+                <p class="service-text">Grit blasting surface preparation followed by multi-coat polyurethane industrial primer and baked enamel topcoats.</p>
+                <div class="mt-auto pt-2">
+                  <a href="service-details.html?service=painting" class="service-link">Read Details <i class="fas fa-chevron-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. Truck Body Modification -->
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card has-thumb h-100">
+              <div class="service-thumb-wrapper">
+                <img src="assets/images/services/service-modification.jpg" alt="Truck Body Modification" class="service-thumb">
+                <div class="service-thumb-icon">
+                  <i class="fas fa-sliders-h"></i>
+                </div>
+              </div>
+              <div class="service-card-body">
+                <h3 class="service-title">Truck Body Modification</h3>
+                <p class="service-text">Cabin extension, wheelbase adjustments, hydraulic tailgate installation, and payload capacity re-engineering.</p>
+                <div class="mt-auto pt-2">
+                  <a href="service-details.html?service=modification" class="service-link">Read Details <i class="fas fa-chevron-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="py-5" style="background-color: var(--light-bg); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+      <div class="container py-lg-4">
+        <div class="section-header text-center mx-auto" style="max-width: 720px;">
+          <div class="section-subtitle">The Fabricator Advantage</div>
+          <h2 class="section-title">Why Leading Fleet Owners Trust Us</h2>
+          <p class="section-desc mx-auto">
+            Combining metallurgical science, automated submerged arc welding, and strict compliance with Indian and export commercial vehicle safety standards.
+          </p>
+        </div>
+
+        <div class="row g-4 mt-2">
+          <!-- Point 1 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="p-4 bg-white rounded border shadow-sm h-100 product-card text-center">
+              <div class="footer-contact-icon mx-auto mb-3 fs-3" style="width: 56px; height: 56px; background-color: rgba(240, 120, 36, 0.12);">
+                <i class="fas fa-gem" style="color: var(--industrial-orange);"></i>
+              </div>
+              <h5 class="fw-bold mb-2">Hardox & Strenx Steel</h5>
+              <p class="small text-muted mb-0">
+                Authorized wear plate fabricators delivering up to 1,450 kg tare weight reduction, maximizing gross payload earnings on every highway trip.
+              </p>
+            </div>
+          </div>
+
+          <!-- Point 2 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="p-4 bg-white rounded border shadow-sm h-100 product-card text-center">
+              <div class="footer-contact-icon mx-auto mb-3 fs-3" style="width: 56px; height: 56px; background-color: rgba(240, 120, 36, 0.12);">
+                <i class="fas fa-stamp" style="color: var(--industrial-orange);"></i>
+              </div>
+              <h5 class="fw-bold mb-2">ARAI & AIS 093 Norms</h5>
+              <p class="small text-muted mb-0">
+                100% type-approved designs with certified weighbridge documentation and Form 22A/B clearance for immediate RTO passing without delay.
+              </p>
+            </div>
+          </div>
+
+          <!-- Point 3 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="p-4 bg-white rounded border shadow-sm h-100 product-card text-center">
+              <div class="footer-contact-icon mx-auto mb-3 fs-3" style="width: 56px; height: 56px; background-color: rgba(240, 120, 36, 0.12);">
+                <i class="fas fa-microchip" style="color: var(--industrial-orange);"></i>
+              </div>
+              <h5 class="fw-bold mb-2">Automated Production</h5>
+              <p class="small text-muted mb-0">
+                Equipped with 12kW fiber laser cutters and 800-ton hydraulic press brakes guaranteeing ±0.2mm precision on all mounting chassis interfaces.
+              </p>
+            </div>
+          </div>
+
+          <!-- Point 4 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="p-4 bg-white rounded border shadow-sm h-100 product-card text-center">
+              <div class="footer-contact-icon mx-auto mb-3 fs-3" style="width: 56px; height: 56px; background-color: rgba(240, 120, 36, 0.12);">
+                <i class="fas fa-shield-alt" style="color: var(--industrial-orange);"></i>
+              </div>
+              <h5 class="fw-bold mb-2">5-Year Warranty</h5>
+              <p class="small text-muted mb-0">
+                Comprehensive manufacturing warranty on all chassis subframes and welded joints, backed by priority 24/7 highway repair response.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MANUFACTURING PROCESS -->
+    <section class="py-5 process-section" id="manufacturing-process">
+      <div class="container py-lg-4">
+        <div class="section-header text-center mx-auto" style="max-width: 700px;">
+          <div class="section-subtitle">Streamlined Workflow</div>
+          <h2 class="section-title process-section-title">Our 4-Stage Manufacturing Process</h2>
+          <p class="section-desc process-section-desc mx-auto">
+            From initial payload analysis to final RTO/ARAI certification, we adhere to strict ISO quality control protocols.
+          </p>
+        </div>
+
+        <div class="row g-4 mt-2">
+          <div class="col-md-6 col-lg-3">
+            <div class="process-step-card">
+              <div class="step-number">01</div>
+              <h5 class="process-step-title">Design & Engineering</h5>
+              <p class="process-step-desc">3D CAD design, weight distribution, axle load calculations, and OEM chassis compliance verification.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="process-step-card">
+              <div class="step-number">02</div>
+              <h5 class="process-step-title">Precision Fabrication</h5>
+              <p class="process-step-desc">CNC plasma cutting, press brake bending, subframe alignment, and certified MIG/SAW structural welding.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="process-step-card">
+              <div class="step-number">03</div>
+              <h5 class="process-step-title">Surface & Coating</h5>
+              <p class="process-step-desc">Automated shot blasting to SA 2.5 standard, zinc phosphate priming, and bake-cured polyurethane finish.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="process-step-card">
+              <div class="step-number">04</div>
+              <h5 class="process-step-title">Testing & Dispatch</h5>
+              <p class="process-step-desc">Static water leak tests, ultrasonic weld inspection, electrical harness check, and ARAI roadworthiness sign-off.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS ASYMMETRICAL GRID -->
+    <section class="py-5 bg-white">
+      <div class="container py-lg-4">
+        <div class="d-flex justify-content-between align-items-end flex-wrap mb-4">
+          <div>
+            <div class="section-subtitle">Real Industrial Deliveries</div>
+            <h2 class="section-title">Featured Fabrication Projects</h2>
+          </div>
+          <a href="gallery.html" class="btn btn-outline-steel">Full Project Gallery <i class="fas fa-images ms-2"></i></a>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item col-span-8">
+            <img src="assets/images/gallery/project-1.jpg?v=3" alt="22 Cu.M Hardox 450 Mining Rock Tipper Truck" class="gallery-img" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-cat">Mining & Infrastructure</span>
+              <h4 class="gallery-title text-white" style="color: #FFFFFF !important; text-shadow: 0 2px 10px rgba(0,0,0,0.95), 0 0 20px rgba(0,0,0,0.85) !important;">22 Cu.M Hardox 450 Rock Tipper Body</h4>
+              <p class="gallery-desc">Delivered to Singareni Collieries mining contractor for 32-ton gross vehicle weight operation.</p>
+            </div>
+            <div class="gallery-expand-icon"><i class="fas fa-search-plus"></i></div>
+          </div>
+
+          <div class="gallery-item col-span-4">
+            <img src="assets/images/gallery/project-4.jpg?v=3" alt="Certified Structural Welding on Truck Chassis Frame" class="gallery-img" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-cat">Shop Floor</span>
+              <h4 class="gallery-title text-white" style="color: #FFFFFF !important; text-shadow: 0 2px 10px rgba(0,0,0,0.95), 0 0 20px rgba(0,0,0,0.85) !important;">Certified Robotic & MIG Structural Welding</h4>
+              <p class="gallery-desc">Heavy commercial vehicle chassis subframe precision welding.</p>
+            </div>
+            <div class="gallery-expand-icon"><i class="fas fa-search-plus"></i></div>
+          </div>
+
+          <div class="gallery-item col-span-4">
+            <img src="assets/images/gallery/project-2.jpg?v=3" alt="32 Ft SXL Multi-Axle Dry Cargo Container Fleet" class="gallery-img" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-cat">Logistics Fleet</span>
+              <h4 class="gallery-title text-white" style="color: #FFFFFF !important; text-shadow: 0 2px 10px rgba(0,0,0,0.95), 0 0 20px rgba(0,0,0,0.85) !important;">32 Ft SXL Multi-Axle Dry Cargo Container</h4>
+              <p class="gallery-desc">Turnkey fleet delivery for express courier operator.</p>
+            </div>
+            <div class="gallery-expand-icon"><i class="fas fa-search-plus"></i></div>
+          </div>
+
+          <div class="gallery-item col-span-8">
+            <img src="assets/images/gallery/project-3.jpg?v=3" alt="40 Ft Tri-Axle Skeletal Trailer with Air Suspension" class="gallery-img" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-cat">Heavy Haulage</span>
+              <h4 class="gallery-title text-white" style="color: #FFFFFF !important; text-shadow: 0 2px 10px rgba(0,0,0,0.95), 0 0 20px rgba(0,0,0,0.85) !important;">40 Ft Tri-Axle Skeletal Trailer with Air Suspension</h4>
+              <p class="gallery-desc">Designed for intermodal sea-container port operations.</p>
+            </div>
+            <div class="gallery-expand-icon"><i class="fas fa-search-plus"></i></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS & TRUST -->
+    <section class="py-5" style="background-color: var(--light-bg);">
+      <div class="container py-lg-4">
+        <div class="section-header text-center mx-auto" style="max-width: 650px;">
+          <div class="section-subtitle">Client Endorsements</div>
+          <h2 class="section-title">Trusted by Commercial Fleets</h2>
+          <p class="section-desc mx-auto">See how fleet managers, mining contractors, and logistics heads rely on our fabricated commercial bodies.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card h-100 p-4 border rounded shadow-sm bg-white">
+              <div class="d-flex text-warning mb-3">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="text-muted fst-italic mb-4">
+                "We deployed 35 tipper bodies on our Tata Prima chassis for a highway construction contract. The Hardox reinforcement has survived 300,000 km of boulder loading without a single structural hairline crack."
+              </p>
+              <div class="d-flex align-items-center gap-3 mt-auto">
+                <img src="assets/images/testimonials/client-1.jpg" alt="Rajendra Kumar - Fleet Director" class="rounded-circle flex-shrink-0" style="width: 50px; height: 50px; object-fit: cover; border: 2px solid var(--industrial-orange); box-shadow: 0 3px 10px rgba(0,0,0,0.18);" loading="lazy">
+                <div>
+                  <h6 class="mb-0 fw-bold">Rajendra Kumar</h6>
+                  <small class="text-muted">Fleet Director, Apex Road Infra Ltd.</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card h-100 p-4 border rounded shadow-sm bg-white">
+              <div class="d-flex text-warning mb-3">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="text-muted fst-italic mb-4">
+                "Their dry freight closed containers reduced our tare weight by 14% compared to standard fabricators. This translates directly into 1.2 extra tons of legal payload on every long-haul Delhi-Mumbai trip."
+              </p>
+              <div class="d-flex align-items-center gap-3 mt-auto">
+                <img src="assets/images/testimonials/client-2.jpg" alt="Manjit Singh - VP Operations" class="rounded-circle flex-shrink-0" style="width: 50px; height: 50px; object-fit: cover; border: 2px solid var(--industrial-orange); box-shadow: 0 3px 10px rgba(0,0,0,0.18);" loading="lazy">
+                <div>
+                  <h6 class="mb-0 fw-bold">Manjit Singh</h6>
+                  <small class="text-muted">VP Operations, Bharat Freight Logistics</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card h-100 p-4 border rounded shadow-sm bg-white">
+              <div class="d-flex text-warning mb-3">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="text-muted fst-italic mb-4">
+                "Exceptional workmanship on our 16,000L chemical tanker bodies. 100% radiographic radiography passed on all welds and the RTO homologation paperwork was completely seamless."
+              </p>
+              <div class="d-flex align-items-center gap-3 mt-auto">
+                <img src="assets/images/testimonials/client-3.jpg" alt="Vikas Sharma - General Manager" class="rounded-circle flex-shrink-0" style="width: 50px; height: 50px; object-fit: cover; border: 2px solid var(--industrial-orange); box-shadow: 0 3px 10px rgba(0,0,0,0.18);" loading="lazy">
+                <div>
+                  <h6 class="mb-0 fw-bold">Vikas Sharma</h6>
+                  <small class="text-muted">General Manager, Gujarat Bulk Petro Transport</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LATEST TECHNICAL ARTICLES & GUIDES -->
+    <section class="py-5 bg-white">
+      <div class="container py-lg-4">
+        <div class="d-flex justify-content-between align-items-end flex-wrap mb-4">
+          <div>
+            <div class="section-subtitle">Knowledge Base & Whitepapers</div>
+            <h2 class="section-title">Commercial Vehicle Engineering Insights</h2>
+          </div>
+          <a href="blog.html" class="btn btn-outline-steel">View All Articles <i class="fas fa-book-open ms-2"></i></a>
+        </div>
+
+        <div class="row g-4">
+          <!-- Article 1 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="blog-card h-100">
+              <div class="blog-thumb-wrapper">
+                <img src="assets/images/blog/blog-1.jpg" alt="Hardox vs Mild Steel Mining Tipper" class="blog-thumb">
+                <div class="blog-date-badge">
+                  <span class="d-block fw-bold fs-6">28</span>
+                  <span class="small text-uppercase">Oct 2026</span>
+                </div>
+              </div>
+              <div class="blog-body">
+                <span class="blog-category">Materials & Metallurgy</span>
+                <h3 class="blog-title"><a href="blog-details.html?id=1">High-Tensile Hardox Steel vs Mild Steel in Mining Tipper Fabrication</a></h3>
+                <p class="blog-excerpt">Comprehensive metallurgical analysis of Brinell 450 HBW wear plate versus structural mild steel, cutting tare weight by 1,450 kg.</p>
+                <div class="blog-meta-footer">
+                  <span><i class="fas fa-user-circle me-1"></i> Technical Desk</span>
+                  <a href="blog-details.html?id=1" class="fw-bold text-orange">Read Whitepaper <i class="fas fa-angle-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Article 2 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="blog-card h-100">
+              <div class="blog-thumb-wrapper">
+                <img src="assets/images/blog/blog-2.jpg" alt="ARAI AIS 093 Commercial Compliance" class="blog-thumb">
+                <div class="blog-date-badge">
+                  <span class="d-block fw-bold fs-6">15</span>
+                  <span class="small text-uppercase">Oct 2026</span>
+                </div>
+              </div>
+              <div class="blog-body">
+                <span class="blog-category">ARAI & AIS Norms</span>
+                <h3 class="blog-title"><a href="blog-details.html?id=2">ARAI AIS-093 Code of Practice: Essential Checklist for Commercial Truck Bodies</a></h3>
+                <p class="blog-excerpt">A breakdown of safety dimensions, rear under-run protection (RUPD), lateral protection devices (LPD), and fire retardant cabin separation norms.</p>
+                <div class="blog-meta-footer">
+                  <span><i class="fas fa-user-circle me-1"></i> Regulatory Cell</span>
+                  <a href="blog-details.html?id=2" class="fw-bold text-orange">Read Article <i class="fas fa-angle-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Article 3 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="blog-card h-100">
+              <div class="blog-thumb-wrapper">
+                <img src="assets/images/blog/blog-3.jpg" alt="Aerodynamic Dry Freight Container Body" class="blog-thumb">
+                <div class="blog-date-badge">
+                  <span class="d-block fw-bold fs-6">02</span>
+                  <span class="small text-uppercase">Oct 2026</span>
+                </div>
+              </div>
+              <div class="blog-body">
+                <span class="blog-category">Vehicle Engineering</span>
+                <h3 class="blog-title"><a href="blog-details.html?id=3">Aerodynamic Dry Container Engineering: Slashing Highway Drag by 12%</a></h3>
+                <p class="blog-excerpt">CFD wind-tunnel modeling results on corner chamfers, side vortex skirts, and roof deflectors on 32-ft and 40-ft multi-axle freight containers.</p>
+                <div class="blog-meta-footer">
+                  <span><i class="fas fa-user-circle me-1"></i> Aerodynamics Lab</span>
+                  <a href="blog-details.html?id=3" class="fw-bold text-orange">Read Article <i class="fas fa-angle-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALL TO °CTION & QUICK QUOTE SECTION -->
+    <section class="py-5" style="background: linear-gradient(135deg, var(--charcoal) 0%, var(--primary-steel) 100%); color: var(--white);">
+      <div class="container py-lg-4 text-center">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <span class="badge-certified mb-3 d-inline-block">Commercial Vehicle Engineering</span>
+            <h2 class="display-6 fw-bold text-white mb-3">Ready to Build Your Custom Commercial Truck Body?</h2>
+            <p class="lead text-light opacity-90 mb-4">
+              Speak directly with our chief fabrication engineers. We review your chassis specifications, payload targets, and operational routes to formulate an optimal manufacturing quotation.
+            </p>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+              <a href="shop.html?category=custom&openQuote=true" class="btn btn-industrial btn-lg">
+                <i class="fas fa-calculator me-2"></i> Request Technical Quotation in Shop
+              </a>
+              <a href="tel:+919876543210" class="btn btn-outline-light-industrial btn-lg">
+                <i class="fas fa-phone me-2"></i> Call +91 98765 43210
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- INDUSTRIAL FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Col 1: About -->
+        <div class="col-lg-4 col-md-6 footer-widget">
+          <a href="index.html" class="footer-brand d-inline-block mb-3 text-decoration-none" title="Truck Body Builder - Back to Home">
+            <div class="footer-logo-wrap">
+              <img src="assets/images/logo/logo-main.svg" alt="Truck Body Builder - Heavy Commercial Vehicle Fabrication" class="footer-logo-img">
+            </div>
+          </a>
+          <p class="text-muted small mb-3">
+            Heavy commercial vehicle fabrication and industrial truck body builder. Certified by ARAI, conforming to CMVR specifications, and delivering durable body engineering across India and export markets.
+          </p>
+          <div class="badge-certified d-inline-block mb-3">
+            <i class="fas fa-award me-1"></i> ISO 9001:2015 Registered Unit
+          </div>
+          <div class="social-links">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Twitter X"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="col-lg-2 col-md-6 footer-widget">
+          <h5 class="text-white">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fas fa-angle-right"></i> Home (General)</a></li>
+            <li><a href="home-2.html"><i class="fas fa-angle-right"></i> Home (Fabrication)</a></li>
+            <li><a href="about.html"><i class="fas fa-angle-right"></i> About Us</a></li>
+            <li><a href="services.html"><i class="fas fa-angle-right"></i> Fabrication Services</a></li>
+            <li><a href="service-details.html"><i class="fas fa-angle-right"></i> Service Details</a></li>
+            <li><a href="gallery.html"><i class="fas fa-angle-right"></i> Project Gallery</a></li>
+            <li><a href="blog.html"><i class="fas fa-angle-right"></i> Technical Blog</a></li>
+            <li><a href="shop.html"><i class="fas fa-angle-right"></i> Hardware Shop</a></li>
+            <li><a href="cart.html"><i class="fas fa-angle-right"></i> Shopping Cart</a></li>
+            <li><a href="contact.html"><i class="fas fa-angle-right"></i> Contact & Quote</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Services & Capabilities -->
+        <div class="col-lg-2 col-md-6 footer-widget">
+          <h5 class="text-white">Our Services</h5>
+          <ul class="footer-links">
+            <li><a href="services.html"><i class="fas fa-angle-right"></i> Heavy Fabrication</a></li>
+            <li><a href="services.html"><i class="fas fa-angle-right"></i> Custom Body Design</a></li>
+            <li><a href="services.html"><i class="fas fa-angle-right"></i> Structural Welding</a></li>
+            <li><a href="services.html"><i class="fas fa-angle-right"></i> Industrial Painting</a></li>
+            <li><a href="services.html"><i class="fas fa-angle-right"></i> Accident Repair</a></li>
+            <li><a href="service-details.html"><i class="fas fa-angle-right"></i> Testing & Certification</a></li>
+            <li><a href="gallery.html"><i class="fas fa-angle-right"></i> Project Gallery</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact & Workshop -->
+        <div class="col-lg-4 col-md-6 footer-widget">
+          <h5 class="text-white">Plant & Head Office</h5>
+          <div class="footer-contact-item">
+            <a href="contact.html" class="footer-contact-icon text-decoration-none" title="View Plant & Head Office Location"><i class="fas fa-map-marker-alt"></i></a>
+            <div>
+              <strong>Industrial Works:</strong><br>
+              Plot 42-48, Sector 9, Heavy Engineering Industrial Zone, Near Automobile Hub, Chennai / Pune Highway, India.
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <a href="tel:+919876543210" class="footer-contact-icon text-decoration-none" title="Call Technical Hotline"><i class="fas fa-phone"></i></a>
+            <div>
+              <strong>Technical Hotline:</strong><br>
+              <a href="tel:+919876543210" class="text-white">+91 98765 43210</a> / <a href="tel:18004198782" class="text-white">1800-419-8782</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <a href="mailto:fabrication@truckbodybuilder.com" class="footer-contact-icon text-decoration-none" title="Email Quotation Desk"><i class="fas fa-envelope"></i></a>
+            <div>
+              <strong>Quotation Desk:</strong><br>
+              <a href="mailto:fabrication@truckbodybuilder.com" class="text-white">fabrication@truckbodybuilder.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Copyright Bar -->
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+            &copy; 2026 Truck Body Builder & Commercial Vehicle Fabrication Works. All rights reserved.
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <div class="footer-bottom-links">
+              <a href="about.html">Privacy Policy</a>
+              <a href="services.html">Terms of Manufacturing</a>
+              <a href="services.html">Site Index</a>
+              <a href="#" onclick="window.replayLiquidChromeReveal(); return false;" class="text-orange" title="Replay Liquid Chrome 3D Logo Reveal"><i class="fas fa-play-circle me-1"></i> Replay Intro</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button id="backToTopBtn" class="back-to-top" title="Back to top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Modular Scripts -->
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/liquid-chrome.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/gallery.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/premium-motion.js" defer></script>
+</body>
+</html>

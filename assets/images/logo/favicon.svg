@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <defs>
+    <linearGradient id="favChrome" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="50%" stop-color="#94A3B8" />
+      <stop offset="100%" stop-color="#FFFFFF" />
+    </linearGradient>
+    <linearGradient id="favSteel" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#243447" />
+      <stop offset="100%" stop-color="#0B1117" />
+    </linearGradient>
+    <linearGradient id="favOrange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFA866" />
+      <stop offset="60%" stop-color="#F07824" />
+      <stop offset="100%" stop-color="#C24F00" />
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="44" height="44" rx="10" fill="url(#favSteel)" stroke="url(#favChrome)" stroke-width="1.8" />
+  <rect x="4.5" y="4.5" width="39" height="39" rx="8" fill="none" stroke="url(#favOrange)" stroke-width="1.2" opacity="0.9" />
+  <g transform="translate(4, 7) scale(0.72)">
+    <path d="M 2 41 L 53 41" stroke="url(#favOrange)" stroke-width="3" stroke-linecap="round" />
+    <!-- Tipper Box -->
+    <path d="M 4 12 L 33 12 L 33 37 L 4 37 Z" fill="url(#favChrome)" />
+    <line x1="13" y1="14" x2="13" y2="35" stroke="#17232F" stroke-width="1.8" />
+    <line x1="23" y1="14" x2="23" y2="35" stroke="#17232F" stroke-width="1.8" />
+    <!-- Cab -->
+    <path d="M 35 17 L 44 17 L 51 26 L 51 37 L 35 37 Z" fill="url(#favChrome)" />
+    <path d="M 42 14 L 52 22" stroke="url(#favOrange)" stroke-width="2.2" stroke-linecap="round" />
+    <polygon points="37,20 43,20 48,26 37,26" fill="#17232F" />
+    <!-- Wheels -->
+    <circle cx="13" cy="38" r="6" fill="#0B1117" stroke="url(#favChrome)" stroke-width="2" />
+    <circle cx="13" cy="38" r="2.5" fill="url(#favOrange)" />
+    <circle cx="25" cy="38" r="6" fill="#0B1117" stroke="url(#favChrome)" stroke-width="2" />
+    <circle cx="25" cy="38" r="2.5" fill="url(#favOrange)" />
+    <circle cx="45" cy="38" r="6" fill="#0B1117" stroke="url(#favChrome)" stroke-width="2" />
+    <circle cx="45" cy="38" r="2.5" fill="url(#favOrange)" />
+  </g>
+</svg>

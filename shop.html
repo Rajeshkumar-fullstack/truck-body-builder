@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Truck Body Accessories & Parts Shop | Truck Body Builder</title>
+  <meta name="description" content="Shop factory-direct commercial truck body accessories, hydraulic tipping equipment, chassis components, cargo lashing hardware, and request custom truck body quotes.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo/favicon.svg">
+  <link rel="alternate icon" href="assets/images/logo/logo-compact.svg">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/premium-motion.css">
+
+  <style>
+    .shop-filter-btn {
+      border: 1px solid var(--border-color);
+      background-color: var(--card-bg);
+      color: var(--body-text);
+      padding: 8px 18px;
+      border-radius: 30px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      transition: all var(--transition-fast);
+      cursor: pointer;
+    }
+    .shop-filter-btn:hover,
+    .shop-filter-btn.active {
+      background-color: var(--industrial-orange);
+      color: var(--white);
+      border-color: var(--industrial-orange);
+    }
+    .product-price-box {
+      font-family: var(--font-heading);
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--primary-steel);
+    }
+    .product-price-sub {
+      font-size: 0.75rem;
+      color: var(--muted-text);
+      font-weight: normal;
+    }
+    .product-spec-list {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 12px;
+      font-size: 0.8rem;
+    }
+    .product-spec-list li {
+      padding: 2px 0;
+      color: var(--body-text);
+    }
+    .product-spec-list li i {
+      color: var(--industrial-orange);
+      margin-right: 6px;
+      font-size: 0.75rem;
+    }
+    .shop-card-qty {
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      background: var(--card-bg);
+    }
+    .card-qty-btn {
+      background: var(--light-bg);
+      border: none;
+      padding: 6px 12px;
+      font-weight: bold;
+      cursor: pointer;
+      color: var(--primary-steel);
+      transition: background-color var(--transition-fast);
+    }
+    .card-qty-btn:hover {
+      background: var(--border-color);
+    }
+    .product-qty-input {
+      width: 42px;
+      text-align: center;
+      border: none;
+      font-weight: 700;
+      background: transparent;
+      color: var(--primary-steel);
+    }
+    [data-theme="dark"] .shop-filter-btn {
+      background-color: var(--secondary-steel-blue);
+      border-color: #273646;
+      color: #CBD5E1;
+    }
+    [data-theme="dark"] .shop-filter-btn.active {
+      background-color: var(--industrial-orange);
+      color: #FFFFFF;
+      border-color: var(--industrial-orange);
+    }
+    [data-theme="dark"] .product-price-box {
+      color: #F1F5F9;
+    }
+    [data-theme="dark"] .card-qty-btn {
+      background: #1b2633;
+      color: #F1F5F9;
+    }
+    [data-theme="dark"] .card-qty-btn:hover {
+      background: #273646;
+    }
+    [data-theme="dark"] .product-qty-input {
+      color: #F1F5F9;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Main Navigation Header -->
+  <header class="site-header" id="siteHeader">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container navbar-container">
+        <!-- Brand Logo (Left) -->
+        <a class="navbar-brand navbar-brand-industrial" href="index.html" aria-label="Truck Body Builder Homepage">
+          <div class="brand-logo-wrap">
+            <img src="assets/images/logo/logo-main.svg" alt="Truck Body Builder - Commercial Vehicle Fabrication" class="brand-logo-main">
+            <div class="brand-logo-sheen"></div>
+          </div>
+        </a>
+
+        <!-- Mobile Controls (Dark/Light Mode, RTL, Cart & Hamburger) -->
+        <div class="mobile-nav-controls d-lg-none">
+          <button class="header-icon-btn theme-toggle-btn" type="button" title="Toggle Dark/Light Mode" aria-label="Toggle Theme">
+            <i class="fas fa-moon"></i>
+          </button>
+          <button class="header-icon-btn rtl-toggle-btn" type="button" title="Toggle RTL/LTR" aria-label="Toggle RTL">
+            <span class="rtl-text">RTL</span>
+          </button>
+          <!-- Cart Icon with Live Badge (Mobile) -->
+          <a href="cart.html" class="header-icon-btn cart-icon-btn position-relative" title="View Shopping Cart" aria-label="Shopping Cart">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count-badge badge bg-warning text-dark position-absolute top-0 start-100 translate-middle rounded-pill" style="display: none; font-size: 0.65rem; padding: 0.25em 0.5em;">0</span>
+          </a>
+          <button class="navbar-toggler" type="button" id="navbarDrawerToggler" aria-label="Toggle navigation drawer" aria-expanded="false" aria-controls="navbarDrawer">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <!-- Navigation Drawer & Menu (Centered on Desktop, Slide-in Drawer on Mobile) -->
+        <div class="navbar-drawer" id="navbarDrawer">
+          <!-- Mobile Drawer Header -->
+          <div class="drawer-header d-lg-none">
+            <div class="drawer-brand">
+              <a href="index.html" class="drawer-brand-link text-decoration-none" aria-label="Truck Body Builder Homepage">
+                <img src="assets/images/logo/logo-main.svg" alt="Truck Body Builder" class="drawer-logo-img">
+              </a>
+            </div>
+            <button type="button" class="drawer-close-btn" id="navbarDrawerClose" aria-label="Close navigation drawer">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+
+          <!-- Centered Navigation Links on Desktop -->
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Home
+              </a>
+              <ul class="dropdown-menu dropdown-menu-industrial">
+                <li><a class="dropdown-item" href="index.html"><i class="fas fa-industry"></i> Home 1</a></li>
+                <li><a class="dropdown-item" href="home-2.html"><i class="fas fa-tools"></i> Home 2</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="shop.html">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+
+          <!-- Desktop Header Actions (Right) -->
+          <div class="header-actions">
+            <!-- Theme & RTL Toggles (Desktop only >=992px) -->
+            <button class="header-icon-btn theme-toggle-btn d-none d-lg-inline-flex" type="button" title="Toggle Dark/Light Mode" aria-label="Toggle Theme">
+              <i class="fas fa-moon"></i>
+            </button>
+            <button class="header-icon-btn rtl-toggle-btn d-none d-lg-inline-flex" type="button" title="Toggle RTL/LTR" aria-label="Toggle RTL">
+              <span class="rtl-text">RTL</span>
+            </button>
+
+            <!-- Cart Icon with Live Badge (Desktop) -->
+            <a href="cart.html" class="header-icon-btn cart-icon-btn position-relative d-none d-lg-inline-flex" title="View Shopping Cart" aria-label="Shopping Cart">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-count-badge badge bg-warning text-dark position-absolute top-0 start-100 translate-middle rounded-pill" style="display: none; font-size: 0.65rem; padding: 0.25em 0.5em;">0</span>
+            </a>
+
+            <!-- CTA "Get a Quote" -->
+            <a href="contact.html" class="btn btn-industrial nav-cta-btn">
+              <i class="fas fa-file-invoice"></i> Get a Quote
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Backdrop Overlay (<992px) -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+  <main>
+    <!-- SHOP BREADCRUMB HERO -->
+    <section class="py-5 text-white" style="background: linear-gradient(rgba(23, 35, 47, 0.94), rgba(23, 35, 47, 0.94)), url('assets/images/products/container-body.jpg?v=2') center/cover no-repeat; border-bottom: 4px solid var(--industrial-orange);">
+      <div class="container py-4 text-center">
+        <span class="badge-certified mb-2 d-inline-block">Commercial Vehicle Components & Hardware</span>
+        <h1 class="display-5 fw-bold text-white mb-2">Truck Body Parts & Procurement Shop</h1>
+        <p class="text-light opacity-90 mx-auto mb-0" style="max-width: 720px;">
+          Factory-direct heavy truck accessories, multi-stage hydraulic hoists, chassis spares, cargo tie-downs, and custom truck body manufacturing quotations.
+        </p>
+      </div>
+    </section>
+
+    <!-- SHOP CONTENT & CATALOG SECTION -->
+    <section class="py-5" style="background-color: var(--light-bg);">
+      <div class="container py-lg-3">
+
+        <!-- Search, Filter & Sort Controls -->
+        <div class="card p-3 p-md-4 border rounded shadow-sm bg-white mb-4">
+          <div class="row g-3 align-items-center">
+            <!-- Search Input -->
+            <div class="col-lg-5 col-md-6">
+              <div class="input-group">
+                <span class="input-group-text bg-light border-end-0"><i class="fas fa-search text-muted"></i></span>
+                <input type="text" id="shopSearchInput" class="form-control border-start-0" placeholder="Search truck parts, hydraulics, SKU...">
+              </div>
+            </div>
+
+            <!-- Sort Select -->
+            <div class="col-lg-3 col-md-6 ms-auto">
+              <div class="d-flex align-items-center gap-2">
+                <label for="shopSortSelect" class="small text-nowrap fw-bold text-muted">Sort By:</label>
+                <select class="form-select form-select-sm" id="shopSortSelect">
+                  <option value="featured">Featured Components</option>
+                  <option value="price-low">Price: Low to High</option>
+                  <option value="price-high">Price: High to Low</option>
+                  <option value="name">Product Name (A-Z)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category Filter Pills -->
+          <div class="d-flex flex-wrap gap-2 mt-3 pt-3 border-top" id="categoryFilterGroup">
+            <button class="shop-filter-btn active" data-category="all">
+              <i class="fas fa-layer-group me-1"></i> All Products (27)
+            </button>
+            <button class="shop-filter-btn" data-category="Truck Body Accessories">
+              <i class="fas fa-toolbox me-1"></i> Truck Body Accessories
+            </button>
+            <button class="shop-filter-btn" data-category="Truck Chassis Components">
+              <i class="fas fa-car-battery me-1"></i> Truck Chassis Components
+            </button>
+            <button class="shop-filter-btn" data-category="Hydraulic Equipment">
+              <i class="fas fa-oil-can me-1"></i> Hydraulic Equipment
+            </button>
+            <button class="shop-filter-btn" data-category="Truck Body Spare Parts">
+              <i class="fas fa-wrench me-1"></i> Truck Body Spare Parts
+            </button>
+            <button class="shop-filter-btn" data-category="Fabrication Components">
+              <i class="fas fa-cogs me-1"></i> Fabrication Components
+            </button>
+            <button class="shop-filter-btn" data-category="Industrial Vehicle Accessories">
+              <i class="fas fa-shield-alt me-1"></i> Industrial Vehicle Accessories
+            </button>
+            <button class="shop-filter-btn" data-category="Custom Truck Bodies">
+              <i class="fas fa-truck me-1"></i> Custom Truck Bodies (Quote)
+            </button>
+          </div>
+        </div>
+
+        <!-- Dynamic Product Grid Rendered by JS -->
+        <div class="row g-4" id="shopProductGrid">
+          <!-- Loading placeholder -->
+          <div class="col-12 text-center py-5">
+            <div class="spinner-border text-warning" role="status">
+              <span class="visually-hidden">Loading Products...</span>
+            </div>
+            <p class="mt-3 text-muted">Loading commercial vehicle hardware catalog...</p>
+          </div>
+        </div>
+
+        <!-- B2B Procurement Benefits Bar -->
+        <div class="row g-4 mt-5">
+          <div class="col-md-3 col-sm-6">
+            <div class="p-3 bg-white rounded border shadow-sm h-100 text-center">
+              <div class="fs-2 text-orange mb-2" style="color: var(--industrial-orange);"><i class="fas fa-file-invoice-dollar"></i></div>
+              <h6 class="fw-bold mb-1">18% GST Input Credit</h6>
+              <p class="small text-muted mb-0">Official B2B tax invoice with printed GSTIN for complete enterprise tax credit.</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="p-3 bg-white rounded border shadow-sm h-100 text-center">
+              <div class="fs-2 text-orange mb-2" style="color: var(--industrial-orange);"><i class="fas fa-shield-alt"></i></div>
+              <h6 class="fw-bold mb-1">Transit Insured Freight</h6>
+              <p class="small text-muted mb-0">Palletized dispatch via trusted commercial freight lines with live docket tracking.</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="p-3 bg-white rounded border shadow-sm h-100 text-center">
+              <div class="fs-2 text-orange" style="color: var(--industrial-orange);"><i class="fas fa-certificate mb-2"></i></div>
+              <h6 class="fw-bold mb-1">ARAI & CMVR Certified</h6>
+              <p class="small text-muted mb-0">All parts comply with Automotive Industry Standards (AIS) and CMVR specifications.</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="p-3 bg-white rounded border shadow-sm h-100 text-center">
+              <div class="fs-2 text-orange" style="color: var(--industrial-orange);"><i class="fas fa-headset mb-2"></i></div>
+              <h6 class="fw-bold mb-1">Direct Engineering Support</h6>
+              <p class="small text-muted mb-0">Dedicated chassis fitment guidance from certified automotive bodybuilders.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- CUSTOM TRUCK BODY QUOTATION MODAL -->
+    <!-- CUSTOM TRUCK BODY QUOTATION MODAL -->
+  <div class="modal fade" id="customQuoteModal" tabindex="-1" aria-labelledby="customQuoteModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content border-0 shadow-lg">
+        <div class="modal-header bg-dark text-white border-bottom border-warning">
+          <div class="d-flex align-items-center gap-2">
+            <i class="fas fa-truck text-warning fs-4"></i>
+            <h5 class="modal-title fw-bold" id="customQuoteModalLabel">Request Custom Truck Body Fabrication Quote</h5>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        
+        <div id="quoteModalBodyContainer">
+          <form id="customQuoteModalForm" novalidate>
+            <div class="modal-body p-4" style="max-height: 75vh; overflow-y: auto;">
+              <div class="alert alert-light border small mb-3">
+                <i class="fas fa-info-circle text-orange me-1" style="color: var(--industrial-orange);"></i>
+                Provide your fleet chassis details and body requirements. Our design desk will issue a comprehensive 3D CAD proposal and statutory RTO homologation roadmap.
+              </div>
+
+              <div class="row g-3">
+                <!-- 1. Required Truck Body Type -->
+                <div class="col-md-6 form-group-validated">
+                  <label for="quoteBodyType" class="form-label fw-bold small">Required Truck Body Type <span class="text-danger">*</span></label>
+                  <select class="form-select" id="quoteBodyType" required>
+                    <option value="" disabled selected>Select Truck Body Type</option>
+                    <option value="Tipper Body">Heavy Mining Tipper Body (Hardox 450)</option>
+                    <option value="Closed Container Body">Closed Logistics Freight Container</option>
+                    <option value="Refrigerated Reefer Body">Insulated Refrigerated Reefer Body (-25°C)</option>
+                    <option value="Trailer Body">Tri-Axle Skeletal / Flatbed Semi-Trailer</option>
+                    <option value="Liquid Tanker Body">Petroleum &amp; Chemical Road Tanker (SS316L)</option>
+                    <option value="Open Truck Body">Fixed / Dropside Open Cargo Body</option>
+                    <option value="Flatbed Truck Body">Machinery Flatbed Carrier with Winches</option>
+                    <option value="Custom Special Vehicle">Bespoke Defense / Recovery / Municipal Rig</option>
+                  </select>
+                  <div class="custom-field-error" id="quoteBodyTypeError"></div>
+                </div>
+
+                <!-- 2. Chassis Make & Model -->
+                <div class="col-md-6 form-group-validated">
+                  <label for="quoteVehicleModel" class="form-label fw-bold small">Chassis Make &amp; Model <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" id="quoteVehicleModel" required placeholder="e.g. Tata Signa 4825 / Ashok Leyland 3525" maxlength="100">
+                  <div class="custom-field-error" id="quoteVehicleModelError"></div>
+                </div>
+
+                <!-- 3. Fleet / Vehicle Quantity -->
+                <div class="col-md-6 form-group-validated">
+                  <label for="quoteQuantity" class="form-label fw-bold small">Fleet / Vehicle Quantity <span class="text-danger">*</span></label>
+                  <input type="number" class="form-control" id="quoteQuantity" min="1" max="10000" step="1" placeholder="e.g. 5" required>
+                  <div class="custom-field-error" id="quoteQuantityError"></div>
+                </div>
+
+                <!-- 4. Authorized Contact Name -->
+                <div class="col-md-6 form-group-validated">
+                  <label for="quoteContactName" class="form-label fw-bold small">Authorized Contact Name <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" id="quoteContactName" required placeholder="e.g. Rajesh Kumar" maxlength="60">
+                  <div class="custom-field-error" id="quoteContactNameError"></div>
+                </div>
+
+                <!-- 5. Mobile Number (10 Digits) -->
+                <div class="col-md-6 form-group-validated">
+                  <label for="quoteContactMobile" class="form-label fw-bold small">Mobile Number (10 Digits) <span class="text-danger">*</span></label>
+                  <div class="input-group" id="quoteMobileGroup">
+                    <span class="input-group-text bg-light fw-bold text-dark border-end-0">+91</span>
+                    <input type="tel" class="form-control border-start-0" id="quoteContactMobile" placeholder="9876543210" maxlength="10" inputmode="numeric" required>
+                  </div>
+                  <div class="custom-field-error" id="quoteContactMobileError"></div>
+                </div>
+
+                <!-- 6. Email Address -->
+                <div class="col-md-6 form-group-validated">
+                  <label for="quoteContactEmail" class="form-label fw-bold small">Email Address <span class="text-danger">*</span></label>
+                  <input type="email" class="form-control" id="quoteContactEmail" required placeholder="e.g. rajesh@gmail.com">
+                  <div class="custom-field-error" id="quoteContactEmailError"></div>
+                </div>
+
+                <!-- 7. Payload & Operating Specifications -->
+                <div class="col-12 form-group-validated">
+                  <div class="d-flex justify-content-between align-items-center mb-1">
+                    <label for="quoteDetails" class="form-label fw-bold small mb-0">Payload &amp; Operating Specifications (Optional)</label>
+                    <span class="badge bg-light text-muted border small font-monospace" id="quoteDetailsCharCount">0 / 1000 characters</span>
+                  </div>
+                  <textarea class="form-control" id="quoteDetails" rows="3" maxlength="1000" placeholder="Target payload volume, floor wear plate requirements, operating route conditions..."></textarea>
+                  <div class="custom-field-error" id="quoteDetailsError"></div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer bg-light d-flex justify-content-between align-items-center">
+              <span class="small text-muted"><i class="fas fa-shield-alt text-orange me-1"></i> 100% Secure &amp; Confidential B2B Quote</span>
+              <div class="d-flex gap-2">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="submit" class="btn btn-industrial fw-bold" id="quoteSubmitBtn">
+                  <i class="fas fa-paper-plane me-1"></i> Submit Quotation Request
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INDUSTRIAL FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6 footer-widget">
+          <a href="index.html" class="footer-brand d-inline-block mb-3 text-decoration-none" title="Truck Body Builder - Back to Home">
+            <div class="footer-logo-wrap">
+              <img src="assets/images/logo/logo-main.svg" alt="Truck Body Builder - Heavy Commercial Vehicle Fabrication" class="footer-logo-img">
+            </div>
+          </a>
+          <p class="text-muted small mb-3">
+            Heavy commercial vehicle fabrication and industrial truck body builder. Certified by ARAI, conforming to CMVR specifications, and delivering durable body engineering across India and export markets.
+          </p>
+          <div class="badge-certified d-inline-block mb-3">
+            <i class="fas fa-award me-1"></i> ISO 9001:2015 Registered Unit
+          </div>
+          <div class="social-links">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Twitter X"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="col-lg-2 col-md-6 footer-widget">
+          <h5 class="text-white">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fas fa-angle-right"></i> Home (General)</a></li>
+            <li><a href="home-2.html"><i class="fas fa-angle-right"></i> Home (Fabrication)</a></li>
+            <li><a href="about.html"><i class="fas fa-angle-right"></i> About Us</a></li>
+            <li><a href="services.html"><i class="fas fa-angle-right"></i> Fabrication Services</a></li>
+            <li><a href="service-details.html"><i class="fas fa-angle-right"></i> Service Details</a></li>
+            <li><a href="gallery.html"><i class="fas fa-angle-right"></i> Project Gallery</a></li>
+            <li><a href="blog.html"><i class="fas fa-angle-right"></i> Technical Blog</a></li>
+            <li><a href="shop.html"><i class="fas fa-angle-right"></i> Hardware Shop</a></li>
+            <li><a href="cart.html"><i class="fas fa-angle-right"></i> Shopping Cart</a></li>
+            <li><a href="contact.html"><i class="fas fa-angle-right"></i> Contact & Quote</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Services & Capabilities -->
+        <div class="col-lg-2 col-md-6 footer-widget">
+          <h5 class="text-white">Our Services</h5>
+          <ul class="footer-links">
+            <li><a href="services.html"><i class="fas fa-angle-right"></i> Heavy Fabrication</a></li>
+            <li><a href="services.html"><i class="fas fa-angle-right"></i> Custom Body Design</a></li>
+            <li><a href="services.html"><i class="fas fa-angle-right"></i> Structural Welding</a></li>
+            <li><a href="services.html"><i class="fas fa-angle-right"></i> Industrial Painting</a></li>
+            <li><a href="services.html"><i class="fas fa-angle-right"></i> Accident Repair</a></li>
+            <li><a href="service-details.html"><i class="fas fa-angle-right"></i> Testing & Certification</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-6 footer-widget">
+          <h5 class="text-white">Plant & Head Office</h5>
+          <div class="footer-contact-item">
+            <a href="contact.html" class="footer-contact-icon text-decoration-none" title="View Plant & Head Office Location"><i class="fas fa-map-marker-alt"></i></a>
+            <div>
+              <strong>Industrial Works:</strong><br>
+              Plot 42-48, Sector 9, Heavy Engineering Industrial Zone, Near Automobile Hub, Chennai / Pune Highway, India.
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <a href="tel:+919876543210" class="footer-contact-icon text-decoration-none" title="Call Technical Hotline"><i class="fas fa-phone"></i></a>
+            <div>
+              <strong>Technical Hotline:</strong><br>
+              <a href="tel:+919876543210" class="text-white">+91 98765 43210</a> / <a href="tel:18004198782" class="text-white">1800-419-8782</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <a href="mailto:fabrication@truckbodybuilder.com" class="footer-contact-icon text-decoration-none" title="Email Quotation Desk"><i class="fas fa-envelope"></i></a>
+            <div>
+              <strong>Quotation Desk:</strong><br>
+              <a href="mailto:fabrication@truckbodybuilder.com" class="text-white">fabrication@truckbodybuilder.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+            &copy; 2026 Truck Body Builder & Commercial Vehicle Fabrication Works. All rights reserved.
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <div class="footer-bottom-links">
+              <a href="about.html">Privacy Policy</a>
+              <a href="services.html">Terms of Manufacturing</a>
+              <a href="services.html">Site Index</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTopBtn" class="back-to-top" title="Back to top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/gallery.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/premium-motion.js" defer></script>
+
+  <!-- Shop Filtering & Dynamic Product Rendering Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const grid = document.getElementById('shopProductGrid');
+      const searchInput = document.getElementById('shopSearchInput');
+      const sortSelect = document.getElementById('shopSortSelect');
+      const filterBtns = document.querySelectorAll('.shop-filter-btn');
+
+      let currentCategory = 'all';
+      let currentSearch = '';
+      let currentSort = 'featured';
+
+      // Update All Products count badge dynamically
+      if (window.TruckCart && window.TruckCart.catalog) {
+        const allBtn = document.querySelector('.shop-filter-btn[data-category="all"]');
+        if (allBtn) {
+          allBtn.innerHTML = `<i class="fas fa-layer-group me-1"></i> All Products (${window.TruckCart.catalog.length})`;
+        }
+      }
+
+      window.resetShopFilters = function() {
+        if (searchInput) searchInput.value = '';
+        currentSearch = '';
+        currentCategory = 'all';
+        filterBtns.forEach(btn => {
+          if (btn.getAttribute('data-category') === 'all') {
+            btn.classList.add('active');
+          } else {
+            btn.classList.remove('active');
+          }
+        });
+        renderProducts();
+      };
+
+      function renderProducts() {
+        if (!grid || !window.TruckCart || !window.TruckCart.catalog) return;
+        const catalog = window.TruckCart.catalog;
+
+        const q = (currentSearch || '').trim().toLowerCase();
+        const tokens = q ? q.split(/\s+/).filter(Boolean) : [];
+
+        const matchesItem = (item) => {
+          if (tokens.length === 0) return true;
+          const fullSearchText = [
+            item.name || '',
+            item.category || '',
+            item.sku || '',
+            item.description || '',
+            (item.specs || []).join(' '),
+            item.badge || ''
+          ].join(' ').toLowerCase();
+          return tokens.every(token => fullSearchText.includes(token));
+        };
+
+        const scoreItem = (item) => {
+          if (tokens.length === 0) return 0;
+          let score = 0;
+          const nameL = (item.name || '').toLowerCase();
+          const skuL = (item.sku || '').toLowerCase();
+          const catL = (item.category || '').toLowerCase();
+          const descL = (item.description || '').toLowerCase();
+
+          if (q && nameL.includes(q)) score += 30;
+          tokens.forEach(tok => {
+            if (nameL.includes(tok)) score += 12;
+            if (skuL.includes(tok)) score += 10;
+            if (catL.includes(tok)) score += 6;
+            if (descL.includes(tok)) score += 3;
+          });
+          return score;
+        };
+
+        // Filter by category
+        let list = catalog.filter(item => {
+          if (currentCategory === 'all') return true;
+          return item.category === currentCategory;
+        }).filter(matchesItem);
+
+        // Smart Category Fallback:
+        // If search produces 0 results inside a restricted category, but matching products exist in the catalog,
+        // automatically fallback to all products so the user is never stuck with an empty screen.
+        if (list.length === 0 && tokens.length > 0 && currentCategory !== 'all') {
+          const globalMatches = catalog.filter(matchesItem);
+          if (globalMatches.length > 0) {
+            currentCategory = 'all';
+            list = globalMatches;
+            filterBtns.forEach(btn => {
+              if (btn.getAttribute('data-category') === 'all') {
+                btn.classList.add('active');
+              } else {
+                btn.classList.remove('active');
+              }
+            });
+          }
+        }
+
+        // Sort results
+        if (currentSort === 'price-low') {
+          list.sort((a, b) => (a.price || 9999999) - (b.price || 9999999));
+        } else if (currentSort === 'price-high') {
+          list.sort((a, b) => (b.price || 0) - (a.price || 0));
+        } else if (currentSort === 'name') {
+          list.sort((a, b) => a.name.localeCompare(b.name));
+        } else if (tokens.length > 0) {
+          // When searching under default/featured sort, rank higher scoring items first
+          list.sort((a, b) => scoreItem(b) - scoreItem(a));
+        }
+
+        if (list.length === 0) {
+          grid.innerHTML = `
+            <div class="col-12 text-center py-5">
+              <div class="p-5 bg-white rounded border shadow-sm mx-auto" style="max-width: 520px;">
+                <i class="fas fa-search fs-1 text-muted mb-3"></i>
+                <h4 class="h5 fw-bold mb-2">No Matching Truck Products Found</h4>
+                <p class="text-muted small mb-3">We could not find products matching "<strong>${escapeHtml(currentSearch)}</strong>". Try checking another category or reset filters.</p>
+                <button type="button" class="btn btn-sm btn-industrial" onclick="window.resetShopFilters()">
+                  <i class="fas fa-undo me-1"></i> Reset Search Filters
+                </button>
+              </div>
+            </div>
+          `;
+          return;
+        }
+
+        grid.innerHTML = list.map(item => {
+          const isFixed = item.priceType === 'fixed' && typeof item.price === 'number';
+          const priceDisplay = isFixed 
+            ? `<div class="product-price-box">${TruckCart.formatCurrency(item.price)} <span class="product-price-sub">+18% GST</span></div>`
+            : `<div class="product-price-box text-orange" style="color: var(--industrial-orange); font-size: 1.15rem;">Price on Request <span class="product-price-sub d-block text-muted">Custom Fabrication Quote</span></div>`;
+
+          const actionHtml = isFixed ? `
+            <div class="d-flex align-items-center gap-2 mt-auto pt-3 border-top">
+              <div class="shop-card-qty flex-shrink-0">
+                <button type="button" class="card-qty-btn qty-minus" aria-label="Decrease quantity">-</button>
+                <input type="text" class="product-qty-input" value="1" readonly aria-label="Quantity">
+                <button type="button" class="card-qty-btn qty-plus" aria-label="Increase quantity">+</button>
+              </div>
+              <button type="button" class="btn btn-industrial flex-grow-1" data-add-to-cart="${item.id}">
+                <i class="fas fa-cart-plus me-1"></i> Add to Cart
+              </button>
+            </div>
+          ` : `
+            <div class="d-flex align-items-center gap-2 mt-auto pt-3 border-top flex-wrap">
+              <div class="shop-card-qty flex-shrink-0">
+                <button type="button" class="card-qty-btn qty-minus" aria-label="Decrease quantity">-</button>
+                <input type="text" class="product-qty-input" value="1" readonly aria-label="Quantity">
+                <button type="button" class="card-qty-btn qty-plus" aria-label="Increase quantity">+</button>
+              </div>
+              <button type="button" class="btn btn-outline-steel flex-grow-1" data-add-to-cart="${item.id}" title="Add to cart">
+                <i class="fas fa-cart-plus me-1"></i> Add to Cart
+              </button>
+              <button type="button" class="btn btn-industrial flex-shrink-0 px-3" data-request-quote="${escapeHtml(item.name)}" title="Submit direct quote request">
+                <i class="fas fa-paper-plane me-1"></i> Quote
+              </button>
+            </div>
+          `;
+
+          const specsHtml = item.specs ? `
+            <ul class="product-spec-list">
+              ${item.specs.map(s => `<li><i class="fas fa-angle-right"></i>${s}</li>`).join('')}
+            </ul>
+          ` : '';
+
+          return `
+            <div class="col-md-6 col-lg-4 product-item">
+              <div class="product-card h-100 d-flex flex-column border rounded shadow-sm bg-white overflow-hidden">
+                <div class="product-thumb-wrapper position-relative" style="height: 220px; overflow: hidden; background: #17232F;">
+                  <span class="product-tag">${item.badge || item.category}</span>
+                  <img src="${item.image}" alt="${item.name}" class="product-thumb w-100 h-100" style="object-fit: cover; transition: transform var(--transition-normal);" loading="lazy">
+                </div>
+                <div class="product-body p-4 d-flex flex-column flex-grow-1">
+                  <div class="d-flex justify-content-between align-items-start mb-2">
+                    <span class="badge bg-light text-dark border font-monospace small">${item.sku}</span>
+                    <span class="small fw-semibold ${isFixed ? 'text-success' : 'text-primary'}">
+                      <i class="fas fa-circle me-1" style="font-size: 0.55rem;"></i>${item.stockStatus}
+                    </span>
+                  </div>
+                  <h3 class="product-title fs-5 fw-bold mb-2">${item.name}</h3>
+                  <p class="product-desc small text-muted mb-3">${item.description}</p>
+                  
+                  ${specsHtml}
+                  
+                  <div class="my-2">
+                    ${priceDisplay}
+                  </div>
+
+                  ${actionHtml}
+                </div>
+              </div>
+            </div>
+          `;
+        }).join('');
+      }
+
+      function escapeHtml(str) {
+        if (!str) return '';
+        return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+      }
+
+      // Category click
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          currentCategory = btn.getAttribute('data-category');
+          renderProducts();
+        });
+      });
+
+      // Search input
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          currentSearch = e.target.value;
+          renderProducts();
+        });
+      }
+
+      // Sort select
+      if (sortSelect) {
+        sortSelect.addEventListener('change', (e) => {
+          currentSort = e.target.value;
+          renderProducts();
+        });
+      }
+
+      // Handle deep-link parameters (?category=..., ?search=..., ?openQuote=true)
+      const urlParams = new URLSearchParams(window.location.search);
+      const catParam = urlParams.get('category') || urlParams.get('filter');
+      const searchParam = urlParams.get('search') || urlParams.get('product');
+      const openQuoteParam = urlParams.get('openQuote') || (urlParams.get('spec') === 'custom-build');
+
+      if (searchParam) {
+        const cleanSearch = searchParam.replace(/-/g, ' ').replace(/\+/g, ' ').trim();
+        if (searchInput) {
+          searchInput.value = cleanSearch;
+        }
+        currentSearch = cleanSearch;
+        currentCategory = 'all';
+        filterBtns.forEach(b => {
+          if (b.getAttribute('data-category') === 'all') {
+            b.classList.add('active');
+          } else {
+            b.classList.remove('active');
+          }
+        });
+      }
+
+      if (catParam) {
+        let matchingBtn = document.querySelector(`.shop-filter-btn[data-category="${catParam}"]`);
+        if (!matchingBtn) {
+          filterBtns.forEach(btn => {
+            const btnCat = (btn.getAttribute('data-category') || '').toLowerCase();
+            if (btnCat.includes(catParam.toLowerCase())) {
+              matchingBtn = btn;
+            }
+          });
+        }
+        if (matchingBtn) {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          matchingBtn.classList.add('active');
+          currentCategory = matchingBtn.getAttribute('data-category');
+        }
+      }
+
+      // Initial Render with parsed parameters
+      renderProducts();
+
+      if (openQuoteParam) {
+        setTimeout(() => {
+          const modalEl = document.getElementById('customQuoteModal');
+          if (modalEl && typeof bootstrap !== 'undefined' && bootstrap.Modal) {
+            const chassisParam = urlParams.get('chassis');
+            if (chassisParam) {
+              const chassisInp = document.getElementById('quoteVehicleModel');
+              if (chassisInp) chassisInp.value = chassisParam;
+            }
+            if (searchParam) {
+              const select = document.getElementById('quoteBodyType');
+              if (select) {
+                const sLower = searchParam.toLowerCase();
+                for (let i = 0; i < select.options.length; i++) {
+                  if (select.options[i].text.toLowerCase().includes(sLower) || select.options[i].value.toLowerCase().includes(sLower)) {
+                    select.selectedIndex = i;
+                    break;
+                  }
+                }
+              }
+            }
+            const modal = bootstrap.Modal.getOrCreateInstance(modalEl);
+            modal.show();
+          }
+        }, 400);
+      }
+    });
+  </script>
+</body>
+</html>

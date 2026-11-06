@@ -1,0 +1,760 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Details & Technical Specifications | Truck Body Builder</title>
+  <meta name="description" content="In-depth service specifications, manufacturing methodology, quality assurance checkpoints, engineering FAQs, and pricing estimation criteria.">
+  
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo/favicon.svg">
+  <link rel="alternate icon" href="assets/images/logo/logo-compact.svg">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/premium-motion.css">
+</head>
+<body>
+
+  <!-- Main Navigation Header -->
+  <header class="site-header" id="siteHeader">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container navbar-container">
+        <!-- Brand Logo (Left) -->
+        <a class="navbar-brand navbar-brand-industrial" href="index.html" aria-label="Truck Body Builder Homepage">
+          <div class="brand-logo-wrap">
+            <img src="assets/images/logo/logo-main.svg" alt="Truck Body Builder - Commercial Vehicle Fabrication" class="brand-logo-main">
+            <div class="brand-logo-sheen"></div>
+          </div>
+        </a>
+
+        <!-- Mobile Controls (Dark/Light Mode, RTL & Hamburger) -->
+        <div class="mobile-nav-controls d-lg-none">
+          <button class="header-icon-btn theme-toggle-btn" type="button" title="Toggle Dark/Light Mode" aria-label="Toggle Theme">
+            <i class="fas fa-moon"></i>
+          </button>
+          <button class="header-icon-btn rtl-toggle-btn" type="button" title="Toggle RTL/LTR" aria-label="Toggle RTL">
+            <span class="rtl-text">RTL</span>
+          </button>
+          <!-- Cart Icon with Live Badge (Mobile) -->
+          <a href="cart.html" class="header-icon-btn cart-icon-btn position-relative" title="View Shopping Cart" aria-label="Shopping Cart">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count-badge badge bg-warning text-dark position-absolute top-0 start-100 translate-middle rounded-pill" style="display: none; font-size: 0.65rem; padding: 0.25em 0.5em;">0</span>
+          </a>
+          <button class="navbar-toggler" type="button" id="navbarDrawerToggler" aria-label="Toggle navigation drawer" aria-expanded="false" aria-controls="navbarDrawer">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <!-- Navigation Drawer & Menu (Centered on Desktop, Slide-in Drawer on Mobile) -->
+        <div class="navbar-drawer" id="navbarDrawer">
+          <!-- Mobile Drawer Header -->
+          <div class="drawer-header d-lg-none">
+            <div class="drawer-brand">
+              <a href="index.html" class="drawer-brand-link text-decoration-none" aria-label="Truck Body Builder Homepage">
+                <img src="assets/images/logo/logo-main.svg" alt="Truck Body Builder" class="drawer-logo-img">
+              </a>
+            </div>
+            <button type="button" class="drawer-close-btn" id="navbarDrawerClose" aria-label="Close navigation drawer">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+
+          <!-- Centered Navigation Links on Desktop -->
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Home
+              </a>
+              <ul class="dropdown-menu dropdown-menu-industrial">
+                <li><a class="dropdown-item" href="index.html"><i class="fas fa-industry"></i> Home 1</a></li>
+                <li><a class="dropdown-item" href="home-2.html"><i class="fas fa-tools"></i> Home 2</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="shop.html">Shop</a>
+            </li>
+<li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+
+          <!-- Desktop & Mobile Header Actions (Right) -->
+          <div class="header-actions">
+            <!-- Theme & RTL Toggles (Desktop only >=992px) -->
+            <button class="header-icon-btn theme-toggle-btn d-none d-lg-inline-flex" type="button" title="Toggle Dark/Light Mode" aria-label="Toggle Theme">
+              <i class="fas fa-moon"></i>
+            </button>
+            <button class="header-icon-btn rtl-toggle-btn d-none d-lg-inline-flex" type="button" title="Toggle RTL/LTR" aria-label="Toggle RTL">
+              <span class="rtl-text">RTL</span>
+            </button>
+
+            <!-- CTA "Get a Quote" -->
+            <!-- Cart Icon with Live Badge (Desktop) -->
+            <a href="cart.html" class="header-icon-btn cart-icon-btn position-relative d-none d-lg-inline-flex" title="View Shopping Cart" aria-label="Shopping Cart">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-count-badge badge bg-warning text-dark position-absolute top-0 start-100 translate-middle rounded-pill" style="display: none; font-size: 0.65rem; padding: 0.25em 0.5em;">0</span>
+            </a>
+<a href="contact.html" class="btn btn-industrial nav-cta-btn">
+              <i class="fas fa-file-invoice"></i> Get a Quote
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Backdrop Overlay (<992px) -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+  <main>
+    <!-- BREADCRUMB HERO -->
+    <section class="py-5 text-white" style="background: linear-gradient(rgba(23, 35, 47, 0.94), rgba(23, 35, 47, 0.94)), url('assets/images/services/service-fabrication.jpg') center/cover no-repeat; border-bottom: 4px solid var(--industrial-orange);">
+      <div class="container py-4 text-center">
+        <span class="badge-certified mb-2 d-inline-block">Technical Documentation</span>
+        <h1 class="display-5 fw-bold text-white mb-2" id="serviceHeroTitle">Truck Body Fabrication: Engineering & Specs</h1>
+        <p class="text-light opacity-90 mx-auto mb-0" id="serviceHeroSubtitle" style="max-width: 650px;">
+          Comprehensive breakdown of our heavy commercial vehicle manufacturing process, quality benchmarks, and pricing estimation criteria.
+        </p>
+      </div>
+    </section>
+
+    <!-- MAIN SERVICE DETAIL CONTENT -->
+    <section class="py-5 bg-white">
+      <div class="container py-lg-4">
+        <div class="row g-5">
+          
+          <!-- Left Column: Detailed Service Info -->
+          <div class="col-lg-8">
+            <div class="mb-4">
+              <img id="serviceMainImg" src="assets/images/services/service-fabrication.jpg" alt="Large Heavy Fabrication Facility" class="rounded w-100 shadow-sm" style="height: 380px; object-fit: cover;">
+            </div>
+
+            <div class="section-subtitle" id="serviceSubtitle">Commercial Vehicle Fabrication</div>
+            <h2 class="h2 fw-bold mb-3" id="serviceMainHeading">Ground-Up Structural Engineering for All Commercial Chassis</h2>
+            
+            <p class="lead text-dark fw-normal mb-3" id="serviceLead">
+              We fabricate high-payload commercial truck bodies engineered to withstand dynamic torsional flexing, severe shock loading, and harsh highway environments across India.
+            </p>
+            <p class="text-muted mb-4" id="serviceDesc">
+              Utilizing high-tensile hot-rolled steel plates (IS 2062 Grade E250 / E350 and Domex/Hardox alloys), our commercial bodies maximize legal cargo volume while minimizing tare curb weight. Every assembly adheres to AIS-093 Type-Approval requirements, guaranteeing hassle-free RTO passing.
+            </p>
+
+            <h3 class="h4 fw-bold mb-3 border-bottom pb-2">The 4-Step Engineering Workflow</h3>
+            <div class="row g-3 mb-4" id="serviceWorkflow">
+              <div class="col-md-6">
+                <div class="p-3 border rounded bg-light">
+                  <div class="d-flex align-items-center gap-2 mb-2">
+                    <span class="badge bg-warning text-dark fw-bold">Step 1</span>
+                    <h6 class="fw-bold mb-0">Chassis CAD Integration</h6>
+                  </div>
+                  <p class="small text-muted mb-0">Direct 3D CAD modeling aligned with factory OEM chassis drawings (Tata, Ashok Leyland, BharatBenz, Eicher) to guarantee zero interference with fuel tanks and AdBlue SCR units.</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="p-3 border rounded bg-light">
+                  <div class="d-flex align-items-center gap-2 mb-2">
+                    <span class="badge bg-warning text-dark fw-bold">Step 2</span>
+                    <h6 class="fw-bold mb-0">Automated Submerged Arc Welding</h6>
+                  </div>
+                  <p class="small text-muted mb-0">Longitudinal subframe channels are welded with automated submerged arc gantries (SAW) achieving full-depth root penetration without warping or heat-affected brittleness.</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="p-3 border rounded bg-light">
+                  <div class="d-flex align-items-center gap-2 mb-2">
+                    <span class="badge bg-warning text-dark fw-bold">Step 3</span>
+                    <h6 class="fw-bold mb-0">Shot Blasting & Epoxy Coating</h6>
+                  </div>
+                  <p class="small text-muted mb-0">Total abrasive shot-blasting to Swedish Standard SA 2.5 removes all mill scale, followed by a two-pack zinc phosphate epoxy primer and 100-micron polyurethane topcoat.</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="p-3 border rounded bg-light">
+                  <div class="d-flex align-items-center gap-2 mb-2">
+                    <span class="badge bg-warning text-dark fw-bold">Step 4</span>
+                    <h6 class="fw-bold mb-0">Chassis Mating & Homologation</h6>
+                  </div>
+                  <p class="small text-muted mb-0">Subframe is secured to chassis using high-tensile 10.9-grade U-bolts and wooden/polyurethane sleeper dampers. Electrical harness and reflective tape applied to CMVR standards.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Technical Specifications Table -->
+            <h3 class="h4 fw-bold mb-3 border-bottom pb-2">Standard Technical Specifications</h3>
+            <div class="table-responsive mb-4">
+              <table class="table table-bordered table-striped align-middle">
+                <thead class="table-dark">
+                  <tr>
+                    <th>Component / Attribute</th>
+                    <th>Specification Standard</th>
+                    <th>Structural Material Grade</th>
+                  </tr>
+                </thead>
+                <tbody id="serviceSpecsBody">
+                  <tr>
+                    <td><strong>Subframe Longitude Members</strong></td>
+                    <td>ISMC 150x75 to ISMC 250x80</td>
+                    <td>IS 2062 Grade E350 High Yield</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Floor Deck</strong></td>
+                    <td>4mm, 5mm or 6mm Chequered Plate</td>
+                    <td>Wear-Resistant Mild Steel / Hardox 450</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Crossmembers & Outriggers</strong></td>
+                    <td>100x50mm C-Channel @ 300mm Pitch</td>
+                    <td>Cold-formed High Strength Steel</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Side & Front Bulkhead</strong></td>
+                    <td>Corrugated Pressed 1.6mm - 2.5mm</td>
+                    <td>CRCA / Galvanized Steel Sheet</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Welding Consumables</strong></td>
+                    <td>ER70S-6 Solid Wire & E71T Flux Cored</td>
+                    <td>AWS A5.18 / ASME SFA 5.18 Certified</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Paint Finish</strong></td>
+                    <td>2 Primer Coats + 2 PU Topcoats</td>
+                    <td>Automotive Polyurethane (120Âµm DFT)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Service FAQs Accordion -->
+            <h3 class="h4 fw-bold mb-3 border-bottom pb-2">Frequently Asked Questions (FAQs)</h3>
+            <div class="accordion mb-4" id="serviceFaqAccordion">
+              <div class="accordion-item border rounded mb-2">
+                <h4 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    What is the typical manufacturing turnaround time for a custom truck body?
+                  </button>
+                </h4>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#serviceFaqAccordion">
+                  <div class="accordion-body text-muted">
+                    Standard open cargo bodies and dry containers take approximately 7 to 10 working days once the chassis is received at our works. Heavy hydraulic tipper bodies and insulated refrigerated reefers require 12 to 16 working days due to hydraulic plumbing, subframe reinforcement, and thermal PUF curing cycles.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item border rounded mb-2">
+                <h4 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Will the fabrication void our new vehicle manufacturer chassis warranty?
+                  </button>
+                </h4>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#serviceFaqAccordion">
+                  <div class="accordion-body text-muted">
+                    No. As an authorized commercial vehicle body builder, we strictly follow the OEM Body Builder Guidelines (BBG) issued by Tata Motors, Ashok Leyland, BharatBenz, and Eicher. We never drill into or weld onto chassis flanges; all subframes are anchored via pre-existing mounting holes and flexible U-bolt clamps.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item border rounded mb-2">
+                <h4 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Do you handle ARAI approvals and RTO passing certificates?
+                  </button>
+                </h4>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#serviceFaqAccordion">
+                  <div class="accordion-body text-muted">
+                    Yes. All our commercial body designs possess AIS-093 type approval and CMVR extensions. We provide the complete set of Form 22A/22B certificates, certified weighbridge receipts, and compliance drawings required for immediate RTO registration.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item border rounded mb-2">
+                <h4 class="accordion-header" id="headingFour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    How is pricing calculated for custom truck body manufacturing?
+                  </button>
+                </h4>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#serviceFaqAccordion">
+                  <div class="accordion-body text-muted">
+                    Custom vehicle manufacturing does not use fixed SaaS checkout prices. Pricing is scientifically determined by: <strong>1) Gross structural steel tonnage & alloy grades (Hardox/Domex vs MS)</strong>, <strong>2) Hydraulic components (Hyva/Penta ram specs)</strong>, <strong>3) Body dimensions and surface coating system</strong>. We furnish transparent, line-item BOQs with zero hidden costs.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Sidebar -->
+          <div class="col-lg-4">
+            
+            <!-- Quick Quotation Box -->
+            <div class="sidebar-widget">
+              <h4 class="widget-title">Get a Detailed Quote</h4>
+              <p class="small text-muted mb-3">
+                Send your vehicle model and required body specifications. Our senior estimation engineer will prepare a formal BOQ within 4 business hours.
+              </p>
+              <div class="d-grid gap-2">
+                <a href="shop.html?category=custom&openQuote=true" class="btn btn-industrial">
+                  <i class="fas fa-file-invoice me-2"></i> Request Official Quote in Shop
+                </a>
+                <a href="tel:+919876543210" class="btn btn-outline-steel">
+                  <i class="fas fa-phone me-2"></i> Call Technical Desk
+                </a>
+              </div>
+            </div>
+
+            <!-- Other Engineering Services -->
+            <div class="sidebar-widget">
+              <h4 class="widget-title">All Engineering Services</h4>
+              <ul class="list-unstyled mb-0" id="servicesSidebarList">
+                <li class="mb-2 pb-2 border-bottom"><a href="service-details.html?service=fabrication" data-service="fabrication" class="text-dark fw-bold"><i class="fas fa-angle-right text-orange me-2"></i> Truck Body Fabrication</a></li>
+                <li class="mb-2 pb-2 border-bottom"><a href="service-details.html?service=design" data-service="design" class="text-secondary"><i class="fas fa-angle-right text-orange me-2"></i> Custom Truck Body Design</a></li>
+                <li class="mb-2 pb-2 border-bottom"><a href="service-details.html?service=welding" data-service="welding" class="text-secondary"><i class="fas fa-angle-right text-orange me-2"></i> Welding & Metal Fabrication</a></li>
+                <li class="mb-2 pb-2 border-bottom"><a href="service-details.html?service=repair" data-service="repair" class="text-secondary"><i class="fas fa-angle-right text-orange me-2"></i> Truck Body Accident Repair</a></li>
+                <li class="mb-2 pb-2 border-bottom"><a href="service-details.html?service=painting" data-service="painting" class="text-secondary"><i class="fas fa-angle-right text-orange me-2"></i> Industrial Polyurethane Painting</a></li>
+                <li class="mb-2 pb-2 border-bottom"><a href="service-details.html?service=modification" data-service="modification" class="text-secondary"><i class="fas fa-angle-right text-orange me-2"></i> Truck Body Modification</a></li>
+                <li class="mb-2 pb-2 border-bottom"><a href="service-details.html?service=maintenance" data-service="maintenance" class="text-secondary"><i class="fas fa-angle-right text-orange me-2"></i> Commercial Vehicle Maintenance</a></li>
+                <li class="mb-2 pb-2 border-bottom"><a href="service-details.html?service=hydraulics" data-service="hydraulics" class="text-secondary"><i class="fas fa-angle-right text-orange me-2"></i> Hydraulic Systems & Tipper Kits</a></li>
+                <li><a href="service-details.html?service=reefer" data-service="reefer" class="text-secondary"><i class="fas fa-angle-right text-orange me-2"></i> Insulated Reefer & Cold Chain</a></li>
+              </ul>
+            </div>
+
+            <!-- Technical Brochure Download -->
+            <div class="sidebar-widget bg-dark text-white border-0">
+              <h5 class="text-white mb-2"><i class="fas fa-file-pdf text-warning me-2"></i> Technical Brochure</h5>
+              <p class="small text-light opacity-75 mb-3">Download our 36-page complete product and engineering capability portfolio (PDF, 8.4 MB).</p>
+              <a href="javascript:void(0)" onclick="window.print()" class="btn btn-sm btn-industrial w-100">
+                <i class="fas fa-download me-1"></i> Download PDF Brochure
+              </a>
+            </div>
+
+            <!-- Emergency Breakdown Assistance -->
+            <div class="sidebar-widget border-warning">
+              <div class="d-flex align-items-center gap-3">
+                <div class="text-warning fs-1"><i class="fas fa-truck-pickup"></i></div>
+                <div>
+                  <h6 class="fw-bold mb-1">Accident Body Towing</h6>
+                  <p class="small text-muted mb-0">24/7 heavy recovery to our fabrication plant: <strong>1800-419-8782</strong></p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CALL TO °CTION -->
+    <section class="py-5" style="background: var(--primary-steel); color: var(--white);">
+      <div class="container py-lg-4 text-center">
+        <h2 class="display-6 fw-bold text-white mb-3">Ready to Discuss Your Fabrication Requirements?</h2>
+        <p class="lead text-light opacity-90 mx-auto mb-4" style="max-width: 650px;">
+          Our technical estimation team will review your payload targets and prepare a detailed cost estimate within 4 business hours.
+        </p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+          <a href="shop.html?category=custom&openQuote=true" class="btn btn-industrial btn-lg">Request Fabrication Estimate in Shop</a>
+          <a href="gallery.html" class="btn btn-outline-light-industrial btn-lg">View Project Gallery</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- INDUSTRIAL FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6 footer-widget">
+          <a href="index.html" class="footer-brand d-inline-block mb-3 text-decoration-none" title="Truck Body Builder - Back to Home">
+            <div class="footer-logo-wrap">
+              <img src="assets/images/logo/logo-main.svg" alt="Truck Body Builder - Heavy Commercial Vehicle Fabrication" class="footer-logo-img">
+            </div>
+          </a>
+          <p class="text-muted small mb-3">
+            Heavy commercial vehicle fabrication and industrial truck body builder. Certified by ARAI, conforming to CMVR specifications, and delivering durable body engineering across India and export markets.
+          </p>
+          <div class="badge-certified d-inline-block mb-3">
+            <i class="fas fa-award me-1"></i> ISO 9001:2015 Registered Unit
+          </div>
+          <div class="social-links">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Twitter X"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="col-lg-2 col-md-6 footer-widget">
+          <h5 class="text-white">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fas fa-angle-right"></i> Home (General)</a></li>
+            <li><a href="home-2.html"><i class="fas fa-angle-right"></i> Home (Fabrication)</a></li>
+            <li><a href="about.html"><i class="fas fa-angle-right"></i> About Us</a></li>
+            <li><a href="services.html"><i class="fas fa-angle-right"></i> Fabrication Services</a></li>
+            <li><a href="service-details.html"><i class="fas fa-angle-right"></i> Service Details</a></li>
+            <li><a href="gallery.html"><i class="fas fa-angle-right"></i> Project Gallery</a></li>
+            <li><a href="blog.html"><i class="fas fa-angle-right"></i> Technical Blog</a></li>
+            <li><a href="shop.html"><i class="fas fa-angle-right"></i> Hardware Shop</a></li>
+            <li><a href="cart.html"><i class="fas fa-angle-right"></i> Shopping Cart</a></li>
+            <li><a href="contact.html"><i class="fas fa-angle-right"></i> Contact & Quote</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Services & Capabilities -->
+        <div class="col-lg-2 col-md-6 footer-widget">
+          <h5 class="text-white">Our Services</h5>
+          <ul class="footer-links">
+            <li><a href="services.html"><i class="fas fa-angle-right"></i> Heavy Fabrication</a></li>
+            <li><a href="services.html"><i class="fas fa-angle-right"></i> Custom Body Design</a></li>
+            <li><a href="services.html"><i class="fas fa-angle-right"></i> Structural Welding</a></li>
+            <li><a href="services.html"><i class="fas fa-angle-right"></i> Industrial Painting</a></li>
+            <li><a href="services.html"><i class="fas fa-angle-right"></i> Accident Repair</a></li>
+            <li><a href="service-details.html"><i class="fas fa-angle-right"></i> Testing & Certification</a></li>
+            <li><a href="gallery.html"><i class="fas fa-angle-right"></i> Project Gallery</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-6 footer-widget">
+          <h5 class="text-white">Plant & Head Office</h5>
+          <div class="footer-contact-item">
+            <a href="contact.html" class="footer-contact-icon text-decoration-none" title="View Plant & Head Office Location"><i class="fas fa-map-marker-alt"></i></a>
+            <div>
+              <strong>Industrial Works:</strong><br>
+              Plot 42-48, Sector 9, Heavy Engineering Industrial Zone, Near Automobile Hub, Chennai / Pune Highway, India.
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <a href="tel:+919876543210" class="footer-contact-icon text-decoration-none" title="Call Technical Hotline"><i class="fas fa-phone"></i></a>
+            <div>
+              <strong>Technical Hotline:</strong><br>
+              <a href="tel:+919876543210" class="text-white">+91 98765 43210</a> / <a href="tel:18004198782" class="text-white">1800-419-8782</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <a href="mailto:fabrication@truckbodybuilder.com" class="footer-contact-icon text-decoration-none" title="Email Quotation Desk"><i class="fas fa-envelope"></i></a>
+            <div>
+              <strong>Quotation Desk:</strong><br>
+              <a href="mailto:fabrication@truckbodybuilder.com" class="text-white">fabrication@truckbodybuilder.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+            &copy; 2026 Truck Body Builder & Commercial Vehicle Fabrication Works. All rights reserved.
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <div class="footer-bottom-links">
+              <a href="about.html">Privacy Policy</a>
+              <a href="services.html">Terms of Manufacturing</a>
+              <a href="services.html">Site Index</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTopBtn" class="back-to-top" title="Back to top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/gallery.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/premium-motion.js" defer></script>
+  <script>
+    (function () {
+      const services = {
+        fabrication: {
+          title: "Truck Body Fabrication: Engineering & Specs",
+          subtitle: "Comprehensive breakdown of our heavy commercial vehicle manufacturing process, quality benchmarks, and pricing estimation criteria.",
+          badge: "Commercial Vehicle Fabrication",
+          heading: "Ground-Up Structural Engineering for All Commercial Chassis",
+          lead: "We fabricate high-payload commercial truck bodies engineered to withstand dynamic torsional flexing, severe shock loading, and harsh highway environments across India.",
+          desc: "Utilizing high-tensile hot-rolled steel plates (IS 2062 Grade E250 / E350 and Domex/Hardox alloys), our commercial bodies maximize legal cargo volume while minimizing tare curb weight. Every assembly adheres to AIS-093 Type-Approval requirements, guaranteeing hassle-free RTO passing.",
+          img: "assets/images/services/service-fabrication.jpg",
+          steps: [
+            { num: "Step 1", title: "Chassis CAD Integration", desc: "Direct 3D CAD modeling aligned with factory OEM chassis drawings (Tata, Ashok Leyland, BharatBenz, Eicher) to guarantee zero interference with fuel tanks and AdBlue SCR units." },
+            { num: "Step 2", title: "Automated Submerged Arc Welding", desc: "Longitudinal subframe channels are welded with automated submerged arc gantries (SAW) achieving full-depth root penetration without warping or heat-affected brittleness." },
+            { num: "Step 3", title: "Shot Blasting & Epoxy Coating", desc: "Total abrasive shot-blasting to Swedish Standard SA 2.5 removes all mill scale, followed by a two-pack zinc phosphate epoxy primer and 100-micron polyurethane topcoat." },
+            { num: "Step 4", title: "Chassis Mating & Homologation", desc: "Subframe is secured to chassis using high-tensile 10.9-grade U-bolts and wooden/polyurethane sleeper dampers. Electrical harness and reflective tape applied to CMVR standards." }
+          ],
+          specs: [
+            ["Subframe Longitude Members", "ISMC 150x75 to ISMC 250x80", "IS 2062 Grade E350 High Yield"],
+            ["Floor Deck", "4mm, 5mm or 6mm Chequered Plate", "Wear-Resistant Mild Steel / Hardox 450"],
+            ["Crossmembers & Outriggers", "100x50mm C-Channel @ 300mm Pitch", "Cold-formed High Strength Steel"],
+            ["Side & Front Bulkhead", "Corrugated Pressed 1.6mm - 2.5mm", "CRCA / Galvanized Steel Sheet"],
+            ["Welding Consumables", "ER70S-6 Solid Wire & E71T Flux Cored", "AWS A5.18 / ASME SFA 5.18 Certified"],
+            ["Paint Finish", "2 Primer Coats + 2 PU Topcoats", "Automotive Polyurethane (120Âµm DFT)"]
+          ]
+        },
+        design: {
+          title: "Custom Truck Body Design: 3D CAD & FEA Simulation",
+          subtitle: "Parametric 3D solid modeling, dynamic road-vibration stress analysis, and aerodynamic wind-drag optimization prior to shop-floor fabrication.",
+          badge: "Bespoke Design Engineering",
+          heading: "Virtual Prototyping & Finite Element Stress Analysis",
+          lead: "Every custom commercial vehicle body begins in our computational design center where CAD blueprints ensure optimal axle weight distribution and minimum aerodynamic drag.",
+          desc: "Using Dassault SystÃ¨mes SolidWorks and ANSYS FEA software, our structural engineers simulate extreme road shocks, sharp-corner torsion, and full-payload tipping stability. We identify high-stress concentrations and engineer reinforcements without adding unnecessary deadweight.",
+          img: "assets/images/services/service-design.jpg",
+          steps: [
+            { num: "Step 1", title: "Payload & Route Requirements", desc: "We interview fleet managers to calculate gross cargo density, loading methods (crane vs fork vs hopper), and prevailing state axle load limits." },
+            { num: "Step 2", title: "3D Digital Chassis Twin", desc: "Creating accurate 3D CAD assemblies incorporating transmission PTO shafts, exhaust systems, hydraulic oil reservoirs, and spare tire carriers." },
+            { num: "Step 3", title: "Finite Element Stress Simulation", desc: "Von Mises stress testing under 3G dynamic shock load to verify fatigue limits on critical chassis brackets and tipping hinge pins." },
+            { num: "Step 4", title: "CNC Nesting & CAM Generation", desc: "Exporting direct DXF cut files for automated fiber laser cutting and press brake CNC tooling, ensuring sub-millimeter manufacturing precision." }
+          ],
+          specs: [
+            ["Design Software Suite", "SolidWorks 2024 & ANSYS FEA", "Parametric 3D Solid & Surface Modeling"],
+            ["Stress Simulation Standard", "AIS-093 / SAE Commercial Truck Standards", "Dynamic 3G Acceleration & Torsion Testing"],
+            ["Weight Optimization Ratio", "Up to 18% Tare Curb Weight Reduction", "High-Yield Low-Alloy (HSLA) Steels"],
+            ["RTO Homologation Drafting", "Form 22A/B Blueprints & CMVR Layouts", "Certified Engineering Drawing Set"],
+            ["Aerodynamic Modeling", "CFD Wind Tunnel Turbulence Simulation", "Airflow Cab Deflectors & Side Skirts"],
+            ["Deliverables", "Full 3D Assemblies & Exploded Spare Catalogs", "STEP, DXF, and Multi-View PDF Blueprints"]
+          ]
+        },
+        welding: {
+          title: "Welding & Metal Fabrication: AWS D1.1 Certified Works",
+          subtitle: "Heavy structural metal fabrication, robotic submerged arc gantries, and precision CNC laser profiling for severe commercial duty cycles.",
+          badge: "Heavy Structural Welding",
+          heading: "High-Penetration Metallurgical Fusion for Severe Haulage",
+          lead: "Commercial truck bodies endure millions of road vibration cycles. Our certified welding division delivers 100% defect-free structural joints built to last.",
+          desc: "Our facility operates automated submerged arc welding (SAW) gantries for main subframe I-beams, synchronized pulsed MIG/MAG lines, and TIG welding bays for stainless steel and cryogenic tankers. All welders are qualified under ASME Section IX and AWS D1.1 structural welding codes.",
+          img: "assets/images/services/service-welding.jpg",
+          steps: [
+            { num: "Step 1", title: "Edge Preparation & CNC Beveling", desc: "Fiber laser cut edges are mechanical chamfered to 30Â° V-grooves to facilitate 100% full-penetration butt welds on thick structural webs." },
+            { num: "Step 2", title: "Submerged Arc Long-Member Welding", desc: "Continuous dual-wire submerged arc tractor gantries lay flawless 12-meter weld beads under granular flux, eliminating spatter and porosity." },
+            { num: "Step 3", title: "Preheat & Temperature Monitoring", desc: "Quenched and tempered alloy plates (Hardox 450) are preheated with infrared ceramic mats to prevent delayed hydrogen-induced cracking." },
+            { num: "Step 4", title: "Non-Destructive Testing (NDT)", desc: "10% random radiographic examination and 100% ultrasonic/dye-penetrant testing on all high-stress pivot brackets and drawbar joints." }
+          ],
+          specs: [
+            ["Welding Processes", "SAW (121), GMAW (135), GTAW (141), FCAW (136)", "Automated Gantries & Semi-Auto Torches"],
+            ["Applicable Welding Standards", "AWS D1.1 Structural Steel / ISO 15614", "WPS & PQR Verified by Third-Party TPI"],
+            ["Plate Cutting Capacity", "12kW CNC Fiber Laser up to 32mm Steel", "Tolerance Â±0.2mm on Bolt Hole Pitch"],
+            ["Bending Press Capacity", "800-Ton Hydraulic Press Brake (12m Bed)", "Single-Pass Heavy Channel Forming"],
+            ["Testing & Quality Assurance", "Ultrasonic (UT), Magnetic Particle (MPI), DPT", "NDT Level-II Certified Inspectors"],
+            ["Welder Certifications", "ASME Sec IX / IBR & AWS D1.1 Certified", "Bi-Annual Re-Qualification Audits"]
+          ]
+        },
+        repair: {
+          title: "Truck Body Accident Repair & Hydraulic Overhauls",
+          subtitle: "Rapid-turnaround collision restoration, hydraulic laser frame straightening, and comprehensive fleet refurbishment to factory tolerances.",
+          badge: "Fleet Accident & Repair Services",
+          heading: "Laser-Guided Frame Straightening & Complete Reconditioning",
+          lead: "Accidents, rollovers, and structural fatigue need not permanently retire an expensive commercial vehicle. We restore damaged bodies to certified roadworthiness.",
+          desc: "From twisted subframes and bent tipping cylinders to cracked headboards and crushed container corner-castings, our heavy-repair workshop handles full structural rehabilitation. We maintain direct relationships with major commercial fleet insurance surveyors for seamless cashless claims.",
+          img: "assets/images/services/service-repair.jpg",
+          steps: [
+            { num: "Step 1", title: "Laser Diagnostic Inspection", desc: "Electronic 3D chassis measuring system maps twist, sway, and sag down to 1.0mm deviation against factory OEM chassis coordinates." },
+            { num: "Step 2", title: "Hydraulic Straightening & Flitching", desc: "Multi-point 100-ton hydraulic towers pull deformed longitudinal beams back into true alignment while cold-riveting heavy inner flitches." },
+            { num: "Step 3", title: "Damaged Panel Replacement", desc: "Torn sidewalls, damaged rub rails, and buckled floor plates are torched out and replaced with brand new press-braked steel sections." },
+            { num: "Step 4", title: "Hydraulic System Pressure Overhaul", desc: "Disassembling tipping cylinders, honing barrels, replacing polyurethane oil seals, and dynamic bench testing to 250 Bar pressure." }
+          ],
+          specs: [
+            ["Chassis Straightening Capacity", "Multi-Tower 100-Ton Hydraulic Jigs", "Accommodates up to 16-Meter Vehicle Lengths"],
+            ["Laser Alignment Accuracy", "Precision Within Â±1.5mm Across Wheelbase", "Digital Coordinate Verification Certificate"],
+            ["Hydraulic Ram Repair Bench", "Dynamic Test Pressure up to 300 Bar", "Hyva, Penta, Wipro & Binotto Overhauls"],
+            ["Insurance Survey Liaison", "Direct Cashless Claim Processing", "Itemized Estimations & Surveyor Approval Support"],
+            ["Emergency Recovery Service", "24/7 Heavy Towing to Facility Yard", "Covering Major Highway Corridors"],
+            ["Refurbishment Warranty", "1-Year Warranty on Straightening & Welds", "Full Structural Re-Certification Paperwork"]
+          ]
+        },
+        painting: {
+          title: "Industrial Polyurethane Painting & Shot Blasting",
+          subtitle: "Automotive-grade heated downdraft blast and paint booths providing long-lasting 1500-hour salt spray corrosion resistance.",
+          badge: "Surface Coating & Blast Finishing",
+          heading: "Industrial Anti-Corrosion Protection & Custom Fleet Livery",
+          lead: "Harsh tropical monsoons, road salt, chemicals, and abrasive gravel destroy unprotected truck steel within months. Our multi-stage coating guarantees lasting endurance.",
+          desc: "We house an 18-meter enclosed abrasive blasting booth operating chilled steel grit and copper slag to strip mill scale down to white metal (SA 2.5). This is immediately sealed with 2-pack high-build zinc epoxy primers and high-gloss 2K polyurethane topcoats formulated for severe industrial duty.",
+          img: "assets/images/services/service-painting.jpg",
+          steps: [
+            { num: "Step 1", title: "Abrasive Blasting to SA 2.5", desc: "Removing all mill scale, rust, and weld heat tints to establish a 50-75 micron anchor profile ensuring permanent mechanical paint adhesion." },
+            { num: "Step 2", title: "Zinc-Phosphate Epoxy Primer", desc: "Applying 60-80 microns DFT of two-pack anti-corrosive primer formulated with active sacrificial zinc pigments." },
+            { num: "Step 3", title: "Underbody Bituminous Sealant", desc: "Spraying rubberized chip-resistant compound across subframe bottom surfaces and wheel splash arches to deaden stone impact." },
+            { num: "Step 4", title: "2K Polyurethane Topcoat & Bake", desc: "Twin-gun electrostatic spray in our 65Â°C heated downdraft booth to achieve a rock-hard 120Âµm mirror-finish resistant to diesel and acids." }
+          ],
+          specs: [
+            ["Blast Booth Dimensions", "18m (L) x 5.5m (W) x 5m (H)", "Accommodates Long 40ft Trailers and Tankers"],
+            ["Surface Cleanliness Standard", "ISO 8501-1 SA 2.5 / SSPC-SP 10", "Full Heavy Mill Scale Removal"],
+            ["Corrosion Protection Life", "1500+ Hours ASTM B117 Salt Fog Testing", "Up to 7 Years Industrial Service Life"],
+            ["Coating Chemistry", "High-Solid 2K Aliphatic Polyurethane", "UV Resistant, Non-Chalking Gloss Retention"],
+            ["Coating Thickness (DFT)", "Total Dry Film Thickness 140 - 180 Microns", "Verified with Calibrated Elcometer Gauges"],
+            ["Fleet Branding Options", "Computer-Cut Stenciling & Reflective AIS-090", "Custom Corporate RAL Color Matching"]
+          ]
+        },
+        modification: {
+          title: "Truck Body Modification & Wheelbase Extensions",
+          subtitle: "ARAI-homologated chassis lengthening, tractor-to-tipper conversion, additional pusher/tag axle integration, and customized body adaptations.",
+          badge: "Specialized Conversions & Modifications",
+          heading: "Engineered Chassis Lengthening & Specialized Vehicle Upgrades",
+          lead: "Transform standard factory chassis into purpose-built specialized machinery, high-cube volume carriers, or heavy tractor trailers with full RTO compliance.",
+          desc: "Changing transport routes and cargo requirements frequently demand chassis alterations. We execute ARAI-compliant wheelbase extensions using cold-formed internal chassis flitches and Huck mechanical fasteners, maintaining factory chassis torsional flexibility without inducing fatigue fractures.",
+          img: "assets/images/services/service-modification.jpg",
+          steps: [
+            { num: "Step 1", title: "Chassis Stress Calculation", desc: "Determining bending moment diagrams and new center of gravity to position propeller shaft intermediate carrier bearings correctly." },
+            { num: "Step 2", title: "Cold Huck-Bolted Joint Assembly", desc: "Using aerospace-grade Huck fasteners instead of hot welding directly onto high-tensile chassis flanges to eliminate brittle cracking." },
+            { num: "Step 3", title: "Driveshaft & Brake Line Extension", desc: "Dynamically balancing prolonged propeller shafts and extending copper-nickel dual-line pneumatic brake piping with relay valves." },
+            { num: "Step 4", title: "RTO Homologation Certification", desc: "Preparing the complete Form 22A/B documentation pack with certified weighbridge receipts for immediate RTO passing." }
+          ],
+          specs: [
+            ["Wheelbase Extension Range", "From 3,400mm up to 7,200mm", "Accommodating 32ft Container Bodies"],
+            ["Flitching Material", "IS 2062 Grade E350 Pressed Channels", "Full-Length Internal Reinforcement"],
+            ["Fastening System", "Grade 10.9 Cold-Installed Huck Fasteners", "Zero Weld Heat Damage to Chassis Web"],
+            ["Brake Pneumatic Integration", "WABCO / Knorr-Bremse Relay Valves", "Dual-Line ABS Sensor Cable Extensions"],
+            ["Pusher Axle Installation", "Pneumatic Lift-Axle Kits (Air Suspension)", "Adds 6.5 to 10 Tons Legal Gross Axle Weight"],
+            ["Compliance Documentation", "ARAI AIS-093 / CMVR Rule 125 Approval", "Guaranteed Endorsement on Vehicle RC"]
+          ]
+        },
+        maintenance: {
+          title: "Commercial Vehicle Maintenance & Fleet Health Contracts",
+          subtitle: "Comprehensive preventive maintenance contracts, hydraulic tipper servicing, subframe inspections, and scheduled fleet wear audits.",
+          badge: "Preventive Fleet Maintenance",
+          heading: "Maximize Fleet Uptime with Scheduled Industrial Servicing",
+          lead: "Unplanned roadside breakdowns cost fleet owners thousands per hour in missed freight penalties. Our structured AMC contracts keep your vehicles moving.",
+          desc: "We provide structured preventative maintenance programs for corporate fleets, mining operations, and logistics carriers. Our mobile service teams and dedicated plant service bays inspect subframe torque, lubricate pivot pins, overhaul hydraulic valves, and replace worn wear-strips before structural failures occur.",
+          img: "assets/images/services/service-maintenance.jpg",
+          steps: [
+            { num: "Step 1", title: "Ultrasonic Chassis Stress Audit", desc: "Regular ultrasonic scanning of high-stress subframe points, fifth-wheel kingpins, and tipping trunnions to spot micro-cracks early." },
+            { num: "Step 2", title: "Hydraulic Oil Filtration & Degas", desc: "Testing hydraulic fluid for particulate contamination, water ingress, and micron filtration to extend pump and cylinder life." },
+            { num: "Step 3", title: "U-Bolt & Fastener Re-Torque", desc: "Checking and re-torquing all body-to-chassis U-bolts to specified 450 Nm torque using calibrated pneumatic torque wrenches." },
+            { num: "Step 4", title: "Weatherseal & Hardware Refresh", desc: "Replacing perished EPDM door gaskets, greasing container cam locks, and repairing damaged reflective safety conspicuity tape." }
+          ],
+          specs: [
+            ["Fleet Contract Models", "Quarterly AMC, Half-Yearly, or Pay-Per-Service", "Flexible Customized Corporate Packages"],
+            ["Hydraulic Fluid Filtration", "10-Micron Beta-200 Off-Line Cleaning", "Removes Metallic Swarf and Silt"],
+            ["Trunnion & Bushing Servicing", "Hardened Manganese Bronze Bushing Replacement", "Heavy-Duty Moly Grease Application"],
+            ["Conspicuity & Electrical Check", "CMVR AIS-090 Grade Retro-Reflective Tape", "Complete Sealed Wire Harness Check"],
+            ["Dedicated Bay Scheduling", "Priority Turnaround in 4 to 8 Hours", "Minimizing Off-Duty Fleet Downtime"],
+            ["Digital Maintenance Logs", "Cloud Inspection Reports & Component History", "Exportable for Enterprise ERPs"]
+          ]
+        },
+        hydraulics: {
+          title: "Hydraulic Tipper Systems & Ram Installation",
+          subtitle: "OEM integration of front-end multi-stage telescopic cylinders, PTO pumps, high-pressure relief valves, and pilot proportional in-cab controls.",
+          badge: "Hydraulic Tipper Systems",
+          heading: "Precision Heavy-Duty Tipper Hoists & Hydraulic Drive Kits",
+          lead: "Seamless hydraulic tipping integration engineered for severe quarry, mining, and highway infrastructure cycles.",
+          desc: "We supply, mount, calibrate, and bench-test commercial vehicle tipping kits. Partnering with industry leaders Hyva, Penta, and Wipro, our engineers ensure proper oil reservoir sizing, hose routing, and pressure relief valve calibration to guarantee 100% safe tipping stability under maximum legal gross vehicle weight.",
+          img: "assets/images/services/service-hydraulics.jpg",
+          steps: [
+            { num: "Step 1", title: "PTO & Transmission Ratio Matching", desc: "Selecting the correct Power Take-Off unit matching OEM gearbox bolt pattern and target pump RPM." },
+            { num: "Step 2", title: "Cylinder Trunnion Alignment", desc: "Laser-aligning the top and bottom tipping pivot trunnions to ensure smooth multi-stage telescopic stroke without side-load binding." },
+            { num: "Step 3", title: "High-Pressure Hose Routing", desc: "Installing 4-spiral steel wire braided hydraulic hoses routed away from exhaust heat shields with anti-abrasion spiral wrapping." },
+            { num: "Step 4", title: "250-Bar Dynamic Pressure Testing", desc: "Bench testing full extension under simulated payload load with automatic relief valve pop-off at 190-250 Bar." }
+          ],
+          specs: [
+            ["Cylinder Types", "Front-End Telescopic (FE) & Underbody (FC/UB)", "Hyva, Penta, Wipro & Binotto"],
+            ["Operating Pressure", "190 to 250 Bar Working Pressure", "Factory Calibrated Safety Relief"],
+            ["Pump Capacity", "61 to 105 L/min Bi-Rotational Gear Pumps", "High Volumetric Efficiency"],
+            ["Pneumatic Controls", "Proportional In-Cab Console Joystick", "Integrated PTO Switch & Tip Indicator"],
+            ["Reservoir Tank", "120L to 180L Mild Steel / Aluminum Tank", "Air Breather & 25-Micron Return Filter"],
+            ["Certification & Warranty", "Pressure Test Certificate & Flow Calibration", "2-Year Manufacturer Warranty"]
+          ]
+        },
+        reefer: {
+          title: "Insulated Reefer & Cold Chain Truck Body Fabrication",
+          subtitle: "HACCP & Pharma GDP compliant temperature-controlled reefer boxes (-25°C to +15°C) with injected high-density PUF insulation.",
+          badge: "Cold Chain Logistics",
+          heading: "Thermally Efficient Refrigerated Bodies for Perishables & Pharma",
+          lead: "Deliver unbroken cold chains across long-distance interstate transit with our deep-freeze insulated composite bodies.",
+          desc: "Our refrigerated bodies feature 100mm to 120mm injected high-density CFC-free polyurethane foam (PUF) insulation cores laminated with food-grade seamless fiber-reinforced plastic (FRP/GRP) skins. Outfitted with heavy extruded aluminum T-profile subfloors for optimal air circulation, four-layer EPDM door gaskets, and dual-temp moveable partitions.",
+          img: "assets/images/services/service-reefer.jpg",
+          steps: [
+            { num: "Step 1", title: "Continuous High-Pressure PUF Injection", desc: "Monolithic hydraulic press injection of 42 kg/m³ high-density polyurethane foam eliminating thermal bridges." },
+            { num: "Step 2", title: "Food-Grade FRP Seamless Lamination", desc: "Seamless antimicrobial gel-coated fiberglass skins bonded under vacuum for zero moisture absorption and easy steam cleaning." },
+            { num: "Step 3", title: "Airflow T-Flooring & Drain Traps", desc: "Extruded heavy-duty aluminum T-bar floor enabling pallet truck forklift operations while facilitating continuous cold air return." },
+            { num: "Step 4", title: "Thermal Leak & Pull-Down Test", desc: "Multi-point sensor thermal mapping verifying pull-down from +35°C to -25°C within 120 minutes with zero thermal leakage." }
+          ],
+          specs: [
+            ["Temperature Range", "-25°C Deep Freeze to +15°C Chilled", "Dual-Compartment Multi-Temp Ready"],
+            ["Insulation Core", "100mm to 120mm Injected Polyurethane (PUF)", "Density 42-45 kg/m³, CFC/HCFC Free"],
+            ["Wall & Ceiling Skins", "2.0mm - 2.5mm Antimicrobial Food-Grade GRP", "Seamless, Stain-Resistant & Washable"],
+            ["Flooring System", "Extruded Aluminum T-Floor with 250mm Kickplates", "Heavy Forklift Axle Rated"],
+            ["Door Seals & Gaskets", "Four-Lip EPDM Rubber Multi-Chamber Gaskets", "Heated Perimeter Frame against Ice Freezing"],
+            ["Certifications", "Pharma GDP / HACCP / ATP International Class", "Complete Thermal Pull-Down Test Logs"]
+          ]
+        }
+      };
+
+      const params = new URLSearchParams(window.location.search);
+      const serviceKey = params.get('service');
+
+      if (serviceKey && services[serviceKey]) {
+        const data = services[serviceKey];
+        
+        // Update Hero
+        document.getElementById('serviceHeroTitle').textContent = data.title;
+        document.getElementById('serviceHeroSubtitle').textContent = data.subtitle;
+        document.title = data.title + " | Truck Body Builder";
+
+        // Update Content
+        document.getElementById('serviceSubtitle').textContent = data.badge;
+        document.getElementById('serviceMainHeading').textContent = data.heading;
+        document.getElementById('serviceLead').textContent = data.lead;
+        document.getElementById('serviceDesc').textContent = data.desc;
+        document.getElementById('serviceMainImg').src = data.img;
+
+        // Update Workflow Steps
+        const workflowEl = document.getElementById('serviceWorkflow');
+        if (workflowEl) {
+          workflowEl.innerHTML = data.steps.map(step => `
+            <div class="col-md-6">
+              <div class="p-3 border rounded bg-light h-100">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <span class="badge bg-warning text-dark fw-bold">${step.num}</span>
+                  <h6 class="fw-bold mb-0">${step.title}</h6>
+                </div>
+                <p class="small text-muted mb-0">${step.desc}</p>
+              </div>
+            </div>
+          `).join('');
+        }
+
+        // Update Specs
+        const specsEl = document.getElementById('serviceSpecsBody');
+        if (specsEl) {
+          specsEl.innerHTML = data.specs.map(row => `
+            <tr>
+              <td><strong>${row[0]}</strong></td>
+              <td>${row[1]}</td>
+              <td>${row[2]}</td>
+            </tr>
+          `).join('');
+        }
+
+        // Update Sidebar active link
+        const sidebarLinks = document.querySelectorAll('#servicesSidebarList a');
+        sidebarLinks.forEach(link => {
+          if (link.getAttribute('data-service') === serviceKey) {
+            link.className = 'text-dark fw-bold';
+            link.innerHTML = `<i class="fas fa-angle-right text-orange me-2"></i> ${link.textContent.trim()}`;
+          } else {
+            link.className = 'text-secondary';
+          }
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

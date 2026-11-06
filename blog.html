@@ -1,0 +1,525 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technical Blog & Commercial Vehicle Insights | Truck Body Builder</title>
+  <meta name="description" content="Technical engineering articles, AIS 093 compliance insights, metallurgy guides, and fleet payload optimization strategies from commercial vehicle body builders.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo/favicon.svg">
+  <link rel="alternate icon" href="assets/images/logo/logo-compact.svg">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/premium-motion.css">
+</head>
+<body>
+
+  <!-- Main Navigation Header -->
+  <header class="site-header" id="siteHeader">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container navbar-container">
+        <!-- Brand Logo (Left) -->
+        <a class="navbar-brand navbar-brand-industrial" href="index.html" aria-label="Truck Body Builder Homepage">
+          <div class="brand-logo-wrap">
+            <img src="assets/images/logo/logo-main.svg" alt="Truck Body Builder - Commercial Vehicle Fabrication" class="brand-logo-main">
+            <div class="brand-logo-sheen"></div>
+          </div>
+        </a>
+
+        <!-- Mobile Controls (Dark/Light Mode, RTL & Hamburger) -->
+        <div class="mobile-nav-controls d-lg-none">
+          <button class="header-icon-btn theme-toggle-btn" type="button" title="Toggle Dark/Light Mode" aria-label="Toggle Theme">
+            <i class="fas fa-moon"></i>
+          </button>
+          <button class="header-icon-btn rtl-toggle-btn" type="button" title="Toggle RTL/LTR" aria-label="Toggle RTL">
+            <span class="rtl-text">RTL</span>
+          </button>
+          <!-- Cart Icon with Live Badge (Mobile) -->
+          <a href="cart.html" class="header-icon-btn cart-icon-btn position-relative" title="View Shopping Cart" aria-label="Shopping Cart">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count-badge badge bg-warning text-dark position-absolute top-0 start-100 translate-middle rounded-pill" style="display: none; font-size: 0.65rem; padding: 0.25em 0.5em;">0</span>
+          </a>
+          <button class="navbar-toggler" type="button" id="navbarDrawerToggler" aria-label="Toggle navigation drawer" aria-expanded="false" aria-controls="navbarDrawer">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <!-- Navigation Drawer & Menu (Centered on Desktop, Slide-in Drawer on Mobile) -->
+        <div class="navbar-drawer" id="navbarDrawer">
+          <!-- Mobile Drawer Header -->
+          <div class="drawer-header d-lg-none">
+            <div class="drawer-brand">
+              <a href="index.html" class="drawer-brand-link text-decoration-none" aria-label="Truck Body Builder Homepage">
+                <img src="assets/images/logo/logo-main.svg" alt="Truck Body Builder" class="drawer-logo-img">
+              </a>
+            </div>
+            <button type="button" class="drawer-close-btn" id="navbarDrawerClose" aria-label="Close navigation drawer">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+
+          <!-- Centered Navigation Links on Desktop -->
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Home
+              </a>
+              <ul class="dropdown-menu dropdown-menu-industrial">
+                <li><a class="dropdown-item" href="index.html"><i class="fas fa-industry"></i> Home 1</a></li>
+                <li><a class="dropdown-item" href="home-2.html"><i class="fas fa-tools"></i> Home 2</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="shop.html">Shop</a>
+            </li>
+<li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+
+          <!-- Desktop & Mobile Header Actions (Right) -->
+          <div class="header-actions">
+            <!-- Theme & RTL Toggles (Desktop only >=992px) -->
+            <button class="header-icon-btn theme-toggle-btn d-none d-lg-inline-flex" type="button" title="Toggle Dark/Light Mode" aria-label="Toggle Theme">
+              <i class="fas fa-moon"></i>
+            </button>
+            <button class="header-icon-btn rtl-toggle-btn d-none d-lg-inline-flex" type="button" title="Toggle RTL/LTR" aria-label="Toggle RTL">
+              <span class="rtl-text">RTL</span>
+            </button>
+
+            <!-- CTA "Get a Quote" -->
+            <!-- Cart Icon with Live Badge (Desktop) -->
+            <a href="cart.html" class="header-icon-btn cart-icon-btn position-relative d-none d-lg-inline-flex" title="View Shopping Cart" aria-label="Shopping Cart">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-count-badge badge bg-warning text-dark position-absolute top-0 start-100 translate-middle rounded-pill" style="display: none; font-size: 0.65rem; padding: 0.25em 0.5em;">0</span>
+            </a>
+<a href="contact.html" class="btn btn-industrial nav-cta-btn">
+              <i class="fas fa-file-invoice"></i> Get a Quote
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Backdrop Overlay (<992px) -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+  <main>
+    <!-- BREADCRUMB HERO -->
+    <section class="py-5 text-white" style="background: linear-gradient(rgba(23, 35, 47, 0.94), rgba(23, 35, 47, 0.94)), url('assets/images/blog/blog-1.jpg') center/cover no-repeat; border-bottom: 4px solid var(--industrial-orange);">
+      <div class="container py-4 text-center">
+        <span class="badge-certified mb-2 d-inline-block">Technical Metallurgy & Engineering Insights</span>
+        <h1 class="display-5 fw-bold text-white mb-2">Truck Body Fabrication Blog & Guides</h1>
+        <p class="text-light opacity-90 mx-auto mb-0" style="max-width: 680px;">
+          Expert articles on commercial vehicle body building, structural steel selection, ARAI AIS-093 certification, aerodynamic payload optimization, and preventative fleet maintenance.
+        </p>
+      </div>
+    </section>
+
+    <!-- FEATURED ARTICLE HERO CARD -->
+    <section class="py-5" style="background-color: var(--white); border-bottom: 1px solid var(--border-color);">
+      <div class="container">
+        <div class="row align-items-center g-4 p-4 rounded shadow-sm border" style="background-color: var(--card-bg);">
+          <div class="col-lg-6">
+            <div class="position-relative overflow-hidden rounded" style="height: 340px;">
+              <img src="assets/images/blog/blog-1.jpg" alt="Hardox vs Mild Steel Mining Tipper" class="w-100 h-100" style="object-fit: cover;">
+              <span class="badge position-absolute top-0 start-0 m-3 px-3 py-2 fs-6" style="background-color: var(--industrial-orange); color: var(--white);">
+                <i class="fas fa-star me-1"></i> Featured Technical Whitepaper
+              </span>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="d-flex align-items-center gap-3 mb-2 small text-muted">
+              <span><i class="fas fa-calendar-alt text-orange" style="color: var(--industrial-orange);"></i> October 28, 2026</span>
+              <span><i class="fas fa-user-shield text-orange" style="color: var(--industrial-orange);"></i> By Chief Metallurgical Engineer</span>
+              <span><i class="fas fa-clock text-orange" style="color: var(--industrial-orange);"></i> 8 min read</span>
+            </div>
+            <h2 class="h3 fw-bold mb-3">
+              <a href="blog-details.html?id=1" class="text-decoration-none">
+                High-Tensile Hardox Steel vs Mild Steel in Mining Tipper Fabrication: Weight, Payload & Life Cycle Analysis
+              </a>
+            </h2>
+            <p class="text-muted mb-4">
+              Discover how transitioning from conventional IS 2062 mild steel to abrasion-resistant Hardox 450 wear plate slashes unladen tipper tare weight by 1,450 kgâ€”yielding an additional â‚¹4.2 Lakhs in gross freight revenue per vehicle every operating year.
+            </p>
+            <a href="blog-details.html?id=1" class="btn btn-industrial">
+              Read Full Article <i class="fas fa-arrow-right ms-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEARCH & FILTER TOOLBAR -->
+    <section class="py-4" style="background-color: var(--light-bg); border-bottom: 1px solid var(--border-color);">
+      <div class="container">
+        <div class="row align-items-center g-3">
+          <!-- Search Field -->
+          <div class="col-md-5 col-lg-4">
+            <div class="input-group">
+              <span class="input-group-text bg-white border-end-0"><i class="fas fa-search text-muted"></i></span>
+              <input type="text" id="blogSearchInput" class="form-control border-start-0" placeholder="Search articles by keyword, steel type, norms...">
+            </div>
+          </div>
+
+          <!-- Category Filter Pills -->
+          <div class="col-md-7 col-lg-8">
+            <div class="d-flex flex-wrap gap-2 justify-content-md-end">
+              <button class="filter-btn blog-cat-filter active" data-category="all">All Articles</button>
+              <button class="filter-btn blog-cat-filter" data-category="materials">Materials & Metallurgy</button>
+              <button class="filter-btn blog-cat-filter" data-category="engineering">Vehicle Engineering</button>
+              <button class="filter-btn blog-cat-filter" data-category="regulations">ARAI & AIS Norms</button>
+              <button class="filter-btn blog-cat-filter" data-category="maintenance">Fleet Maintenance</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOG ARTICLES LIST -->
+    <section class="py-5" style="background-color: var(--light-bg); min-height: 500px;">
+      <div class="container py-lg-3">
+        
+        <!-- Articles Grid -->
+        <div class="row g-4" id="blogGrid">
+
+          <!-- Article 1 -->
+          <div class="col-md-6 col-lg-4 blog-article-card" data-category="materials">
+            <article class="blog-card h-100">
+              <div class="blog-thumb-wrapper">
+                <img src="assets/images/blog/blog-1.jpg" alt="Hardox vs Mild Steel Mining Tipper" class="blog-thumb">
+                <div class="blog-date-badge">
+                  <span class="d-block fw-bold fs-6">28</span>
+                  <span class="small text-uppercase">Oct 2026</span>
+                </div>
+              </div>
+              <div class="blog-body">
+                <span class="blog-category">Materials & Metallurgy</span>
+                <h3 class="blog-title">
+                  <a href="blog-details.html?id=1">High-Tensile Hardox Steel vs Mild Steel in Mining Tipper Fabrication</a>
+                </h3>
+                <p class="blog-excerpt">
+                  Comparative analysis of wear plate hardness (Brinell 450 HBW) versus structural yield, dent resistance under boulder loading, and tare weight savings.
+                </p>
+                <div class="blog-meta-footer">
+                  <span><i class="fas fa-user-circle me-1"></i> Technical Desk</span>
+                  <a href="blog-details.html?id=1" class="fw-bold text-orange">Read More <i class="fas fa-angle-right"></i></a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Article 2 -->
+          <div class="col-md-6 col-lg-4 blog-article-card" data-category="regulations">
+            <article class="blog-card h-100">
+              <div class="blog-thumb-wrapper">
+                <img src="assets/images/blog/blog-2.jpg" alt="ARAI AIS 093 Commercial Compliance" class="blog-thumb">
+                <div class="blog-date-badge">
+                  <span class="d-block fw-bold fs-6">15</span>
+                  <span class="small text-uppercase">Oct 2026</span>
+                </div>
+              </div>
+              <div class="blog-body">
+                <span class="blog-category">ARAI & AIS Norms</span>
+                <h3 class="blog-title">
+                  <a href="blog-details.html?id=2">ARAI AIS-093 Code of Practice: Essential Checklist for Commercial Truck Bodies</a>
+                </h3>
+                <p class="blog-excerpt">
+                  A breakdown of safety dimensions, rear under-run protection (RUPD), lateral protection devices (LPD), and fire retardant cabin separation norms.
+                </p>
+                <div class="blog-meta-footer">
+                  <span><i class="fas fa-user-circle me-1"></i> Regulatory Cell</span>
+                  <a href="blog-details.html?id=2" class="fw-bold text-orange">Read More <i class="fas fa-angle-right"></i></a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Article 3 -->
+          <div class="col-md-6 col-lg-4 blog-article-card" data-category="engineering">
+            <article class="blog-card h-100">
+              <div class="blog-thumb-wrapper">
+                <img src="assets/images/blog/blog-3.jpg" alt="Aerodynamic Dry Freight Container Body" class="blog-thumb">
+                <div class="blog-date-badge">
+                  <span class="d-block fw-bold fs-6">02</span>
+                  <span class="small text-uppercase">Oct 2026</span>
+                </div>
+              </div>
+              <div class="blog-body">
+                <span class="blog-category">Vehicle Engineering</span>
+                <h3 class="blog-title">
+                  <a href="blog-details.html?id=3">Aerodynamic Dry Container Engineering: Slashing Highway Drag by 12%</a>
+                </h3>
+                <p class="blog-excerpt">
+                  CFD wind-tunnel modeling results on corner chamfers, side vortex skirts, and roof deflectors on 32-ft and 40-ft multi-axle freight containers.
+                </p>
+                <div class="blog-meta-footer">
+                  <span><i class="fas fa-user-circle me-1"></i> Aerodynamics Lab</span>
+                  <a href="blog-details.html?id=3" class="fw-bold text-orange">Read More <i class="fas fa-angle-right"></i></a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Article 4 -->
+          <div class="col-md-6 col-lg-4 blog-article-card" data-category="maintenance">
+            <article class="blog-card h-100">
+              <div class="blog-thumb-wrapper">
+                <img src="assets/images/blog/blog-4.jpg" alt="Chassis Modification & Huck Bolting" class="blog-thumb">
+                <div class="blog-date-badge">
+                  <span class="d-block fw-bold fs-6">19</span>
+                  <span class="small text-uppercase">Sep 2026</span>
+                </div>
+              </div>
+              <div class="blog-body">
+                <span class="blog-category">Fleet Maintenance</span>
+                <h3 class="blog-title">
+                  <a href="blog-details.html?id=4">Preventing Fatigue Cracking in Wheelbase Extensions: Flitch Plating Rules</a>
+                </h3>
+                <p class="blog-excerpt">
+                  Why welding directly to chassis top flanges causes catastrophic fractures, and how cold-riveted inner channel flitches preserve OEM chassis flex.
+                </p>
+                <div class="blog-meta-footer">
+                  <span><i class="fas fa-user-circle me-1"></i> Senior Inspector</span>
+                  <a href="blog-details.html?id=4" class="fw-bold text-orange">Read More <i class="fas fa-angle-right"></i></a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Article 5 -->
+          <div class="col-md-6 col-lg-4 blog-article-card" data-category="materials">
+            <article class="blog-card h-100">
+              <div class="blog-thumb-wrapper">
+                <img src="assets/images/blog/blog-5.jpg" alt="Reefer Container Insulation" class="blog-thumb">
+                <div class="blog-date-badge">
+                  <span class="d-block fw-bold fs-6">05</span>
+                  <span class="small text-uppercase">Sep 2026</span>
+                </div>
+              </div>
+              <div class="blog-body">
+                <span class="blog-category">Materials & Metallurgy</span>
+                <h3 class="blog-title">
+                  <a href="blog-details.html?id=5">Cold Chain Reefer Design: High-Pressure Polyurethane Injection Technology</a>
+                </h3>
+                <p class="blog-excerpt">
+                  Maintaining stable -25Â°C temperatures in 45Â°C ambient Indian summer conditions through closed-cell PUF cores and thermal break PVC sub-profiles.
+                </p>
+                <div class="blog-meta-footer">
+                  <span><i class="fas fa-user-circle me-1"></i> Thermal Engineer</span>
+                  <a href="blog-details.html?id=5" class="fw-bold text-orange">Read More <i class="fas fa-angle-right"></i></a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Article 6 -->
+          <div class="col-md-6 col-lg-4 blog-article-card" data-category="engineering">
+            <article class="blog-card h-100">
+              <div class="blog-thumb-wrapper">
+                <img src="assets/images/blog/blog-6.jpg" alt="Submerged Arc Welding on Trailer" class="blog-thumb">
+                <div class="blog-date-badge">
+                  <span class="d-block fw-bold fs-6">22</span>
+                  <span class="small text-uppercase">Aug 2026</span>
+                </div>
+              </div>
+              <div class="blog-body">
+                <span class="blog-category">Vehicle Engineering</span>
+                <h3 class="blog-title">
+                  <a href="blog-details.html?id=6">Submerged Arc Welding (SAW) vs Manual MIG for Heavy Trailer Girders</a>
+                </h3>
+                <p class="blog-excerpt">
+                  Why automated SAW ensures deep continuous weld penetration on 14-meter trailer main beams with zero slag inclusions or hydrogen cracking.
+                </p>
+                <div class="blog-meta-footer">
+                  <span><i class="fas fa-user-circle me-1"></i> Welding Specialist</span>
+                  <a href="blog-details.html?id=6" class="fw-bold text-orange">Read More <i class="fas fa-angle-right"></i></a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+        </div>
+
+        <!-- No Results Fallback -->
+        <div id="blogNoResults" class="text-center py-5" style="display: none;">
+          <div class="p-5 bg-white rounded border shadow-sm mx-auto" style="max-width: 500px;">
+            <i class="fas fa-search fa-3x text-muted mb-3"></i>
+            <h4 class="h5 fw-bold mb-2">No Matching Technical Articles Found</h4>
+            <p class="text-muted small mb-3">Try searching with broader terms such as "steel", "tipper", "container", or "welding".</p>
+            <button class="btn btn-sm btn-industrial" onclick="document.getElementById('blogSearchInput').value=''; document.querySelector('.blog-cat-filter[data-category=\'all\']').click();">Reset Filters</button>
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <nav class="mt-5 d-flex justify-content-center" aria-label="Blog Article Pagination">
+          <ul class="pagination">
+            <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1"><i class="fas fa-chevron-left"></i></a></li>
+            <li class="page-item active"><a class="page-link" href="#" style="background-color: var(--industrial-orange); border-color: var(--industrial-orange);">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#"><i class="fas fa-chevron-right"></i></a></li>
+          </ul>
+        </nav>
+
+      </div>
+    </section>
+
+    <!-- NEWSLETTER / WHITEPAPER DOWNLOAD -->
+    <section class="py-5" style="background: linear-gradient(135deg, var(--charcoal) 0%, var(--primary-steel) 100%); color: var(--white);">
+      <div class="container py-lg-3 text-center">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <span class="badge-certified mb-3 d-inline-block">Technical Metallurgy Library</span>
+            <h2 class="h3 fw-bold text-white mb-3">Download Our Commercial Vehicle Body Building Manual</h2>
+            <p class="text-light opacity-90 mb-4">
+              Access 78 pages of engineering drawings, payload formulas, steel grade cross-reference tables, and ARAI AIS-093 regulatory compliance matrices.
+            </p>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+              <a href="contact.html" class="btn btn-industrial btn-lg">
+                <i class="fas fa-file-pdf me-2"></i> Request Engineering Manual (PDF)
+              </a>
+              <a href="gallery.html" class="btn btn-outline-light-industrial btn-lg">
+                <i class="fas fa-images me-2"></i> View Project Gallery
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- INDUSTRIAL FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6 footer-widget">
+          <a href="index.html" class="footer-brand d-inline-block mb-3 text-decoration-none" title="Truck Body Builder - Back to Home">
+            <div class="footer-logo-wrap">
+              <img src="assets/images/logo/logo-main.svg" alt="Truck Body Builder - Heavy Commercial Vehicle Fabrication" class="footer-logo-img">
+            </div>
+          </a>
+          <p class="text-muted small mb-3">
+            Heavy commercial vehicle fabrication and industrial truck body builder. Certified by ARAI, conforming to CMVR specifications, and delivering durable body engineering across India and export markets.
+          </p>
+          <div class="badge-certified d-inline-block mb-3">
+            <i class="fas fa-award me-1"></i> ISO 9001:2015 Registered Unit
+          </div>
+          <div class="social-links">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Twitter X"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="col-lg-2 col-md-6 footer-widget">
+          <h5 class="text-white">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fas fa-angle-right"></i> Home (General)</a></li>
+            <li><a href="home-2.html"><i class="fas fa-angle-right"></i> Home (Fabrication)</a></li>
+            <li><a href="about.html"><i class="fas fa-angle-right"></i> About Us</a></li>
+            <li><a href="services.html"><i class="fas fa-angle-right"></i> Fabrication Services</a></li>
+            <li><a href="service-details.html"><i class="fas fa-angle-right"></i> Service Details</a></li>
+            <li><a href="gallery.html"><i class="fas fa-angle-right"></i> Project Gallery</a></li>
+            <li><a href="blog.html"><i class="fas fa-angle-right"></i> Technical Blog</a></li>
+            <li><a href="shop.html"><i class="fas fa-angle-right"></i> Hardware Shop</a></li>
+            <li><a href="cart.html"><i class="fas fa-angle-right"></i> Shopping Cart</a></li>
+            <li><a href="contact.html"><i class="fas fa-angle-right"></i> Contact & Quote</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Services & Capabilities -->
+        <div class="col-lg-2 col-md-6 footer-widget">
+          <h5 class="text-white">Our Services</h5>
+          <ul class="footer-links">
+            <li><a href="services.html"><i class="fas fa-angle-right"></i> Heavy Fabrication</a></li>
+            <li><a href="services.html"><i class="fas fa-angle-right"></i> Custom Body Design</a></li>
+            <li><a href="services.html"><i class="fas fa-angle-right"></i> Structural Welding</a></li>
+            <li><a href="services.html"><i class="fas fa-angle-right"></i> Industrial Painting</a></li>
+            <li><a href="services.html"><i class="fas fa-angle-right"></i> Accident Repair</a></li>
+            <li><a href="service-details.html"><i class="fas fa-angle-right"></i> Testing & Certification</a></li>
+            <li><a href="gallery.html"><i class="fas fa-angle-right"></i> Project Gallery</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-6 footer-widget">
+          <h5 class="text-white">Plant & Head Office</h5>
+          <div class="footer-contact-item">
+            <a href="contact.html" class="footer-contact-icon text-decoration-none" title="View Plant & Head Office Location"><i class="fas fa-map-marker-alt"></i></a>
+            <div>
+              <strong>Industrial Works:</strong><br>
+              Plot 42-48, Sector 9, Heavy Engineering Industrial Zone, Near Automobile Hub, Chennai / Pune Highway, India.
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <a href="tel:+919876543210" class="footer-contact-icon text-decoration-none" title="Call Technical Hotline"><i class="fas fa-phone"></i></a>
+            <div>
+              <strong>Technical Hotline:</strong><br>
+              <a href="tel:+919876543210" class="text-white">+91 98765 43210</a> / <a href="tel:18004198782" class="text-white">1800-419-8782</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <a href="mailto:fabrication@truckbodybuilder.com" class="footer-contact-icon text-decoration-none" title="Email Quotation Desk"><i class="fas fa-envelope"></i></a>
+            <div>
+              <strong>Quotation Desk:</strong><br>
+              <a href="mailto:fabrication@truckbodybuilder.com" class="text-white">fabrication@truckbodybuilder.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+            &copy; 2026 Truck Body Builder & Commercial Vehicle Fabrication Works. All rights reserved.
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <div class="footer-bottom-links">
+              <a href="about.html">Privacy Policy</a>
+              <a href="services.html">Terms of Manufacturing</a>
+              <a href="services.html">Site Index</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTopBtn" class="back-to-top" title="Back to top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/gallery.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/premium-motion.js" defer></script>
+</body>
+</html>

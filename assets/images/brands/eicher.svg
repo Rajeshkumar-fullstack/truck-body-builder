@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="240" height="60" aria-label="Eicher Trucks Logo">
+  <!-- Eicher Dual-Triangle Red Dynamic Emblem -->
+  <g transform="translate(10, 8)">
+    <polygon points="2,8 24,8 14,24" fill="#E60000" />
+    <polygon points="16,24 38,24 28,40" fill="#B30000" />
+    <polygon points="14,9 23,24 2,24" fill="#E60000" opacity="0.85" />
+    <polygon points="26,24 35,40 16,40" fill="#990000" opacity="0.9" />
+  </g>
+  <!-- Brand Typography -->
+  <g transform="translate(60, 16)">
+    <text x="0" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-weight="900" font-size="20" letter-spacing="3.5" fill="currentColor">EICHER</text>
+    <text x="0" y="32" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="9" letter-spacing="3" fill="#E60000">TRUCKS &amp; BUSES</text>
+  </g>
+</svg>

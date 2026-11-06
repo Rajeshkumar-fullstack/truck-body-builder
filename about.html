@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Truck Body Builder & Commercial Vehicle Fabrication Works</title>
+  <meta name="description" content="Learn about our 28-year history, engineering team, ISO 9001:2015 certified infrastructure, and commitment to heavy commercial vehicle body manufacturing.">
+  
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo/favicon.svg">
+  <link rel="alternate icon" href="assets/images/logo/logo-compact.svg">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/premium-motion.css">
+</head>
+<body>
+
+  <!-- Main Navigation Header -->
+  <header class="site-header" id="siteHeader">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container navbar-container">
+        <!-- Brand Logo (Left) -->
+        <a class="navbar-brand navbar-brand-industrial" href="index.html" aria-label="Truck Body Builder Homepage">
+          <div class="brand-logo-wrap">
+            <img src="assets/images/logo/logo-main.svg" alt="Truck Body Builder - Commercial Vehicle Fabrication" class="brand-logo-main">
+            <div class="brand-logo-sheen"></div>
+          </div>
+        </a>
+
+        <!-- Mobile Controls (Dark/Light Mode, RTL & Hamburger) -->
+        <div class="mobile-nav-controls d-lg-none">
+          <button class="header-icon-btn theme-toggle-btn" type="button" title="Toggle Dark/Light Mode" aria-label="Toggle Theme">
+            <i class="fas fa-moon"></i>
+          </button>
+          <button class="header-icon-btn rtl-toggle-btn" type="button" title="Toggle RTL/LTR" aria-label="Toggle RTL">
+            <span class="rtl-text">RTL</span>
+          </button>
+          <!-- Cart Icon with Live Badge (Mobile) -->
+          <a href="cart.html" class="header-icon-btn cart-icon-btn position-relative" title="View Shopping Cart" aria-label="Shopping Cart">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count-badge badge bg-warning text-dark position-absolute top-0 start-100 translate-middle rounded-pill" style="display: none; font-size: 0.65rem; padding: 0.25em 0.5em;">0</span>
+          </a>
+          <button class="navbar-toggler" type="button" id="navbarDrawerToggler" aria-label="Toggle navigation drawer" aria-expanded="false" aria-controls="navbarDrawer">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <!-- Navigation Drawer & Menu (Centered on Desktop, Slide-in Drawer on Mobile) -->
+        <div class="navbar-drawer" id="navbarDrawer">
+          <!-- Mobile Drawer Header -->
+          <div class="drawer-header d-lg-none">
+            <div class="drawer-brand">
+              <a href="index.html" class="drawer-brand-link text-decoration-none" aria-label="Truck Body Builder Homepage">
+                <img src="assets/images/logo/logo-main.svg" alt="Truck Body Builder" class="drawer-logo-img">
+              </a>
+            </div>
+            <button type="button" class="drawer-close-btn" id="navbarDrawerClose" aria-label="Close navigation drawer">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+
+          <!-- Centered Navigation Links on Desktop -->
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Home
+              </a>
+              <ul class="dropdown-menu dropdown-menu-industrial">
+                <li><a class="dropdown-item" href="index.html"><i class="fas fa-industry"></i> Home 1</a></li>
+                <li><a class="dropdown-item" href="home-2.html"><i class="fas fa-tools"></i> Home 2</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="shop.html">Shop</a>
+            </li>
+<li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+
+          <!-- Desktop & Mobile Header Actions (Right) -->
+          <div class="header-actions">
+            <!-- Theme & RTL Toggles (Desktop only >=992px) -->
+            <button class="header-icon-btn theme-toggle-btn d-none d-lg-inline-flex" type="button" title="Toggle Dark/Light Mode" aria-label="Toggle Theme">
+              <i class="fas fa-moon"></i>
+            </button>
+            <button class="header-icon-btn rtl-toggle-btn d-none d-lg-inline-flex" type="button" title="Toggle RTL/LTR" aria-label="Toggle RTL">
+              <span class="rtl-text">RTL</span>
+            </button>
+
+            <!-- CTA "Get a Quote" -->
+            <!-- Cart Icon with Live Badge (Desktop) -->
+            <a href="cart.html" class="header-icon-btn cart-icon-btn position-relative d-none d-lg-inline-flex" title="View Shopping Cart" aria-label="Shopping Cart">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-count-badge badge bg-warning text-dark position-absolute top-0 start-100 translate-middle rounded-pill" style="display: none; font-size: 0.65rem; padding: 0.25em 0.5em;">0</span>
+            </a>
+<a href="contact.html" class="btn btn-industrial nav-cta-btn">
+              <i class="fas fa-file-invoice"></i> Get a Quote
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Backdrop Overlay (<992px) -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+  <main>
+    <!-- PAGE BREADCRUMB HERO -->
+    <section class="py-5 text-white" style="background: linear-gradient(rgba(23, 35, 47, 0.94), rgba(23, 35, 47, 0.94)), url('assets/images/about/facility-1.jpg') center/cover no-repeat; border-bottom: 4px solid var(--industrial-orange);">
+      <div class="container py-4 text-center">
+        <span class="badge-certified mb-2 d-inline-block">Established 1998</span>
+        <h1 class="display-5 fw-bold text-white mb-2">About Our Company</h1>
+        <p class="text-light opacity-90 mx-auto mb-0" style="max-width: 650px;">
+          Nearly three decades of excellence in commercial vehicle fabrication, metallurgical integrity, and heavy automotive manufacturing.
+        </p>
+      </div>
+    </section>
+
+    <!-- COMPANY OVERVIEW & STATS -->
+    <section class="py-5 bg-white">
+      <div class="container py-lg-4">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <div class="section-subtitle">Who We Are</div>
+            <h2 class="section-title">Engineering Heavy Commercial Strength Since 1998</h2>
+            <p class="text-muted mb-3">
+              Founded as a dedicated commercial vehicle body manufacturing unit, <strong>Truck Body Builder</strong> has grown into an industry-leading fabrication hub covering 120,000 square feet with a monthly delivery throughput of over 85 commercial bodies.
+            </p>
+            <p class="text-muted mb-4">
+              We work in direct coordination with fleet corporations, logistics operators, state transport undertakings, mining conglomerates, and authorized OEM dealers for Tata Motors, Ashok Leyland, BharatBenz, and Eicher. Every chassis that rolls out of our facility is engineered with FEA structural modeling, certified welding, and ARAI roadworthiness approval.
+            </p>
+
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <div class="border-start border-4 border-warning ps-3">
+                  <h4 class="h5 fw-bold mb-1">ARAI / CMVR Certified</h4>
+                  <p class="small text-muted mb-0">Full compliance with AIS-093 truck body codes.</p>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="border-start border-4 border-warning ps-3">
+                  <h4 class="h5 fw-bold mb-1">OEM Direct Approvals</h4>
+                  <p class="small text-muted mb-0">Authorized chassis body fabricator status.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="row g-3">
+              <div class="col-6">
+                <img src="assets/images/about/facility-2.jpg" alt="Heavy Metal Fabrication Assembly Bay" class="rounded w-100 shadow-sm" style="height: 240px; object-fit: cover;" onerror="this.onerror=null; this.src='assets/images/about/facility-1.jpg';">
+              </div>
+              <div class="col-6">
+                <img src="assets/images/about/facility-3.jpg" alt="CNC Laser Cutting and Quality Testing" class="rounded w-100 shadow-sm" style="height: 240px; object-fit: cover;" onerror="this.onerror=null; this.src='assets/images/about/facility-1.jpg';">
+              </div>
+              <div class="col-12">
+                <img src="assets/images/about/facility-1.jpg" alt="Automated Vehicle Body Manufacturing Bay" class="rounded w-100 shadow-sm" style="height: 200px; object-fit: cover;" onerror="this.onerror=null; this.src='assets/images/about/facility-2.jpg';">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MISSION, VISION & QUALITY POLICY -->
+    <section class="py-5" style="background-color: var(--light-bg);">
+      <div class="container py-lg-4">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card h-100 border-0 p-4 rounded shadow-sm bg-white">
+              <div class="text-orange fs-2 mb-3" style="color: var(--industrial-orange);"><i class="fas fa-bullseye"></i></div>
+              <h3 class="h4 fw-bold mb-3">Our Mission</h3>
+              <p class="text-muted mb-0">
+                To fabricate the most structurally reliable, lightweight, and legally compliant commercial vehicle bodies that maximize payload profitability and guarantee operator safety on every highway.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 border-0 p-4 rounded shadow-sm bg-white">
+              <div class="text-orange fs-2 mb-3" style="color: var(--industrial-orange);"><i class="fas fa-eye"></i></div>
+              <h3 class="h4 fw-bold mb-3">Our Vision</h3>
+              <p class="text-muted mb-0">
+                To be the benchmark commercial vehicle fabrication company recognized globally for metallurgical innovation, automated manufacturing, and zero-defect delivery standards.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 border-0 p-4 rounded shadow-sm bg-white">
+              <div class="text-orange fs-2 mb-3" style="color: var(--industrial-orange);"><i class="fas fa-medal"></i></div>
+              <h3 class="h4 fw-bold mb-3">Quality Policy</h3>
+              <p class="text-muted mb-0">
+                Zero tolerance for structural compromise. We use prime-tested steel certified with mill test certificates (MTC), ultrasonic weld inspections, and multi-stage anti-corrosion chemical treatment.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPANY HISTORY & MILESTONES -->
+    <section class="py-5 bg-white">
+      <div class="container py-lg-4">
+        <div class="section-header text-center mx-auto" style="max-width: 650px;">
+          <div class="section-subtitle">Our Journey</div>
+          <h2 class="section-title">28 Years of Manufacturing Milestones</h2>
+          <p class="section-desc mx-auto">From a modest 2-bay workshop to a heavy engineering fabrication powerhouse.</p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="border-start border-3 border-warning ps-4 ms-2 position-relative">
+              
+              <div class="mb-5 position-relative">
+                <span class="badge bg-dark text-warning position-absolute" style="left: -42px; top: 0; width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem;">1</span>
+                <span class="fw-bold text-orange" style="color: var(--industrial-orange);">1998</span>
+                <h4 class="h5 fw-bold mt-1">Foundation of Engineering Workshop</h4>
+                <p class="text-muted mb-0">Started operations with standard wooden-composite and mild steel open cargo bodies on 16-ton chassis platforms.</p>
+              </div>
+
+              <div class="mb-5 position-relative">
+                <span class="badge bg-dark text-warning position-absolute" style="left: -42px; top: 0; width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem;">2</span>
+                <span class="fw-bold text-orange" style="color: var(--industrial-orange);">2006</span>
+                <h4 class="h5 fw-bold mt-1">Expansion to Hydraulic Tipper Manufacturing</h4>
+                <p class="text-muted mb-0">Commissioned specialized heavy tipping jigs, partnered with European hydraulic cylinder manufacturers, and secured major mining fleet contracts.</p>
+              </div>
+
+              <div class="mb-5 position-relative">
+                <span class="badge bg-dark text-warning position-absolute" style="left: -42px; top: 0; width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem;">3</span>
+                <span class="fw-bold text-orange" style="color: var(--industrial-orange);">2014</span>
+                <h4 class="h5 fw-bold mt-1">ISO 9001:2015 & ARAI Code Homologation</h4>
+                <p class="text-muted mb-0">Upgraded production to comply fully with AIS-093 truck code regulations and secured OEM Tier-1 fabrication accreditation.</p>
+              </div>
+
+              <div class="mb-5 position-relative">
+                <span class="badge bg-dark text-warning position-absolute" style="left: -42px; top: 0; width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem;">4</span>
+                <span class="fw-bold text-orange" style="color: var(--industrial-orange);">2020</span>
+                <h4 class="h5 fw-bold mt-1">CNC Robotic Line & Laser Cutting Facility</h4>
+                <p class="text-muted mb-0">Installed 12kW fiber laser cutting and 800-ton CNC bending press brakes, achieving 0.1mm tolerance across all sheet metal body components.</p>
+              </div>
+
+              <div class="position-relative">
+                <span class="badge bg-dark text-warning position-absolute" style="left: -42px; top: 0; width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem;">5</span>
+                <span class="fw-bold text-orange" style="color: var(--industrial-orange);">Present Day</span>
+                <h4 class="h5 fw-bold mt-1">Cross-Border Heavy Commercial Expansion</h4>
+                <p class="text-muted mb-0">Surpassed 14,500 fabricated commercial bodies with turnkey deliveries for defense, e-commerce reefer fleets, and interstate multi-axle trailers.</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEADERSHIP & ENGINEERING TEAM -->
+    <section class="py-5" style="background-color: var(--light-bg);">
+      <div class="container py-lg-4">
+        <div class="section-header text-center mx-auto" style="max-width: 650px;">
+          <div class="section-subtitle">Leadership</div>
+          <h2 class="section-title">Our Technical Leadership Team</h2>
+          <p class="section-desc mx-auto">Headed by certified automotive metallurgists and commercial body engineering specialists.</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Member 1: Harish Chandra Sharma -->
+          <div class="col-sm-6 col-lg-3">
+            <div class="team-card">
+              <div class="team-thumb-wrapper">
+                <img src="assets/images/about/team-1.jpg?v=4" alt="Harish Chandra Sharma - Managing Director" class="team-thumb-img" loading="lazy">
+              </div>
+              <div class="team-body">
+                <h3 class="team-name">Harish Chandra Sharma</h3>
+                <span class="team-role">Managing Director &amp; Founder</span>
+                <p class="team-bio">35+ years in automotive structural fabrication, fleet engineering, and ARAI homologation governance.</p>
+                <div class="team-social">
+                  <a href="contact.html" class="team-social-link" title="Contact Harish Sharma" aria-label="Contact"><i class="fas fa-envelope"></i></a>
+                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="team-social-link" title="LinkedIn Profile" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Member 2: Er. Balvinder Singh -->
+          <div class="col-sm-6 col-lg-3">
+            <div class="team-card">
+              <div class="team-thumb-wrapper">
+                <img src="assets/images/about/team-2.jpg?v=4" alt="Er. Balvinder Singh - Head of Design & FEA" class="team-thumb-img" loading="lazy">
+              </div>
+              <div class="team-body">
+                <h3 class="team-name">Er. Balvinder Singh</h3>
+                <span class="team-role">Head of Design &amp; FEA</span>
+                <p class="team-bio">M.Tech (CAD/CAM), specialist in dynamic chassis load simulation, torsional stress, and Hardox tipper design.</p>
+                <div class="team-social">
+                  <a href="contact.html" class="team-social-link" title="Contact Balvinder Singh" aria-label="Contact"><i class="fas fa-envelope"></i></a>
+                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="team-social-link" title="LinkedIn Profile" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Member 3: Dr. Priya Nambiar -->
+          <div class="col-sm-6 col-lg-3">
+            <div class="team-card">
+              <div class="team-thumb-wrapper">
+                <img src="assets/images/about/team-3.jpg?v=4" alt="Dr. Priya Nambiar - Chief Quality & NDT Officer" class="team-thumb-img" loading="lazy">
+              </div>
+              <div class="team-body">
+                <h3 class="team-name">Dr. Priya Nambiar</h3>
+                <span class="team-role">Chief Quality &amp; NDT Officer</span>
+                <p class="team-bio">ASNT Level III certified metallurgist overseeing welding radiography, ultrasonic testing, and weld fatigue audits.</p>
+                <div class="team-social">
+                  <a href="contact.html" class="team-social-link" title="Contact Priya Nambiar" aria-label="Contact"><i class="fas fa-envelope"></i></a>
+                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="team-social-link" title="LinkedIn Profile" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Member 4: Karthik Subramanian -->
+          <div class="col-sm-6 col-lg-3">
+            <div class="team-card">
+              <div class="team-thumb-wrapper">
+                <img src="assets/images/about/team-4.jpg?v=4" alt="Karthik Subramanian - Plant Production Manager" class="team-thumb-img" loading="lazy">
+              </div>
+              <div class="team-body">
+                <h3 class="team-name">Karthik Subramanian</h3>
+                <span class="team-role">Plant Production Manager</span>
+                <p class="team-bio">Leads robotic welding bays, shot blasting lines, and lean fleet assembly for rapid multi-unit dispatches.</p>
+                <div class="team-social">
+                  <a href="contact.html" class="team-social-link" title="Contact Karthik Subramanian" aria-label="Contact"><i class="fas fa-envelope"></i></a>
+                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="team-social-link" title="LinkedIn Profile" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+    </section>
+
+    <!-- CALL TO °CTION -->
+    <section class="py-5" style="background: var(--primary-steel); color: var(--white);">
+      <div class="container py-lg-4 text-center">
+        <h2 class="display-6 fw-bold text-white mb-3">Partner with India's Proven Truck Body Builder</h2>
+        <p class="lead text-light opacity-90 mx-auto mb-4" style="max-width: 650px;">
+          Whether building an individual heavy tipper or contracting a 100-vehicle logistics fleet, we guarantee structural longevity and competitive pricing.
+        </p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+          <a href="contact.html" class="btn btn-industrial btn-lg">Contact Technical Desk</a>
+          <a href="gallery.html" class="btn btn-outline-light-industrial btn-lg">View Project Gallery</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- INDUSTRIAL FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6 footer-widget">
+          <a href="index.html" class="footer-brand d-inline-block mb-3 text-decoration-none" title="Truck Body Builder - Back to Home">
+            <div class="footer-logo-wrap">
+              <img src="assets/images/logo/logo-main.svg" alt="Truck Body Builder - Heavy Commercial Vehicle Fabrication" class="footer-logo-img">
+            </div>
+          </a>
+          <p class="text-muted small mb-3">
+            Heavy commercial vehicle fabrication and industrial truck body builder. Certified by ARAI, conforming to CMVR specifications, and delivering durable body engineering across India and export markets.
+          </p>
+          <div class="badge-certified d-inline-block mb-3">
+            <i class="fas fa-award me-1"></i> ISO 9001:2015 Registered Unit
+          </div>
+          <div class="social-links">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Twitter X"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="col-lg-2 col-md-6 footer-widget">
+          <h5 class="text-white">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fas fa-angle-right"></i> Home (General)</a></li>
+            <li><a href="home-2.html"><i class="fas fa-angle-right"></i> Home (Fabrication)</a></li>
+            <li><a href="about.html"><i class="fas fa-angle-right"></i> About Us</a></li>
+            <li><a href="services.html"><i class="fas fa-angle-right"></i> Fabrication Services</a></li>
+            <li><a href="service-details.html"><i class="fas fa-angle-right"></i> Service Details</a></li>
+            <li><a href="gallery.html"><i class="fas fa-angle-right"></i> Project Gallery</a></li>
+            <li><a href="blog.html"><i class="fas fa-angle-right"></i> Technical Blog</a></li>
+            <li><a href="shop.html"><i class="fas fa-angle-right"></i> Hardware Shop</a></li>
+            <li><a href="cart.html"><i class="fas fa-angle-right"></i> Shopping Cart</a></li>
+            <li><a href="contact.html"><i class="fas fa-angle-right"></i> Contact & Quote</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Services & Capabilities -->
+        <div class="col-lg-2 col-md-6 footer-widget">
+          <h5 class="text-white">Our Services</h5>
+          <ul class="footer-links">
+            <li><a href="services.html"><i class="fas fa-angle-right"></i> Heavy Fabrication</a></li>
+            <li><a href="services.html"><i class="fas fa-angle-right"></i> Custom Body Design</a></li>
+            <li><a href="services.html"><i class="fas fa-angle-right"></i> Structural Welding</a></li>
+            <li><a href="services.html"><i class="fas fa-angle-right"></i> Industrial Painting</a></li>
+            <li><a href="services.html"><i class="fas fa-angle-right"></i> Accident Repair</a></li>
+            <li><a href="service-details.html"><i class="fas fa-angle-right"></i> Testing & Certification</a></li>
+            <li><a href="gallery.html"><i class="fas fa-angle-right"></i> Project Gallery</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-6 footer-widget">
+          <h5 class="text-white">Plant & Head Office</h5>
+          <div class="footer-contact-item">
+            <a href="contact.html" class="footer-contact-icon text-decoration-none" title="View Plant & Head Office Location"><i class="fas fa-map-marker-alt"></i></a>
+            <div>
+              <strong>Industrial Works:</strong><br>
+              Plot 42-48, Sector 9, Heavy Engineering Industrial Zone, Near Automobile Hub, Chennai / Pune Highway, India.
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <a href="tel:+919876543210" class="footer-contact-icon text-decoration-none" title="Call Technical Hotline"><i class="fas fa-phone"></i></a>
+            <div>
+              <strong>Technical Hotline:</strong><br>
+              <a href="tel:+919876543210" class="text-white">+91 98765 43210</a> / <a href="tel:18004198782" class="text-white">1800-419-8782</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <a href="mailto:fabrication@truckbodybuilder.com" class="footer-contact-icon text-decoration-none" title="Email Quotation Desk"><i class="fas fa-envelope"></i></a>
+            <div>
+              <strong>Quotation Desk:</strong><br>
+              <a href="mailto:fabrication@truckbodybuilder.com" class="text-white">fabrication@truckbodybuilder.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+            &copy; 2026 Truck Body Builder & Commercial Vehicle Fabrication Works. All rights reserved.
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <div class="footer-bottom-links">
+              <a href="about.html">Privacy Policy</a>
+              <a href="services.html">Terms of Manufacturing</a>
+              <a href="services.html">Site Index</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTopBtn" class="back-to-top" title="Back to top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/gallery.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/premium-motion.js" defer></script>
+</body>
+</html>

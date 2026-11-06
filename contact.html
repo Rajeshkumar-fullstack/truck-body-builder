@@ -1,0 +1,510 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Commercial Quotation Desk | Truck Body Builder & Heavy Fabrication</title>
+  <meta name="description" content="Request a technical manufacturing quotation for custom truck bodies, tippers, containers, trailers, and repairs. Connect directly with our chief fabrication engineers.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo/favicon.svg">
+  <link rel="alternate icon" href="assets/images/logo/logo-compact.svg">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/premium-motion.css">
+</head>
+<body>
+
+  <!-- Main Navigation Header -->
+  <header class="site-header" id="siteHeader">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container navbar-container">
+        <!-- Brand Logo (Left) -->
+        <a class="navbar-brand navbar-brand-industrial" href="index.html" aria-label="Truck Body Builder Homepage">
+          <div class="brand-logo-wrap">
+            <img src="assets/images/logo/logo-main.svg" alt="Truck Body Builder - Commercial Vehicle Fabrication" class="brand-logo-main">
+            <div class="brand-logo-sheen"></div>
+          </div>
+        </a>
+
+        <!-- Mobile Controls (Dark/Light Mode, RTL & Hamburger) -->
+        <div class="mobile-nav-controls d-lg-none">
+          <button class="header-icon-btn theme-toggle-btn" type="button" title="Toggle Dark/Light Mode" aria-label="Toggle Theme">
+            <i class="fas fa-moon"></i>
+          </button>
+          <button class="header-icon-btn rtl-toggle-btn" type="button" title="Toggle RTL/LTR" aria-label="Toggle RTL">
+            <span class="rtl-text">RTL</span>
+          </button>
+          <!-- Cart Icon with Live Badge (Mobile) -->
+          <a href="cart.html" class="header-icon-btn cart-icon-btn position-relative" title="View Shopping Cart" aria-label="Shopping Cart">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count-badge badge bg-warning text-dark position-absolute top-0 start-100 translate-middle rounded-pill" style="display: none; font-size: 0.65rem; padding: 0.25em 0.5em;">0</span>
+          </a>
+          <button class="navbar-toggler" type="button" id="navbarDrawerToggler" aria-label="Toggle navigation drawer" aria-expanded="false" aria-controls="navbarDrawer">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <!-- Navigation Drawer & Menu (Centered on Desktop, Slide-in Drawer on Mobile) -->
+        <div class="navbar-drawer" id="navbarDrawer">
+          <!-- Mobile Drawer Header -->
+          <div class="drawer-header d-lg-none">
+            <div class="drawer-brand">
+              <a href="index.html" class="drawer-brand-link text-decoration-none" aria-label="Truck Body Builder Homepage">
+                <img src="assets/images/logo/logo-main.svg" alt="Truck Body Builder" class="drawer-logo-img">
+              </a>
+            </div>
+            <button type="button" class="drawer-close-btn" id="navbarDrawerClose" aria-label="Close navigation drawer">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+
+          <!-- Centered Navigation Links on Desktop -->
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Home
+              </a>
+              <ul class="dropdown-menu dropdown-menu-industrial">
+                <li><a class="dropdown-item" href="index.html"><i class="fas fa-industry"></i> Home 1</a></li>
+                <li><a class="dropdown-item" href="home-2.html"><i class="fas fa-tools"></i> Home 2</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="contact.html">Contact</a>
+            </li>
+          </ul>
+
+          <!-- Desktop & Mobile Header Actions (Right) -->
+          <div class="header-actions">
+            <!-- Theme & RTL Toggles (Desktop only >=992px) -->
+            <button class="header-icon-btn theme-toggle-btn d-none d-lg-inline-flex" type="button" title="Toggle Dark/Light Mode" aria-label="Toggle Theme">
+              <i class="fas fa-moon"></i>
+            </button>
+            <button class="header-icon-btn rtl-toggle-btn d-none d-lg-inline-flex" type="button" title="Toggle RTL/LTR" aria-label="Toggle RTL">
+              <span class="rtl-text">RTL</span>
+            </button>
+
+            <!-- CTA "Get a Quote" -->
+            <!-- Cart Icon with Live Badge (Desktop) -->
+            <a href="cart.html" class="header-icon-btn cart-icon-btn position-relative d-none d-lg-inline-flex" title="View Shopping Cart" aria-label="Shopping Cart">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-count-badge badge bg-warning text-dark position-absolute top-0 start-100 translate-middle rounded-pill" style="display: none; font-size: 0.65rem; padding: 0.25em 0.5em;">0</span>
+            </a>
+<a href="contact.html" class="btn btn-industrial nav-cta-btn">
+              <i class="fas fa-file-invoice"></i> Get a Quote
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Backdrop Overlay (<992px) -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+  <main>
+    <!-- BREADCRUMB HERO -->
+    <section class="py-5 text-white" style="background: linear-gradient(rgba(23, 35, 47, 0.94), rgba(23, 35, 47, 0.94)), url('assets/images/about/facility-1.jpg') center/cover no-repeat; border-bottom: 4px solid var(--industrial-orange);">
+      <div class="container py-4 text-center">
+        <span class="badge-certified mb-2 d-inline-block">Commercial Vehicle Engineering</span>
+        <h1 class="display-5 fw-bold text-white mb-2">Technical Quotation & Contact Desk</h1>
+        <p class="text-light opacity-90 mx-auto mb-0" style="max-width: 680px;">
+          Submit your vehicle chassis specifications, payload targets, or fleet fabrication requirements. Our technical estimation engineers respond within 24 business hours.
+        </p>
+      </div>
+    </section>
+
+    <!-- CONT°CT DETAILS & QUOTATION FORM -->
+    <section class="py-5" style="background-color: var(--light-bg);">
+      <div class="container py-lg-4">
+        
+        <!-- Contact Cards Row -->
+        <div class="row g-4 mb-5">
+          <div class="col-md-4">
+            <div class="p-4 bg-white rounded border shadow-sm h-100" style="background-color: var(--card-bg);">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="footer-contact-icon fs-5" style="width: 44px; height: 44px;">
+                  <i class="fas fa-industry"></i>
+                </div>
+                <div>
+                  <h5 class="fw-bold mb-0">Heavy Works & Plant</h5>
+                  <small class="text-muted">120,000 Sq. Ft. Fabrication Yard</small>
+                </div>
+              </div>
+              <p class="text-muted small mb-0">
+                Plot 42-48, Sector 9, Heavy Engineering Industrial Zone, Near Automobile Hub, Chennai / Pune Highway, India.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="p-4 bg-white rounded border shadow-sm h-100" style="background-color: var(--card-bg);">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="footer-contact-icon fs-5" style="width: 44px; height: 44px;">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <div>
+                  <h5 class="fw-bold mb-0">Hotline & Technical Support</h5>
+                  <small class="text-muted">Direct Engineering Lines</small>
+                </div>
+              </div>
+              <p class="text-muted small mb-1">
+                <strong>Direct Mobile:</strong> <a href="tel:+919876543210" class="fw-bold text-orange">+91 98765 43210</a>
+              </p>
+              <p class="text-muted small mb-0">
+                <strong>Toll Free:</strong> <a href="tel:18004198782" class="fw-bold text-dark">1800-419-8782</a> (Mon-Sat 8AM-7PM)
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="p-4 bg-white rounded border shadow-sm h-100" style="background-color: var(--card-bg);">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="footer-contact-icon fs-5" style="width: 44px; height: 44px;">
+                  <i class="fas fa-envelope-open-text"></i>
+                </div>
+                <div>
+                  <h5 class="fw-bold mb-0">Electronic Enquiries</h5>
+                  <small class="text-muted">Drawing & Tender Submissions</small>
+                </div>
+              </div>
+              <p class="text-muted small mb-1">
+                <strong>Quotes:</strong> <a href="mailto:fabrication@truckbodybuilder.com" class="fw-bold text-orange">fabrication@truckbodybuilder.com</a>
+              </p>
+              <p class="text-muted small mb-0">
+                <strong>B2B Tenders:</strong> <a href="mailto:procurement@truckbodybuilder.com" class="fw-bold text-dark">procurement@truckbodybuilder.com</a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-5">
+          <!-- Left Column: Form (col-lg-7) -->
+          <div class="col-lg-7">
+            <div class="form-card">
+              <div class="d-flex align-items-center justify-content-between mb-4 pb-2 border-bottom">
+                <div>
+                  <h3 class="h4 fw-bold mb-1">Request Engineering Quotation</h3>
+                  <p class="small text-muted mb-0">Fill in your requirements below for an itemized commercial proposal.</p>
+                </div>
+                <div class="d-none d-sm-block text-end">
+                  <span class="badge bg-success py-2 px-3"><i class="fas fa-shield-alt me-1"></i> AIS-093 / CMVR</span>
+                </div>
+              </div>
+
+              <!-- Strictly Validated Quote Form -->
+              <form id="truckQuoteForm" novalidate>
+                
+                <div class="row g-3">
+                  <!-- Full Name -->
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="fullName" class="form-label">Full Name <span class="required">*</span></label>
+                      <input type="text" class="form-control" id="fullName" placeholder="e.g. Ramesh Kumar" required>
+                      <div class="invalid-feedback">Please enter a valid full name (letters and spaces only, min 3 characters).</div>
+                    </div>
+                  </div>
+
+                  <!-- Email Address -->
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="emailAddress" class="form-label">Business Email Address <span class="required">*</span></label>
+                      <input type="email" class="form-control" id="emailAddress" placeholder="e.g. name@logistics.com" required>
+                      <div class="invalid-feedback">Please provide a valid business email address.</div>
+                    </div>
+                  </div>
+
+                  <!-- Mobile Number (10 Digits) -->
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="mobileNumber" class="form-label">Mobile Number (10 Digits) <span class="required">*</span></label>
+                      <div class="input-group">
+                        <span class="input-group-text bg-light text-muted small border-end-0">+91</span>
+                        <input type="tel" class="form-control border-start-0" id="mobileNumber" placeholder="9876543210" maxlength="10" required>
+                      </div>
+                      <div class="invalid-feedback">Please enter a valid 10-digit Indian mobile number starting with 6, 7, 8, or 9.</div>
+                    </div>
+                  </div>
+
+                  <!-- Company Name -->
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="companyName" class="form-label">Fleet / Company Name</label>
+                      <input type="text" class="form-control" id="companyName" placeholder="e.g. Trans-India Logistics Pvt Ltd">
+                    </div>
+                  </div>
+
+                  <!-- Truck Body Type Dropdown -->
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="truckBodyType" class="form-label">Truck Body Category <span class="required">*</span></label>
+                      <select class="form-select" id="truckBodyType" required>
+                        <option value="">Select Truck Body Type...</option>
+                        <option value="open_body">Open Truck Body (High-Side / Drop-Side)</option>
+                        <option value="container_body">Closed Corrugated Freight Container Body</option>
+                        <option value="tipper_body">Heavy Mining & Quarry Tipper Body</option>
+                        <option value="trailer_body">Multi-Axle Semi-Trailer / Low-Bed Hauler</option>
+                        <option value="tanker_body">Liquid / Chemical / Petroleum Tanker Body</option>
+                        <option value="refrigerated_body">Insulated Cold Chain Reefer Body</option>
+                        <option value="flatbed_body">Heavy Equipment Flatbed Body</option>
+                        <option value="custom_body">Specialized Custom Fabricated Body</option>
+                      </select>
+                      <div class="invalid-feedback">Please select a truck body category.</div>
+                    </div>
+                  </div>
+
+                  <!-- Vehicle Chassis Model -->
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="vehicleModel" class="form-label">Chassis / Vehicle Model <span class="required">*</span></label>
+                      <input type="text" class="form-control" id="vehicleModel" placeholder="e.g. Tata Signa 4825, BharatBenz 2823" required>
+                      <div class="invalid-feedback">Please enter the vehicle chassis model (min 2 characters).</div>
+                    </div>
+                  </div>
+
+                  <!-- Required Service Dropdown -->
+                  <div class="col-12">
+                    <div class="form-group">
+                      <label for="requiredService" class="form-label">Required Fabrication Service <span class="required">*</span></label>
+                      <select class="form-select" id="requiredService" required>
+                        <option value="">Select Engineering or Fabrication Service...</option>
+                        <option value="new_body_fabrication">Complete New Truck Body Fabrication</option>
+                        <option value="custom_cad_design">Custom 3D CAD Design & Stress Simulation</option>
+                        <option value="chassis_extension">Wheelbase Modification & Chassis Extension</option>
+                        <option value="accident_repair">Accident Straightening & Structural Rebuilding</option>
+                        <option value="industrial_painting">Grit Blasting & 2K Polyurethane Painting</option>
+                        <option value="accessory_order">Commercial Truck Accessories & Spare Parts</option>
+                        <option value="fleet_contract">Multi-Unit Fleet Fabrication Contract</option>
+                      </select>
+                      <div class="invalid-feedback">Please select the required service.</div>
+                    </div>
+                  </div>
+
+                  <!-- Project Description -->
+                  <div class="col-12">
+                    <div class="form-group">
+                      <label for="projectDescription" class="form-label">Project Description & Technical Specifications <span class="required">*</span></label>
+                      <textarea class="form-control" id="projectDescription" rows="4" placeholder="Specify required payload tonnage, floor thickness, internal cargo dimensions, operating routes, or hardware accessories (min 15 characters)..." required></textarea>
+                      <div class="invalid-feedback">Please provide at least 15 characters describing payload capacity, dimensions, or usage.</div>
+                    </div>
+                  </div>
+
+                  <!-- Form Notice -->
+                  <div class="col-12">
+                    <div class="alert alert-light border small text-muted mb-0">
+                      <i class="fas fa-info-circle text-orange me-1" style="color: var(--industrial-orange);"></i>
+                      <strong>Technical Guarantee:</strong> We sign non-disclosure agreements for custom OEM prototypes. Your payload and route details remain strictly confidential.
+                    </div>
+                  </div>
+
+                  <!-- Submit Button -->
+                  <div class="col-12 mt-3">
+                    <button type="submit" class="btn btn-industrial btn-lg w-100">
+                      <i class="fas fa-paper-plane me-2"></i> Submit Quotation Request
+                    </button>
+                  </div>
+
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Right Column: Map & Plant Info (col-lg-5) -->
+          <div class="col-lg-5">
+            
+            <!-- Map Container -->
+            <div class="map-container mb-4 shadow-sm">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124442.27987823908!2d79.9880196726207!3d12.982260656094463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a528cc248f76d49%3A0x64e62ff127623a3e!2sSriperumbudur%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Industrial Fabrication Facility Location">
+              </iframe>
+            </div>
+
+            <!-- Factory Specifications Card -->
+            <div class="p-4 bg-white rounded border shadow-sm mb-4" style="background-color: var(--card-bg);">
+              <h5 class="fw-bold mb-3">Fabrication Plant Capabilities</h5>
+              <ul class="list-unstyled mb-0 small">
+                <li class="py-2 border-bottom d-flex align-items-center gap-2">
+                  <i class="fas fa-check-circle text-orange" style="color: var(--industrial-orange);"></i>
+                  <span><strong>Total Facility Area:</strong> 120,000 Sq. Ft. covered fabrication yard</span>
+                </li>
+                <li class="py-2 border-bottom d-flex align-items-center gap-2">
+                  <i class="fas fa-check-circle text-orange" style="color: var(--industrial-orange);"></i>
+                  <span><strong>Overhead Cranes:</strong> 6x 20-ton Demag dual-hoist gantries</span>
+                </li>
+                <li class="py-2 border-bottom d-flex align-items-center gap-2">
+                  <i class="fas fa-check-circle text-orange" style="color: var(--industrial-orange);"></i>
+                  <span><strong>Press Brake:</strong> 800-ton CNC 12-meter single-pass bending</span>
+                </li>
+                <li class="py-2 border-bottom d-flex align-items-center gap-2">
+                  <i class="fas fa-check-circle text-orange" style="color: var(--industrial-orange);"></i>
+                  <span><strong>Paint Facility:</strong> 18-meter heated downdraft blast & 2K booth</span>
+                </li>
+                <li class="py-2 d-flex align-items-center gap-2">
+                  <i class="fas fa-check-circle text-orange" style="color: var(--industrial-orange);"></i>
+                  <span><strong>Monthly Capacity:</strong> 180+ heavy commercial bodies</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Quality Certification Banner -->
+            <div class="p-4 rounded border text-white" style="background: linear-gradient(135deg, var(--charcoal) 0%, var(--primary-steel) 100%);">
+              <div class="d-flex align-items-center gap-3 mb-2">
+                <i class="fas fa-award fa-2x text-orange" style="color: var(--industrial-orange);"></i>
+                <div>
+                  <h6 class="fw-bold text-white mb-0">ARAI & CMVR Regulatory Accredited</h6>
+                  <small class="text-light opacity-75">Certificate No. ARAI-CB-2024-9842</small>
+                </div>
+              </div>
+              <p class="small text-light opacity-90 mb-0">
+                All fabricated commercial bodies comply with AIS-093 (Truck Body Code), AIS-029 (Cabin Crashworthiness), and CMVR axle-weight specifications.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- INDUSTRIAL FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6 footer-widget">
+          <a href="index.html" class="footer-brand d-inline-block mb-3 text-decoration-none" title="Truck Body Builder - Back to Home">
+            <div class="footer-logo-wrap">
+              <img src="assets/images/logo/logo-main.svg" alt="Truck Body Builder - Heavy Commercial Vehicle Fabrication" class="footer-logo-img">
+            </div>
+          </a>
+          <p class="text-muted small mb-3">
+            Heavy commercial vehicle fabrication and industrial truck body builder. Certified by ARAI, conforming to CMVR specifications, and delivering durable body engineering across India and export markets.
+          </p>
+          <div class="badge-certified d-inline-block mb-3">
+            <i class="fas fa-award me-1"></i> ISO 9001:2015 Registered Unit
+          </div>
+          <div class="social-links">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Twitter X"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="col-lg-2 col-md-6 footer-widget">
+          <h5 class="text-white">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fas fa-angle-right"></i> Home (General)</a></li>
+            <li><a href="home-2.html"><i class="fas fa-angle-right"></i> Home (Fabrication)</a></li>
+            <li><a href="about.html"><i class="fas fa-angle-right"></i> About Us</a></li>
+            <li><a href="services.html"><i class="fas fa-angle-right"></i> Fabrication Services</a></li>
+            <li><a href="service-details.html"><i class="fas fa-angle-right"></i> Service Details</a></li>
+            <li><a href="gallery.html"><i class="fas fa-angle-right"></i> Project Gallery</a></li>
+            <li><a href="blog.html"><i class="fas fa-angle-right"></i> Technical Blog</a></li>
+            <li><a href="shop.html"><i class="fas fa-angle-right"></i> Hardware Shop</a></li>
+            <li><a href="cart.html"><i class="fas fa-angle-right"></i> Shopping Cart</a></li>
+            <li><a href="contact.html"><i class="fas fa-angle-right"></i> Contact & Quote</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Services & Capabilities -->
+        <div class="col-lg-2 col-md-6 footer-widget">
+          <h5 class="text-white">Our Services</h5>
+          <ul class="footer-links">
+            <li><a href="services.html"><i class="fas fa-angle-right"></i> Heavy Fabrication</a></li>
+            <li><a href="services.html"><i class="fas fa-angle-right"></i> Custom Body Design</a></li>
+            <li><a href="services.html"><i class="fas fa-angle-right"></i> Structural Welding</a></li>
+            <li><a href="services.html"><i class="fas fa-angle-right"></i> Industrial Painting</a></li>
+            <li><a href="services.html"><i class="fas fa-angle-right"></i> Accident Repair</a></li>
+            <li><a href="service-details.html"><i class="fas fa-angle-right"></i> Testing & Certification</a></li>
+            <li><a href="gallery.html"><i class="fas fa-angle-right"></i> Project Gallery</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-6 footer-widget">
+          <h5 class="text-white">Plant & Head Office</h5>
+          <div class="footer-contact-item">
+            <a href="contact.html" class="footer-contact-icon text-decoration-none" title="View Plant & Head Office Location"><i class="fas fa-map-marker-alt"></i></a>
+            <div>
+              <strong>Industrial Works:</strong><br>
+              Plot 42-48, Sector 9, Heavy Engineering Industrial Zone, Near Automobile Hub, Chennai / Pune Highway, India.
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <a href="tel:+919876543210" class="footer-contact-icon text-decoration-none" title="Call Technical Hotline"><i class="fas fa-phone"></i></a>
+            <div>
+              <strong>Technical Hotline:</strong><br>
+              <a href="tel:+919876543210" class="text-white">+91 98765 43210</a> / <a href="tel:18004198782" class="text-white">1800-419-8782</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <a href="mailto:fabrication@truckbodybuilder.com" class="footer-contact-icon text-decoration-none" title="Email Quotation Desk"><i class="fas fa-envelope"></i></a>
+            <div>
+              <strong>Quotation Desk:</strong><br>
+              <a href="mailto:fabrication@truckbodybuilder.com" class="text-white">fabrication@truckbodybuilder.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+            &copy; 2026 Truck Body Builder & Commercial Vehicle Fabrication Works. All rights reserved.
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <div class="footer-bottom-links">
+              <a href="about.html">Privacy Policy</a>
+              <a href="services.html">Terms of Manufacturing</a>
+              <a href="services.html">Site Index</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTopBtn" class="back-to-top" title="Back to top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/gallery.js"></script>
+  <script src="assets/js/validation.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/premium-motion.js" defer></script>
+</body>
+</html>
