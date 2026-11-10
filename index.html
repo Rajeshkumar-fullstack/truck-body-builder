@@ -6,8 +6,11 @@
   <title>Truck Body Builder | Heavy Commercial Vehicle Fabrication & Manufacturing</title>
   <meta name="description" content="Premier industrial truck body builder and commercial vehicle fabrication company. Specializing in tippers, containers, tankers, trailers, and custom commercial bodies.">
   
-  <!-- Favicon -->
+  <!-- Favicon Suite -->
   <link rel="icon" type="image/svg+xml" href="assets/images/logo/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/logo/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo/apple-touch-icon.png">
   <link rel="alternate icon" href="assets/images/logo/logo-compact.svg">
 
   <!-- Bootstrap 5 CSS -->
@@ -23,6 +26,11 @@
   <link rel="stylesheet" href="assets/css/premium-motion.css">
 </head>
 <body>
+
+  <!-- Top Viewport Scroll Progress Bar -->
+  <div class="scroll-progress-track" id="scrollProgressTrack" aria-hidden="true">
+    <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+  </div>
 
   <!-- LIQUID CHROME 3D LOGO REVEAL INTRO OVERLAY -->
   <div class="liquid-chrome-intro" id="liquidChromeIntro" role="dialog" aria-modal="true" aria-label="Truck Body Builder Liquid Chrome Logo Reveal">
@@ -207,7 +215,7 @@
           <ul class="navbar-nav mx-auto">
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Home
+                Home <i class="fas fa-chevron-down nav-chevron ms-1"></i>
               </a>
               <ul class="dropdown-menu dropdown-menu-industrial">
                 <li><a class="dropdown-item active" href="index.html"><i class="fas fa-industry"></i> Home 1</a></li>
@@ -266,6 +274,8 @@
     <!-- ADVANCED AUTO-ROTATING HERO CAROUSEL -->
     <section class="hero-carousel-section" id="heroCarousel" aria-label="Commercial Truck Body Manufacturing Showcase">
       <div class="hero-ambient-mesh"></div>
+      <div class="hero-ambient-orb hero-ambient-orb-1"></div>
+      <div class="hero-ambient-orb hero-ambient-orb-2"></div>
       <div class="hero-slides-wrapper">
 
         <!-- Slide 1: Premium Heavy Commercial Truck (Mercedes-Benz Actros CGI Style) -->
@@ -943,10 +953,10 @@
       <div class="container py-lg-4">
         <div class="row align-items-center g-5">
           <div class="col-lg-6">
-            <div class="position-relative overflow-hidden rounded shadow-lg" style="border: 1px solid rgba(23, 35, 47, 0.12);">
+            <div class="position-relative overflow-hidden rounded shadow-lg facility-img-wrap" style="border: 1px solid rgba(23, 35, 47, 0.12);">
               <img src="assets/images/about/facility-1.jpg" 
                    alt="Automated Commercial Vehicle Body Manufacturing Facility" 
-                   class="w-100" 
+                   class="w-100 facility-img" 
                    style="height: 440px; object-fit: cover; display: block;" 
                    loading="lazy"
                    onerror="this.onerror=null; this.src='assets/images/about/facility-2.jpg';">
@@ -1327,7 +1337,7 @@
           <div class="col-md-6 col-lg-4">
             <div class="service-card has-thumb h-100">
               <div class="service-thumb-wrapper">
-                <img src="assets/images/services/service-design.jpg" alt="Custom Truck Body Design" class="service-thumb">
+                <img src="assets/images/services/service-design.jpg" alt="Custom Truck Body Design - 3D CAD & FEA Simulation" class="service-thumb" loading="lazy">
                 <div class="service-thumb-icon">
                   <i class="fas fa-drafting-compass"></i>
                 </div>
@@ -1670,7 +1680,7 @@
           <div class="col-md-6 col-lg-4">
             <div class="blog-card h-100">
               <div class="blog-thumb-wrapper">
-                <img src="assets/images/blog/blog-1.jpg" alt="Hardox vs Mild Steel Mining Tipper" class="blog-thumb">
+                <a href="blog-details.html?id=1"><img src="assets/images/blog/blog-1.jpg" alt="Hardox vs Mild Steel Mining Tipper" class="blog-thumb"></a>
                 <div class="blog-date-badge">
                   <span class="d-block fw-bold fs-6">28</span>
                   <span class="small text-uppercase">Oct 2026</span>
@@ -1681,8 +1691,8 @@
                 <h3 class="blog-title"><a href="blog-details.html?id=1">High-Tensile Hardox Steel vs Mild Steel in Mining Tipper Fabrication</a></h3>
                 <p class="blog-excerpt">Comprehensive metallurgical analysis of Brinell 450 HBW wear plate versus structural mild steel, cutting tare weight by 1,450 kg.</p>
                 <div class="blog-meta-footer">
-                  <span><i class="fas fa-user-circle me-1"></i> Technical Desk</span>
-                  <a href="blog-details.html?id=1" class="fw-bold text-orange">Read Whitepaper <i class="fas fa-angle-right"></i></a>
+                  <span class="d-inline-flex align-items-center"><img src="assets/images/about/author-natarajan.jpg" alt="Er. R. Natarajan" class="blog-author-avatar" loading="lazy"> Technical Desk</span>
+                  <a href="blog-details.html?id=1" class="fw-bold text-orange">Read Article <i class="fas fa-angle-right"></i></a>
                 </div>
               </div>
             </div>
@@ -1692,7 +1702,7 @@
           <div class="col-md-6 col-lg-4">
             <div class="blog-card h-100">
               <div class="blog-thumb-wrapper">
-                <img src="assets/images/blog/blog-2.jpg" alt="ARAI AIS 093 Commercial Compliance" class="blog-thumb">
+                <a href="blog-details.html?id=2"><img src="assets/images/blog/blog-2.jpg" alt="ARAI AIS 093 Commercial Compliance" class="blog-thumb"></a>
                 <div class="blog-date-badge">
                   <span class="d-block fw-bold fs-6">15</span>
                   <span class="small text-uppercase">Oct 2026</span>
@@ -1703,7 +1713,7 @@
                 <h3 class="blog-title"><a href="blog-details.html?id=2">ARAI AIS-093 Code of Practice: Essential Checklist for Commercial Truck Bodies</a></h3>
                 <p class="blog-excerpt">A breakdown of safety dimensions, rear under-run protection (RUPD), lateral protection devices (LPD), and fire retardant cabin separation norms.</p>
                 <div class="blog-meta-footer">
-                  <span><i class="fas fa-user-circle me-1"></i> Regulatory Cell</span>
+                  <span class="d-inline-flex align-items-center"><img src="assets/images/about/author-vikram.jpg" alt="Er. S. Vikram" class="blog-author-avatar" loading="lazy"> Regulatory Cell</span>
                   <a href="blog-details.html?id=2" class="fw-bold text-orange">Read Article <i class="fas fa-angle-right"></i></a>
                 </div>
               </div>
@@ -1714,7 +1724,7 @@
           <div class="col-md-6 col-lg-4">
             <div class="blog-card h-100">
               <div class="blog-thumb-wrapper">
-                <img src="assets/images/blog/blog-3.jpg" alt="Aerodynamic Dry Freight Container Body" class="blog-thumb">
+                <a href="blog-details.html?id=3"><img src="assets/images/blog/blog-3.jpg" alt="Aerodynamic Dry Freight Container Body" class="blog-thumb"></a>
                 <div class="blog-date-badge">
                   <span class="d-block fw-bold fs-6">02</span>
                   <span class="small text-uppercase">Oct 2026</span>
@@ -1725,7 +1735,7 @@
                 <h3 class="blog-title"><a href="blog-details.html?id=3">Aerodynamic Dry Container Engineering: Slashing Highway Drag by 12%</a></h3>
                 <p class="blog-excerpt">CFD wind-tunnel modeling results on corner chamfers, side vortex skirts, and roof deflectors on 32-ft and 40-ft multi-axle freight containers.</p>
                 <div class="blog-meta-footer">
-                  <span><i class="fas fa-user-circle me-1"></i> Aerodynamics Lab</span>
+                  <span class="d-inline-flex align-items-center"><img src="assets/images/about/author-raman.jpg" alt="Dr. K. Raman" class="blog-author-avatar" loading="lazy"> Aerodynamics Lab</span>
                   <a href="blog-details.html?id=3" class="fw-bold text-orange">Read Article <i class="fas fa-angle-right"></i></a>
                 </div>
               </div>
@@ -1863,8 +1873,12 @@
     </div>
   </footer>
 
-  <!-- Floating Back to Top Button -->
+  <!-- Floating Back to Top Button with Circular Progress Ring -->
   <button id="backToTopBtn" class="back-to-top" title="Back to top" aria-label="Back to top">
+    <svg class="progress-ring" width="46" height="46" viewBox="0 0 46 46">
+      <circle class="progress-ring-track" cx="23" cy="23" r="20" stroke="rgba(255, 255, 255, 0.12)" stroke-width="2.5" fill="none" />
+      <circle class="progress-ring-circle" id="scrollProgressCircle" cx="23" cy="23" r="20" stroke="#F07824" stroke-width="2.5" stroke-dasharray="125.66" stroke-dashoffset="125.66" stroke-linecap="round" fill="none" />
+    </svg>
     <i class="fas fa-chevron-up"></i>
   </button>
 

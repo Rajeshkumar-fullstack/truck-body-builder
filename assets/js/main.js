@@ -9,7 +9,7 @@
   document.addEventListener('DOMContentLoaded', () => {
     initHeroCarousel();
     initHeroVisualShowcases();
-    initMobileDrawer();
+    initResponsiveNavbar();
     highlightCurrentNavLink();
     initAnimatedCounters();
     initBlogFilterAndSearch();
@@ -356,6 +356,25 @@
   }
 
   // Sticky Header & Back-To-Top Trigger
+  
+  // Sticky Navbar Controller for Responsive Viewports
+  function initStickyHeaderWatcher() {
+    const header = document.querySelector('.site-header');
+    if (!header) return;
+
+    function handleScroll() {
+      const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+      if (scrollY > 15) {
+        header.classList.add('scrolled', 'is-sticky');
+      } else {
+        header.classList.remove('scrolled', 'is-sticky');
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+  }
+
   function initBackToTop() {
     const btn = document.getElementById('backToTopBtn');
     if (!btn) return;
@@ -391,15 +410,28 @@
       drawer.classList.add('is-open');
       if (backdrop) backdrop.classList.add('is-active');
       document.body.classList.add('drawer-open');
-      if (drawerToggler) drawerToggler.setAttribute('aria-expanded', 'true');
+      const toggler = document.getElementById('navbarDrawerToggler') || document.querySelector('.navbar-toggler');
+      if (toggler) toggler.setAttribute('aria-expanded', 'true');
     }
 
     function closeDrawer() {
       drawer.classList.remove('is-open');
       if (backdrop) backdrop.classList.remove('is-active');
       document.body.classList.remove('drawer-open');
-      if (drawerToggler) drawerToggler.setAttribute('aria-expanded', 'false');
+      const toggler = document.getElementById('navbarDrawerToggler') || document.querySelector('.navbar-toggler');
+      if (toggler) toggler.setAttribute('aria-expanded', 'false');
     }
+
+    // Expose programmatic global API
+    window.openNavDrawer = openDrawer;
+    window.closeNavDrawer = closeDrawer;
+    window.toggleNavDrawer = function() {
+      if (drawer.classList.contains('is-open')) {
+        closeDrawer();
+      } else {
+        openDrawer();
+      }
+    };
 
     if (drawerToggler) {
       drawerToggler.addEventListener('click', (e) => {
@@ -584,4 +616,38 @@
       });
     });
   }
+
+  // Global event delegation for navbar drawer toggle (fallback guarantee)
+  document.addEventListener('click', function (e) {
+    const toggler = e.target.closest('#navbarDrawerToggler, .navbar-toggler');
+    if (toggler) {
+      e.preventDefault();
+      e.stopPropagation();
+      if (typeof window.toggleNavDrawer === 'function') {
+        window.toggleNavDrawer();
+      }
+      return;
+    }
+
+    const closeBtn = e.target.closest('#navbarDrawerClose, .drawer-close-btn');
+    if (closeBtn) {
+      e.preventDefault();
+      e.stopPropagation();
+      if (typeof window.closeNavDrawer === 'function') {
+        window.closeNavDrawer();
+      }
+      return;
+    }
+
+    const backdrop = e.target.closest('#drawerBackdrop, .drawer-backdrop');
+    if (backdrop) {
+      if (typeof window.closeNavDrawer === 'function') {
+        window.closeNavDrawer();
+      }
+    }
+  });
+
+  // Alias for backward compatibility
+  const initMobileDrawer = initResponsiveNavbar;
+
 })();

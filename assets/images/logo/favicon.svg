@@ -1,38 +1,90 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
   <defs>
+    <!-- Mirror Specular Chrome Gradient -->
     <linearGradient id="favChrome" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#FFFFFF" />
-      <stop offset="50%" stop-color="#94A3B8" />
+      <stop offset="20%" stop-color="#F1F5F9" />
+      <stop offset="45%" stop-color="#94A3B8" />
+      <stop offset="55%" stop-color="#475569" />
+      <stop offset="72%" stop-color="#E2E8F0" />
       <stop offset="100%" stop-color="#FFFFFF" />
     </linearGradient>
+
+    <!-- Deep Titanium Dark Steel Gradient -->
     <linearGradient id="favSteel" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#243447" />
-      <stop offset="100%" stop-color="#0B1117" />
+      <stop offset="0%" stop-color="#223345" />
+      <stop offset="50%" stop-color="#141E28" />
+      <stop offset="100%" stop-color="#090E13" />
     </linearGradient>
+
+    <!-- Glowing Molten Industrial Orange Gradient -->
     <linearGradient id="favOrange" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFA866" />
-      <stop offset="60%" stop-color="#F07824" />
-      <stop offset="100%" stop-color="#C24F00" />
+      <stop offset="0%" stop-color="#FFE3CC" />
+      <stop offset="30%" stop-color="#FFA866" />
+      <stop offset="65%" stop-color="#F07824" />
+      <stop offset="100%" stop-color="#B84500" />
     </linearGradient>
+
+    <!-- 3D Bevel Inner Shadow -->
+    <radialGradient id="favInnerGlow" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#FFA866" stop-opacity="0.35" />
+      <stop offset="60%" stop-color="#F07824" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.6" />
+    </radialGradient>
+
+    <!-- Drop Shadow for 3D Pop -->
+    <filter id="favDropShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2.5" stdDeviation="2.5" flood-color="#000000" flood-opacity="0.65" />
+    </filter>
+
+    <filter id="favOrangeGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="0" stdDeviation="2.2" flood-color="#F07824" flood-opacity="0.75" />
+    </filter>
   </defs>
-  <rect x="2" y="2" width="44" height="44" rx="10" fill="url(#favSteel)" stroke="url(#favChrome)" stroke-width="1.8" />
-  <rect x="4.5" y="4.5" width="39" height="39" rx="8" fill="none" stroke="url(#favOrange)" stroke-width="1.2" opacity="0.9" />
-  <g transform="translate(4, 7) scale(0.72)">
-    <path d="M 2 41 L 53 41" stroke="url(#favOrange)" stroke-width="3" stroke-linecap="round" />
-    <!-- Tipper Box -->
-    <path d="M 4 12 L 33 12 L 33 37 L 4 37 Z" fill="url(#favChrome)" />
-    <line x1="13" y1="14" x2="13" y2="35" stroke="#17232F" stroke-width="1.8" />
-    <line x1="23" y1="14" x2="23" y2="35" stroke="#17232F" stroke-width="1.8" />
-    <!-- Cab -->
-    <path d="M 35 17 L 44 17 L 51 26 L 51 37 L 35 37 Z" fill="url(#favChrome)" />
-    <path d="M 42 14 L 52 22" stroke="url(#favOrange)" stroke-width="2.2" stroke-linecap="round" />
-    <polygon points="37,20 43,20 48,26 37,26" fill="#17232F" />
-    <!-- Wheels -->
-    <circle cx="13" cy="38" r="6" fill="#0B1117" stroke="url(#favChrome)" stroke-width="2" />
-    <circle cx="13" cy="38" r="2.5" fill="url(#favOrange)" />
-    <circle cx="25" cy="38" r="6" fill="#0B1117" stroke="url(#favChrome)" stroke-width="2" />
-    <circle cx="25" cy="38" r="2.5" fill="url(#favOrange)" />
-    <circle cx="45" cy="38" r="6" fill="#0B1117" stroke="url(#favChrome)" stroke-width="2" />
-    <circle cx="45" cy="38" r="2.5" fill="url(#favOrange)" />
+
+  <!-- Heavy Shield Base Plate with Chrome Bevel -->
+  <rect x="2.5" y="2.5" width="59" height="59" rx="14" fill="url(#favSteel)" stroke="url(#favChrome)" stroke-width="2.5" filter="url(#favDropShadow)" />
+  
+  <!-- Radial Core Depth Glow -->
+  <rect x="4.5" y="4.5" width="55" height="55" rx="12" fill="url(#favInnerGlow)" />
+
+  <!-- High-Precision Molten Orange Inner Rim -->
+  <rect x="5.5" y="5.5" width="53" height="53" rx="11" fill="none" stroke="url(#favOrange)" stroke-width="1.6" filter="url(#favOrangeGlow)" />
+
+  <!-- Industrial Gear Cog Teeth (4 Corner Notches) -->
+  <rect x="29" y="1" width="6" height="3" rx="1" fill="url(#favChrome)" />
+  <rect x="29" y="60" width="6" height="3" rx="1" fill="url(#favChrome)" />
+  <rect x="1" y="29" width="3" height="6" rx="1" fill="url(#favChrome)" />
+  <rect x="60" y="29" width="3" height="6" rx="1" fill="url(#favChrome)" />
+
+  <!-- Commercial Heavy-Duty Truck Silhouette (High Contrast, Bold, Instantly Readable at 16x16 / 32x32) -->
+  <g transform="translate(6, 9)">
+    <!-- Aerodynamic Speed Line & High-Tensile Chassis Foundation -->
+    <path d="M 3 36 L 49 36" stroke="url(#favOrange)" stroke-width="3" stroke-linecap="round" />
+    <line x1="12" y1="39.5" x2="40" y2="39.5" stroke="url(#favChrome)" stroke-width="1.4" stroke-linecap="round" opacity="0.9" />
+
+    <!-- Severe-Duty Tipper Body / Cargo Box with Polished Structural Stiffeners -->
+    <path d="M 4 10 L 29 10 L 29 33 L 4 33 Z" fill="url(#favChrome)" />
+    <!-- Deep Laser-Etched Stiffener Ribs -->
+    <line x1="10" y1="12" x2="10" y2="31" stroke="#141E28" stroke-width="1.8" stroke-linecap="round" />
+    <line x1="16.5" y1="12" x2="16.5" y2="31" stroke="#141E28" stroke-width="1.8" stroke-linecap="round" />
+    <line x1="23" y1="12" x2="23" y2="31" stroke="#141E28" stroke-width="1.8" stroke-linecap="round" />
+
+    <!-- Commercial Cab-Over Head Unit -->
+    <path d="M 31 15 L 39 15 L 47 23 L 47 33 L 31 33 Z" fill="url(#favChrome)" />
+    <!-- Aerodynamic Orange Sun Visor -->
+    <path d="M 37 12 L 48 19" stroke="url(#favOrange)" stroke-width="2.6" stroke-linecap="round" />
+    <!-- Tinted Driver's Cockpit Window -->
+    <polygon points="33,18 39,18 44,23 33,23" fill="#0E1620" />
+
+    <!-- Heavy Alloy Wheels with Glowing Orange Center Hubs -->
+    <circle cx="11.5" cy="34" r="5.5" fill="#090E13" stroke="url(#favChrome)" stroke-width="2" />
+    <circle cx="11.5" cy="34" r="2.2" fill="url(#favOrange)" />
+
+    <circle cx="21.5" cy="34" r="5.5" fill="#090E13" stroke="url(#favChrome)" stroke-width="2" />
+    <circle cx="21.5" cy="34" r="2.2" fill="url(#favOrange)" />
+
+    <circle cx="41.5" cy="34" r="5.5" fill="#090E13" stroke="url(#favChrome)" stroke-width="2" />
+    <circle cx="41.5" cy="34" r="2.2" fill="url(#favOrange)" />
   </g>
 </svg>

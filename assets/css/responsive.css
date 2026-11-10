@@ -157,7 +157,7 @@
   }
 
   .hero-slide-content {
-    padding: 30px 0 40px;
+    padding: 30px 16px 40px;
   }
 
   .hero-spec-panel,
@@ -466,7 +466,7 @@
   }
 
   .hero-slide-content {
-    padding: 35px 0 80px;
+    padding: 35px 16px 80px;
   }
 
   .hero-nav-btn {
@@ -960,11 +960,12 @@
     font-size: 1.85rem;
   }
   .cad-viewport {
-    height: 190px;
+    height: 215px;
   }
   .cad-telemetry-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 6px;
+    margin-top: 10px;
   }
   .cad-tab-btn {
     padding: 4px 8px;
@@ -1008,6 +1009,11 @@
    ========================================================================== */
 @media (max-width: 991.98px) {
   .site-header {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1050 !important;
+    width: 100% !important;
     padding: 8px 0 !important;
   }
 
@@ -1037,12 +1043,12 @@
     max-width: 100% !important;
     display: flex !important;
     align-items: center !important;
-    overflow: hidden !important;
+    overflow: visible !important;
   }
 
   .brand-logo-main {
     height: 34px !important;
-    max-width: 190px !important;
+    max-width: 220px !important;
     width: auto !important;
     object-fit: contain !important;
   }
@@ -1067,11 +1073,23 @@
     justify-content: center !important;
   }
 
+    .mobile-nav-controls .cart-icon-btn {
+    overflow: visible !important;
+  }
+
   .mobile-nav-controls .cart-count-badge {
-    top: -4px !important;
-    right: -4px !important;
+    top: -5px !important;
+    right: -5px !important;
+    left: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    min-width: 18px !important;
+    height: 18px !important;
     font-size: 0.65rem !important;
-    padding: 2px 5px !important;
+    padding: 0 4px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
 }
 
@@ -1083,12 +1101,12 @@
   }
 
   .navbar-brand-industrial {
-    max-width: 54vw !important;
+    max-width: 58vw !important;
   }
 
   .brand-logo-main {
     height: 30px !important;
-    max-width: 165px !important;
+    max-width: 195px !important;
   }
 
   .mobile-nav-controls {
@@ -1111,12 +1129,12 @@
   }
 
   .navbar-brand-industrial {
-    max-width: 52vw !important;
+    max-width: 56vw !important;
   }
 
   .brand-logo-main {
-    height: 26px !important;
-    max-width: 140px !important;
+    height: 27px !important;
+    max-width: 170px !important;
   }
 
   .mobile-nav-controls {
@@ -1135,8 +1153,44 @@
    Mobile Hero Section Typography & Balanced Proportions
    ========================================================================== */
 @media (max-width: 767.98px) {
+  .hero-carousel-section,
+  .hero-slide {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+  }
+
   .hero-slide-content {
-    padding: 24px 0 60px !important;
+    padding: 24px 16px 60px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .hero-slide-content > .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .hero-col-left {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    width: 100% !important;
+  }
+
+  .hero-section-2 .container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .hero-section-2 .container > .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .hero-section-2 .hero-col-left {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    width: 100% !important;
   }
 
   .hero-badge {
@@ -1189,5 +1243,270 @@
   .hero-progress-track {
     bottom: 0 !important;
     height: 3px !important;
+  }
+}
+
+
+/* ==========================================================================
+   Mobile Drawer & Header Stacking Elevation (Zero Blur / Zero Obscurity)
+   ========================================================================== */
+body.drawer-open .site-header,
+.site-header:has(.navbar-drawer.is-open) {
+  z-index: 1080 !important;
+}
+
+@media (max-width: 991.98px) {
+  body.drawer-open .site-header {
+    z-index: 1080 !important;
+  }
+
+  .navbar-drawer {
+    background-color: #0E1620 !important;
+    z-index: 1090 !important;
+    box-shadow: -12px 0 45px rgba(0, 0, 0, 0.8) !important;
+    filter: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  .drawer-backdrop {
+    z-index: 1050 !important;
+  }
+
+  /* Cart Icon Button & Live Badge (Always Crisp & Fully Visible) */
+  .header-icon-btn.cart-icon-btn {
+    overflow: visible !important;
+  }
+}
+
+/* ==========================================================================
+   Uniform Responsive Card Text & Component Alignment System
+   Ensures 100% Parallel Horizontal Baselines Across All Columns & Devices
+   ========================================================================== */
+
+/* Base Card Elements Setup */
+.blog-title {
+  display: block !important;
+  font-size: 1.15rem !important;
+  font-weight: 700 !important;
+  line-height: 1.4 !important;
+  margin-bottom: 12px !important;
+}
+
+.blog-title a {
+  display: block !important;
+}
+
+.blog-excerpt {
+  font-size: 0.9rem !important;
+  line-height: 1.6 !important;
+  margin-bottom: 18px !important;
+}
+
+.blog-meta-footer {
+  margin-top: auto !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding-top: 14px !important;
+  border-top: 1px solid var(--border-color) !important;
+}
+
+.service-card.has-thumb .service-card-body {
+  display: flex !important;
+  flex-direction: column !important;
+  flex-grow: 1 !important;
+}
+
+.service-card.has-thumb .service-card-body > .mt-auto {
+  margin-top: auto !important;
+}
+
+/* 1. Large Desktop (>= 1200px) */
+@media (min-width: 1200px) {
+  /* Blog Cards: exactly 3 columns, cards align across 3 lines of title and 4 lines of text */
+  .blog-title {
+    min-height: 78px !important;
+    height: 78px !important;
+  }
+  .blog-excerpt {
+    min-height: 92px !important;
+    height: 92px !important;
+    overflow: hidden !important;
+  }
+
+  /* Service Cards */
+  .service-card.has-thumb .service-title {
+    min-height: 56px !important;
+    height: 56px !important;
+  }
+  .service-card.has-thumb .service-text {
+    min-height: 96px !important;
+    height: 96px !important;
+    overflow: hidden !important;
+  }
+  .service-card.has-thumb ul {
+    min-height: 92px !important;
+    margin-bottom: 16px !important;
+  }
+
+  /* Mission & Vision Cards */
+  .mission-vision-title {
+    min-height: 38px !important;
+  }
+  .mission-vision-text {
+    min-height: 115px !important;
+  }
+
+  /* Benchmark Cards */
+  .benchmark-title {
+    min-height: 52px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .benchmark-text {
+    min-height: 64px !important;
+  }
+}
+
+/* 2. Standard Desktop (992px to 1199.98px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .blog-title {
+    min-height: 82px !important;
+    height: 82px !important;
+  }
+  .blog-excerpt {
+    min-height: 104px !important;
+    height: 104px !important;
+    overflow: hidden !important;
+  }
+
+  .service-card.has-thumb .service-title {
+    min-height: 58px !important;
+    height: 58px !important;
+  }
+  .service-card.has-thumb .service-text {
+    min-height: 108px !important;
+    height: 108px !important;
+    overflow: hidden !important;
+  }
+  .service-card.has-thumb ul {
+    min-height: 100px !important;
+  }
+
+  .mission-vision-title {
+    min-height: 38px !important;
+  }
+  .mission-vision-text {
+    min-height: 135px !important;
+  }
+
+  .benchmark-title {
+    min-height: 54px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .benchmark-text {
+    min-height: 74px !important;
+  }
+}
+
+/* 3. Tablet (768px to 991.98px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .blog-title {
+    min-height: 76px !important;
+    height: 76px !important;
+  }
+  .blog-excerpt {
+    min-height: 92px !important;
+    height: 92px !important;
+    overflow: hidden !important;
+  }
+
+  .service-card.has-thumb .service-title {
+    min-height: 56px !important;
+    height: 56px !important;
+  }
+  .service-card.has-thumb .service-text {
+    min-height: 96px !important;
+    height: 96px !important;
+    overflow: hidden !important;
+  }
+  .service-card.has-thumb ul {
+    min-height: 92px !important;
+  }
+
+  .mission-vision-title {
+    min-height: 38px !important;
+  }
+  .mission-vision-text {
+    min-height: 115px !important;
+  }
+
+  .benchmark-title {
+    min-height: 52px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .benchmark-text {
+    min-height: 64px !important;
+  }
+}
+
+/* 4. Small Tablet / Large Mobile Landscape (576px to 767.98px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .benchmark-title {
+    min-height: 52px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .benchmark-text {
+    min-height: 64px !important;
+  }
+
+  .blog-title,
+  .blog-excerpt,
+  .service-card.has-thumb .service-title,
+  .service-card.has-thumb .service-text,
+  .service-card.has-thumb ul,
+  .mission-vision-title,
+  .mission-vision-text {
+    min-height: auto !important;
+    height: auto !important;
+  }
+}
+
+/* 5. Mobile Devices (< 576px) */
+@media (max-width: 575.98px) {
+  .blog-title,
+  .blog-excerpt,
+  .service-card.has-thumb .service-title,
+  .service-card.has-thumb .service-text,
+  .service-card.has-thumb ul,
+  .mission-vision-title,
+  .mission-vision-text,
+  .benchmark-title,
+  .benchmark-text {
+    min-height: auto !important;
+    height: auto !important;
+  }
+}
+
+
+/* ==========================================================================
+   Responsive Cart & Product Card Alignment Rules
+   ========================================================================== */
+@media (max-width: 576px) {
+  .cart-nav-actions {
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+  .cart-nav-actions .btn {
+    width: 100% !important;
+    justify-content: center !important;
   }
 }

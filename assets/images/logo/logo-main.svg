@@ -1,9 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 76" width="500" height="76">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 76" width="540" height="76">
   <defs>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@800;900&amp;family=Montserrat:wght@700;800;900&amp;display=swap');
-      .brand-title-metal { font-family: 'Outfit', 'Montserrat', 'Segoe UI', Arial, sans-serif; font-weight: 900; font-size: 28px; letter-spacing: 1px; fill: url(#mainChromeGrad); }
-      .brand-title-orange { font-family: 'Outfit', 'Montserrat', sans-serif; font-weight: 900; font-size: 30px; letter-spacing: 1.5px; fill: url(#mainOrangeGrad); filter: drop-shadow(0 0 8px rgba(240, 120, 36, 0.45)); }
+      .brand-title-metal { font-family: 'Outfit', 'Montserrat', 'Segoe UI', Arial, sans-serif; font-weight: 900; font-size: 27px; letter-spacing: 0.5px; fill: url(#mainChromeGrad); }
+      .brand-title-orange { font-family: 'Outfit', 'Montserrat', 'Segoe UI', Arial, sans-serif; font-weight: 900; font-size: 28px; letter-spacing: 1px; fill: url(#mainOrangeGrad); filter: drop-shadow(0 0 8px rgba(240, 120, 36, 0.45)); }
       .brand-tagline { font-family: 'Montserrat', 'Segoe UI', sans-serif; font-weight: 800; font-size: 9.5px; letter-spacing: 3.2px; fill: #A0AEC0; }
     </style>
 

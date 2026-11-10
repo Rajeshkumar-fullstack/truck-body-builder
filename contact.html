@@ -6,8 +6,11 @@
   <title>Contact & Commercial Quotation Desk | Truck Body Builder & Heavy Fabrication</title>
   <meta name="description" content="Request a technical manufacturing quotation for custom truck bodies, tippers, containers, trailers, and repairs. Connect directly with our chief fabrication engineers.">
   
-  <!-- Favicon -->
+  <!-- Favicon Suite -->
   <link rel="icon" type="image/svg+xml" href="assets/images/logo/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/logo/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo/apple-touch-icon.png">
   <link rel="alternate icon" href="assets/images/logo/logo-compact.svg">
 
   <!-- Bootstrap 5 CSS -->
@@ -71,7 +74,7 @@
           <ul class="navbar-nav mx-auto">
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Home
+                Home <i class="fas fa-chevron-down nav-chevron ms-1"></i>
               </a>
               <ul class="dropdown-menu dropdown-menu-industrial">
                 <li><a class="dropdown-item" href="index.html"><i class="fas fa-industry"></i> Home 1</a></li>
@@ -221,8 +224,8 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <label for="fullName" class="form-label">Full Name <span class="required">*</span></label>
-                      <input type="text" class="form-control" id="fullName" placeholder="e.g. Ramesh Kumar" required>
-                      <div class="invalid-feedback">Please enter a valid full name (letters and spaces only, min 3 characters).</div>
+                      <input type="text" class="form-control" id="fullName" name="fullName" autocomplete="name" placeholder="e.g. Rajesh Kumar" maxlength="60" required>
+                      <div class="invalid-feedback">Please enter a valid name using letters only.</div>
                     </div>
                   </div>
 
@@ -230,8 +233,8 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <label for="emailAddress" class="form-label">Business Email Address <span class="required">*</span></label>
-                      <input type="email" class="form-control" id="emailAddress" placeholder="e.g. name@logistics.com" required>
-                      <div class="invalid-feedback">Please provide a valid business email address.</div>
+                      <input type="email" class="form-control" id="emailAddress" name="emailAddress" autocomplete="email" placeholder="e.g. rajesh@gmail.com" maxlength="100" required>
+                      <div class="invalid-feedback">Please enter a valid business email address.</div>
                     </div>
                   </div>
 
@@ -239,19 +242,20 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <label for="mobileNumber" class="form-label">Mobile Number (10 Digits) <span class="required">*</span></label>
-                      <div class="input-group">
-                        <span class="input-group-text bg-light text-muted small border-end-0">+91</span>
-                        <input type="tel" class="form-control border-start-0" id="mobileNumber" placeholder="9876543210" maxlength="10" required>
+                      <div class="input-group has-validation" id="mobileInputGroup">
+                        <span class="input-group-text bg-light text-muted small border-end-0" id="countryCodePrefix" aria-label="Country Code">+91</span>
+                        <input type="tel" class="form-control border-start-0" id="mobileNumber" name="mobile" autocomplete="tel" placeholder="Enter 10-digit mobile number" maxlength="10" inputmode="numeric" required>
+                        <div class="invalid-feedback" id="mobileFeedback">Mobile number is required.</div>
                       </div>
-                      <div class="invalid-feedback">Please enter a valid 10-digit Indian mobile number starting with 6, 7, 8, or 9.</div>
                     </div>
                   </div>
 
                   <!-- Company Name -->
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label for="companyName" class="form-label">Fleet / Company Name</label>
-                      <input type="text" class="form-control" id="companyName" placeholder="e.g. Trans-India Logistics Pvt Ltd">
+                      <label for="companyName" class="form-label">Fleet / Company Name <span class="text-muted small fw-normal">(Optional)</span></label>
+                      <input type="text" class="form-control" id="companyName" name="companyName" placeholder="e.g. Trans-India Logistics Pvt Ltd" maxlength="100">
+                      <div class="invalid-feedback">Please enter a valid company name (letters and numbers only).</div>
                     </div>
                   </div>
 
@@ -259,8 +263,8 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <label for="truckBodyType" class="form-label">Truck Body Category <span class="required">*</span></label>
-                      <select class="form-select" id="truckBodyType" required>
-                        <option value="">Select Truck Body Type...</option>
+                      <select class="form-select" id="truckBodyType" name="truckBodyType" required>
+                        <option value="" disabled selected>Select Truck Body Type...</option>
                         <option value="open_body">Open Truck Body (High-Side / Drop-Side)</option>
                         <option value="container_body">Closed Corrugated Freight Container Body</option>
                         <option value="tipper_body">Heavy Mining & Quarry Tipper Body</option>
@@ -278,8 +282,8 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <label for="vehicleModel" class="form-label">Chassis / Vehicle Model <span class="required">*</span></label>
-                      <input type="text" class="form-control" id="vehicleModel" placeholder="e.g. Tata Signa 4825, BharatBenz 2823" required>
-                      <div class="invalid-feedback">Please enter the vehicle chassis model (min 2 characters).</div>
+                      <input type="text" class="form-control" id="vehicleModel" name="vehicleModel" placeholder="e.g. Tata Signa 4825, BharatBenz 2823" maxlength="100" required>
+                      <div class="invalid-feedback">Please enter the vehicle chassis model.</div>
                     </div>
                   </div>
 
@@ -287,8 +291,8 @@
                   <div class="col-12">
                     <div class="form-group">
                       <label for="requiredService" class="form-label">Required Fabrication Service <span class="required">*</span></label>
-                      <select class="form-select" id="requiredService" required>
-                        <option value="">Select Engineering or Fabrication Service...</option>
+                      <select class="form-select" id="requiredService" name="requiredService" required>
+                        <option value="" disabled selected>Select Engineering or Fabrication Service...</option>
                         <option value="new_body_fabrication">Complete New Truck Body Fabrication</option>
                         <option value="custom_cad_design">Custom 3D CAD Design & Stress Simulation</option>
                         <option value="chassis_extension">Wheelbase Modification & Chassis Extension</option>
@@ -297,7 +301,7 @@
                         <option value="accessory_order">Commercial Truck Accessories & Spare Parts</option>
                         <option value="fleet_contract">Multi-Unit Fleet Fabrication Contract</option>
                       </select>
-                      <div class="invalid-feedback">Please select the required service.</div>
+                      <div class="invalid-feedback">Please select the required engineering or fabrication service.</div>
                     </div>
                   </div>
 
@@ -305,8 +309,8 @@
                   <div class="col-12">
                     <div class="form-group">
                       <label for="projectDescription" class="form-label">Project Description & Technical Specifications <span class="required">*</span></label>
-                      <textarea class="form-control" id="projectDescription" rows="4" placeholder="Specify required payload tonnage, floor thickness, internal cargo dimensions, operating routes, or hardware accessories (min 15 characters)..." required></textarea>
-                      <div class="invalid-feedback">Please provide at least 15 characters describing payload capacity, dimensions, or usage.</div>
+                      <textarea class="form-control" id="projectDescription" name="projectDescription" rows="4" maxlength="1000" placeholder="Specify required payload tonnage, floor thickness, internal cargo dimensions, operating routes, or hardware accessories (min 15 characters)..." required></textarea>
+                      <div class="invalid-feedback">Please provide at least 15 characters describing payload capacity or dimensions.</div>
                     </div>
                   </div>
 

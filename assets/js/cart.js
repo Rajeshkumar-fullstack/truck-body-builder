@@ -21,7 +21,7 @@
       category: 'Truck Body Accessories',
       price: 14500,
       priceType: 'fixed',
-      image: 'assets/images/products/acc-toolbox.jpg',
+      image: 'assets/images/products/acc-toolbox.jpg?v=2',
       stockStatus: 'In Stock - Ready to Dispatch',
       badge: 'Bestseller',
       specs: ['Dimensions: 900 x 450 x 450 mm', 'Material: 2.5mm CRCA Automotive Steel', 'Lock: Dual Stainless Keyed T-Latch'],
@@ -34,7 +34,7 @@
       category: 'Truck Body Accessories',
       price: 7600,
       priceType: 'fixed',
-      image: 'assets/images/products/acc-bumper.jpg',
+      image: 'assets/images/products/acc-bumper.jpg?v=2',
       stockStatus: 'In Stock - Ready to Dispatch',
       badge: 'Dock Protection',
       specs: ['Size: 400 x 200 x 120 mm per block', 'Compound: High-Durometer Natural Rubber', 'Fastening: Pre-Drilled Steel Core Flanges'],
@@ -47,11 +47,11 @@
       category: 'Truck Body Accessories',
       price: 11200,
       priceType: 'fixed',
-      image: 'assets/images/gallery/project-5.jpg',
+      image: 'assets/images/products/acc-ladder.jpg?v=5',
       stockStatus: 'In Stock - Ready to Dispatch',
       badge: 'Ergonomic Access',
-      specs: ['Material: Marine-Grade 6061-T6 Aluminium', 'Rungs: Anti-Slip Serrated Profile', 'Mounting: Universal Chassis Bolt-On Kit'],
-      description: 'Lightweight high-tensile access ladder providing safe, ergonomic three-point contact for drivers inspecting container and tipper roofs.'
+      specs: ['Material: Marine-Grade 6061-T6 Structural Aluminium', 'Rungs: 5 Serrated Anti-Slip High-Traction Treads', 'Mounting: Universal Chassis Bolt-On Flange Kit'],
+      description: 'All-welded industrial aluminium ladder engineered for safe 3-point cab-mount climbing and roof inspections on commercial tippers and container rigs.'
     },
 
     // 2. Truck Chassis Components
@@ -62,7 +62,7 @@
       category: 'Truck Chassis Components',
       price: 34000,
       priceType: 'fixed',
-      image: 'assets/images/gallery/project-3.jpg',
+      image: 'assets/images/products/part-leafspring.jpg',
       stockStatus: 'In Stock - Heavy Haul',
       badge: '16T Axle Load',
       specs: ['Leaves: 12-Leaf Parabolic Stack', 'Steel Grade: 55Si7 High-Tensile Spring Steel', 'Finish: Shot-Peened & Anti-Rust Primed'],
@@ -75,11 +75,11 @@
       category: 'Truck Chassis Components',
       price: 21500,
       priceType: 'fixed',
-      image: 'assets/images/products/trailer-body.jpg',
+      image: 'assets/images/products/part-kingpin.jpg?v=5',
       stockStatus: 'In Stock - ARAI Certified',
       badge: '50-Ton D-Value',
-      specs: ['Standard: DIN 74080 / SAE J700 Compliant', 'Alloy: Drop-Forged 42CrMo4 Quenched', 'Plate: 12mm Skid Plate Mounting'],
-      description: 'High-strength semi-trailer kingpin engineered for severe articulation stress, prime-mover coupling, and heavy bulk freight.'
+      specs: ['Standard: DIN 74080 / SAE J700 & ARAI AIS-090 Compliant', 'Alloy: Drop-Forged 42CrMo4 Quenched & Tempered', 'Mounting: 8-Bolt Bolster Skid Flange (50-Ton D-Value)'],
+      description: 'Precision-machined high-tensile trailer kingpin with heavy-duty bolster mounting flange, rated for severe articulation load and multi-axle freight haulage.'
     },
     {
       id: 'prod-06',
@@ -88,7 +88,7 @@
       category: 'Truck Chassis Components',
       price: 46000,
       priceType: 'fixed',
-      image: 'assets/images/gallery/project-10.jpg',
+      image: 'assets/images/products/part-equalizer.jpg',
       stockStatus: 'In Stock - Factory Tested',
       badge: '32-Ton Tandem',
       specs: ['Bushings: Heavy Bronze Greasable Bushes', 'Forging: Heavy Cast Steel Rocker Arm', 'Rating: 32,000 kg Axle Combination'],
@@ -103,7 +103,7 @@
       category: 'Hydraulic Equipment',
       price: 78000,
       priceType: 'fixed',
-      image: 'assets/images/services/service-welding.jpg',
+      image: 'assets/images/products/hyd-cylinder.jpg',
       stockStatus: 'In Stock - Factory Tested',
       badge: 'Heavy Mining',
       specs: ['Capacity: 50 Metric Ton Payload', 'Type: 4-Stage Telescopic Single-Acting', 'Stroke: 4200mm Extended'],
@@ -116,7 +116,7 @@
       category: 'Hydraulic Equipment',
       price: 26500,
       priceType: 'fixed',
-      image: 'assets/images/services/service-modification.jpg',
+      image: 'assets/images/products/hyd-valve.jpg?v=3',
       stockStatus: 'In Stock - Ready to Dispatch',
       badge: 'OEM Quality',
       specs: ['Working Pressure: 250 Bar (3,600 PSI)', 'Controls: In-Cabin Pneumatic Joystick', 'Ports: Standard 1/2" BSP'],
@@ -129,7 +129,7 @@
       category: 'Hydraulic Equipment',
       price: 32000,
       priceType: 'fixed',
-      image: 'assets/images/services/service-repair.jpg',
+      image: 'assets/images/products/hyd-pump.jpg?v=3',
       stockStatus: 'In Stock - Heavy Duty',
       badge: 'High Flow',
       specs: ['Displacement: 85 L/min at 1,000 RPM', 'Mount: 4-Bolt ISO Flange Fitment', 'Pressure Peak: 280 Bar Continuous'],
@@ -144,11 +144,11 @@
       category: 'Truck Body Spare Parts',
       price: 9800,
       priceType: 'fixed',
-      image: 'assets/images/products/container-body.jpg',
+      image: 'assets/images/products/part-camlock.jpg?v=5',
       stockStatus: 'In Stock - Ready to Dispatch',
       badge: 'SS-304 Marine',
-      specs: ['Poles: Dual 28mm Pipe Lock Keepers', 'Material: Drop-Forged Stainless Steel 304', 'Standard: ISO 1496 Cargo Container Spec'],
-      description: 'Corrosion-proof rear door locking mechanism kit with anti-rack cams, keepers, and heavy stamped hinge brackets for logistics containers.'
+      specs: ['Material: Marine-Grade Austenitic SS-304 Stainless', 'Components: Dual Lock Rods, 4 Cams, 4 Keepers & Hinges', 'Standard: ISO 1496 Cargo Container Anti-Rack Spec'],
+      description: 'Complete mirror-finished stainless steel rear cargo door locking gear with anti-rack forged cams, heavy-duty bracket keepers, and ergonomic safety catch levers.'
     },
     {
       id: 'prod-11',
@@ -157,7 +157,7 @@
       category: 'Truck Body Spare Parts',
       price: 16500,
       priceType: 'fixed',
-      image: 'assets/images/products/tipper-body.jpg',
+      image: 'assets/images/products/part-tailgate-lock.jpg',
       stockStatus: 'In Stock - Ready to Dispatch',
       badge: 'Air Actuated',
       specs: ['Cylinder Bore: 63mm Pneumatic Stroke', 'Claw: Hardened Alloy Steel Cam Hook', 'Operation: Automatic Interlock with Tipping Lever'],
@@ -170,11 +170,11 @@
       category: 'Truck Body Spare Parts',
       price: 8400,
       priceType: 'fixed',
-      image: 'assets/images/products/open-body.jpg',
+      image: 'assets/images/products/part-dropside-handle.jpg?v=5',
       stockStatus: 'In Stock - Ready to Dispatch',
       badge: 'Heavy Dropside',
-      specs: ['Mechanism: Internal Heavy Compression Spring', 'Finish: Hot-Dip Galvanized Zinc', 'Application: Dropside Cargo & Flatbed Bodies'],
-      description: 'Spring-damped over-center latches that maintain constant locking tension on side dropside flaps, eliminating vibration rattle.'
+      specs: ['Pack Size: Complete Matched Set of 6 Latches & Keepers', 'Mechanism: Internal Heavy Compression Spring Over-Center', 'Finish: Hot-Dip Galvanized Zinc (Corrosion Class C4)'],
+      description: 'Industrial over-center spring toggle latches with integrated safety releases, maintaining positive lock tension on truck dropside panels under extreme road vibration.'
     },
 
     // 5. Fabrication Components
@@ -185,7 +185,7 @@
       category: 'Fabrication Components',
       price: 18500,
       priceType: 'fixed',
-      image: 'assets/images/gallery/project-9.jpg',
+      image: 'assets/images/products/part-twistlock.jpg',
       stockStatus: 'In Stock - Heavy Haul',
       badge: 'ISO Standard',
       specs: ['Standard: ISO 1161 Corner Casting Fit', 'Material: Drop-Forged 42CrMo4 Alloy', 'Operation: Retractable Twist Lock Pin'],
@@ -198,7 +198,7 @@
       category: 'Fabrication Components',
       price: 28000,
       priceType: 'fixed',
-      image: 'assets/images/gallery/project-12.jpg',
+      image: 'assets/images/products/part-c-channel.jpg?v=3',
       stockStatus: 'In Stock - Mill Certified',
       badge: 'High-Yield IS 2062',
       specs: ['Profile: Channel 225 x 75 x 8 mm', 'Length: 6,000 mm Structural Beam', 'Yield Strength: 350-450 MPa Structural Grade'],
@@ -211,7 +211,7 @@
       category: 'Fabrication Components',
       price: 42000,
       priceType: 'fixed',
-      image: 'assets/images/gallery/project-1.jpg',
+      image: 'assets/images/products/part-hardox-plate.jpg?v=3',
       stockStatus: 'In Stock - Authentic SSAB',
       badge: 'Genuine Hardox',
       specs: ['Hardness: 450 HBW Abrasion Resistant', 'Dimensions: 2500 x 1250 x 8 mm', 'Impact Toughness: 50 J at -40°C'],
@@ -226,7 +226,7 @@
       category: 'Industrial Vehicle Accessories',
       price: 4800,
       priceType: 'fixed',
-      image: 'assets/images/products/acc-lights.jpg',
+      image: 'assets/images/products/acc-lights.jpg?v=3',
       stockStatus: 'In Stock - Ready to Dispatch',
       badge: 'ARAI AIS-008',
       specs: ['Voltage: 12V / 24V Multi-Voltage', 'Rating: IP68 Submersible Sealed', 'Compliance: ARAI AIS-008 Norms'],
@@ -239,7 +239,7 @@
       category: 'Industrial Vehicle Accessories',
       price: 4200,
       priceType: 'fixed',
-      image: 'assets/images/products/acc-tape.jpg',
+      image: 'assets/images/products/acc-tape.jpg?v=3',
       stockStatus: 'In Stock - Ready to Dispatch',
       badge: 'CMVR Rule 104',
       specs: ['Dimensions: 50mm x 50 Meter Roll', 'Pattern: Microprismatic High-Reflective', 'Standard: AIS-090 / CMVR Rule 104'],
@@ -252,7 +252,7 @@
       category: 'Industrial Vehicle Accessories',
       price: 3200,
       priceType: 'fixed',
-      image: 'assets/images/products/acc-strap.jpg',
+      image: 'assets/images/products/acc-strap.jpg?v=3',
       stockStatus: 'In Stock - Ready to Dispatch',
       badge: '10 Ton Rated',
       specs: ['Capacity: 10,000 kg Lashing Strength', 'Webbing: 50mm 100% High-Tenacity PES', 'Hardware: Double-J Forged Steel Hooks'],
@@ -265,11 +265,11 @@
       category: 'Industrial Vehicle Accessories',
       price: 5400,
       priceType: 'fixed',
-      image: 'assets/images/products/acc-bumper.jpg',
+      image: 'assets/images/products/acc-mudflap.jpg?v=5',
       stockStatus: 'In Stock - Ready to Dispatch',
       badge: 'AIS-013 Ready',
-      specs: ['Material: Multi-Ribbed Recycled Thermoplastic', 'Size: 600 x 400 mm with Steel Reinforcing Bar', 'Compliance: AIS-013 Spray Suppression'],
-      description: 'High-efficiency anti-spray wheel flap system reducing road spray turbulence and enhancing visibility for trailing highway motorists.'
+      specs: ['Flaps: Pair 600x400mm Ribbed Thermoplastic (AIS-013)', 'Hardware: Galvanized Tubular Steel Arms & Chassis Brackets', 'Fastening: Grade 8.8 High-Tensile Chassis Mounting Bolts'],
+      description: 'ARAI AIS-013 compliant anti-spray rain suppression flap kit with structural tubular steel mounting arms, minimizing highway splash and protecting following traffic.'
     },
 
     // 7. Custom Truck Bodies (Custom Fabrication – Price on Request / Quotation List)
@@ -293,7 +293,7 @@
       category: 'Custom Truck Bodies',
       price: null,
       priceType: 'quote',
-      image: 'assets/images/products/container-body.jpg?v=2',
+      image: 'assets/images/products/container-body.jpg',
       stockStatus: 'Custom Fabrication - Made to Order',
       badge: 'Logistics',
       specs: ['Volume: Up to 1200 cu.ft High-Cube', 'Walls: Corrugated MS / GI Steel Panels', 'Doors: Rear Double Doors with SS-304 Cam Locks'],
@@ -416,7 +416,7 @@
     badges.forEach(badge => {
       badge.textContent = totalCount;
       if (totalCount > 0) {
-        badge.style.display = 'inline-block';
+        badge.style.display = 'inline-flex';
         badge.setAttribute('aria-label', `${totalCount} items in procurement cart`);
       } else {
         badge.style.display = 'none';
@@ -920,12 +920,12 @@
           ${fixedItems.length > 0 ? `
             <div class="summary-row">
               <span class="text-muted">Priced Subtotal:</span>
-              <span class="fw-bold font-monospace">${formatCurrency(subtotal)}</span>
+              <span class="fw-bold text-dark">${formatCurrency(subtotal)}</span>
             </div>
 
             <div class="summary-row">
               <span class="text-muted">Commercial GST (18%):</span>
-              <span class="fw-bold font-monospace">${formatCurrency(gstAmount)}</span>
+              <span class="fw-bold text-dark">${formatCurrency(gstAmount)}</span>
             </div>
 
             <div class="summary-row">
@@ -950,7 +950,7 @@
 
           <div class="summary-row total-row">
             <span>Estimated Grand Total:</span>
-            <span class="text-orange font-monospace" style="color: var(--industrial-orange); font-size: 1.35rem;">
+            <span class="text-orange fw-bold" style="color: var(--industrial-orange); font-size: 1.35rem; letter-spacing: -0.2px;">
               ${fixedItems.length > 0 ? formatCurrency(grandTotal) : 'Price on Request'}
             </span>
           </div>
@@ -961,16 +961,16 @@
 
           <div class="d-grid gap-2 mt-4">
             ${fixedItems.length > 0 ? `
-              <a href="#checkout-form-card" class="btn btn-industrial btn-lg">
+              <button type="button" class="btn btn-industrial btn-lg w-100 btn-proceed-checkout" onclick="TruckCart.scrollToSection('checkout-form-card', 'custName')">
                 <i class="fas fa-check-double me-2"></i> Proceed to Order Checkout
-              </a>
+              </button>
             ` : ''}
             ${quoteItems.length > 0 ? `
-              <a href="#quote-form-card" class="btn btn-outline-steel btn-lg" style="background: #273646; color: #FFF;">
+              <button type="button" class="btn btn-outline-steel btn-lg w-100 btn-proceed-quote" onclick="TruckCart.scrollToSection('quote-form-card', 'enqVehicleModel')" style="background: #273646; color: #FFF; border-color: #273646;">
                 <i class="fas fa-drafting-compass me-2"></i> Request Body Quotation
-              </a>
+              </button>
             ` : ''}
-            <a href="contact.html?source=cart" class="btn btn-outline-steel">
+            <a href="contact.html?source=cart" class="btn btn-outline-steel w-100">
               <i class="fas fa-headset me-2"></i> Speak with Chief Engineer
             </a>
           </div>
@@ -1319,10 +1319,27 @@
         touched: false,
         validate: function() {
           const val = (this.el ? this.el.value : '').trim();
-          if (!val) return 'Please enter a valid contact name.';
-          if (val.length < 2 || val.length > 60) return 'Please enter a valid contact name.';
-          if (!/^[a-zA-Z\s'\-]+$/.test(val)) return 'Please enter a valid contact name.';
-          if (!/[a-zA-Z]/.test(val)) return 'Please enter a valid contact name.';
+          if (!val) {
+            return 'Please enter authorized contact person name.';
+          }
+          if (/^\d+$/.test(val)) {
+            return 'Contact name cannot be numbers only. If you are entering your phone, please use the Mobile field below.';
+          }
+          if (/\d/.test(val)) {
+            return 'Contact name cannot contain numbers. Please enter letters only (e.g. Rajesh Kumar).';
+          }
+          if (val.length < 2) {
+            return 'Contact name must be at least 2 characters.';
+          }
+          if (val.length > 60) {
+            return 'Contact name cannot exceed 60 characters.';
+          }
+          if (!/^[a-zA-Z\s'\-\.]+$/.test(val)) {
+            return 'Contact name can only contain letters, spaces, dots, and hyphens.';
+          }
+          if (!/[a-zA-Z]/.test(val)) {
+            return 'Please enter a valid contact name with letters.';
+          }
           return '';
         }
       },
@@ -1333,7 +1350,10 @@
         touched: false,
         validate: function() {
           const val = (this.el ? this.el.value : '').trim();
-          if (!/^[6-9]\d{9}$/.test(val)) return 'Please enter a valid 10-digit mobile number.';
+          if (!val) return 'Please enter your 10-digit mobile number.';
+          if (val.length !== 10) return `Mobile number must be exactly 10 digits (${val.length}/10 entered).`;
+          if (!/^[6-9]/.test(val)) return 'Mobile number must start with 6, 7, 8, or 9.';
+          if (!/^[6-9]\d{9}$/.test(val)) return 'Please enter a valid 10-digit Indian mobile number.';
           return '';
         }
       },
@@ -1423,6 +1443,14 @@
           if (field.counterEl) {
             field.counterEl.textContent = `${len} / 1000 characters`;
             field.counterEl.classList.toggle('near-limit', len >= 950);
+          }
+          if (field.touched) applyFieldStatus(key);
+        });
+      } else if (key === 'contactName') {
+        field.el.addEventListener('input', (e) => {
+          // If digits or numbers are typed in contact name, immediately show helpful message
+          if (/\d/.test(e.target.value)) {
+            field.touched = true;
           }
           if (field.touched) applyFieldStatus(key);
         });
@@ -1583,6 +1611,51 @@
   // ==========================================================================
   // Public API
   // ==========================================================================
+    // Smooth scroll with header offset and focus for checkout / quotation forms
+  function scrollToSection(targetId, focusInputId) {
+    const targetEl = document.getElementById(targetId);
+    if (!targetEl) {
+      console.warn('Target section not found:', targetId);
+      return;
+    }
+
+    const header = document.querySelector('.site-header');
+    const headerHeight = header ? header.offsetHeight : 80;
+    const targetRect = targetEl.getBoundingClientRect();
+    const targetTop = targetRect.top + window.pageYOffset - (headerHeight + 20);
+
+    // Primary smooth window scroll
+    window.scrollTo({
+      top: Math.max(0, targetTop),
+      behavior: 'smooth'
+    });
+
+    // Secondary fallback for cross-browser mobile support
+    try {
+      targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // Offset fixed header if scrollIntoView places top of element behind header
+      setTimeout(() => {
+        window.scrollBy({ top: -(headerHeight + 20), behavior: 'smooth' });
+      }, 80);
+    } catch (e) {
+      // scrollIntoView unsupported or fallback
+    }
+
+    targetEl.classList.remove('checkout-card-pulse');
+    void targetEl.offsetWidth; // retrigger animation
+    targetEl.classList.add('checkout-card-pulse');
+
+    setTimeout(() => {
+      const inp = focusInputId ? document.getElementById(focusInputId) : targetEl.querySelector('input:not([type="hidden"]):not([disabled]), select');
+      if (inp) {
+        inp.focus({ preventScroll: true });
+        if (typeof inp.select === 'function' && inp.value) {
+          inp.select();
+        }
+      }
+    }, 480);
+  }
+
   window.TruckCart = {
     add: addToCart,
     updateQty: updateQuantity,
@@ -1590,6 +1663,7 @@
     clear: clearCart,
     getCart: getCart,
     render: renderCartPage,
+    scrollToSection: scrollToSection,
     handleCheckout: handleCheckout,
     handleQuoteEnquiry: handleQuoteEnquiry,
     handleQuoteRequest: handleQuoteRequest,

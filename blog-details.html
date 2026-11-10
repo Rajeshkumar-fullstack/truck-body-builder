@@ -6,8 +6,11 @@
   <title>High-Tensile Hardox Steel vs Mild Steel in Mining Tipper Fabrication | Technical Whitepaper</title>
   <meta name="description" content="In-depth technical whitepaper on Hardox 450 vs mild steel in heavy mining tipper body fabrication: payload gains, abrasion resistance, and welding procedures.">
   
-  <!-- Favicon -->
+  <!-- Favicon Suite -->
   <link rel="icon" type="image/svg+xml" href="assets/images/logo/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/logo/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo/apple-touch-icon.png">
   <link rel="alternate icon" href="assets/images/logo/logo-compact.svg">
 
   <!-- Bootstrap 5 CSS -->
@@ -71,7 +74,7 @@
           <ul class="navbar-nav mx-auto">
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Home
+                Home <i class="fas fa-chevron-down nav-chevron ms-1"></i>
               </a>
               <ul class="dropdown-menu dropdown-menu-industrial">
                 <li><a class="dropdown-item" href="index.html"><i class="fas fa-industry"></i> Home 1</a></li>
@@ -150,7 +153,7 @@
             <article class="bg-white p-4 p-md-5 rounded border shadow-sm" style="background-color: var(--card-bg);">
               
               <!-- Category Badge & Headline -->
-              <span class="badge mb-3 px-3 py-2 text-uppercase fw-bold" style="background-color: rgba(240, 120, 36, 0.12); color: var(--industrial-orange); font-size: 0.8rem;">
+              <span class="badge mb-3 px-3 py-2 text-uppercase fw-bold" id="articleCategoryBadge" style="background-color: rgba(240, 120, 36, 0.12); color: var(--industrial-orange); font-size: 0.8rem;">
                 Metallurgy & Commercial Body Engineering
               </span>
               <h1 class="display-6 fw-bold mb-3" id="articleTitle" style="line-height: 1.3;">
@@ -168,7 +171,7 @@
               <!-- Featured Image -->
               <div class="mb-4 rounded overflow-hidden shadow-sm">
                 <img src="assets/images/blog/blog-1.jpg" id="articleImage" alt="Heavy Mining Tipper Fabricated with Hardox Steel" class="w-100" style="max-height: 440px; object-fit: cover;">
-                <div class="p-2 bg-dark text-white text-center small">
+                <div class="p-2 bg-dark text-white text-center small" id="articleImageCaption">
                   <em>Figure 1: Heavy 24 Cu.M rock body fabricated using Hardox 450 floor and Domex 700 ribs on Tata Signa 3525.K 8x4 chassis.</em>
                 </div>
               </div>
@@ -272,7 +275,7 @@
               <!-- Tags & Share Row -->
               <div class="row align-items-center g-3 pt-4 mt-4 border-top">
                 <div class="col-md-6">
-                  <div class="d-flex align-items-center gap-2 flex-wrap">
+                  <div class="d-flex align-items-center gap-2 flex-wrap" id="articleTags">
                     <span class="fw-bold small text-muted"><i class="fas fa-tags me-1"></i> Tags:</span>
                     <span class="badge bg-light text-dark border">Hardox 450</span>
                     <span class="badge bg-light text-dark border">Tipper Body</span>
@@ -304,7 +307,7 @@
             <!-- Related Articles -->
             <div class="mt-5">
               <h3 class="h4 fw-bold mb-4">Related Technical Articles</h3>
-              <div class="row g-4">
+              <div class="row g-4" id="relatedArticlesContainer">
                 <div class="col-md-6">
                   <div class="blog-card h-100">
                     <div class="blog-thumb-wrapper" style="height: 180px;">
@@ -511,6 +514,129 @@
   <script src="assets/js/theme.js"></script>
   <script src="assets/js/cart.js"></script>
   <script src="assets/js/gallery.js"></script>
+  <script src="assets/js/blog-data.js"></script>
+  <script>
+    (function() {
+      function renderArticle() {
+        if (!window.TruckBlogData) return;
+        var urlParams = new URLSearchParams(window.location.search);
+        var articleId = urlParams.get('id') || urlParams.get('article');
+        
+        // If slug was passed instead of id, resolve it
+        if (articleId && isNaN(articleId)) {
+          var found = Object.values(window.TruckBlogData).find(function(a) { return a.slug === articleId; });
+          if (found) articleId = found.id;
+        }
+        
+        if (!articleId || !window.TruckBlogData[articleId]) {
+          articleId = "1";
+        }
+
+        var article = window.TruckBlogData[articleId];
+        if (!article) return;
+
+        // 1. Update Title & Meta
+        document.title = article.title + " | Truck Body Builder Knowledge Base";
+        var metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) metaDesc.setAttribute('content', article.lead || article.title);
+
+        // 2. Breadcrumb
+        var bc = document.getElementById('articleBreadcrumb');
+        if (bc) bc.textContent = article.shortTitle || article.title;
+
+        // 3. Category Badge
+        var catBadge = document.getElementById('articleCategoryBadge');
+        if (catBadge) catBadge.textContent = article.category;
+
+        // 4. Headline
+        var titleEl = document.getElementById('articleTitle');
+        if (titleEl) titleEl.textContent = article.title;
+
+        // 5. Meta Row
+        var metaRow = document.getElementById('articleMetaRow');
+        if (metaRow) {
+          metaRow.innerHTML = 
+            '<span class="d-inline-flex align-items-center">' +
+              '<img src="' + article.authorAvatar + '" alt="' + article.authorName + '" class="rounded-circle me-2" style="width: 26px; height: 26px; object-fit: cover; border: 1.5px solid var(--industrial-orange);" loading="lazy">' +
+              '<strong>' + article.authorName + '</strong>,&nbsp;' + article.authorTitle +
+            '</span>' +
+            '<span><i class="fas fa-calendar-alt text-orange me-1" style="color: var(--industrial-orange);"></i> Published ' + article.date + '</span>' +
+            '<span><i class="fas fa-clock text-orange me-1" style="color: var(--industrial-orange);"></i> ' + article.readTime + '</span>' +
+            '<span><i class="fas fa-eye text-orange me-1" style="color: var(--industrial-orange);"></i> ' + article.views + '</span>';
+        }
+
+        // 6. Featured Image & Caption
+        var imgEl = document.getElementById('articleImage');
+        if (imgEl) {
+          imgEl.src = article.image;
+          imgEl.alt = article.title;
+        }
+        var captionEl = document.getElementById('articleImageCaption');
+        if (captionEl) {
+          captionEl.innerHTML = '<em>' + article.imageCaption + '</em>';
+        }
+
+        // 7. Body & Lead
+        var bodyEl = document.getElementById('articleBody');
+        if (bodyEl) {
+          bodyEl.innerHTML = 
+            '<p class="lead fw-normal">' + article.lead + '</p>' +
+            article.contentHtml;
+        }
+
+        // 8. Tags
+        var tagsEl = document.getElementById('articleTags');
+        if (tagsEl && article.tags) {
+          tagsEl.innerHTML = 
+            '<span class="fw-bold small text-muted"><i class="fas fa-tags me-1"></i> Tags:</span> ' +
+            article.tags.map(function(t) { return '<span class="badge bg-light text-dark border me-1">' + t + '</span>'; }).join('');
+        }
+
+        // 9. Author Card
+        var authorNameEl = document.getElementById('authorName');
+        if (authorNameEl) authorNameEl.textContent = article.authorName;
+        var authorBioEl = document.getElementById('authorBio');
+        if (authorBioEl) authorBioEl.textContent = article.authorBio;
+        var authorAvatarEl = document.getElementById('authorAvatar');
+        if (authorAvatarEl && article.authorAvatar) {
+          authorAvatarEl.src = article.authorAvatar;
+          authorAvatarEl.alt = article.authorName;
+        }
+
+        // 10. Related Articles (Pick 2 other articles)
+        var relatedContainer = document.getElementById('relatedArticlesContainer');
+        if (relatedContainer) {
+          var allKeys = Object.keys(window.TruckBlogData);
+          var otherKeys = allKeys.filter(function(k) { return String(k) !== String(article.id); });
+          var rel1 = window.TruckBlogData[otherKeys[0]];
+          var rel2 = window.TruckBlogData[otherKeys[1]];
+          var list = [rel1, rel2].filter(Boolean);
+
+          relatedContainer.innerHTML = list.map(function(item) {
+            return '<div class="col-md-6">' +
+              '<div class="blog-card h-100">' +
+                '<div class="blog-thumb-wrapper" style="height: 180px;">' +
+                  '<a href="blog-details.html?id=' + item.id + '"><img src="' + item.image + '" alt="' + item.title + '" class="blog-thumb"></a>' +
+                '</div>' +
+                '<div class="blog-body p-3">' +
+                  '<span class="blog-category">' + item.category + '</span>' +
+                  '<h4 class="blog-title fs-6"><a href="blog-details.html?id=' + item.id + '">' + item.title + '</a></h4>' +
+                  '<p class="small text-muted mb-2">' + item.lead.substring(0, 115) + '...</p>' +
+                  '<a href="blog-details.html?id=' + item.id + '" class="small fw-bold text-orange">Read Article &rarr;</a>' +
+                '</div>' +
+              '</div>' +
+            '</div>';
+          }).join('');
+        }
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', renderArticle);
+      } else {
+        renderArticle();
+      }
+    })();
+  </script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/premium-motion.js" defer></script>
 </body>

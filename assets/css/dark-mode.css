@@ -309,22 +309,122 @@
   color: #E2E8F0;
 }
 
-/* Form Controls in Dark Mode */
+/* ==========================================================================
+   Form Controls, Search Inputs & Placeholder Visibility (Dark Mode)
+   Guarantees 100% Crisp Visibility for Placeholders, Typed Text & Focused State
+   ========================================================================== */
+
+/* 1. Base input fields and textareas */
 [data-theme="dark"] .form-control,
-[data-theme="dark"] .form-select {
-  background-color: #131b24;
-  border-color: #273646;
-  color: #F8FAFC;
+[data-theme="dark"] .form-select,
+[data-theme="dark"] input[type="text"],
+[data-theme="dark"] input[type="email"],
+[data-theme="dark"] input[type="tel"],
+[data-theme="dark"] input[type="number"],
+[data-theme="dark"] input[type="search"],
+[data-theme="dark"] textarea.form-control,
+[data-theme="dark"] textarea {
+  background-color: #131b24 !important;
+  border-color: #2b3b4e !important;
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
 }
 
+/* 2. Focus state: keep background dark, text white, border industrial orange */
+[data-theme="dark"] .form-control:focus,
+[data-theme="dark"] .form-select:focus,
+[data-theme="dark"] input[type="text"]:focus,
+[data-theme="dark"] input[type="email"]:focus,
+[data-theme="dark"] input[type="tel"]:focus,
+[data-theme="dark"] input[type="number"]:focus,
+[data-theme="dark"] input[type="search"]:focus,
+[data-theme="dark"] textarea.form-control:focus,
+[data-theme="dark"] textarea:focus {
+  background-color: #172433 !important;
+  border-color: var(--industrial-orange) !important;
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  box-shadow: 0 0 0 3px rgba(240, 120, 36, 0.25) !important;
+  outline: none !important;
+}
+
+/* 3. Placeholder text visibility in Dark Mode - MUST be clear luminous light slate, never dark/hidden */
+[data-theme="dark"] input::placeholder,
+[data-theme="dark"] textarea::placeholder,
+[data-theme="dark"] .form-control::placeholder,
+[data-theme="dark"] #shopSearchInput::placeholder,
+[data-theme="dark"] #blogSearchInput::placeholder {
+  color: #E2E8F0 !important;
+  -webkit-text-fill-color: #E2E8F0 !important;
+  opacity: 1 !important;
+  font-weight: 500 !important;
+}
+
+[data-theme="dark"] input::-webkit-input-placeholder,
+[data-theme="dark"] textarea::-webkit-input-placeholder,
+[data-theme="dark"] .form-control::-webkit-input-placeholder,
+[data-theme="dark"] #shopSearchInput::-webkit-input-placeholder,
+[data-theme="dark"] #blogSearchInput::-webkit-input-placeholder {
+  color: #E2E8F0 !important;
+  -webkit-text-fill-color: #E2E8F0 !important;
+  opacity: 1 !important;
+  font-weight: 500 !important;
+}
+
+[data-theme="dark"] input::-moz-placeholder,
+[data-theme="dark"] textarea::-moz-placeholder,
+[data-theme="dark"] .form-control::-moz-placeholder,
+[data-theme="dark"] #shopSearchInput::-moz-placeholder,
+[data-theme="dark"] #blogSearchInput::-moz-placeholder {
+  color: #E2E8F0 !important;
+  -webkit-text-fill-color: #E2E8F0 !important;
+  opacity: 1 !important;
+  font-weight: 500 !important;
+}
+
+[data-theme="dark"] input:-ms-input-placeholder,
+[data-theme="dark"] textarea:-ms-input-placeholder,
+[data-theme="dark"] .form-control:-ms-input-placeholder,
+[data-theme="dark"] #shopSearchInput:-ms-input-placeholder,
+[data-theme="dark"] #blogSearchInput:-ms-input-placeholder {
+  color: #E2E8F0 !important;
+  -webkit-text-fill-color: #E2E8F0 !important;
+  opacity: 1 !important;
+  font-weight: 500 !important;
+}
+
+[data-theme="dark"] .input-group:focus-within {
+  box-shadow: 0 0 0 3px rgba(240, 120, 36, 0.3) !important;
+}
+[data-theme="dark"] .input-group:focus-within .input-group-text,
+[data-theme="dark"] .input-group:focus-within .form-control {
+  border-color: var(--industrial-orange) !important;
+}
+
+/* 4. Input group prepends / appends (search icons, currency symbols, flags) */
 [data-theme="dark"] .input-group-text {
-  background-color: #1a2532 !important;
-  border-color: #273646 !important;
-  color: #CBD5E1 !important;
+  background-color: #172433 !important;
+  border-color: #2b3b4e !important;
+  color: #FFA559 !important;
 }
 
-[data-theme="dark"] .form-label {
-  color: #E2E8F0;
+[data-theme="dark"] .input-group-text i,
+[data-theme="dark"] .input-group-text .text-muted {
+  color: #FFA559 !important;
+}
+
+/* 5. Select dropdowns and options */
+[data-theme="dark"] .form-select option,
+[data-theme="dark"] select option {
+  background-color: #131b24 !important;
+  color: #F8FAFC !important;
+}
+
+/* 6. Form labels and helper text */
+[data-theme="dark"] .form-label,
+[data-theme="dark"] label.text-muted,
+[data-theme="dark"] .form-text {
+  color: #E2E8F0 !important;
 }
 
 [data-theme="dark"] .filter-btn {
@@ -796,4 +896,217 @@ footer h5,
 :root:not([data-theme="dark"]) .hero-2-desc,
 :root:not([data-theme="dark"]) #cadHeroStudio p {
   color: #E2E8F0 !important;
+}
+
+
+/* ==========================================================================
+   COMPREHENSIVE DARK MODE INNER-TEXT VISIBILITY GUARANTEE
+   Ensures 100% High-Contrast Legibility for All Card Elements & Inner Prose
+   ========================================================================== */
+
+/* 1. Blog Cards in Dark Mode */
+[data-theme="dark"] .blog-card {
+  background-color: #17232F !important;
+  border-color: #27374a !important;
+}
+
+[data-theme="dark"] .blog-title,
+[data-theme="dark"] .blog-title a,
+[data-theme="dark"] .blog-card .blog-title,
+[data-theme="dark"] .blog-card .blog-title a {
+  color: #FFFFFF !important;
+}
+
+[data-theme="dark"] .blog-card:hover .blog-title,
+[data-theme="dark"] .blog-card:hover .blog-title a,
+[data-theme="dark"] .blog-card .blog-title a:hover {
+  color: #FFA559 !important;
+}
+
+[data-theme="dark"] .blog-excerpt,
+[data-theme="dark"] .blog-card .blog-excerpt,
+[data-theme="dark"] .blog-card p {
+  color: #CBD5E1 !important;
+}
+
+[data-theme="dark"] .blog-category {
+  color: #FFA559 !important;
+}
+
+[data-theme="dark"] .blog-meta-footer {
+  border-top-color: #27374a !important;
+  color: #94A3B8 !important;
+}
+
+[data-theme="dark"] .blog-meta-footer span {
+  color: #CBD5E1 !important;
+}
+
+[data-theme="dark"] .blog-meta-footer a.text-orange,
+[data-theme="dark"] .blog-meta-footer .text-orange {
+  color: #FFA559 !important;
+}
+
+[data-theme="dark"] .blog-meta-footer a.text-orange:hover {
+  color: #FFB878 !important;
+}
+
+/* 2. Service Cards in Dark Mode */
+[data-theme="dark"] .service-card {
+  background-color: #17232F !important;
+  border-color: #27374a !important;
+}
+
+[data-theme="dark"] .service-title,
+[data-theme="dark"] .service-title a,
+[data-theme="dark"] .service-card .service-title,
+[data-theme="dark"] .service-card .service-title a {
+  color: #FFFFFF !important;
+}
+
+[data-theme="dark"] .service-card:hover .service-title,
+[data-theme="dark"] .service-card:hover .service-title a,
+[data-theme="dark"] .service-card .service-title a:hover {
+  color: #FFA559 !important;
+}
+
+[data-theme="dark"] .service-text,
+[data-theme="dark"] .service-card .service-text,
+[data-theme="dark"] .service-card p {
+  color: #CBD5E1 !important;
+}
+
+[data-theme="dark"] .service-card ul li {
+  color: #CBD5E1 !important;
+}
+
+[data-theme="dark"] .service-link {
+  color: #FFA559 !important;
+}
+
+[data-theme="dark"] .service-card:hover .service-link {
+  color: #FFB878 !important;
+}
+
+/* 3. Mission, Vision & Quality Policy Cards in Dark Mode */
+[data-theme="dark"] .mission-vision-card {
+  background-color: #17232F !important;
+  border: 1px solid #27374a !important;
+}
+
+[data-theme="dark"] .mission-vision-title,
+[data-theme="dark"] .mission-vision-card h3 {
+  color: #FFFFFF !important;
+}
+
+[data-theme="dark"] .mission-vision-text,
+[data-theme="dark"] .mission-vision-card p {
+  color: #CBD5E1 !important;
+}
+
+/* 4. Quality Benchmark Cards in Dark Mode */
+[data-theme="dark"] .benchmark-card {
+  background-color: #17232F !important;
+  border-color: #27374a !important;
+}
+
+[data-theme="dark"] .benchmark-title,
+[data-theme="dark"] .benchmark-card h5 {
+  color: #FFFFFF !important;
+}
+
+[data-theme="dark"] .benchmark-text,
+[data-theme="dark"] .benchmark-card p {
+  color: #CBD5E1 !important;
+}
+
+/* 5. General Cards & Containers in Dark Mode */
+[data-theme="dark"] .card {
+  background-color: #17232F !important;
+  border-color: #27374a !important;
+}
+
+[data-theme="dark"] .card h1,
+[data-theme="dark"] .card h2,
+[data-theme="dark"] .card h3,
+[data-theme="dark"] .card h4,
+[data-theme="dark"] .card h5,
+[data-theme="dark"] .card h6,
+[data-theme="dark"] .card-title {
+  color: #FFFFFF !important;
+}
+
+[data-theme="dark"] .card p:not(.text-orange):not(.text-warning),
+[data-theme="dark"] .card-text,
+[data-theme="dark"] .card li:not(.text-orange):not(.text-warning) {
+  color: #CBD5E1 !important;
+}
+
+[data-theme="dark"] .card a:not(.btn):not(.badge):not(.service-link):not(.text-orange) {
+  color: #F8FAFC !important;
+}
+
+[data-theme="dark"] .card .text-muted,
+[data-theme="dark"] .card small.text-muted {
+  color: #94A3B8 !important;
+}
+
+[data-theme="dark"] .card .text-dark {
+  color: #FFFFFF !important;
+}
+
+/* 6. Blog Details Dynamic Article Prose in Dark Mode */
+[data-theme="dark"] #articleBody,
+[data-theme="dark"] .article-prose {
+  color: #CBD5E1 !important;
+}
+
+[data-theme="dark"] .article-prose h1,
+[data-theme="dark"] .article-prose h2,
+[data-theme="dark"] .article-prose h3,
+[data-theme="dark"] .article-prose h4 {
+  color: #FFFFFF !important;
+}
+
+[data-theme="dark"] .article-prose p,
+[data-theme="dark"] .article-prose li {
+  color: #CBD5E1 !important;
+}
+
+[data-theme="dark"] .article-prose strong,
+[data-theme="dark"] .article-prose b {
+  color: #FFFFFF !important;
+}
+
+[data-theme="dark"] .article-prose table {
+  color: #CBD5E1 !important;
+  border-color: #27374a !important;
+}
+
+[data-theme="dark"] .article-prose thead {
+  background-color: #111a24 !important;
+  color: #FFFFFF !important;
+}
+
+[data-theme="dark"] .article-prose td,
+[data-theme="dark"] .article-prose th {
+  border-color: #27374a !important;
+}
+
+[data-theme="dark"] #articleMetaRow span {
+  color: #CBD5E1 !important;
+}
+
+[data-theme="dark"] #authorName {
+  color: #FFFFFF !important;
+}
+
+[data-theme="dark"] #authorBio {
+  color: #CBD5E1 !important;
+}
+
+[data-theme="dark"] #articleTags .badge {
+  background-color: #1f2d3c !important;
+  color: #E2E8F0 !important;
+  border-color: #273646 !important;
 }

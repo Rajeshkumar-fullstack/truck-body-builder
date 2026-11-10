@@ -53,12 +53,15 @@ html {
   font-size: 16px;
 }
 
+html, body {
+  overflow-x: clip;
+}
 body {
   font-family: var(--font-body);
   color: var(--body-text);
   background-color: var(--light-bg);
   line-height: 1.6;
-  overflow-x: hidden;
+  
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -122,10 +125,50 @@ ul {
 /* ==========================================================================
    Header & Responsive Navbar
    ========================================================================== */
+
+/* Elevate header stacking context when mobile navigation drawer is open */
+body.drawer-open .site-header,
+.site-header:has(.navbar-drawer.is-open) {
+  z-index: 1080 !important;
+}
+
+.cart-icon-btn {
+  position: relative !important;
+  overflow: visible !important;
+}
+
+.cart-count-badge {
+  position: absolute !important;
+  top: -5px !important;
+  right: -5px !important;
+  left: auto !important;
+  bottom: auto !important;
+  transform: none !important;
+  min-width: 19px !important;
+  height: 19px !important;
+  padding: 0 4px !important;
+  font-family: var(--font-heading), 'Sora', sans-serif !important;
+  font-weight: 800 !important;
+  font-size: 0.68rem !important;
+  line-height: 1 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  background-color: var(--industrial-orange, #F07824) !important;
+  color: #FFFFFF !important;
+  border: 2px solid #0E1620 !important;
+  border-radius: 10px !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.45) !important;
+  z-index: 25 !important;
+  pointer-events: none !important;
+}
+
 .site-header {
-  position: sticky;
-  top: 0;
-  z-index: 1040;
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1050 !important;
   background-color: var(--primary-steel);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.22);
   transition: background-color var(--transition-normal), box-shadow var(--transition-normal);
@@ -1089,7 +1132,7 @@ ul {
 .hero-slide-content {
   position: relative;
   z-index: 3;
-  padding: 60px 0 90px;
+  padding: 60px 15px 90px;
 }
 
 /* Staggered entrance animations */
@@ -2302,6 +2345,10 @@ ul {
   flex-grow: 1;
 }
 
+.service-card.has-thumb .service-card-body > .mt-auto {
+  margin-top: auto !important;
+}
+
 .service-thumb-icon {
   position: absolute;
   bottom: 12px;
@@ -3001,7 +3048,26 @@ ul {
   flex-grow: 1;
 }
 
+.blog-author-avatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid var(--industrial-orange);
+  margin-right: 8px;
+  flex-shrink: 0;
+  display: inline-block;
+  vertical-align: middle;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.blog-card:hover .blog-author-avatar {
+  transform: scale(1.12);
+  box-shadow: 0 2px 8px rgba(230, 81, 0, 0.35);
+}
+
 .blog-meta-footer {
+  margin-top: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -3938,20 +4004,18 @@ footer h5,
 }
 
 /* Hotspot Callout Box */
+/* Hotspot Callout Box - Positioned as Dedicated Component Inspector Panel Below Viewport */
 .cad-hotspot-callout {
-  position: absolute;
-  bottom: 12px;
-  left: 12px;
-  right: 12px;
+  position: relative;
+  margin-top: 10px;
   background: rgba(10, 16, 23, 0.95);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(240, 120, 36, 0.6);
+  border: 1px solid rgba(240, 120, 36, 0.45);
   border-left: 3px solid var(--industrial-orange);
-  border-radius: 5px;
+  border-radius: 6px;
   padding: 10px 14px;
-  z-index: 6;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
   transition: all 0.25s ease;
 }
 
@@ -4202,6 +4266,7 @@ footer h5,
 }
 
 /* Hide Dropdown Arrow / Caret Indicators */
+/* Single Clean Dropdown Menu Arrow Indicator */
 .dropdown-toggle::after,
 .nav-link.dropdown-toggle::after,
 .navbar-nav .dropdown-toggle::after {
@@ -4211,7 +4276,35 @@ footer h5,
 }
 
 .nav-chevron {
-  display: none !important;
+  display: inline-block !important;
+  font-size: 0.72rem;
+  margin-left: 6px;
+  vertical-align: middle;
+  transition: transform 0.25s ease, color 0.25s ease;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.nav-link:hover .nav-chevron,
+.nav-item.dropdown:hover .nav-chevron,
+.nav-item.dropdown.show .nav-chevron,
+.nav-link.dropdown-toggle[aria-expanded="true"] .nav-chevron,
+.navbar-drawer .dropdown.is-open .nav-chevron,
+.navbar-drawer .dropdown.show .nav-chevron {
+  transform: rotate(180deg);
+  color: var(--industrial-orange, #F07824);
+}
+
+.dropdown-menu-industrial.show {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+  pointer-events: auto !important;
+}
+
+[dir="rtl"] .nav-chevron {
+  margin-left: 0;
+  margin-right: 6px;
 }
 
 
@@ -4333,4 +4426,116 @@ footer h5,
     animation: none !important;
     display: none !important;
   }
+}
+
+
+/* ==========================================================================
+   Checkout & Quotation Form Target Card Highlight Pulse
+   ========================================================================== */
+@keyframes cardTargetPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(240, 120, 36, 0.7);
+    border-color: var(--industrial-orange) !important;
+  }
+  40% {
+    box-shadow: 0 0 0 14px rgba(240, 120, 36, 0.28);
+    border-color: var(--industrial-orange) !important;
+  }
+  100% {
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  }
+}
+
+.checkout-card-pulse {
+  animation: cardTargetPulse 1.4s ease-out !important;
+  border-color: var(--industrial-orange) !important;
+}
+
+/* Form Group & Input Group Validation Enhancements */
+.input-group.has-validation .invalid-feedback {
+  display: none;
+  width: 100%;
+  margin-top: 5px;
+  font-size: 0.8rem;
+  color: #DC2626;
+  font-weight: 500;
+}
+
+.input-group.has-validation > .form-control.is-invalid ~ .invalid-feedback,
+.input-group.is-invalid .invalid-feedback {
+  display: block;
+}
+
+.input-group:has(.form-control.is-invalid) .input-group-text,
+.input-group.is-invalid .input-group-text {
+  border-color: #DC2626 !important;
+  color: #DC2626 !important;
+}
+
+.input-group:has(.form-control.is-valid) .input-group-text,
+.input-group.is-valid .input-group-text {
+  border-color: #10B981 !important;
+  color: #10B981 !important;
+}
+
+
+/* ==========================================================================
+   Mission, Vision & Quality Policy Cards Base
+   ========================================================================== */
+.mission-vision-card {
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+.mission-vision-icon {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 14px;
+}
+.mission-vision-title {
+  margin-bottom: 12px;
+  line-height: 1.35;
+}
+.mission-vision-text {
+  line-height: 1.65;
+  flex-grow: 1;
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   Quality Benchmark Cards Base
+   ========================================================================== */
+.benchmark-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+.benchmark-icon {
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+.benchmark-title {
+  margin-bottom: 10px;
+  line-height: 1.35;
+}
+.benchmark-text {
+  line-height: 1.55;
+  margin-top: auto;
+}
+
+
+/* Light Mode Accessible Placeholders */
+input::placeholder,
+textarea::placeholder,
+.form-control::placeholder {
+  color: #64748B !important;
+  opacity: 1 !important;
 }

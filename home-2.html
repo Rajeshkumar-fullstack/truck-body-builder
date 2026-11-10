@@ -6,8 +6,11 @@
   <title>Specialized Heavy Truck Body Fabrication | Custom Commercial Vehicles | Home 2</title>
   <meta name="description" content="Custom commercial vehicle fabrication, specialized heavy-duty tippers, refrigerated reefers, cryogenic tankers, and purpose-built vehicle bodies.">
   
-  <!-- Favicon -->
+  <!-- Favicon Suite -->
   <link rel="icon" type="image/svg+xml" href="assets/images/logo/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/logo/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo/apple-touch-icon.png">
   <link rel="alternate icon" href="assets/images/logo/logo-compact.svg">
 
   <!-- Bootstrap 5 CSS -->
@@ -74,7 +77,7 @@
           <ul class="navbar-nav mx-auto">
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Home
+                Home <i class="fas fa-chevron-down nav-chevron ms-1"></i>
               </a>
               <ul class="dropdown-menu dropdown-menu-industrial">
                 <li><a class="dropdown-item" href="index.html"><i class="fas fa-industry"></i> Home 1</a></li>
@@ -248,17 +251,17 @@
                 <div class="cad-hotspot" id="hotspot2" style="top: 55%; left: 66%;" data-index="1" title="Click to view component spec">2</div>
                 <div class="cad-hotspot" id="hotspot3" style="top: 76%; left: 28%;" data-index="2" title="Click to view component spec">3</div>
                 <div class="cad-hotspot" id="hotspot4" style="top: 68%; left: 86%;" data-index="3" title="Click to view component spec">4</div>
+              </div>
 
-                <!-- Active Component Callout Box -->
-                <div class="cad-hotspot-callout" id="cadCallout">
-                  <div class="cad-callout-title">
-                    <span id="calloutName">50-Ton Italian Hydraulic Ram</span>
-                    <span class="badge bg-orange text-white" id="calloutBadge">Hydraulics</span>
-                  </div>
-                  <p class="cad-callout-desc" id="calloutDesc">
-                    5-Stage telescopic cylinder with cabin proportional pilot joystick valve and 190-bar relief.
-                  </p>
+              <!-- Active Component Callout Box (Positioned cleanly below viewport - never hides image) -->
+              <div class="cad-hotspot-callout" id="cadCallout">
+                <div class="cad-callout-title">
+                  <span id="calloutName">50-Ton Italian Hydraulic Ram</span>
+                  <span class="badge bg-orange text-white" id="calloutBadge">Hydraulics</span>
                 </div>
+                <p class="cad-callout-desc" id="calloutDesc">
+                  5-Stage telescopic cylinder with cabin proportional pilot joystick valve and 190-bar relief.
+                </p>
               </div>
 
               <!-- Real-Time Telemetry HUD Strip -->
@@ -642,8 +645,8 @@
 
                 <!-- 4. Authorized Contact Name -->
                 <div class="col-md-6 form-group-validated">
-                  <label for="quoteContactName" class="form-label fw-bold small">Authorized Contact Name <span class="text-danger">*</span></label>
-                  <input type="text" class="form-control" id="quoteContactName" required placeholder="e.g. Rajesh Kumar" maxlength="60">
+                  <label for="quoteContactName" class="form-label fw-bold small">Authorized Contact Person (Full Name) <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" id="quoteContactName" name="contactName" autocomplete="name" required placeholder="e.g. Rajesh Kumar (Letters only)" maxlength="60">
                   <div class="custom-field-error" id="quoteContactNameError"></div>
                 </div>
 
@@ -652,7 +655,7 @@
                   <label for="quoteContactMobile" class="form-label fw-bold small">Mobile Number (10 Digits) <span class="text-danger">*</span></label>
                   <div class="input-group" id="quoteMobileGroup">
                     <span class="input-group-text bg-light fw-bold text-dark border-end-0">+91</span>
-                    <input type="tel" class="form-control border-start-0" id="quoteContactMobile" placeholder="9876543210" maxlength="10" inputmode="numeric" required>
+                    <input type="tel" class="form-control border-start-0" id="quoteContactMobile" name="mobile" autocomplete="tel" placeholder="9876543210" maxlength="10" inputmode="numeric" required>
                   </div>
                   <div class="custom-field-error" id="quoteContactMobileError"></div>
                 </div>
