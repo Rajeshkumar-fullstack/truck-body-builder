@@ -1,0 +1,149 @@
+const fs = require('fs');
+
+// Create the prominent, ultra-bold, high-impact logo SVG
+const svgContent = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 405 76" width="405" height="76">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@900&amp;family=Montserrat:wght@900&amp;display=swap');
+      .brand-title-metal {
+        font-family: 'Segoe UI Black', 'Arial Black', 'Outfit', 'Montserrat', system-ui, sans-serif;
+        font-weight: 900;
+        font-size: 26px;
+        letter-spacing: 0.4px;
+        fill: url(#brightChromeGrad);
+        stroke: #CBD5E1;
+        stroke-width: 0.7px;
+        paint-order: stroke fill;
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.9)) drop-shadow(0 0 2px rgba(255, 255, 255, 0.75));
+      }
+      .brand-title-orange {
+        font-family: 'Segoe UI Black', 'Arial Black', 'Outfit', 'Montserrat', system-ui, sans-serif;
+        font-weight: 900;
+        font-size: 27px;
+        letter-spacing: 0.5px;
+        fill: url(#vibrantOrangeGrad);
+        stroke: #D95C00;
+        stroke-width: 0.7px;
+        paint-order: stroke fill;
+        filter: drop-shadow(0 0 10px rgba(240, 120, 36, 0.85)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.9));
+      }
+      .brand-tagline {
+        font-family: 'Segoe UI Black', 'Arial Black', 'Montserrat', sans-serif;
+        font-weight: 900;
+        font-size: 9.6px;
+        letter-spacing: 1.8px;
+        fill: #FFFFFF;
+        stroke: #FFFFFF;
+        stroke-width: 0.35px;
+        paint-order: stroke fill;
+        filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.95));
+      }
+    </style>
+
+    <!-- High-Contrast Brilliant Platinum Chrome Gradient (Zero dark muddiness) -->
+    <linearGradient id="brightChromeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="25%" stop-color="#FFFFFF" />
+      <stop offset="48%" stop-color="#E2E8F0" />
+      <stop offset="52%" stop-color="#CBD5E1" />
+      <stop offset="75%" stop-color="#F1F5F9" />
+      <stop offset="100%" stop-color="#FFFFFF" />
+    </linearGradient>
+
+    <!-- Deep Industrial Steel Shield Background -->
+    <linearGradient id="mainSteelGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#243447" />
+      <stop offset="50%" stop-color="#17232F" />
+      <stop offset="100%" stop-color="#0B1117" />
+    </linearGradient>
+
+    <!-- High-Vibrance Industrial Molten Orange Gradient -->
+    <linearGradient id="vibrantOrangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF0E5" />
+      <stop offset="20%" stop-color="#FFA866" />
+      <stop offset="50%" stop-color="#F07824" />
+      <stop offset="85%" stop-color="#D95C00" />
+      <stop offset="100%" stop-color="#FF9347" />
+    </linearGradient>
+
+    <!-- Chrome Shield Outer Bevel Gradient -->
+    <linearGradient id="shieldChromeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="30%" stop-color="#E2E8F0" />
+      <stop offset="50%" stop-color="#94A3B8" />
+      <stop offset="70%" stop-color="#CBD5E1" />
+      <stop offset="100%" stop-color="#FFFFFF" />
+    </linearGradient>
+
+    <!-- Drop Shadow Filter for Emblem Depth -->
+    <filter id="mainEmblemShadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#000000" flood-opacity="0.55" />
+    </filter>
+  </defs>
+
+  <!-- ==================== EMBLEM (LEFT) ==================== -->
+  <g transform="translate(6, 6)">
+    <!-- Outer Rounded Industrial Shield -->
+    <rect x="0" y="0" width="64" height="64" rx="15" fill="url(#mainSteelGrad)" stroke="url(#shieldChromeGrad)" stroke-width="2.2" filter="url(#mainEmblemShadow)" />
+    
+    <!-- Inner Precision Orange Accent Rim -->
+    <rect x="3.5" y="3.5" width="57" height="57" rx="12" fill="none" stroke="url(#vibrantOrangeGrad)" stroke-width="1.5" opacity="0.95" />
+
+    <!-- Industrial Gear Cog Segment Watermark -->
+    <g opacity="0.3" stroke="#FFFFFF" stroke-width="1.8" fill="none">
+      <circle cx="32" cy="32" r="23" stroke-dasharray="6 3.5" stroke-linecap="round" />
+      <circle cx="32" cy="32" r="19" stroke-width="1.2" stroke="#F07824" opacity="0.75" />
+    </g>
+
+    <!-- Commercial Heavy-Duty Truck Silhouette -->
+    <g transform="translate(6.5, 12) scale(0.9)">
+      <!-- Aerodynamic Speed Line / Chassis Foundation -->
+      <path d="M 2 41 L 55 41" stroke="url(#vibrantOrangeGrad)" stroke-width="3" stroke-linecap="round" />
+      <path d="M 10 45 L 46 45" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" opacity="0.85" />
+
+      <!-- Heavy Commercial Tipper Cargo Box with Vertical Ribs -->
+      <path d="M 4 12 L 34 12 L 34 37 L 4 37 Z" fill="url(#brightChromeGrad)" />
+      <!-- Structural Stiffener Ribs -->
+      <line x1="11" y1="14" x2="11" y2="35" stroke="#17232F" stroke-width="1.6" />
+      <line x1="19" y1="14" x2="19" y2="35" stroke="#17232F" stroke-width="1.6" />
+      <line x1="27" y1="14" x2="27" y2="35" stroke="#17232F" stroke-width="1.6" />
+
+      <!-- Commercial Cab-Over Head Unit -->
+      <path d="M 36 17 L 45 17 L 53 26 L 53 37 L 36 37 Z" fill="url(#brightChromeGrad)" />
+      <!-- Sun Visor Deflector -->
+      <path d="M 43 14 L 54 22" stroke="url(#vibrantOrangeGrad)" stroke-width="2.2" stroke-linecap="round" />
+      <!-- Cab Window Tint -->
+      <polygon points="38,20 44,20 50,26 38,26" fill="#17232F" />
+
+      <!-- Heavy Axles (Dual Rear Tandem + Front Steer) -->
+      <circle cx="13" cy="38" r="6" fill="#0B1117" stroke="#FFFFFF" stroke-width="1.8" />
+      <circle cx="13" cy="38" r="2.4" fill="url(#vibrantOrangeGrad)" />
+      <circle cx="25" cy="38" r="6" fill="#0B1117" stroke="#FFFFFF" stroke-width="1.8" />
+      <circle cx="25" cy="38" r="2.4" fill="url(#vibrantOrangeGrad)" />
+      <circle cx="47" cy="38" r="6" fill="#0B1117" stroke="#FFFFFF" stroke-width="1.8" />
+      <circle cx="47" cy="38" r="2.4" fill="url(#vibrantOrangeGrad)" />
+    </g>
+  </g>
+
+  <!-- ==================== TYPOGRAPHY (RIGHT) ==================== -->
+  <g transform="translate(74, 0)">
+    <!-- Primary Brand Title: TRUCK BODY BUILDER -->
+    <text x="0" y="42">
+      <tspan class="brand-title-metal">TRUCK BODY </tspan>
+      <tspan class="brand-title-orange">BUILDER</tspan>
+    </text>
+
+    <!-- Tagline: BUILD • FABRICATE • DELIVER -->
+    <g transform="translate(1, 58)">
+      <text x="0" y="0" class="brand-tagline">
+        BUILD <tspan fill="#F07824" font-weight="900">•</tspan> FABRICATE <tspan fill="#F07824" font-weight="900">•</tspan> DELIVER
+      </text>
+
+      <!-- Precision Orange Speed Micro-Bar -->
+      <line x1="226" y1="-3.2" x2="305" y2="-3.2" stroke="url(#vibrantOrangeGrad)" stroke-width="2.5" stroke-linecap="round" opacity="0.95" />
+    </g>
+  </g>
+</svg>`;
+
+fs.writeFileSync('assets/images/logo/logo-main.svg', svgContent, 'utf8');
+console.log('Successfully wrote new prominent logo SVG');

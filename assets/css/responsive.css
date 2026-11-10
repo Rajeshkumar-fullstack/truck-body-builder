@@ -79,8 +79,8 @@
   }
 
   .brand-logo-main {
-    height: clamp(30px, 2.3vw, 36px) !important;
-    max-width: clamp(165px, 15vw, 220px) !important;
+    height: clamp(42px, 3.2vw, 48px) !important;
+    max-width: clamp(210px, 20vw, 275px) !important;
     width: auto !important;
     object-fit: contain !important;
   }
@@ -1233,7 +1233,7 @@
 
   .brand-logo-main {
     height: auto !important;
-    max-height: 36px !important;
+    max-height: 42px !important;
     max-width: 100% !important;
     width: auto !important;
     object-fit: contain !important;
@@ -1308,7 +1308,7 @@
 
   .brand-logo-main {
     height: auto !important;
-    max-height: 32px !important;
+    max-height: 37px !important;
     max-width: 100% !important;
     width: auto !important;
   }
@@ -1344,7 +1344,7 @@
 
   .brand-logo-main {
     height: auto !important;
-    max-height: 27px !important;
+    max-height: 32px !important;
     max-width: 100% !important;
     width: auto !important;
   }

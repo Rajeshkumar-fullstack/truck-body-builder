@@ -1,30 +1,39 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 76" width="375" height="76">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 405 76" width="405" height="76">
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@800;900&amp;family=Montserrat:wght@700;800;900&amp;display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@900&amp;family=Montserrat:wght@900&amp;display=swap');
       .brand-title-metal {
-        font-family: 'Outfit', 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-family: 'Segoe UI Black', 'Arial Black', 'Outfit', 'Montserrat', system-ui, sans-serif;
         font-weight: 900;
-        font-size: 24.5px;
+        font-size: 26px;
         letter-spacing: 0.4px;
         fill: url(#brightChromeGrad);
-        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.85)) drop-shadow(0 0 1px rgba(255, 255, 255, 0.6));
+        stroke: #CBD5E1;
+        stroke-width: 0.7px;
+        paint-order: stroke fill;
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.9)) drop-shadow(0 0 2px rgba(255, 255, 255, 0.75));
       }
       .brand-title-orange {
-        font-family: 'Outfit', 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-family: 'Segoe UI Black', 'Arial Black', 'Outfit', 'Montserrat', system-ui, sans-serif;
         font-weight: 900;
-        font-size: 25.5px;
+        font-size: 27px;
         letter-spacing: 0.5px;
         fill: url(#vibrantOrangeGrad);
-        filter: drop-shadow(0 0 8px rgba(240, 120, 36, 0.75)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.85));
+        stroke: #D95C00;
+        stroke-width: 0.7px;
+        paint-order: stroke fill;
+        filter: drop-shadow(0 0 10px rgba(240, 120, 36, 0.85)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.9));
       }
       .brand-tagline {
-        font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', sans-serif;
-        font-weight: 800;
-        font-size: 8.8px;
+        font-family: 'Segoe UI Black', 'Arial Black', 'Montserrat', sans-serif;
+        font-weight: 900;
+        font-size: 9.6px;
         letter-spacing: 1.8px;
-        fill: #E2E8F0;
-        filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.9));
+        fill: #FFFFFF;
+        stroke: #FFFFFF;
+        stroke-width: 0.35px;
+        paint-order: stroke fill;
+        filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.95));
       }
     </style>
 
@@ -114,7 +123,7 @@
   </g>
 
   <!-- ==================== TYPOGRAPHY (RIGHT) ==================== -->
-  <g transform="translate(73, 0)">
+  <g transform="translate(74, 0)">
     <!-- Primary Brand Title: TRUCK BODY BUILDER -->
     <text x="0" y="42">
       <tspan class="brand-title-metal">TRUCK BODY </tspan>
@@ -128,7 +137,7 @@
       </text>
 
       <!-- Precision Orange Speed Micro-Bar -->
-      <line x1="210" y1="-3" x2="280" y2="-3" stroke="url(#vibrantOrangeGrad)" stroke-width="2" stroke-linecap="round" opacity="0.95" />
+      <line x1="226" y1="-3.2" x2="305" y2="-3.2" stroke="url(#vibrantOrangeGrad)" stroke-width="2.5" stroke-linecap="round" opacity="0.95" />
     </g>
   </g>
 </svg>
