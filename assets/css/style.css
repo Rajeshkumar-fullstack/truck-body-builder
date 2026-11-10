@@ -53,7 +53,17 @@ html {
   font-size: 16px;
 }
 
-html, body {
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  max-width: 100%;
   overflow-x: clip;
 }
 body {
@@ -185,6 +195,9 @@ body.drawer-open .site-header,
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  max-width: 1360px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 /* ==========================================================================
@@ -2869,6 +2882,35 @@ body.drawer-open .site-header,
 .cart-item-meta {
   font-size: 0.8rem;
   color: var(--muted-text);
+}
+
+/* Cart Table Product Media & Info Alignment */
+.cart-product-cell {
+  min-width: 280px;
+}
+
+.cart-product-media-wrap {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.cart-product-img {
+  width: 78px;
+  height: 58px;
+  min-width: 78px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #f1f5f9;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  display: block;
+}
+
+.cart-product-details {
+  min-width: 0;
+  flex: 1 1 auto;
 }
 
 .cart-qty-ctrl {

@@ -597,14 +597,16 @@
       const itemSubtotal = formatCurrency(item.price * item.quantity);
       return `
         <tr class="cart-item-row" data-id="${item.id}">
-          <td style="width: 85px;">
-            <img src="${item.image}" alt="${item.name}" class="rounded border" style="width: 75px; height: 55px; object-fit: cover;">
-          </td>
-          <td>
-            <div class="cart-item-title">${item.name}</div>
-            <div class="cart-item-meta">
-              <span class="badge bg-light text-dark border me-1">${item.category}</span>
-              <span class="text-muted">SKU: ${item.sku}</span>
+          <td class="cart-product-cell">
+            <div class="cart-product-media-wrap">
+              <img src="${item.image}" alt="${item.name}" class="cart-product-img rounded border" loading="lazy" onerror="this.onerror=null; this.src='assets/images/products/acc-toolbox.jpg';">
+              <div class="cart-product-details">
+                <div class="cart-item-title">${item.name}</div>
+                <div class="cart-item-meta">
+                  <span class="badge bg-light text-dark border me-1">${item.category}</span>
+                  <span class="text-muted">SKU: ${item.sku}</span>
+                </div>
+              </div>
             </div>
           </td>
           <td class="text-nowrap font-monospace fw-bold">
@@ -633,14 +635,16 @@
     const quoteRowsHtml = quoteItems.map(item => {
       return `
         <tr class="cart-item-row table-warning-subtle" data-id="${item.id}">
-          <td style="width: 85px;">
-            <img src="${item.image}" alt="${item.name}" class="rounded border" style="width: 75px; height: 55px; object-fit: cover;">
-          </td>
-          <td>
-            <div class="cart-item-title">${item.name}</div>
-            <div class="cart-item-meta">
-              <span class="badge bg-dark text-white me-1">${item.category}</span>
-              <span class="text-muted">SKU: ${item.sku}</span>
+          <td class="cart-product-cell">
+            <div class="cart-product-media-wrap">
+              <img src="${item.image}" alt="${item.name}" class="cart-product-img rounded border" loading="lazy" onerror="this.onerror=null; this.src='assets/images/products/body-open.jpg';">
+              <div class="cart-product-details">
+                <div class="cart-item-title">${item.name}</div>
+                <div class="cart-item-meta">
+                  <span class="badge bg-dark text-white me-1">${item.category}</span>
+                  <span class="text-muted">SKU: ${item.sku}</span>
+                </div>
+              </div>
             </div>
           </td>
           <td class="text-nowrap">
@@ -685,7 +689,7 @@
               <table class="cart-table">
                 <thead>
                   <tr>
-                    <th colspan="2">Product Details</th>
+                    <th class="cart-th-product">Product Details</th>
                     <th>Unit Price</th>
                     <th>Quantity</th>
                     <th class="text-end">Subtotal</th>
@@ -713,7 +717,7 @@
               <table class="cart-table">
                 <thead>
                   <tr style="background-color: #273646;">
-                    <th colspan="2">Vehicle Body Type</th>
+                    <th class="cart-th-product">Vehicle Body Type</th>
                     <th>Price Status</th>
                     <th>Fleet Qty</th>
                     <th class="text-end">Pricing Mode</th>
