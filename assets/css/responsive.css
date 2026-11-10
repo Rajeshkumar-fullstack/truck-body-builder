@@ -1216,7 +1216,7 @@
   .navbar-brand-industrial {
     flex: 0 1 auto !important;
     min-width: 0 !important;
-    max-width: 62vw !important;
+    max-width: calc(100% - 145px) !important;
     margin-right: 0 !important;
     padding: 0 !important;
     display: flex !important;
@@ -1232,10 +1232,12 @@
   }
 
   .brand-logo-main {
-    height: 40px !important;
-    max-width: 240px !important;
+    height: auto !important;
+    max-height: 36px !important;
+    max-width: 100% !important;
     width: auto !important;
     object-fit: contain !important;
+    object-position: left center !important;
     filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.65)) !important;
   }
 
@@ -1244,22 +1246,36 @@
     flex-direction: row !important;
     align-items: center !important;
     flex-shrink: 0 !important;
-    gap: 6px !important;
+    gap: 5px !important;
     margin-left: auto !important;
   }
 
   .mobile-nav-controls .header-icon-btn {
-    width: 35px !important;
-    height: 35px !important;
-    min-width: 35px !important;
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
     padding: 0 !important;
-    font-size: 0.82rem !important;
+    font-size: 0.78rem !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
   }
 
-    .mobile-nav-controls .cart-icon-btn {
+  .mobile-nav-controls .navbar-toggler {
+    padding: 4px 7px !important;
+    height: 32px !important;
+    min-width: 34px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .mobile-nav-controls .navbar-toggler-icon {
+    width: 18px !important;
+    height: 18px !important;
+  }
+
+  .mobile-nav-controls .cart-icon-btn {
     overflow: visible !important;
   }
 
@@ -1287,12 +1303,14 @@
   }
 
   .navbar-brand-industrial {
-    max-width: 62vw !important;
+    max-width: calc(100% - 138px) !important;
   }
 
   .brand-logo-main {
-    height: 37px !important;
-    max-width: 215px !important;
+    height: auto !important;
+    max-height: 32px !important;
+    max-width: 100% !important;
+    width: auto !important;
   }
 
   .mobile-nav-controls {
@@ -1300,27 +1318,35 @@
   }
 
   .mobile-nav-controls .header-icon-btn {
-    width: 32px !important;
-    height: 32px !important;
+    width: 30px !important;
+    height: 30px !important;
+    min-width: 30px !important;
+    font-size: 0.74rem !important;
+  }
+
+  .mobile-nav-controls .navbar-toggler {
+    height: 30px !important;
     min-width: 32px !important;
-    font-size: 0.78rem !important;
+    padding: 3px 6px !important;
   }
 }
 
 @media (max-width: 360px) {
   .navbar-container {
-    padding-left: 8px !important;
-    padding-right: 8px !important;
+    padding-left: 6px !important;
+    padding-right: 6px !important;
     gap: 4px !important;
   }
 
   .navbar-brand-industrial {
-    max-width: 60vw !important;
+    max-width: calc(100% - 124px) !important;
   }
 
   .brand-logo-main {
-    height: 34px !important;
-    max-width: 195px !important;
+    height: auto !important;
+    max-height: 27px !important;
+    max-width: 100% !important;
+    width: auto !important;
   }
 
   .mobile-nav-controls {
@@ -1328,10 +1354,16 @@
   }
 
   .mobile-nav-controls .header-icon-btn {
-    width: 29px !important;
-    height: 29px !important;
+    width: 27px !important;
+    height: 27px !important;
+    min-width: 27px !important;
+    font-size: 0.68rem !important;
+  }
+
+  .mobile-nav-controls .navbar-toggler {
+    height: 27px !important;
     min-width: 29px !important;
-    font-size: 0.72rem !important;
+    padding: 2px 4px !important;
   }
 }
 
@@ -1619,6 +1651,43 @@ body.drawer-open .site-header,
 
 /* 2. Standard Desktop (992px to 1199.98px) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
+  /* Commercial Truck Body Cards at 1024px Viewport */
+  .product-body {
+    padding: 16px 12px !important;
+  }
+  .product-title {
+    font-size: 1.08rem !important;
+    min-height: 2.6rem !important;
+  }
+  .product-desc {
+    font-size: 0.825rem !important;
+    line-height: 1.45 !important;
+    min-height: 3.6rem !important;
+  }
+  .product-specs {
+    padding: 10px 10px !important;
+    margin-bottom: 14px !important;
+    font-size: 0.78rem !important;
+  }
+  .product-footer {
+    gap: 4px !important;
+    padding-top: 10px !important;
+  }
+  .product-footer .btn {
+    font-size: 0.72rem !important;
+    padding: 6px 6px !important;
+    letter-spacing: 0 !important;
+    white-space: nowrap !important;
+  }
+  .product-footer .btn i {
+    font-size: 0.7rem !important;
+    margin-right: 3px !important;
+  }
+  .product-footer .btn-outline-steel {
+    padding-left: 6px !important;
+    padding-right: 6px !important;
+  }
+
   .blog-title {
     min-height: 82px !important;
     height: 82px !important;
@@ -1775,5 +1844,52 @@ body.drawer-open .site-header,
     overflow: visible !important;
     display: flex !important;
     flex-direction: row !important;
+  }
+}
+
+
+/* ==========================================================================
+   Cart Page Product Thumbnail & Responsive Table System
+   ========================================================================== */
+@media (max-width: 991.98px) {
+  .cart-table-wrapper {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    margin-bottom: 20px !important;
+    border-radius: var(--radius-sm) !important;
+  }
+  .cart-table {
+    min-width: 580px !important;
+    width: 100% !important;
+  }
+  .cart-product-cell {
+    min-width: 240px !important;
+  }
+  .cart-product-media-wrap {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+  }
+  .cart-product-img {
+    width: 68px !important;
+    height: 52px !important;
+    min-width: 68px !important;
+    max-width: 68px !important;
+    flex: 0 0 68px !important;
+    object-fit: cover !important;
+    display: block !important;
+    border-radius: 4px !important;
+    background-color: #17232F !important;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15) !important;
+  }
+  .cart-product-details {
+    min-width: 0 !important;
+    flex: 1 1 auto !important;
+  }
+  .cart-item-title {
+    font-size: 0.88rem !important;
+    font-weight: 600 !important;
+    line-height: 1.3 !important;
+    margin-bottom: 3px !important;
   }
 }

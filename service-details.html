@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -128,7 +128,7 @@
 
   <main>
     <!-- BREADCRUMB HERO -->
-    <section class="py-5 text-white" style="background: linear-gradient(rgba(23, 35, 47, 0.94), rgba(23, 35, 47, 0.94)), url('assets/images/services/service-fabrication.jpg') center/cover no-repeat; border-bottom: 4px solid var(--industrial-orange);">
+    <section class="py-5 text-white" id="serviceHeroSection" style="background: linear-gradient(rgba(23, 35, 47, 0.94), rgba(23, 35, 47, 0.94)), url('assets/images/services/service-fabrication.jpg') center/cover no-repeat; border-bottom: 4px solid var(--industrial-orange);">
       <div class="container py-4 text-center">
         <span class="badge-certified mb-2 d-inline-block">Technical Documentation</span>
         <h1 class="display-5 fw-bold text-white mb-2" id="serviceHeroTitle">Truck Body Fabrication: Engineering & Specs</h1>
@@ -146,7 +146,7 @@
           <!-- Left Column: Detailed Service Info -->
           <div class="col-lg-8">
             <div class="mb-4">
-              <img id="serviceMainImg" src="assets/images/services/service-fabrication.jpg" alt="Large Heavy Fabrication Facility" class="rounded w-100 shadow-sm" style="height: 380px; object-fit: cover;">
+              <img id="serviceMainImg" src="assets/images/services/service-fabrication.jpg" alt="Commercial Vehicle Engineering & Specs" class="rounded w-100 shadow-sm img-fluid" style="width: 100%; max-height: 480px; min-height: 220px; object-fit: cover;">
             </div>
 
             <div class="section-subtitle" id="serviceSubtitle">Commercial Vehicle Fabrication</div>
@@ -205,9 +205,9 @@
               <table class="table table-bordered table-striped align-middle">
                 <thead class="table-dark">
                   <tr>
-                    <th>Component / Attribute</th>
-                    <th>Specification Standard</th>
-                    <th>Structural Material Grade</th>
+                    <th scope="col" style="width: 32%; padding: 14px 16px; font-weight: 700; letter-spacing: 0.3px;">Engineering Specification</th>
+                    <th scope="col" style="width: 38%; padding: 14px 16px; font-weight: 700; letter-spacing: 0.3px;">Standard Value / Tolerance</th>
+                    <th scope="col" style="width: 30%; padding: 14px 16px; font-weight: 700; letter-spacing: 0.3px;">Material & Standard Benchmark</th>
                   </tr>
                 </thead>
                 <tbody id="serviceSpecsBody">
@@ -239,7 +239,7 @@
                   <tr>
                     <td><strong>Paint Finish</strong></td>
                     <td>2 Primer Coats + 2 PU Topcoats</td>
-                    <td>Automotive Polyurethane (120Âµm DFT)</td>
+                    <td>Automotive Polyurethane (120µm DFT)</td>
                   </tr>
                 </tbody>
               </table>
@@ -313,7 +313,7 @@
                 Send your vehicle model and required body specifications. Our senior estimation engineer will prepare a formal BOQ within 4 business hours.
               </p>
               <div class="d-grid gap-2">
-                <a href="shop.html?category=custom&openQuote=true" class="btn btn-industrial">
+                <a id="serviceQuoteBtn" href="shop.html?category=custom&openQuote=true" class="btn btn-industrial">
                   <i class="fas fa-file-invoice me-2"></i> Request Official Quote in Shop
                 </a>
                 <a href="tel:+919876543210" class="btn btn-outline-steel">
@@ -335,6 +335,21 @@
                 <li class="mb-2 pb-2 border-bottom"><a href="service-details.html?service=maintenance" data-service="maintenance" class="text-secondary"><i class="fas fa-angle-right text-orange me-2"></i> Commercial Vehicle Maintenance</a></li>
                 <li class="mb-2 pb-2 border-bottom"><a href="service-details.html?service=hydraulics" data-service="hydraulics" class="text-secondary"><i class="fas fa-angle-right text-orange me-2"></i> Hydraulic Systems & Tipper Kits</a></li>
                 <li><a href="service-details.html?service=reefer" data-service="reefer" class="text-secondary"><i class="fas fa-angle-right text-orange me-2"></i> Insulated Reefer & Cold Chain</a></li>
+              </ul>
+            </div>
+
+            <!-- Commercial Truck Body Specifications -->
+            <div class="sidebar-widget">
+              <h4 class="widget-title">Commercial Truck Body Specs</h4>
+              <ul class="list-unstyled mb-0" id="truckBodiesSidebarList">
+                <li class="mb-2 pb-2 border-bottom"><a href="service-details.html?product=open-body" data-service="open-body" class="text-secondary"><i class="fas fa-angle-right text-orange me-2"></i> Open Truck Body</a></li>
+                <li class="mb-2 pb-2 border-bottom"><a href="service-details.html?product=container-body" data-service="container-body" class="text-secondary"><i class="fas fa-angle-right text-orange me-2"></i> Closed Container Body</a></li>
+                <li class="mb-2 pb-2 border-bottom"><a href="service-details.html?product=tipper-body" data-service="tipper-body" class="text-secondary"><i class="fas fa-angle-right text-orange me-2"></i> Tipper Truck Body</a></li>
+                <li class="mb-2 pb-2 border-bottom"><a href="service-details.html?product=trailer-body" data-service="trailer-body" class="text-secondary"><i class="fas fa-angle-right text-orange me-2"></i> Trailer Semi-Trailer Body</a></li>
+                <li class="mb-2 pb-2 border-bottom"><a href="service-details.html?product=tanker-body" data-service="tanker-body" class="text-secondary"><i class="fas fa-angle-right text-orange me-2"></i> Tanker Truck Body</a></li>
+                <li class="mb-2 pb-2 border-bottom"><a href="service-details.html?product=refrigerated-body" data-service="reefer" class="text-secondary"><i class="fas fa-angle-right text-orange me-2"></i> Refrigerated Reefer Body</a></li>
+                <li class="mb-2 pb-2 border-bottom"><a href="service-details.html?product=flatbed-body" data-service="flatbed-body" class="text-secondary"><i class="fas fa-angle-right text-orange me-2"></i> Flatbed Truck Body</a></li>
+                <li><a href="service-details.html?product=custom-body" data-service="custom-body" class="text-secondary"><i class="fas fa-angle-right text-orange me-2"></i> Custom Special Body</a></li>
               </ul>
             </div>
 
@@ -492,6 +507,183 @@
   <script>
     (function () {
       const services = {
+        // --- COMMERCIAL TRUCK BODY TYPES (SPECS) ---
+        'open-body': {
+          title: "Open Truck Body: Heavy Haulage Engineering & Specs",
+          subtitle: "Heavy-duty dropside and fixed-side cargo bodies engineered for multi-axle Tata Motors, Ashok Leyland, and BharatBenz chassis.",
+          badge: "Heavy Haulage Cargo Body",
+          heading: "High-Tensile Dropside & High-Deck Cargo Bodies",
+          lead: "Engineered for bulk aggregates, agricultural produce, steel coils, and general highway cargo with quick-release drop gates and reinforced headboards.",
+          desc: "Manufactured using IS 2062 Grade E350 high-yield structural steel with heavy cold-roll corrugated sidewalls and 4mm to 6mm high-friction chequered deck plating. Reinforced with heavy-duty cab guards, integrated lashing hooks, forged container twist locks, and spring-loaded dropside locking handles to eliminate gate vibration under extreme highway shock loads.",
+          img: "assets/images/products/open-body.jpg",
+          shopQuery: "Open Body",
+          steps: [
+            { num: "Step 1", title: "Chassis Alignment & Laser CAD Mapping", desc: "Digital 3D CAD alignment tailored to OEM factory wheelbases (Tata Signa, Ashok Leyland AVTR, BharatBenz) ensuring optimal axle load distribution." },
+            { num: "Step 2", title: "CNC Press-Brake Corrugated Wall Forming", desc: "Sidewalls pressed with deep 65mm V-rib corrugations providing maximum lateral structural rigidity against shifting loose cargo." },
+            { num: "Step 3", title: "Dual MIG Welded Underbody Cross-Bearers", desc: "High-yield C-channels welded at tight 280mm centers with gusseted outriggers to eliminate floor dishing under concentrated axle loads." },
+            { num: "Step 4", title: "Swedish SA 2.5 Shot Blasting & PU Coating", desc: "Automated shot-blast descaling followed by 2-part zinc-rich epoxy primer and 120-micron high-gloss polyurethane UV-resistant industrial topcoat." }
+          ],
+          specs: [
+            ["Payload Rating", "9 Tons to 40 Tons GVW", "Multi-Axle Rigid & Haulage Configurations"],
+            ["Deck Floor Plating", "4mm, 5mm or 6mm High-Friction Chequered Plate", "IS 2062 E350 / Optional Hardox 450 Wear Liner"],
+            ["Subframe Longitudes", "ISMC 150x75 to ISMC 250x80 Welded Channels", "Reinforced with High-Tensile Flitch Inner Plates"],
+            ["Dropside Wall Height", "2.0 ft to 5.5 ft Removable & Hinged Sections", "Cold-Rolled 2.0mm - 2.5mm Pressed Corrugated Steel"],
+            ["Locking Hardware", "Spring-Loaded Forged Slam Handles & Catches", "Hardened Bushings with Zero-Rattle Locking Pins"],
+            ["Regulatory Compliance", "AIS-093 Type-Approved / CMVR Form 22B", "Reflective Conspicuity Tape & Rear Underrun (RUPD)"]
+          ]
+        },
+
+        'container-body': {
+          title: "Closed Container Body: Logistics & Cargo Specs",
+          subtitle: "All-weather corrugated steel logistics containers with leak-proof monocoque roofing and high-security cam locks for FMCG, parcel express, and retail distribution.",
+          badge: "FMCG & Logistics Container",
+          heading: "All-Weather High-Cube Freight & Express Cargo Containers",
+          lead: "Maximum volumetric cargo capacity up to 1,200 cu.ft with airtight multi-lip EPDM rubber perimeter door gaskets and zero-leak monocoque roof.",
+          desc: "Engineered specifically for courier logistics, e-commerce supply chains, and industrial freight. Fabricated with precision-corrugated GI or CRCA steel side panels to resist crosswind turbulence. Fitted with heavy-duty stainless steel SS-304 dual cam locks, tamper-proof recessed padlock enclosures, internal load-securing E-tracks, and continuous seamless galvanized roof skins.",
+          img: "assets/images/products/container-body.jpg",
+          shopQuery: "Container Body",
+          steps: [
+            { num: "Step 1", title: "Volumetric CAD & Weight Distribution", desc: "Optimizing interior cubic foot volume and center of gravity to maximize legal payload without exceeding axle gross limits." },
+            { num: "Step 2", title: "Roll-Formed Corrugated Outer Skin Cladding", desc: "Interlocking vertical corrugated panels spot-welded and sealed to eliminate moisture penetration and wind-resistance drag." },
+            { num: "Step 3", title: "Robotic Cam Lock & EPDM Gasket Fitting", desc: "Precision assembly of full-height SS-304 cam-action locking rods and four-lip co-extruded EPDM rubber door seals." },
+            { num: "Step 4", title: "High-Pressure Monsoon Water Spray Test", desc: "Intense 360-degree high-pressure water booth chamber testing verifying zero moisture ingress under extreme rain conditions." }
+          ],
+          specs: [
+            ["Volumetric Capacity", "Up to 1,200 cu.ft (Lengths 14ft to 32ft)", "Custom High-Cube Heights up to 9.5ft Clear"],
+            ["Wall Skin Materials", "1.6mm - 2.0mm High-Tensile Corrugated GI / CRCA", "Zinc-Galvanized Anti-Corrosion Treated Sheets"],
+            ["Roof Construction", "Monolithic One-Piece Seamless Roof Skin", "External Anti-Snag Camber with Internal Hat Stiffeners"],
+            ["Rear Door Assembly", "270° Double-Wing Flush Swing Doors", "Heavy-Duty Forged Steel Hinges with Grease Nipples"],
+            ["Security Cam Locks", "SS-304 Stainless Steel Dual Rod Cam Locks", "Tamper-Proof Concealed Padlock Enclosures & Seal Holes"],
+            ["Homologation & Safety", "AIS-093 / AIS-098 Underrun Protection", "Full CMVR Electrical Harness & Side Marker Conspicuity"]
+          ]
+        },
+
+        'tipper-body': {
+          title: "Tipper Truck Body: Mining & Quarry Engineering & Specs",
+          subtitle: "Hardox-lined rock and scoop tip bodies with Italian hydraulic multi-stage telescopic tipping cylinders for severe aggregate and mining duties.",
+          badge: "Mining & Heavy Quarry Body",
+          heading: "Heavy-Duty Rock & Aggregates Tipping Bodies",
+          lead: "Built to withstand severe rock drops, heavy excavator bucket impacts, abrasive sliding friction, and high-cycle quarry dumping without floor dishing.",
+          desc: "Fabricated with Hardox 450/500 wear-resistant steel plate floors and high-yield impact-absorbing side ribs. Powered by genuine 4-stage or 5-stage Italian hydraulic telescopic cylinders (Hyva / Penta) delivering an ultra-fast 52-degree steep tipping angle for clean discharge of sticky muck, coal, blue metal, and iron ore. Outfitted with an over-cab heavy rock canopy, automatic pneumatic tail-gate locking claws, and low-COG subframes.",
+          img: "assets/images/products/tipper-body.jpg",
+          shopQuery: "Tipper Body",
+          steps: [
+            { num: "Step 1", title: "FEA Torsional Stress & Anti-Roll Simulation", desc: "Dynamic structural FEA modeling ensuring tipping stability on uneven terrain and extreme side-tilt angular resistance." },
+            { num: "Step 2", title: "Hardox 450 Wear-Plate Submerged Arc Welding", desc: "Automated SAW butt-welding of high-abrasion steel floor plates with continuous heavy underbody trapezoidal box stiffeners." },
+            { num: "Step 3", title: "Hydraulic Hoist & High-Pressure Valve Rigging", desc: "Plumbing 190-bar hydraulic circuits with cabin proportional pilot joystick valves, tip-stop safety limiters, and return filters." },
+            { num: "Step 4", title: "125% Dynamic Overload Tipping Bench Test", desc: "Full-payload hydraulic tilt testing to 52 degrees verifying zero hose ballooning, perfect cylinder seal stroke, and immediate tailgate trip." }
+          ],
+          specs: [
+            ["Tipping Volume / GVW", "14 m³ to 24 m³ Struck Capacity (16T - 42T GVW)", "Heavy 6x4 and 8x4 Multi-Axle Chassis Fitting"],
+            ["Floor Deck Material", "6mm, 8mm or 10mm Hardox 450 Wear Plate", "High Impact Abrasion Yield (1400 MPa Tensile)"],
+            ["Side & Front Bulkhead", "4mm to 6mm High-Strength Steel (IS 2062 / Domex)", "Formed Stiffener Ribs with Heavy Top Deflector Rail"],
+            ["Hydraulic Telescopic Hoist", "Hyva / Penta Multi-Stage Front-End Cylinder", "190 Bar Operating Pressure with Cabin Proportional Control"],
+            ["Tipping Discharge Angle", "52° High-Lift Steep Dump Angle", "Rapid 18-Second Cycle Time with Hydraulic Cushion Stop"],
+            ["Tailgate Locking System", "Automatic Pneumatic Air Hook / Heavy Linkage", "Self-Tripping Cam Claws with Adjustable Rubber Sealing"]
+          ]
+        },
+
+        'trailer-body': {
+          title: "Commercial Trailer Body: Skeletal & Flatbed Specs",
+          subtitle: "Skeletal container chassis and heavy flatbed semi-trailers in 2-axle, 3-axle, and tandem configurations engineered for long-distance interstate transport.",
+          badge: "Interstate Haulage Semi-Trailer",
+          heading: "Engineered 40ft & 50ft Skeletal & Platform Semi-Trailers",
+          lead: "High-tensile I-beam girder construction with certified forged kingpins, tridem mechanical or air suspension, and dual-line WABCO ABS air braking.",
+          desc: "Built for grueling port-to-inland container haulage and multi-ton industrial cargo distribution. Main longitudinal beams are constructed with submerged arc twin-torch automated gantries using high-yield Strenx and IS 2062 Grade E350 steel flanges with cambered pre-camber arch. Outfitted with York / BPW 13-16 ton axles, heavy JOST landing legs, multi-leaf or pneumatic air suspension, and retractable forged container ISO twistlocks.",
+          img: "assets/images/products/trailer-body.jpg",
+          shopQuery: "Trailer Body",
+          steps: [
+            { num: "Step 1", title: "Automated SAW Submerged Arc Beam Fabrication", desc: "Continuous double-sided submerged arc welding of heavy 500mm web and 16mm flange I-beams with built-in positive camber curve." },
+            { num: "Step 2", title: "Laser Optical Axle Toe-In & Camber Alignment", desc: "Precision laser alignment of York/BPW tandem or tri-axle running gear to eliminate uneven tire scrub and reduce diesel consumption." },
+            { num: "Step 3", title: "Pneumatic Dual-Line Brake & ABS Rigging", desc: "Installation of WABCO emergency relay valves, air spring brake boosters, and CMVR-compliant ISO 7638 ABS electronic wiring." },
+            { num: "Step 4", title: "55-Ton Proof Load Deflection & Braking Dyno", desc: "Static overload beam deflection verification and dynamic rolling-road brake retardation testing ensuring maximum stopping power." }
+          ],
+          specs: [
+            ["Platform Length & Width", "40ft (12.2m) & 50ft (15.2m) Bed, 2.5m Width", "Skeletal Container or Full Heavy Deck Floor"],
+            ["Main Longitudinal Girders", "500mm Deep Fabricated Heavy I-Beams", "IS 2062 Grade E350 High-Yield Steel with Flitch Inserts"],
+            ["Axle Configuration", "York / BPW / Fuwa 13T - 16T Heavy Duty Axles", "Available in Tandem (2-Axle) or Tridem (3-Axle) Setups"],
+            ["Suspension Options", "Heavy-Duty Multi-Leaf Mechanical or Air Suspension", "Heavy Equalizer Rocker Arms with Bronze Bushings"],
+            ["Kingpin & Landing Gear", "50mm / 90mm Forged Dual Kingpin (JOST Spec)", "Two-Speed Heavy JOST Mechanical Landing Legs (50T Capacity)"],
+            ["Container Twist Locks", "12 Retractable Heavy Forged ISO Twistlocks", "Accommodates 1x40ft, 2x20ft or 1x20ft Heavy Center Box"]
+          ]
+        },
+
+        'tanker-body': {
+          title: "Tanker Truck Body: Petroleum & Liquid Transport Specs",
+          subtitle: "Elliptical and cylindrical tanker bodies for fuel, industrial chemicals, potable water, and edible oil with PESO and CCOE homologation.",
+          badge: "Liquid Bulk Logistics",
+          heading: "Hazardous Material & Industrial Liquid Tankers",
+          lead: "Manufactured from high-grade SS-304/SS-316 stainless steel or IS 2062 MS with anti-surge dished baffles and pneumatic emergency bottom shut-off valves.",
+          desc: "Engineered to eliminate liquid surging dynamics during rapid deceleration and sharp cornering. Fabricated with precision-rolled elliptical or circular shell plates, dished flanged baffles, 450mm pressure-vacuum relief manhole assemblies, flame arresters, and pneumatic bottom emergency foot valves. Fully compliant with petroleum transit regulations and certified with full hydrostatic pressure calibration certificates.",
+          img: "assets/images/products/tanker-body.jpg",
+          shopQuery: "Tanker Body",
+          steps: [
+            { num: "Step 1", title: "Precision Plate Rolling & Dished Head Flanging", desc: "CNC four-roll bending of 5mm high-grade plates and hydro-pneumatic flanging of anti-surge internal dished bulkheads." },
+            { num: "Step 2", title: "Automated Seam TIG/MIG Welding & Radiography", desc: "Continuous internal and external longitudinal seam welding with 100% radiographic X-ray inspection on all primary pressure joints." },
+            { num: "Step 3", title: "Emergency Pneumatic Bottom Valve Integration", desc: "Fitting pneumatic fail-safe bottom emergency valves with cabin quick-release shutoff switches and vapor recovery lines." },
+            { num: "Step 4", title: "Hydrostatic Pressure & Calibration Certification", desc: "Hydraulic chamber testing up to 0.35 bar and precision volumetric weighbridge calibration certified for petroleum RTO approval." }
+          ],
+          specs: [
+            ["Volumetric Capacity", "10,000 to 28,000 Litres (Multi-Compartment)", "2, 3, 4 or 5 Isolated Bulkhead Compartments"],
+            ["Tank Shell & Dish Heads", "4.0mm to 6.0mm High Grade Steel / SS-304 / SS-316", "Formed Dished Anti-Surge Baffles with Drain Cutouts"],
+            ["Emergency Safety Valves", "Pneumatic Internal Emergency Foot Valves", "Automatic Secondary Shear Groove to Prevent Spills in Crash"],
+            ["Manhole & Venting", "450mm Manholes with Pressure/Vacuum Breathers", "Integrated Flame Arresters & Emergency High-Venting Relief"],
+            ["Discharge System", "3-Inch or 4-Inch Gravity / PTO Pump Dispense", "Aluminum / SS Ball Valves with Camlock Hose Couplings"],
+            ["Statutory Approvals", "PESO (CCOE) Petroleum Rules & CMVR Certified", "Full Tank Calibration Chart, Form 22B & Hydro Test Logs"]
+          ]
+        },
+
+        'flatbed-body': {
+          title: "Flatbed Truck Body: Heavy Equipment Platform Specs",
+          subtitle: "High point-load machinery carriers with integrated lashing winches, reinforced headboards, and heavy steel chequered decks for construction and industrial plant haulage.",
+          badge: "Heavy Plant & Machinery Carrier",
+          heading: "Engineered Flatbed & Low-Deck Cargo Platforms",
+          lead: "Designed for transport of excavators, tractors, structural steel, precast concrete beams, and high-tonnage industrial equipment.",
+          desc: "Built with heavy-section cross-bearers welded at tight intervals with deep perimeter side raves. Features an ultra-strong 1,500mm high forward bulkhead headboard rated to contain forward shifting inertia of heavy loads. Outfitted with underdeck integrated ratchet lashing winches, heavy 5-ton forged D-rings, retractable side access steps, and optional hydraulic rear loading ramps.",
+          img: "assets/images/products/flatbed-body.jpg",
+          shopQuery: "Flatbed Body",
+          steps: [
+            { num: "Step 1", title: "High-Moment Chassis Subframe Engineering", desc: "Heavy ISMC 200/250 longitudinal channels engineered to handle extreme concentrated single-point heavy machinery axle loads." },
+            { num: "Step 2", title: "Reinforced 1.5m Forward Bulkhead Headboard", desc: "Fabricated from high-yield cold-formed steel channels to prevent cargo penetration into the driver cab in emergency braking." },
+            { num: "Step 3", title: "Under-Rave Lashing Winch & D-Ring Welding", desc: "Welding forged high-tensile 5-ton load anchoring tie-down points across outer channel raves at 1-meter intervals." },
+            { num: "Step 4", title: "Heavy Chequered Deck Plating & Proof Testing", desc: "Laying 6mm/8mm anti-slip chequered steel deck plates with continuous stitch welds and 120% concentrated wheel-load proofing." }
+          ],
+          specs: [
+            ["Payload Rating", "15 Tons to 55 Tons Concentrated Load", "Multi-Axle Rigid Chassis & Semi-Trailer Platforms"],
+            ["Floor Deck Plating", "6mm to 8mm High-Friction Chequered Steel", "Reinforced with Deep Cross-Bearers @ 250mm Pitch"],
+            ["Forward Cab Headboard", "1,500mm High Heavy Reinforced Bulkhead", "Compliant with 10-Ton Forward Shifting Load Standards"],
+            ["Perimeter Side Rave", "Heavy-Duty Formed 150x75 Channel Rave", "Integrated Rope Hooks & Underdeck Ratchet Lashing Winches"],
+            ["Tie-Down Anchor Points", "Forged 5-Ton Drop-Forged D-Rings Every 1m", "Heavy Chain Lashing Pockets for Machinery Chains"],
+            ["Homologation & Markings", "AIS-093 Type-Approved with Reflective Tape", "Rear Underrun Crash Bar (RUPD) & Side Guards (LUPD)"]
+          ]
+        },
+
+        'custom-body': {
+          title: "Custom Special Vehicle Body: Bespoke Engineering Specs",
+          subtitle: "Special-purpose commercial vehicle fabrication for heavy breakdown recovery, mobile service workshops, defense, and specialized municipal utilities.",
+          badge: "Bespoke Special Vehicles",
+          heading: "Custom Engineered Bodies for Specialized Fleet Missions",
+          lead: "Tailored from ground-up CAD modeling to real-world deployment for utilities, emergency rescue, recovery tow trucks, and hazardous material units.",
+          desc: "When standard bodies cannot meet unique operational challenges, our engineering team designs bespoke solutions tailored to the chassis PTO, auxiliary hydraulics, electrical power generation, and specialized payload configurations. Featuring custom subframes, hydraulic outrigger jacks, weather-tight roller shutter storage bays, integrated crane booms, and complete homologation.",
+          img: "assets/images/products/custom-body.jpg",
+          shopQuery: "Fabricated Body",
+          steps: [
+            { num: "Step 1", title: "Mission Analysis & Chassis PTO Assessment", desc: "Analyzing vehicle duty-cycle, auxiliary hydraulic flow requirements, chassis wheelbase modifications, and axle weight balances." },
+            { num: "Step 2", title: "Parametric 3D CAD Twin & FEA Stress Testing", desc: "Full digital assembly with all equipment, generators, tool storage, and boom loadings simulated under dynamic road vibrations." },
+            { num: "Step 3", title: "Precision CNC Fabrication & Electrical Rigging", desc: "Laser cutting of subcomponents, TIG/MIG welding, pneumatic plumbing, and 12V/24V IP67 weatherproof control harness wiring." },
+            { num: "Step 4", title: "ARAI Individual Homologation & Field Commissioning", desc: "Full testing of hydraulic winches, outriggers, lighting systems, and issuing Form 22B certificates for RTO passing." }
+          ],
+          specs: [
+            ["Vehicle Applications", "Heavy Recovery, Mobile Workshop, Fire, Utilities", "Tailored to Any Commercial Chassis Platform"],
+            ["Chassis Modifications", "Wheelbase Extension, Heavy Flitching, Outriggers", "Authorized OEM Body Builder Guidelines (BBG) Compliant"],
+            ["Auxiliary Power & Hydraulics", "Chassis PTO Pumps, Inverters, Air Compressors", "High-Flow Proportional Valves with Wireless Remote Control"],
+            ["Storage Compartments", "Heavy Anodized Aluminum Roller Shutters", "Gas-Strut Lift Doors with Weatherproof IP65 Double Seals"],
+            ["Structural Framework", "Seamless High-Yield Box Tubing & Hardox Plates", "Anti-Vibration Rubber Damper Subframe Mounts"],
+            ["Statutory Certification", "Complete ARAI / RTO Special Purpose Approval", "CMVR Homologation & Factory Warranty Documentation"]
+          ]
+        },
+
+        // --- ENGINEERING SERVICES ---
         fabrication: {
           title: "Truck Body Fabrication: Engineering & Specs",
           subtitle: "Comprehensive breakdown of our heavy commercial vehicle manufacturing process, quality benchmarks, and pricing estimation criteria.",
@@ -500,6 +692,7 @@
           lead: "We fabricate high-payload commercial truck bodies engineered to withstand dynamic torsional flexing, severe shock loading, and harsh highway environments across India.",
           desc: "Utilizing high-tensile hot-rolled steel plates (IS 2062 Grade E250 / E350 and Domex/Hardox alloys), our commercial bodies maximize legal cargo volume while minimizing tare curb weight. Every assembly adheres to AIS-093 Type-Approval requirements, guaranteeing hassle-free RTO passing.",
           img: "assets/images/services/service-fabrication.jpg",
+          shopQuery: "Fabrication",
           steps: [
             { num: "Step 1", title: "Chassis CAD Integration", desc: "Direct 3D CAD modeling aligned with factory OEM chassis drawings (Tata, Ashok Leyland, BharatBenz, Eicher) to guarantee zero interference with fuel tanks and AdBlue SCR units." },
             { num: "Step 2", title: "Automated Submerged Arc Welding", desc: "Longitudinal subframe channels are welded with automated submerged arc gantries (SAW) achieving full-depth root penetration without warping or heat-affected brittleness." },
@@ -512,7 +705,7 @@
             ["Crossmembers & Outriggers", "100x50mm C-Channel @ 300mm Pitch", "Cold-formed High Strength Steel"],
             ["Side & Front Bulkhead", "Corrugated Pressed 1.6mm - 2.5mm", "CRCA / Galvanized Steel Sheet"],
             ["Welding Consumables", "ER70S-6 Solid Wire & E71T Flux Cored", "AWS A5.18 / ASME SFA 5.18 Certified"],
-            ["Paint Finish", "2 Primer Coats + 2 PU Topcoats", "Automotive Polyurethane (120Âµm DFT)"]
+            ["Paint Finish", "2 Primer Coats + 2 PU Topcoats", "Automotive Polyurethane (120µm DFT)"]
           ]
         },
         design: {
@@ -521,8 +714,9 @@
           badge: "Bespoke Design Engineering",
           heading: "Virtual Prototyping & Finite Element Stress Analysis",
           lead: "Every custom commercial vehicle body begins in our computational design center where CAD blueprints ensure optimal axle weight distribution and minimum aerodynamic drag.",
-          desc: "Using Dassault SystÃ¨mes SolidWorks and ANSYS FEA software, our structural engineers simulate extreme road shocks, sharp-corner torsion, and full-payload tipping stability. We identify high-stress concentrations and engineer reinforcements without adding unnecessary deadweight.",
+          desc: "Using Dassault Systèmes SolidWorks and ANSYS FEA software, our structural engineers simulate extreme road shocks, sharp-corner torsion, and full-payload tipping stability. We identify high-stress concentrations and engineer reinforcements without adding unnecessary deadweight.",
           img: "assets/images/services/service-design.jpg",
+          shopQuery: "Design",
           steps: [
             { num: "Step 1", title: "Payload & Route Requirements", desc: "We interview fleet managers to calculate gross cargo density, loading methods (crane vs fork vs hopper), and prevailing state axle load limits." },
             { num: "Step 2", title: "3D Digital Chassis Twin", desc: "Creating accurate 3D CAD assemblies incorporating transmission PTO shafts, exhaust systems, hydraulic oil reservoirs, and spare tire carriers." },
@@ -532,158 +726,165 @@
           specs: [
             ["Design Software Suite", "SolidWorks 2024 & ANSYS FEA", "Parametric 3D Solid & Surface Modeling"],
             ["Stress Simulation Standard", "AIS-093 / SAE Commercial Truck Standards", "Dynamic 3G Acceleration & Torsion Testing"],
-            ["Weight Optimization Ratio", "Up to 18% Tare Curb Weight Reduction", "High-Yield Low-Alloy (HSLA) Steels"],
-            ["RTO Homologation Drafting", "Form 22A/B Blueprints & CMVR Layouts", "Certified Engineering Drawing Set"],
-            ["Aerodynamic Modeling", "CFD Wind Tunnel Turbulence Simulation", "Airflow Cab Deflectors & Side Skirts"],
-            ["Deliverables", "Full 3D Assemblies & Exploded Spare Catalogs", "STEP, DXF, and Multi-View PDF Blueprints"]
+            ["Weight Optimization Ratio", "Up to 14% Curb Weight Reduction", "High-Strength Low-Alloy (HSLA) Steel Sections"],
+            ["Aerodynamic Drag Reduction", "CFD Airflow Contouring (Roof Fairings)", "3% to 6% Measurable Highway Fuel Savings"],
+            ["OEM Chassis Data Compatibility", "Tata, AL, BharatBenz, Eicher, Volvo, Scania", "Factory 1:1 Mounting Coordinate Accuracy"],
+            ["Deliverable Documentation", "Complete 2D/3D Drawings, Form 22B BoM", "ARAI & RTO Passing Compliant Blueprints"]
           ]
         },
         welding: {
-          title: "Welding & Metal Fabrication: AWS D1.1 Certified Works",
-          subtitle: "Heavy structural metal fabrication, robotic submerged arc gantries, and precision CNC laser profiling for severe commercial duty cycles.",
-          badge: "Heavy Structural Welding",
-          heading: "High-Penetration Metallurgical Fusion for Severe Haulage",
-          lead: "Commercial truck bodies endure millions of road vibration cycles. Our certified welding division delivers 100% defect-free structural joints built to last.",
-          desc: "Our facility operates automated submerged arc welding (SAW) gantries for main subframe I-beams, synchronized pulsed MIG/MAG lines, and TIG welding bays for stainless steel and cryogenic tankers. All welders are qualified under ASME Section IX and AWS D1.1 structural welding codes.",
+          title: "Welding & Heavy Metal Fabrication",
+          subtitle: "MIG, TIG, and automated Submerged Arc Welding (SAW) certified to AWS D1.1 structural welding standards for high-tensile truck steel.",
+          badge: "AWS Certified Welding",
+          heading: "Industrial-Grade Welding for High-Stress Commercial Vehicle Joints",
+          lead: "Our fabrication floor employs AWS D1.1 certified master welders executing high-penetration joints that resist cyclic road vibration and fatigue cracking.",
+          desc: "From longitudinal chassis runner welding to corrugated cargo wall joints, our welding procedures follow strict Welding Procedure Specifications (WPS) and Procedure Qualification Records (PQR). We employ pulse-MIG technology with 80/20 Argon-CO2 shielding gas mixtures to eliminate spatter, reduce heat-affected zone (HAZ) embrittlement, and guarantee ductile, fracture-proof joints.",
           img: "assets/images/services/service-welding.jpg",
+          shopQuery: "Welding",
           steps: [
-            { num: "Step 1", title: "Edge Preparation & CNC Beveling", desc: "Fiber laser cut edges are mechanical chamfered to 30Â° V-grooves to facilitate 100% full-penetration butt welds on thick structural webs." },
-            { num: "Step 2", title: "Submerged Arc Long-Member Welding", desc: "Continuous dual-wire submerged arc tractor gantries lay flawless 12-meter weld beads under granular flux, eliminating spatter and porosity." },
-            { num: "Step 3", title: "Preheat & Temperature Monitoring", desc: "Quenched and tempered alloy plates (Hardox 450) are preheated with infrared ceramic mats to prevent delayed hydrogen-induced cracking." },
-            { num: "Step 4", title: "Non-Destructive Testing (NDT)", desc: "10% random radiographic examination and 100% ultrasonic/dye-penetrant testing on all high-stress pivot brackets and drawbar joints." }
+            { num: "Step 1", title: "Edge Preparation & Beveling", desc: "Automated bevel milling on all plates thicker than 6mm ensuring 100% full-penetration butt welds on structural load paths." },
+            { num: "Step 2", title: "Jig & Fixture Clamping", desc: "Heavy hydraulic clamping tables hold subframe assemblies within 0.5mm tolerance, preventing heat-induced distortion or bowing." },
+            { num: "Step 3", title: "Multi-Pass Shielded Welding", desc: "Root pass with ER70S-6 followed by flux-cored cap passes (E71T-1) achieving deep root fusion and smooth, notch-free weld toes." },
+            { num: "Step 4", title: "Non-Destructive Testing (NDT)", desc: "100% Visual Inspection (VT) plus Dye Penetrant (DP) and Ultrasonic Testing (UT) on critical tipping pivot pins and crane brackets." }
           ],
           specs: [
-            ["Welding Processes", "SAW (121), GMAW (135), GTAW (141), FCAW (136)", "Automated Gantries & Semi-Auto Torches"],
-            ["Applicable Welding Standards", "AWS D1.1 Structural Steel / ISO 15614", "WPS & PQR Verified by Third-Party TPI"],
-            ["Plate Cutting Capacity", "12kW CNC Fiber Laser up to 32mm Steel", "Tolerance Â±0.2mm on Bolt Hole Pitch"],
-            ["Bending Press Capacity", "800-Ton Hydraulic Press Brake (12m Bed)", "Single-Pass Heavy Channel Forming"],
-            ["Testing & Quality Assurance", "Ultrasonic (UT), Magnetic Particle (MPI), DPT", "NDT Level-II Certified Inspectors"],
-            ["Welder Certifications", "ASME Sec IX / IBR & AWS D1.1 Certified", "Bi-Annual Re-Qualification Audits"]
+            ["Welding Standards", "AWS D1.1 / ASME Section IX", "Certified Master Structural Welders"],
+            ["Welding Processes", "MIG/GMAW, TIG/GTAW, SAW (Automated)", "Pulse-Arc & Dual-Shield Flux Cored"],
+            ["Shielding Gas", "Ar + 18-20% CO2 High-Purity Gas Mixture", "Zero Spatter with Controlled Thermal Penetration"],
+            ["Base Metals Welded", "IS 2062 E250/E350, Hardox 450/500, Domex", "Stainless Steel SS-304/SS-316 & Aluminum Alloys"],
+            ["Quality Assurance", "Dye Penetrant Testing (DPT) & Ultrasonic (UT)", "100% Root Fusion Guarantee on Structural Members"],
+            ["Joint Strength Rating", "Minimum 490 MPa Ultimate Tensile Strength", "Exceeds Parent Steel Yield Strength Benchmark"]
           ]
         },
         repair: {
-          title: "Truck Body Accident Repair & Hydraulic Overhauls",
-          subtitle: "Rapid-turnaround collision restoration, hydraulic laser frame straightening, and comprehensive fleet refurbishment to factory tolerances.",
-          badge: "Fleet Accident & Repair Services",
-          heading: "Laser-Guided Frame Straightening & Complete Reconditioning",
-          lead: "Accidents, rollovers, and structural fatigue need not permanently retire an expensive commercial vehicle. We restore damaged bodies to certified roadworthiness.",
-          desc: "From twisted subframes and bent tipping cylinders to cracked headboards and crushed container corner-castings, our heavy-repair workshop handles full structural rehabilitation. We maintain direct relationships with major commercial fleet insurance surveyors for seamless cashless claims.",
+          title: "Truck Body Accident Repair & Chassis Straightening",
+          subtitle: "Hydraulic chassis realignment, flitch plate reinforcement, and rapid panel replacement for collision-damaged commercial vehicles.",
+          badge: "Collision & Structural Repair",
+          heading: "Heavy Vehicle Collision Restoration & Chassis Realignment",
+          lead: "Get your commercial assets back on highway revenue duty faster with our precision hydraulic puller frame and certified structural repair team.",
+          desc: "A rollover or collision can twist a truck chassis, misalign axles, and crumple sidewalls. Our 200-ton hydraulic chassis straightening bench restores OEM factory squareness without weakening heat treatments. We replace bent crossmembers, re-rivet OEM-grade flitch plates, reconstruct cab bulkheads, and supply turnkey insurance surveyor documentation.",
           img: "assets/images/services/service-repair.jpg",
+          shopQuery: "Repair",
           steps: [
-            { num: "Step 1", title: "Laser Diagnostic Inspection", desc: "Electronic 3D chassis measuring system maps twist, sway, and sag down to 1.0mm deviation against factory OEM chassis coordinates." },
-            { num: "Step 2", title: "Hydraulic Straightening & Flitching", desc: "Multi-point 100-ton hydraulic towers pull deformed longitudinal beams back into true alignment while cold-riveting heavy inner flitches." },
-            { num: "Step 3", title: "Damaged Panel Replacement", desc: "Torn sidewalls, damaged rub rails, and buckled floor plates are torched out and replaced with brand new press-braked steel sections." },
-            { num: "Step 4", title: "Hydraulic System Pressure Overhaul", desc: "Disassembling tipping cylinders, honing barrels, replacing polyurethane oil seals, and dynamic bench testing to 250 Bar pressure." }
+            { num: "Step 1", title: "Laser Geometric Damage Assessment", desc: "Three-dimensional laser tram-gauge measurement of chassis rails to detect dog-tracking, twist, sag, and diamond distortion." },
+            { num: "Step 2", title: "Controlled Cold Hydraulic Pulling", desc: "Multi-point hydraulic anchoring towers apply progressive pulling tonnage, straightening high-tensile rails cold to preserve metallurgy." },
+            { num: "Step 3", title: "Structural Flitch Plating & Gusseting", desc: "Reinforcing stressed rail sections with high-yield E350 inner flitch liners secured by cold-squeezed structural huckbolts." },
+            { num: "Step 4", title: "Body Re-skinning & Alignment Passing", desc: "Replacing sheared corrugated panels, re-squaring container doors, and issuing wheel alignment passing certificates." }
           ],
           specs: [
-            ["Chassis Straightening Capacity", "Multi-Tower 100-Ton Hydraulic Jigs", "Accommodates up to 16-Meter Vehicle Lengths"],
-            ["Laser Alignment Accuracy", "Precision Within Â±1.5mm Across Wheelbase", "Digital Coordinate Verification Certificate"],
-            ["Hydraulic Ram Repair Bench", "Dynamic Test Pressure up to 300 Bar", "Hyva, Penta, Wipro & Binotto Overhauls"],
-            ["Insurance Survey Liaison", "Direct Cashless Claim Processing", "Itemized Estimations & Surveyor Approval Support"],
-            ["Emergency Recovery Service", "24/7 Heavy Towing to Facility Yard", "Covering Major Highway Corridors"],
-            ["Refurbishment Warranty", "1-Year Warranty on Straightening & Welds", "Full Structural Re-Certification Paperwork"]
+            ["Chassis Straightening Capacity", "Up to 55-Ton GVW Multi-Axle Vehicles", "200-Ton Hydraulic Pulling Towers"],
+            ["Laser Alignment Accuracy", "± 1.0mm Diagonal Wheelbase Tolerance", "Zero Dog-Tracking & Eliminates Tire Scrub"],
+            ["Frame Reinforcement", "Inner/Outer Flitch Plates (IS 2062 E350)", "Grade 10.9 Fasteners / Cold Huckbolts"],
+            ["Insurance Support", "Approved Repairer for Major Indian Insurers", "Surveyor-Ready BOQ & Digital Damage Dossiers"],
+            ["Average Turnaround", "3 to 7 Working Days (Standard Collision)", "24/7 Rapid Priority Fleet Turnaround Available"],
+            ["Post-Repair Warranty", "12-Month Structural Integrity Guarantee", "Complete Roadworthiness Compliance Certificate"]
           ]
         },
         painting: {
-          title: "Industrial Polyurethane Painting & Shot Blasting",
-          subtitle: "Automotive-grade heated downdraft blast and paint booths providing long-lasting 1500-hour salt spray corrosion resistance.",
-          badge: "Surface Coating & Blast Finishing",
-          heading: "Industrial Anti-Corrosion Protection & Custom Fleet Livery",
-          lead: "Harsh tropical monsoons, road salt, chemicals, and abrasive gravel destroy unprotected truck steel within months. Our multi-stage coating guarantees lasting endurance.",
-          desc: "We house an 18-meter enclosed abrasive blasting booth operating chilled steel grit and copper slag to strip mill scale down to white metal (SA 2.5). This is immediately sealed with 2-pack high-build zinc epoxy primers and high-gloss 2K polyurethane topcoats formulated for severe industrial duty.",
+          title: "Industrial Shot Blasting & Polyurethane Painting",
+          subtitle: "Automated shot-blast descaling to SA 2.5, epoxy zinc primers, and high-gloss 2K PU topcoats for maximum corrosion protection.",
+          badge: "Corrosion Protection Systems",
+          heading: "Military-Grade Surface Pretreatment & Industrial Coatings",
+          lead: "Protect your commercial vehicle investment against severe coastal humidity, industrial chemical vapors, and road de-icing salts.",
+          desc: "Paint failure begins with improper surface prep. We start by abrasive shot-blasting raw steel to Swedish Standard SA 2.5, creating a 50-70 micron anchor profile. We immediately apply a two-pack zinc phosphate epoxy primer, followed by high-build intermediate epoxy, and finish with a high-solids automotive Polyurethane (2K PU) topcoat cured in heated downdraft spray booths.",
           img: "assets/images/services/service-painting.jpg",
+          shopQuery: "Painting",
           steps: [
-            { num: "Step 1", title: "Abrasive Blasting to SA 2.5", desc: "Removing all mill scale, rust, and weld heat tints to establish a 50-75 micron anchor profile ensuring permanent mechanical paint adhesion." },
-            { num: "Step 2", title: "Zinc-Phosphate Epoxy Primer", desc: "Applying 60-80 microns DFT of two-pack anti-corrosive primer formulated with active sacrificial zinc pigments." },
-            { num: "Step 3", title: "Underbody Bituminous Sealant", desc: "Spraying rubberized chip-resistant compound across subframe bottom surfaces and wheel splash arches to deaden stone impact." },
-            { num: "Step 4", title: "2K Polyurethane Topcoat & Bake", desc: "Twin-gun electrostatic spray in our 65Â°C heated downdraft booth to achieve a rock-hard 120Âµm mirror-finish resistant to diesel and acids." }
+            { num: "Step 1", title: "Abrasive Steel Shot Blasting", desc: "Automated centrifugal blast wheel and manual blast room descaling raw steel to SA 2.5 white-metal purity, removing all mill scale." },
+            { num: "Step 2", title: "Epoxy Zinc Phosphate Primer", desc: "Applying 60µm DFT anti-corrosive primer providing sacrificial cathodic protection against rust creep and underfilm oxidation." },
+            { num: "Step 3", title: "Downdraft 2K Polyurethane Topcoat", desc: "Precision electrostatic spray application of UV-resistant 2K PU automotive enamel matched to OEM fleet corporate shades." },
+            { num: "Step 4", title: "65°C Heated Baking & DFT Inspection", desc: "Controlled heat curing followed by Elcometer digital dry-film thickness (DFT) checks and cross-hatch adhesion pull tests." }
           ],
           specs: [
-            ["Blast Booth Dimensions", "18m (L) x 5.5m (W) x 5m (H)", "Accommodates Long 40ft Trailers and Tankers"],
-            ["Surface Cleanliness Standard", "ISO 8501-1 SA 2.5 / SSPC-SP 10", "Full Heavy Mill Scale Removal"],
-            ["Corrosion Protection Life", "1500+ Hours ASTM B117 Salt Fog Testing", "Up to 7 Years Industrial Service Life"],
-            ["Coating Chemistry", "High-Solid 2K Aliphatic Polyurethane", "UV Resistant, Non-Chalking Gloss Retention"],
-            ["Coating Thickness (DFT)", "Total Dry Film Thickness 140 - 180 Microns", "Verified with Calibrated Elcometer Gauges"],
-            ["Fleet Branding Options", "Computer-Cut Stenciling & Reflective AIS-090", "Custom Corporate RAL Color Matching"]
+            ["Surface Cleanliness Standard", "ISO 8501-1 / Swedish Standard SA 2.5", "50-70 Micron Peak-to-Valley Anchor Profile"],
+            ["Coating Chemistry", "2-Pack Epoxy Primer + 2K Polyurethane", "Aliphatic Isocyanate Cross-linked PU Topcoat"],
+            ["Total Dry Film Thickness (DFT)", "120 - 150 Microns (Standard Heavy Fleet)", "Up to 250 Microns for Chemical/Coastal Fleets"],
+            ["Corrosion Salt Spray Life", "1,500+ Hours ASTM B117 Salt Spray Test", "Resists Chipping, Stone Throws & UV Fading"],
+            ["Color Matching", "Custom RAL / Fleet Pantone Formulations", "High-Gloss Reflection (>85 GU @ 60° Angle)"],
+            ["Safety Reflective Tape", "AIS-090 / CMVR Class C Compliant Tape", "ECE 104 Retroreflective Perimeter Markings"]
           ]
         },
         modification: {
           title: "Truck Body Modification & Wheelbase Extensions",
-          subtitle: "ARAI-homologated chassis lengthening, tractor-to-tipper conversion, additional pusher/tag axle integration, and customized body adaptations.",
-          badge: "Specialized Conversions & Modifications",
-          heading: "Engineered Chassis Lengthening & Specialized Vehicle Upgrades",
-          lead: "Transform standard factory chassis into purpose-built specialized machinery, high-cube volume carriers, or heavy tractor trailers with full RTO compliance.",
-          desc: "Changing transport routes and cargo requirements frequently demand chassis alterations. We execute ARAI-compliant wheelbase extensions using cold-formed internal chassis flitches and Huck mechanical fasteners, maintaining factory chassis torsional flexibility without inducing fatigue fractures.",
+          subtitle: "ARAI-homologated chassis wheelbase extensions, dropside conversions, hydraulic lift additions, and axle load re-distributions.",
+          badge: "Homologated Modifications",
+          heading: "Custom Commercial Vehicle Chassis & Body Conversions",
+          lead: "Repurpose existing fleet vehicles for new cargo contracts with certified chassis extensions and custom dropside conversions.",
+          desc: "Instead of buying expensive new chassis, extend your existing vehicle's earning potential. We perform precision wheelbase extensions with spliced stepped joints, internal reinforcement channels, elongated balanced propeller shafts with center carrier bearings, extended brake lines, and updated Form 22A certificates for legal RTO registration.",
           img: "assets/images/services/service-modification.jpg",
+          shopQuery: "Modification",
           steps: [
-            { num: "Step 1", title: "Chassis Stress Calculation", desc: "Determining bending moment diagrams and new center of gravity to position propeller shaft intermediate carrier bearings correctly." },
-            { num: "Step 2", title: "Cold Huck-Bolted Joint Assembly", desc: "Using aerospace-grade Huck fasteners instead of hot welding directly onto high-tensile chassis flanges to eliminate brittle cracking." },
-            { num: "Step 3", title: "Driveshaft & Brake Line Extension", desc: "Dynamically balancing prolonged propeller shafts and extending copper-nickel dual-line pneumatic brake piping with relay valves." },
-            { num: "Step 4", title: "RTO Homologation Certification", desc: "Preparing the complete Form 22A/B documentation pack with certified weighbridge receipts for immediate RTO passing." }
+            { num: "Step 1", title: "Chassis Bending Moment Calculation", desc: "Calculating shear force and bending moment diagrams to select the ideal spliced joint position along the neutral axis." },
+            { num: "Step 2", title: "Precision Rail Cutting & Stepped Jointing", desc: "Staggered 45-degree angle rail cuts reinforced with continuous inner and outer high-tensile flitch channels." },
+            { num: "Step 3", title: "Drivetrain & Driveline Extension", desc: "Dynamic balancing of lengthened two-piece or three-piece propeller shafts to ISO 1940 Grade G16 at 3,000 RPM." },
+            { num: "Step 4", title: "Pneumatic & Electrical Line Extension", desc: "Nylon 11/12 air lines with double O-ring push-connectors and OEM-matching sealed weather-pack wire harnesses." }
           ],
           specs: [
-            ["Wheelbase Extension Range", "From 3,400mm up to 7,200mm", "Accommodating 32ft Container Bodies"],
-            ["Flitching Material", "IS 2062 Grade E350 Pressed Channels", "Full-Length Internal Reinforcement"],
-            ["Fastening System", "Grade 10.9 Cold-Installed Huck Fasteners", "Zero Weld Heat Damage to Chassis Web"],
-            ["Brake Pneumatic Integration", "WABCO / Knorr-Bremse Relay Valves", "Dual-Line ABS Sensor Cable Extensions"],
-            ["Pusher Axle Installation", "Pneumatic Lift-Axle Kits (Air Suspension)", "Adds 6.5 to 10 Tons Legal Gross Axle Weight"],
-            ["Compliance Documentation", "ARAI AIS-093 / CMVR Rule 125 Approval", "Guaranteed Endorsement on Vehicle RC"]
+            ["Chassis Extension Range", "From +300mm to +2,400mm Extended Wheelbase", "Full Bending Moment & Axle Weight Compliance"],
+            ["Splicing Methodology", "Stepped Staggered Joint with Inner Flitch", "Double-Shear Grade 10.9 Flange Bolts"],
+            ["Driveshaft Balancing", "Dynamic Balancing to ISO 1940 Grade G16", "Heavy Spicer / Meritor Center Support Bearings"],
+            ["Pneumatic Line Spec", "DIN 74324 Polyamide Air Brake Tubing", "Pressure tested to 15 Bar Burst Pressure"],
+            ["RTO Homologation", "Form 22A / ARAI Modification Compliance", "Complete Weight Balance & Braking Distance Docs"],
+            ["Warranty Protection", "24-Month Chassis Modification Guarantee", "Preserves OEM Axle & Transmission Performance"]
           ]
         },
         maintenance: {
-          title: "Commercial Vehicle Maintenance & Fleet Health Contracts",
-          subtitle: "Comprehensive preventive maintenance contracts, hydraulic tipper servicing, subframe inspections, and scheduled fleet wear audits.",
-          badge: "Preventive Fleet Maintenance",
-          heading: "Maximize Fleet Uptime with Scheduled Industrial Servicing",
-          lead: "Unplanned roadside breakdowns cost fleet owners thousands per hour in missed freight penalties. Our structured AMC contracts keep your vehicles moving.",
-          desc: "We provide structured preventative maintenance programs for corporate fleets, mining operations, and logistics carriers. Our mobile service teams and dedicated plant service bays inspect subframe torque, lubricate pivot pins, overhaul hydraulic valves, and replace worn wear-strips before structural failures occur.",
+          title: "Commercial Vehicle Fleet Maintenance & Overhauls",
+          subtitle: "Preventative body servicing, hinge greasing, hydraulic fluid purges, and structural bolt torque audits for high-uptime fleet logistics.",
+          badge: "Fleet Preventative Care",
+          heading: "Proactive Body Maintenance to Minimize Fleet Breakdown Costs",
+          lead: "High-mileage highways loosen body hardware, fatigue door hinges, and degrade hydraulic seals. Our scheduled maintenance contracts protect your uptime.",
+          desc: "We provide scheduled 30-day, 90-day, and annual preventive health audits for logistics, mining, and municipal fleets. Our certified technicians re-torque U-bolts to calibrated torque specs, replace worn bronze hinge bushings, test hydraulic fluid viscosity, flush tipping cylinders, and reseal leaking container gaskets before they cause in-transit cargo water damage.",
           img: "assets/images/services/service-maintenance.jpg",
+          shopQuery: "Maintenance",
           steps: [
-            { num: "Step 1", title: "Ultrasonic Chassis Stress Audit", desc: "Regular ultrasonic scanning of high-stress subframe points, fifth-wheel kingpins, and tipping trunnions to spot micro-cracks early." },
-            { num: "Step 2", title: "Hydraulic Oil Filtration & Degas", desc: "Testing hydraulic fluid for particulate contamination, water ingress, and micron filtration to extend pump and cylinder life." },
-            { num: "Step 3", title: "U-Bolt & Fastener Re-Torque", desc: "Checking and re-torquing all body-to-chassis U-bolts to specified 450 Nm torque using calibrated pneumatic torque wrenches." },
-            { num: "Step 4", title: "Weatherseal & Hardware Refresh", desc: "Replacing perished EPDM door gaskets, greasing container cam locks, and repairing damaged reflective safety conspicuity tape." }
+            { num: "Step 1", title: "50-Point Structural Torque Audit", desc: "Calibrated pneumatic torque wrench inspection on all chassis U-bolts, body outriggers, kingpin bolts, and wheel studs." },
+            { num: "Step 2", title: "Hydraulic Fluid & Filter Servicing", desc: "Testing ISO 46/68 hydraulic oil for particle contamination, replacing return line filters, and inspecting cylinder wiper seals." },
+            { num: "Step 3", title: "Hardware Greasing & Gasket Care", desc: "Lithium-complex high-pressure greasing on all dropside hinges, cam-lock journals, and applying silicone conditioner to EPDM seals." },
+            { num: "Step 4", title: "Reflective Markings & Electrical Check", desc: "Replacing damaged conspicuity reflective tape, inspecting LED clearance markers, and testing ground continuity." }
           ],
           specs: [
-            ["Fleet Contract Models", "Quarterly AMC, Half-Yearly, or Pay-Per-Service", "Flexible Customized Corporate Packages"],
-            ["Hydraulic Fluid Filtration", "10-Micron Beta-200 Off-Line Cleaning", "Removes Metallic Swarf and Silt"],
-            ["Trunnion & Bushing Servicing", "Hardened Manganese Bronze Bushing Replacement", "Heavy-Duty Moly Grease Application"],
-            ["Conspicuity & Electrical Check", "CMVR AIS-090 Grade Retro-Reflective Tape", "Complete Sealed Wire Harness Check"],
-            ["Dedicated Bay Scheduling", "Priority Turnaround in 4 to 8 Hours", "Minimizing Off-Duty Fleet Downtime"],
-            ["Digital Maintenance Logs", "Cloud Inspection Reports & Component History", "Exportable for Enterprise ERPs"]
+            ["Inspection Checklist", "50-Point AIS Commercial Body Audit", "Written Fleet Health Diagnostic Report"],
+            ["Hydraulic Care", "ISO 46/68 Fluid Flush & 10-Micron Filter", "Pressure Relief Calibration to 190 Bar"],
+            ["Torque Specifications", "Calibrated Torquing (150 Nm - 650 Nm)", "Chassis U-Bolts, Kingpins & Subframe Clamps"],
+            ["Door Gasket Replacement", "Four-Lip Co-extruded EPDM Rubber", "Eliminates Water Leakage Ingress in Transit"],
+            ["Service Contracts", "Quarterly & Annual Fleet SLA Packages", "Priority Turnaround with Dedicated Bay Access"],
+            ["Fleet Emergency Recovery", "24/7 Breakdown Hotline & Mobile Service Van", "Rapid On-Site Welding & Hydraulic Hose Repair"]
           ]
         },
         hydraulics: {
-          title: "Hydraulic Tipper Systems & Ram Installation",
-          subtitle: "OEM integration of front-end multi-stage telescopic cylinders, PTO pumps, high-pressure relief valves, and pilot proportional in-cab controls.",
-          badge: "Hydraulic Tipper Systems",
-          heading: "Precision Heavy-Duty Tipper Hoists & Hydraulic Drive Kits",
-          lead: "Seamless hydraulic tipping integration engineered for severe quarry, mining, and highway infrastructure cycles.",
-          desc: "We supply, mount, calibrate, and bench-test commercial vehicle tipping kits. Partnering with industry leaders Hyva, Penta, and Wipro, our engineers ensure proper oil reservoir sizing, hose routing, and pressure relief valve calibration to guarantee 100% safe tipping stability under maximum legal gross vehicle weight.",
+          title: "Hydraulic Systems & Heavy Tipper Kits",
+          subtitle: "Genuine Hyva, Penta, and Edbro multi-stage telescopic cylinders, PTO pumps, cabin joystick valves, and hydraulic oil tanks.",
+          badge: "Heavy Duty Hydraulics",
+          heading: "Turnkey Hydraulic Plumbing for Tippers, Tip-Trailers & Cranes",
+          lead: "Engineered high-pressure hydraulic circuits providing rapid 18-second tipping cycle times with built-in overload relief protection.",
+          desc: "A tipper body is only as reliable as its hydraulic circuit. We engineer and install turnkey hydraulic systems utilizing genuine Italian and European multi-stage front-end telescopic cylinders, heavy cast-iron gear pumps, cabin proportional pilot joystick valves, tip-stop safety limiters, and clean hydraulic oil reservoirs with return line filtration.",
           img: "assets/images/services/service-hydraulics.jpg",
+          shopQuery: "Hydraulics",
           steps: [
-            { num: "Step 1", title: "PTO & Transmission Ratio Matching", desc: "Selecting the correct Power Take-Off unit matching OEM gearbox bolt pattern and target pump RPM." },
-            { num: "Step 2", title: "Cylinder Trunnion Alignment", desc: "Laser-aligning the top and bottom tipping pivot trunnions to ensure smooth multi-stage telescopic stroke without side-load binding." },
-            { num: "Step 3", title: "High-Pressure Hose Routing", desc: "Installing 4-spiral steel wire braided hydraulic hoses routed away from exhaust heat shields with anti-abrasion spiral wrapping." },
-            { num: "Step 4", title: "250-Bar Dynamic Pressure Testing", desc: "Bench testing full extension under simulated payload load with automatic relief valve pop-off at 190-250 Bar." }
+            { num: "Step 1", title: "Chassis PTO & Pump Mating", desc: "Selecting optimal PTO gear ratio matching the gearbox spline to drive high-flow cast iron pumps with zero driveline vibration." },
+            { num: "Step 2", title: "Telescopic Cylinder Trunnion Mounting", desc: "Heavy-duty upper cradle and lower trunnion mounting brackets fabricated from forged steel to handle dynamic off-axis tipping shocks." },
+            { num: "Step 3", title: "Two-Wire Braided Hose & Valve Plumbing", desc: "Installing SAE 100R2AT high-pressure hydraulic hoses with crimped JIC fittings, proportional air control valves, and bypass lines." },
+            { num: "Step 4", title: "Full-Pressure Bench Commissioning", desc: "Pressure testing up to 210 Bar, verifying cylinder descent speed regulation, automatic tip-stop cut-off, and leak-free seals." }
           ],
           specs: [
-            ["Cylinder Types", "Front-End Telescopic (FE) & Underbody (FC/UB)", "Hyva, Penta, Wipro & Binotto"],
-            ["Operating Pressure", "190 to 250 Bar Working Pressure", "Factory Calibrated Safety Relief"],
-            ["Pump Capacity", "61 to 105 L/min Bi-Rotational Gear Pumps", "High Volumetric Efficiency"],
-            ["Pneumatic Controls", "Proportional In-Cab Console Joystick", "Integrated PTO Switch & Tip Indicator"],
-            ["Reservoir Tank", "120L to 180L Mild Steel / Aluminum Tank", "Air Breather & 25-Micron Return Filter"],
-            ["Certification & Warranty", "Pressure Test Certificate & Flow Calibration", "2-Year Manufacturer Warranty"]
+            ["Hydraulic Ram Brands", "Hyva, Penta, Edbro, Binotto", "Genuine Multi-Stage Hard-Chromed Cylinders"],
+            ["Max Operating Pressure", "190 Bar to 210 Bar Continuous Pressure", "Built-In Main Relief & Knock-Off Safety Valves"],
+            ["Tipping Cycle Time", "16 to 22 Seconds Full Extension", "Proportional Air Control for Controlled Lowering"],
+            ["Pump Capacity", "61 cc to 105 cc High-Pressure Gear Pumps", "Direct Gearbox PTO or Propeller Shaft Driven"],
+            ["Hydraulic Reservoir", "120L to 180L Steel Tank with 10µm Filter", "Side-Chassis or Behind-Cabin Mount with Sight Gauge"],
+            ["Warranty & Spares", "24-Month Manufacturer Hoist Warranty", "100% Genuine Seal Kits & Replacement Rods in Stock"]
           ]
         },
         reefer: {
-          title: "Insulated Reefer & Cold Chain Truck Body Fabrication",
+          title: "Insulated Reefer & Cold Chain Body Fabrication",
           subtitle: "HACCP & Pharma GDP compliant temperature-controlled reefer boxes (-25°C to +15°C) with injected high-density PUF insulation.",
           badge: "Cold Chain Logistics",
           heading: "Thermally Efficient Refrigerated Bodies for Perishables & Pharma",
           lead: "Deliver unbroken cold chains across long-distance interstate transit with our deep-freeze insulated composite bodies.",
           desc: "Our refrigerated bodies feature 100mm to 120mm injected high-density CFC-free polyurethane foam (PUF) insulation cores laminated with food-grade seamless fiber-reinforced plastic (FRP/GRP) skins. Outfitted with heavy extruded aluminum T-profile subfloors for optimal air circulation, four-layer EPDM door gaskets, and dual-temp moveable partitions.",
-          img: "assets/images/services/service-reefer.jpg",
+          img: "assets/images/products/reefer-body.jpg",
+          shopQuery: "Refrigerated Body",
           steps: [
             { num: "Step 1", title: "Continuous High-Pressure PUF Injection", desc: "Monolithic hydraulic press injection of 42 kg/m³ high-density polyurethane foam eliminating thermal bridges." },
             { num: "Step 2", title: "Food-Grade FRP Seamless Lamination", desc: "Seamless antimicrobial gel-coated fiberglass skins bonded under vacuum for zero moisture absorption and easy steam cleaning." },
@@ -701,63 +902,120 @@
         }
       };
 
+      // Read query parameters
       const params = new URLSearchParams(window.location.search);
-      const serviceKey = params.get('service');
+      let rawKey = params.get('product') || params.get('spec') || params.get('service') || 'fabrication';
+      rawKey = String(rawKey).toLowerCase().trim();
 
-      if (serviceKey && services[serviceKey]) {
-        const data = services[serviceKey];
-        
-        // Update Hero
-        document.getElementById('serviceHeroTitle').textContent = data.title;
-        document.getElementById('serviceHeroSubtitle').textContent = data.subtitle;
-        document.title = data.title + " | Truck Body Builder";
+      // Canonical Alias Mapping
+      const aliasMap = {
+        'open': 'open-body',
+        'open-body': 'open-body',
+        'container': 'container-body',
+        'container-body': 'container-body',
+        'tipper': 'tipper-body',
+        'tipper-body': 'tipper-body',
+        'trailer': 'trailer-body',
+        'trailer-body': 'trailer-body',
+        'tanker': 'tanker-body',
+        'tanker-body': 'tanker-body',
+        'reefer': 'reefer',
+        'refrigerated': 'reefer',
+        'refrigerated-body': 'reefer',
+        'flatbed': 'flatbed-body',
+        'flatbed-body': 'flatbed-body',
+        'custom': 'custom-body',
+        'custom-body': 'custom-body',
+        'custom-build': 'custom-body'
+      };
 
-        // Update Content
-        document.getElementById('serviceSubtitle').textContent = data.badge;
-        document.getElementById('serviceMainHeading').textContent = data.heading;
-        document.getElementById('serviceLead').textContent = data.lead;
-        document.getElementById('serviceDesc').textContent = data.desc;
-        document.getElementById('serviceMainImg').src = data.img;
+      const resolvedKey = aliasMap[rawKey] || rawKey;
+      const data = services[resolvedKey] || services['fabrication'];
 
-        // Update Workflow Steps
-        const workflowEl = document.getElementById('serviceWorkflow');
-        if (workflowEl) {
-          workflowEl.innerHTML = data.steps.map(step => `
-            <div class="col-md-6">
-              <div class="p-3 border rounded bg-light h-100">
-                <div class="d-flex align-items-center gap-2 mb-2">
-                  <span class="badge bg-warning text-dark fw-bold">${step.num}</span>
-                  <h6 class="fw-bold mb-0">${step.title}</h6>
-                </div>
-                <p class="small text-muted mb-0">${step.desc}</p>
-              </div>
-            </div>
-          `).join('');
-        }
+      // 1. Update Hero Title, Subtitle, and Page Document Title
+      const heroTitleEl = document.getElementById('serviceHeroTitle');
+      const heroSubtitleEl = document.getElementById('serviceHeroSubtitle');
+      const heroSection = document.getElementById('serviceHeroSection');
 
-        // Update Specs
-        const specsEl = document.getElementById('serviceSpecsBody');
-        if (specsEl) {
-          specsEl.innerHTML = data.specs.map(row => `
-            <tr>
-              <td><strong>${row[0]}</strong></td>
-              <td>${row[1]}</td>
-              <td>${row[2]}</td>
-            </tr>
-          `).join('');
-        }
+      if (heroTitleEl) heroTitleEl.textContent = data.title;
+      if (heroSubtitleEl) heroSubtitleEl.textContent = data.subtitle;
+      document.title = data.title + " | Truck Body Builder";
 
-        // Update Sidebar active link
-        const sidebarLinks = document.querySelectorAll('#servicesSidebarList a');
-        sidebarLinks.forEach(link => {
-          if (link.getAttribute('data-service') === serviceKey) {
-            link.className = 'text-dark fw-bold';
-            link.innerHTML = `<i class="fas fa-angle-right text-orange me-2"></i> ${link.textContent.trim()}`;
-          } else {
-            link.className = 'text-secondary';
-          }
-        });
+      if (heroSection && data.img) {
+        heroSection.style.background = `linear-gradient(rgba(23, 35, 47, 0.94), rgba(23, 35, 47, 0.94)), url('${data.img}') center/cover no-repeat`;
       }
+
+      // 2. Update Content Elements
+      const badgeEl = document.getElementById('serviceSubtitle');
+      const mainHeadingEl = document.getElementById('serviceMainHeading');
+      const leadEl = document.getElementById('serviceLead');
+      const descEl = document.getElementById('serviceDesc');
+      const mainImgEl = document.getElementById('serviceMainImg');
+
+      if (badgeEl) badgeEl.textContent = data.badge;
+      if (mainHeadingEl) mainHeadingEl.textContent = data.heading;
+      if (leadEl) leadEl.textContent = data.lead;
+      if (descEl) descEl.textContent = data.desc;
+      
+      if (mainImgEl && data.img) {
+        mainImgEl.src = data.img;
+        mainImgEl.alt = data.title;
+        mainImgEl.style.maxHeight = '480px';
+        mainImgEl.style.width = '100%';
+        mainImgEl.style.objectFit = 'cover';
+        mainImgEl.style.borderRadius = '8px';
+      }
+
+      // 3. Update Workflow Steps
+      const workflowEl = document.getElementById('serviceWorkflow');
+      if (workflowEl && data.steps) {
+        workflowEl.innerHTML = data.steps.map(step => `
+          <div class="col-md-6">
+            <div class="p-3 border rounded bg-light h-100 shadow-sm">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="badge bg-warning text-dark fw-bold px-2 py-1">${step.num}</span>
+                <h6 class="fw-bold mb-0 text-dark">${step.title}</h6>
+              </div>
+              <p class="small text-muted mb-0">${step.desc}</p>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      // 4. Update Technical Specs Table
+      const specsEl = document.getElementById('serviceSpecsBody');
+      if (specsEl && data.specs) {
+        specsEl.innerHTML = data.specs.map(row => `
+          <tr>
+            <td style="padding: 13px 16px; vertical-align: middle;"><strong class="text-dark">${row[0]}</strong></td>
+            <td style="padding: 13px 16px; vertical-align: middle;"><span class="fw-bold" style="color: var(--industrial-orange); font-size: 0.95rem;">${row[1]}</span></td>
+            <td style="padding: 13px 16px; vertical-align: middle;"><span class="text-secondary small fw-medium">${row[2]}</span></td>
+          </tr>
+        `).join('');
+      }
+
+      // 5. Update Quick Quote CTA Widget
+      const quoteBtn = document.getElementById('serviceQuoteBtn');
+      if (quoteBtn) {
+        const query = data.shopQuery || data.badge || 'Fabrication';
+        quoteBtn.href = 'shop.html?search=' + encodeURIComponent(query) + '&openQuote=true';
+        quoteBtn.innerHTML = '<i class="fas fa-file-invoice me-2"></i> Request Quote for ' + (data.badge || 'Vehicle Body');
+      }
+
+      // 6. Update Sidebar Active Links (Both Services and Truck Bodies)
+      const allSidebarLinks = document.querySelectorAll('#servicesSidebarList a, #truckBodiesSidebarList a');
+      allSidebarLinks.forEach(link => {
+        const itemKey = link.getAttribute('data-service');
+        if (itemKey === resolvedKey || aliasMap[itemKey] === resolvedKey) {
+          link.className = 'text-dark fw-bold d-flex align-items-center py-1 text-decoration-none';
+          const text = link.textContent.trim().replace(/^[\s»›>•-]+/, '').trim();
+          link.innerHTML = `<i class="fas fa-arrow-circle-right text-orange me-2 flex-shrink-0"></i> <span>${text}</span>`;
+        } else {
+          link.className = 'text-secondary d-flex align-items-center py-1 text-decoration-none';
+          const text = link.textContent.trim().replace(/^[\s»›>•-]+/, '').trim();
+          link.innerHTML = `<i class="fas fa-angle-right text-orange me-2 flex-shrink-0"></i> <span>${text}</span>`;
+        }
+      });
     })();
   </script>
 </body>

@@ -226,7 +226,7 @@
       category: 'Industrial Vehicle Accessories',
       price: 4800,
       priceType: 'fixed',
-      image: 'assets/images/products/acc-lights.jpg?v=3',
+      image: 'assets/images/products/acc-lights.jpg?v=6',
       stockStatus: 'In Stock - Ready to Dispatch',
       badge: 'ARAI AIS-008',
       specs: ['Voltage: 12V / 24V Multi-Voltage', 'Rating: IP68 Submersible Sealed', 'Compliance: ARAI AIS-008 Norms'],
@@ -389,7 +389,17 @@
       const parsed = JSON.parse(data);
       if (!Array.isArray(parsed)) return [];
       // Clean invalid entries
-      return parsed.filter(item => item && item.id && item.name && typeof item.quantity === 'number' && item.quantity > 0);
+      return parsed
+        .filter(item => item && item.id && item.name && typeof item.quantity === 'number' && item.quantity > 0)
+        .map(item => {
+          const match = CATALOG.find(p => p.id === item.id);
+          if (match && match.image) {
+            item.image = match.image;
+          } else if (!item.image || typeof item.image !== 'string' || item.image.trim() === '') {
+            item.image = 'assets/images/products/acc-toolbox.jpg';
+          }
+          return item;
+        });
     } catch (e) {
       console.error('Error reading cart from localStorage', e);
       return [];
@@ -599,7 +609,7 @@
         <tr class="cart-item-row" data-id="${item.id}">
           <td class="cart-product-cell">
             <div class="cart-product-media-wrap">
-              <img src="${item.image}" alt="${item.name}" class="cart-product-img rounded border" loading="lazy" onerror="this.onerror=null; this.src='assets/images/products/acc-toolbox.jpg';">
+              <img src="${item.image || 'assets/images/products/acc-toolbox.jpg'}" alt="${item.name}" class="cart-product-img rounded border" loading="lazy" onerror="this.onerror=null; this.src='assets/images/products/acc-toolbox.jpg';">
               <div class="cart-product-details">
                 <div class="cart-item-title">${item.name}</div>
                 <div class="cart-item-meta">
@@ -637,7 +647,7 @@
         <tr class="cart-item-row table-warning-subtle" data-id="${item.id}">
           <td class="cart-product-cell">
             <div class="cart-product-media-wrap">
-              <img src="${item.image}" alt="${item.name}" class="cart-product-img rounded border" loading="lazy" onerror="this.onerror=null; this.src='assets/images/products/body-open.jpg';">
+              <img src="${item.image || 'assets/images/products/container-body.jpg'}" alt="${item.name}" class="cart-product-img rounded border" loading="lazy" onerror="this.onerror=null; this.src='assets/images/products/container-body.jpg';">
               <div class="cart-product-details">
                 <div class="cart-item-title">${item.name}</div>
                 <div class="cart-item-meta">
