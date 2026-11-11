@@ -565,19 +565,67 @@
     }
   }
 
-  // Blog Page Search & Filtering
+  // Blog Page Search, Filtering & Dynamic Pagination
   function initBlogFilterAndSearch() {
     const searchInput = document.getElementById('blogSearchInput');
     const categoryFilters = document.querySelectorAll('.blog-cat-filter');
     const blogCards = document.querySelectorAll('.blog-article-card');
+    const paginationContainer = document.getElementById('blogPagination');
+    const paginationNav = document.getElementById('blogPaginationNav') || paginationContainer?.closest('nav');
+    const noResults = document.getElementById('blogNoResults');
+    const blogGrid = document.getElementById('blogGrid');
 
     if (!blogCards.length) return;
 
+    const ITEMS_PER_PAGE = 3;
     let activeCategory = 'all';
     let searchQuery = '';
+    let currentPage = 1;
 
-    function filterBlogs() {
-      blogCards.forEach(card => {
+    function renderPagination(totalPages, shouldScroll = false) {
+      if (!paginationContainer) return;
+
+      if (totalPages <= 1) {
+        if (paginationNav) paginationNav.style.display = totalPages === 1 ? '' : 'none';
+        paginationContainer.innerHTML = `
+          <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-label="Previous Page"><i class="fas fa-chevron-left"></i></a></li>
+          <li class="page-item active" aria-current="page"><a class="page-link" href="#" data-page="1">1</a></li>
+          <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-label="Next Page"><i class="fas fa-chevron-right"></i></a></li>
+        `;
+        return;
+      }
+
+      if (paginationNav) paginationNav.style.display = '';
+
+      let html = '';
+      // Previous button
+      const prevDisabled = currentPage === 1 ? 'disabled' : '';
+      const prevTabindex = currentPage === 1 ? 'tabindex="-1"' : '';
+      html += `<li class="page-item ${prevDisabled}"><a class="page-link" href="#" data-page="${currentPage - 1}" ${prevTabindex} aria-label="Previous Page"><i class="fas fa-chevron-left"></i></a></li>`;
+
+      // Page numbers
+      for (let i = 1; i <= totalPages; i++) {
+        const isActive = i === currentPage;
+        html += `<li class="page-item ${isActive ? 'active' : ''}" ${isActive ? 'aria-current="page"' : ''}><a class="page-link" href="#" data-page="${i}">${i}</a></li>`;
+      }
+
+      // Next button
+      const nextDisabled = currentPage === totalPages ? 'disabled' : '';
+      const nextTabindex = currentPage === totalPages ? 'tabindex="-1"' : '';
+      html += `<li class="page-item ${nextDisabled}"><a class="page-link" href="#" data-page="${currentPage + 1}" ${nextTabindex} aria-label="Next Page"><i class="fas fa-chevron-right"></i></a></li>`;
+
+      paginationContainer.innerHTML = html;
+
+      if (shouldScroll && blogGrid) {
+        const headerOffset = 110;
+        const targetTop = blogGrid.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+        window.scrollTo({ top: Math.max(0, targetTop), behavior: 'smooth' });
+      }
+    }
+
+    function filterAndPaginateBlogs(shouldScroll = false) {
+      // 1. Identify matching cards
+      const matchingCards = Array.from(blogCards).filter(card => {
         const cardCategory = card.getAttribute('data-category') || '';
         const title = (card.querySelector('.blog-title')?.textContent || '').toLowerCase();
         const excerpt = (card.querySelector('.blog-excerpt')?.textContent || '').toLowerCase();
@@ -585,36 +633,84 @@
         const matchesCat = (activeCategory === 'all' || cardCategory === activeCategory);
         const matchesSearch = !searchQuery || title.includes(searchQuery) || excerpt.includes(searchQuery);
 
-        if (matchesCat && matchesSearch) {
-          card.style.display = '';
-        } else {
-          card.style.display = 'none';
-        }
+        return matchesCat && matchesSearch;
       });
 
-      const noResults = document.getElementById('blogNoResults');
-      if (noResults) {
-        const anyVisible = Array.from(blogCards).some(c => c.style.display !== 'none');
-        noResults.style.display = anyVisible ? 'none' : 'block';
+      // 2. Hide all cards first
+      blogCards.forEach(card => {
+        card.style.display = 'none';
+      });
+
+      // 3. Handle zero results
+      if (matchingCards.length === 0) {
+        if (noResults) noResults.style.display = 'block';
+        if (paginationNav) paginationNav.style.display = 'none';
+        return;
       }
+
+      if (noResults) noResults.style.display = 'none';
+
+      // 4. Calculate total pages & clamp current page
+      const totalPages = Math.ceil(matchingCards.length / ITEMS_PER_PAGE);
+      if (currentPage > totalPages) currentPage = totalPages;
+      if (currentPage < 1) currentPage = 1;
+
+      // 5. Slice and display cards for currentPage
+      const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+      const endIndex = startIndex + ITEMS_PER_PAGE;
+      const pageCards = matchingCards.slice(startIndex, endIndex);
+
+      pageCards.forEach(card => {
+        card.style.display = '';
+      });
+
+      // 6. Render pagination controls
+      renderPagination(totalPages, shouldScroll);
     }
 
+    // Pagination Click Delegation
+    if (paginationContainer) {
+      paginationContainer.addEventListener('click', (e) => {
+        const link = e.target.closest('.page-link');
+        if (!link) return;
+        e.preventDefault();
+
+        const item = link.closest('.page-item');
+        if (item.classList.contains('disabled') || item.classList.contains('active')) {
+          return;
+        }
+
+        const targetPage = parseInt(link.getAttribute('data-page'), 10);
+        if (!isNaN(targetPage) && targetPage !== currentPage) {
+          currentPage = targetPage;
+          filterAndPaginateBlogs(true);
+        }
+      });
+    }
+
+    // Search Input Listener
     if (searchInput) {
       searchInput.addEventListener('input', (e) => {
         searchQuery = e.target.value.toLowerCase().trim();
-        filterBlogs();
+        currentPage = 1;
+        filterAndPaginateBlogs(false);
       });
     }
 
+    // Category Filter Buttons
     categoryFilters.forEach(btn => {
       btn.addEventListener('click', (e) => {
         e.preventDefault();
         categoryFilters.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
         activeCategory = btn.getAttribute('data-category') || 'all';
-        filterBlogs();
+        currentPage = 1;
+        filterAndPaginateBlogs(false);
       });
     });
+
+    // Initial invocation on page load
+    filterAndPaginateBlogs(false);
   }
 
   // Global event delegation for navbar drawer toggle (fallback guarantee)

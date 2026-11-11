@@ -80,8 +80,8 @@
                 Home <i class="fas fa-chevron-down nav-chevron ms-1"></i>
               </a>
               <ul class="dropdown-menu dropdown-menu-industrial">
-                <li><a class="dropdown-item" href="index.html">Commercial Vehicles</a></li>
-                <li><a class="dropdown-item active" href="home-2.html">Custom Fabrication</a></li>
+                <li><a class="dropdown-item" href="index.html"><i class="fas fa-truck-moving"></i> Commercial Vehicles</a></li>
+                <li><a class="dropdown-item active" href="home-2.html"><i class="fas fa-screwdriver-wrench"></i> Custom Fabrication</a></li>
               </ul>
             </li>
             <li class="nav-item">
@@ -409,23 +409,24 @@
 
         <div class="row g-4">
           <!-- Specialized Product 1: Tanker Body -->
-          <div class="col-lg-6">
-            <div class="card border-0 rounded overflow-hidden shadow-sm h-100">
-              <div class="row g-0 h-100">
-                <div class="col-md-5">
-                  <img src="assets/images/products/tanker-body.jpg" alt="Industrial Tanker Body" class="h-100 w-100" style="object-fit: cover; min-height: 240px;">
-                </div>
-                <div class="col-md-7 d-flex flex-column p-4 bg-white">
-                  <span class="badge bg-danger align-self-start mb-2">Hazchem & Bulk Liquid</span>
-                  <h4 class="h5 fw-bold mb-2">Petroleum & Chemical Road Tankers</h4>
-                  <p class="small text-muted mb-3">Stainless steel SS316L and high-grade aluminum elliptical tankers with internal surge baffles, pneumatic bottom discharge valves, and vapor recovery manifold.</p>
-                  <ul class="list-unstyled small mb-3">
-                    <li><i class="fas fa-check text-orange me-2"></i> Capacity: 12,000L to 36,000L</li>
-                    <li><i class="fas fa-check text-orange me-2"></i> Hydrostatic pressure tested to 3.5 bar</li>
-                    <li><i class="fas fa-check text-orange me-2"></i> Petroleum and Explosives Safety (PESO) approved</li>
-                  </ul>
-                  <div class="mt-auto pt-2">
-                    <div class="d-flex gap-2"><a href="shop.html?search=Tanker+Body" class="btn btn-sm btn-industrial"><i class="fas fa-shopping-cart me-1"></i> Order in Shop</a><a href="service-details.html?spec=tanker" class="btn btn-sm btn-outline-steel"><i class="fas fa-file-alt me-1"></i> Specs</a></div>
+          <div class="col-lg-6 d-flex">
+            <div class="card border rounded overflow-hidden shadow-sm h-100 w-100 d-flex flex-column specialized-product-card" style="background-color: var(--card-bg);">
+              <div class="specialized-card-thumb position-relative" style="height: 240px; overflow: hidden; background: #17232F;">
+                <img src="assets/images/products/tanker-body.jpg" alt="Industrial Tanker Body" class="w-100 h-100 specialized-product-img" style="object-fit: cover; object-position: center; transition: transform var(--transition-normal);" loading="lazy">
+                <span class="badge bg-danger position-absolute top-0 start-0 m-3 px-3 py-2 shadow-sm">Hazchem & Bulk Liquid</span>
+              </div>
+              <div class="card-body p-4 d-flex flex-column flex-grow-1">
+                <h4 class="h5 fw-bold mb-2">Petroleum & Chemical Road Tankers</h4>
+                <p class="small text-muted mb-3">Stainless steel SS316L and high-grade aluminum elliptical tankers with internal surge baffles, pneumatic bottom discharge valves, and vapor recovery manifold.</p>
+                <ul class="list-unstyled small mb-3">
+                  <li><i class="fas fa-check text-orange me-2"></i> Capacity: 12,000L to 36,000L</li>
+                  <li><i class="fas fa-check text-orange me-2"></i> Hydrostatic pressure tested to 3.5 bar</li>
+                  <li><i class="fas fa-check text-orange me-2"></i> Petroleum and Explosives Safety (PESO) approved</li>
+                </ul>
+                <div class="mt-auto pt-2">
+                  <div class="d-flex gap-2">
+                    <a href="shop.html?search=Tanker+Body" class="btn btn-sm btn-industrial"><i class="fas fa-shopping-cart me-1"></i> Order in Shop</a>
+                    <a href="service-details.html?spec=tanker" class="btn btn-sm btn-outline-steel"><i class="fas fa-file-alt me-1"></i> Specs</a>
                   </div>
                 </div>
               </div>
@@ -433,23 +434,24 @@
           </div>
 
           <!-- Specialized Product 2: Refrigerated Body -->
-          <div class="col-lg-6">
-            <div class="card border-0 rounded overflow-hidden shadow-sm h-100">
-              <div class="row g-0 h-100">
-                <div class="col-md-5">
-                  <img src="assets/images/products/refrigerated-body.jpg" alt="Refrigerated Reefer Body" class="h-100 w-100" style="object-fit: cover; min-height: 240px;">
-                </div>
-                <div class="col-md-7 d-flex flex-column p-4 bg-white">
-                  <span class="badge bg-info align-self-start mb-2">Cold Chain Logistics</span>
-                  <h4 class="h5 fw-bold mb-2">Insulated Refrigerated Reefer Bodies</h4>
-                  <p class="small text-muted mb-3">High-density Polyurethane Foam (PUF 100mm) sandwich insulated panels with food-grade GRP inner skins. Temperature range maintainable from +15&deg;C down to -25&deg;C.</p>
-                  <ul class="list-unstyled small mb-3">
-                    <li><i class="fas fa-check text-orange me-2"></i> Compatible with Thermo King & Carrier Transicold</li>
-                    <li><i class="fas fa-check text-orange me-2"></i> T-floor aluminum airflow profile</li>
-                    <li><i class="fas fa-check text-orange me-2"></i> Pharma GDP & HACCP compliant</li>
-                  </ul>
-                  <div class="mt-auto pt-2">
-                    <div class="d-flex gap-2"><a href="shop.html?search=Refrigerated+Body" class="btn btn-sm btn-industrial"><i class="fas fa-shopping-cart me-1"></i> Order in Shop</a><a href="service-details.html?spec=reefer" class="btn btn-sm btn-outline-steel"><i class="fas fa-file-alt me-1"></i> Specs</a></div>
+          <div class="col-lg-6 d-flex">
+            <div class="card border rounded overflow-hidden shadow-sm h-100 w-100 d-flex flex-column specialized-product-card" style="background-color: var(--card-bg);">
+              <div class="specialized-card-thumb position-relative" style="height: 240px; overflow: hidden; background: #17232F;">
+                <img src="assets/images/products/refrigerated-body.jpg" alt="Refrigerated Reefer Body" class="w-100 h-100 specialized-product-img" style="object-fit: cover; object-position: center; transition: transform var(--transition-normal);" loading="lazy">
+                <span class="badge bg-info position-absolute top-0 start-0 m-3 px-3 py-2 shadow-sm text-dark fw-bold">Cold Chain Logistics</span>
+              </div>
+              <div class="card-body p-4 d-flex flex-column flex-grow-1">
+                <h4 class="h5 fw-bold mb-2">Insulated Refrigerated Reefer Bodies</h4>
+                <p class="small text-muted mb-3">High-density Polyurethane Foam (PUF 100mm) sandwich insulated panels with food-grade GRP inner skins. Temperature range maintainable from +15&deg;C down to -25&deg;C.</p>
+                <ul class="list-unstyled small mb-3">
+                  <li><i class="fas fa-check text-orange me-2"></i> Compatible with Thermo King & Carrier Transicold</li>
+                  <li><i class="fas fa-check text-orange me-2"></i> T-floor aluminum airflow profile</li>
+                  <li><i class="fas fa-check text-orange me-2"></i> Pharma GDP & HACCP compliant</li>
+                </ul>
+                <div class="mt-auto pt-2">
+                  <div class="d-flex gap-2">
+                    <a href="shop.html?search=Refrigerated+Body" class="btn btn-sm btn-industrial"><i class="fas fa-shopping-cart me-1"></i> Order in Shop</a>
+                    <a href="service-details.html?spec=reefer" class="btn btn-sm btn-outline-steel"><i class="fas fa-file-alt me-1"></i> Specs</a>
                   </div>
                 </div>
               </div>
@@ -457,23 +459,24 @@
           </div>
 
           <!-- Specialized Product 3: Flatbed Body -->
-          <div class="col-lg-6">
-            <div class="card border-0 rounded overflow-hidden shadow-sm h-100">
-              <div class="row g-0 h-100">
-                <div class="col-md-5">
-                  <img src="assets/images/products/flatbed-body.jpg" alt="Flatbed Truck Body" class="h-100 w-100" style="object-fit: cover; min-height: 240px;">
-                </div>
-                <div class="col-md-7 d-flex flex-column p-4 bg-white">
-                  <span class="badge bg-secondary align-self-start mb-2">Heavy Machinery Haul</span>
-                  <h4 class="h5 fw-bold mb-2">Industrial Flatbed & Low-Bed Platforms</h4>
-                  <p class="small text-muted mb-3">Reinforced I-beam crossmembers with integrated ISO twist-locks for multimodal containers, front headache rack, and heavy pull-out outriggers for wide loads.</p>
-                  <ul class="list-unstyled small mb-3">
-                    <li><i class="fas fa-check text-orange me-2"></i> Heavy structural steel I-Beam fabrication</li>
-                    <li><i class="fas fa-check text-orange me-2"></i> Multiple stake pockets & lashing D-rings</li>
-                    <li><i class="fas fa-check text-orange me-2"></i> Hydraulic loading ramps available</li>
-                  </ul>
-                  <div class="mt-auto pt-2">
-                    <div class="d-flex gap-2"><a href="shop.html?search=Flatbed+Body" class="btn btn-sm btn-industrial"><i class="fas fa-shopping-cart me-1"></i> Order in Shop</a><a href="service-details.html?spec=flatbed" class="btn btn-sm btn-outline-steel"><i class="fas fa-file-alt me-1"></i> Specs</a></div>
+          <div class="col-lg-6 d-flex">
+            <div class="card border rounded overflow-hidden shadow-sm h-100 w-100 d-flex flex-column specialized-product-card" style="background-color: var(--card-bg);">
+              <div class="specialized-card-thumb position-relative" style="height: 240px; overflow: hidden; background: #17232F;">
+                <img src="assets/images/products/flatbed-body.jpg" alt="Flatbed Truck Body" class="w-100 h-100 specialized-product-img" style="object-fit: cover; object-position: center; transition: transform var(--transition-normal);" loading="lazy">
+                <span class="badge bg-secondary position-absolute top-0 start-0 m-3 px-3 py-2 shadow-sm">Heavy Machinery Haul</span>
+              </div>
+              <div class="card-body p-4 d-flex flex-column flex-grow-1">
+                <h4 class="h5 fw-bold mb-2">Industrial Flatbed & Low-Bed Platforms</h4>
+                <p class="small text-muted mb-3">Reinforced I-beam crossmembers with integrated ISO twist-locks for multimodal containers, front headache rack, and heavy pull-out outriggers for wide loads.</p>
+                <ul class="list-unstyled small mb-3">
+                  <li><i class="fas fa-check text-orange me-2"></i> Heavy structural steel I-Beam fabrication</li>
+                  <li><i class="fas fa-check text-orange me-2"></i> Multiple stake pockets & lashing D-rings</li>
+                  <li><i class="fas fa-check text-orange me-2"></i> Hydraulic loading ramps available</li>
+                </ul>
+                <div class="mt-auto pt-2">
+                  <div class="d-flex gap-2">
+                    <a href="shop.html?search=Flatbed+Body" class="btn btn-sm btn-industrial"><i class="fas fa-shopping-cart me-1"></i> Order in Shop</a>
+                    <a href="service-details.html?spec=flatbed" class="btn btn-sm btn-outline-steel"><i class="fas fa-file-alt me-1"></i> Specs</a>
                   </div>
                 </div>
               </div>
@@ -481,23 +484,24 @@
           </div>
 
           <!-- Specialized Product 4: Custom Municipal & Defense -->
-          <div class="col-lg-6">
-            <div class="card border-0 rounded overflow-hidden shadow-sm h-100">
-              <div class="row g-0 h-100">
-                <div class="col-md-5">
-                  <img src="assets/images/products/custom-body.jpg" alt="Custom Fabricated Vehicle" class="h-100 w-100" style="object-fit: cover; min-height: 240px;">
-                </div>
-                <div class="col-md-7 d-flex flex-column p-4 bg-white">
-                  <span class="badge bg-dark align-self-start mb-2">Defense & Municipal</span>
-                  <h4 class="h5 fw-bold mb-2">Custom Fabricated Special Application Bodies</h4>
-                  <p class="small text-muted mb-3">Bespoke commercial platforms: compactor garbage trucks, hydraulic crane carrier bodies, fire-rescue superstructures, mobile workshops, and cash-in-transit armored shells.</p>
-                  <ul class="list-unstyled small mb-3">
-                    <li><i class="fas fa-check text-orange me-2"></i> Tailored hydraulic PTO integration</li>
-                    <li><i class="fas fa-check text-orange me-2"></i> Custom electrical control relays</li>
-                    <li><i class="fas fa-check text-orange me-2"></i> Turnkey statutory testing and RTO registration</li>
-                  </ul>
-                  <div class="mt-auto pt-2">
-                    <div class="d-flex gap-2"><a href="shop.html?search=Fabricated+Body&openQuote=true" class="btn btn-sm btn-industrial"><i class="fas fa-tools me-1"></i> Custom Build in Shop</a><a href="service-details.html?spec=custom" class="btn btn-sm btn-outline-steel"><i class="fas fa-file-alt me-1"></i> Specs</a></div>
+          <div class="col-lg-6 d-flex">
+            <div class="card border rounded overflow-hidden shadow-sm h-100 w-100 d-flex flex-column specialized-product-card" style="background-color: var(--card-bg);">
+              <div class="specialized-card-thumb position-relative" style="height: 240px; overflow: hidden; background: #17232F;">
+                <img src="assets/images/products/custom-body.jpg" alt="Custom Fabricated Vehicle" class="w-100 h-100 specialized-product-img" style="object-fit: cover; object-position: center; transition: transform var(--transition-normal);" loading="lazy">
+                <span class="badge bg-dark position-absolute top-0 start-0 m-3 px-3 py-2 shadow-sm">Defense & Municipal</span>
+              </div>
+              <div class="card-body p-4 d-flex flex-column flex-grow-1">
+                <h4 class="h5 fw-bold mb-2">Custom Fabricated Special Application Bodies</h4>
+                <p class="small text-muted mb-3">Bespoke commercial platforms: compactor garbage trucks, hydraulic crane carrier bodies, fire-rescue superstructures, mobile workshops, and cash-in-transit armored shells.</p>
+                <ul class="list-unstyled small mb-3">
+                  <li><i class="fas fa-check text-orange me-2"></i> Tailored hydraulic PTO integration</li>
+                  <li><i class="fas fa-check text-orange me-2"></i> Custom electrical control relays</li>
+                  <li><i class="fas fa-check text-orange me-2"></i> Turnkey statutory testing and RTO registration</li>
+                </ul>
+                <div class="mt-auto pt-2">
+                  <div class="d-flex gap-2">
+                    <a href="shop.html?search=Fabricated+Body&openQuote=true" class="btn btn-sm btn-industrial"><i class="fas fa-tools me-1"></i> Custom Build in Shop</a>
+                    <a href="service-details.html?spec=custom" class="btn btn-sm btn-outline-steel"><i class="fas fa-file-alt me-1"></i> Specs</a>
                   </div>
                 </div>
               </div>
@@ -507,7 +511,7 @@
       </div>
     </section>
 
-    <!-- ADVANCED INFRASTRUCTURE & M°CHINERY -->
+    <!-- ADVANCED INFRASTRUCTURE & MACHINERY -->
     <section class="py-5 bg-white">
       <div class="container py-lg-4">
         <div class="row align-items-center g-5">
@@ -547,7 +551,7 @@
                 </div>
                 <div>
                   <h6 class="fw-bold mb-1">20-Meter Heated Down-Draft Paint Booth</h6>
-                  <p class="small text-muted mb-0">Automated humidity control and 80Â°C bake cycle for a high-gloss, salt-spray tested 120Âµm PU finish.</p>
+                  <p class="small text-muted mb-0">Automated humidity control and 80°C bake cycle for a high-gloss, salt-spray tested 120µm PU finish.</p>
                 </div>
               </div>
               <div class="d-flex gap-3">

@@ -443,23 +443,25 @@
     if (!toast) {
       toast = document.createElement('div');
       toast.className = 'cart-toast';
+      toast.setAttribute('role', 'status');
+      toast.setAttribute('aria-live', 'polite');
       document.body.appendChild(toast);
     }
 
     toast.innerHTML = `
       <div class="cart-toast-icon"><i class="${iconClass}"></i></div>
       <div class="cart-toast-body flex-grow-1">
-        <strong>${title}</strong>
-        <p class="mb-0 small">${message}</p>
+        <strong class="cart-toast-title text-white">${title}</strong>
+        <p class="cart-toast-msg mb-0 small text-light">${message}</p>
       </div>
-      ${showViewCart ? '<a href="cart.html" class="btn btn-sm btn-outline-warning text-nowrap ms-2" style="font-size: 0.78rem;">View Cart &rarr;</a>' : ''}
+      ${showViewCart ? '<a href="cart.html" class="cart-toast-btn text-nowrap ms-2" title="View Shopping Cart">View Cart &rarr;</a>' : ''}
     `;
 
     toast.classList.add('show');
     clearTimeout(toast._hideTimer);
     toast._hideTimer = setTimeout(() => {
       toast.classList.remove('show');
-    }, 4000);
+    }, 4500);
   }
 
   // ==========================================================================
