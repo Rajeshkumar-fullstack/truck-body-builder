@@ -1968,7 +1968,8 @@ body.drawer-open .site-header,
   width: 14px;
 }
 
-.spec-value {
+.hero-spec-panel .spec-value,
+.spec-row-item .spec-value {
   color: #FFFFFF;
   font-weight: 600;
   font-family: var(--font-display);
@@ -1976,8 +1977,21 @@ body.drawer-open .site-header,
   letter-spacing: 0.2px;
 }
 
-.spec-value.text-orange {
+.hero-spec-panel .spec-value.text-orange,
+.spec-row-item .spec-value.text-orange {
   color: #FFA559 !important;
+}
+
+/* General Industrial Orange Text Utility */
+.text-orange {
+  color: #D95D08 !important;
+}
+
+/* Technical Specification Table Values (Light Mode High Contrast) */
+.table-spec-val {
+  color: #D95D08 !important;
+  font-weight: 700;
+  font-size: 0.95rem;
 }
 
 .spec-panel-footer {
@@ -3187,6 +3201,92 @@ body.drawer-open .site-header,
 /* ==========================================================================
    Blog & Article Styles
    ========================================================================== */
+
+/* Single Article Reader View (Equal Padding & Balanced Alignment) */
+.article-main-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md, 8px);
+  box-shadow: var(--shadow-sm);
+  padding: 44px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 991.98px) {
+  .article-main-card {
+    padding: 32px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .article-main-card {
+    padding: 20px;
+  }
+}
+
+/* Article Prose Typographic Balance */
+.article-prose {
+  font-size: 1.02rem;
+  line-height: 1.8;
+  color: var(--body-text);
+}
+
+.article-prose h2,
+.article-prose h3 {
+  margin-top: 36px;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.article-prose p {
+  margin-bottom: 18px;
+}
+
+.article-prose .bg-light.border,
+.article-prose .border-start.border-4 {
+  padding: 24px !important;
+  margin-top: 28px !important;
+  margin-bottom: 28px !important;
+  border-radius: var(--radius-md, 8px) !important;
+}
+
+#articleImageCaption {
+  padding: 10px 16px !important;
+  font-size: 0.85rem;
+}
+
+/* Article Footer Row (Tags & Share) - Replaces .row to prevent negative-margin bleed */
+.article-footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 24px;
+  margin-top: 36px;
+  border-top: 1px solid var(--border-color);
+}
+
+/* Author Box inside Article with Equal Padding on All Sides */
+.article-author-box {
+  background-color: var(--light-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md, 8px);
+  padding: 24px;
+  margin-top: 28px;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+@media (max-width: 575.98px) {
+  .article-author-box {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+}
 
 .blog-card {
   background: var(--card-bg);

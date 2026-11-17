@@ -9,6 +9,7 @@
   // Apply saved theme immediately before DOM content loads to avoid flashing
   const savedTheme = localStorage.getItem('truck_body_theme') || 'light';
   document.documentElement.setAttribute('data-theme', savedTheme);
+  document.documentElement.setAttribute('data-bs-theme', savedTheme);
 
   const savedDir = localStorage.getItem('truck_body_dir') || 'ltr';
   document.documentElement.setAttribute('dir', savedDir);
@@ -49,6 +50,7 @@
         const newTheme = activeTheme === 'dark' ? 'light' : 'dark';
         
         document.documentElement.setAttribute('data-theme', newTheme);
+        document.documentElement.setAttribute('data-bs-theme', newTheme);
         localStorage.setItem('truck_body_theme', newTheme);
         updateIcons(newTheme);
       });

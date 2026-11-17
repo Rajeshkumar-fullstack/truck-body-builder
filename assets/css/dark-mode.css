@@ -188,22 +188,46 @@
   color: #FFFFFF !important;
 }
 
-.spec-panel-sub,
-[data-theme="dark"] .spec-panel-sub,
-[data-theme="light"] .spec-panel-sub {
+.hero-spec-panel .spec-panel-sub,
+[data-theme="dark"] .hero-spec-panel .spec-panel-sub,
+[data-theme="light"] .hero-spec-panel .spec-panel-sub {
   color: #CBD5E1 !important;
 }
 
-.spec-label,
-[data-theme="dark"] .spec-label,
-[data-theme="light"] .spec-label {
+.hero-spec-panel .spec-label,
+[data-theme="dark"] .hero-spec-panel .spec-label,
+[data-theme="light"] .hero-spec-panel .spec-label {
   color: #CBD5E1 !important;
 }
 
-.spec-value,
-[data-theme="dark"] .spec-value,
-[data-theme="light"] .spec-value {
+.hero-spec-panel .spec-value,
+[data-theme="dark"] .hero-spec-panel .spec-value,
+[data-theme="light"] .hero-spec-panel .spec-value {
   color: #FFFFFF !important;
+}
+
+/* Specification Table Middle Column Contrast in Light Mode - High legibility orange */
+.table-spec-val,
+.table .table-spec-val,
+.table td .table-spec-val,
+.table .spec-value,
+.table td .spec-value,
+[data-theme="light"] .table-spec-val,
+[data-theme="light"] .table .table-spec-val,
+[data-theme="light"] .table td .table-spec-val,
+[data-theme="light"] .table .spec-value,
+[data-theme="light"] .table td .spec-value,
+[data-theme="light"] #serviceSpecsBody td .table-spec-val,
+[data-theme="light"] #serviceSpecsBody td .spec-value,
+[data-theme="light"] #serviceSpecsBody td .text-orange,
+:root:not([data-theme="dark"]) .table-spec-val,
+:root:not([data-theme="dark"]) .table .table-spec-val,
+:root:not([data-theme="dark"]) .table td .table-spec-val,
+:root:not([data-theme="dark"]) .table .spec-value,
+:root:not([data-theme="dark"]) .table td .spec-value,
+:root:not([data-theme="dark"]) #serviceSpecsBody td .table-spec-val,
+:root:not([data-theme="dark"]) #serviceSpecsBody td .spec-value {
+  color: #D95D08 !important;
 }
 
 /* In Dark Mode, Backgrounds with .bg-white MUST turn Dark to Prevent White-on-White */
@@ -237,9 +261,21 @@
   color: #F8FAFC !important;
 }
 
+[data-theme="dark"] .text-secondary {
+  color: #94A3B8 !important;
+}
+
 [data-theme="dark"] .text-muted,
 [data-theme="dark"] small.text-muted {
   color: #94A3B8 !important;
+}
+
+[data-theme="dark"] .text-orange,
+[data-theme="dark"] .text-orange.fw-bold,
+[data-theme="dark"] .fw-bold.text-orange,
+[data-theme="dark"] strong.text-orange,
+[data-theme="dark"] span.text-orange {
+  color: #FF8A3D !important;
 }
 
 /* Header & Navigation in Dark Mode */
@@ -531,20 +567,157 @@
   border-color: #273646 !important;
 }
 
-/* Table in Dark Mode */
+/* Table & Technical Specifications in Dark Mode (High Contrast & WCAG AAA) */
 [data-theme="dark"] .table {
-  color: #CBD5E1;
-  border-color: #273646;
+  --bs-table-color: #CBD5E1;
+  --bs-table-bg: #141f2b;
+  --bs-table-border-color: #273646;
+  --bs-table-striped-bg: #1a2735;
+  --bs-table-striped-color: #E2E8F0;
+  --bs-table-active-bg: #223244;
+  --bs-table-active-color: #FFFFFF;
+  --bs-table-hover-bg: #1f2e3e;
+  --bs-table-hover-color: #FFFFFF;
+  color: #CBD5E1 !important;
+  border-color: #273646 !important;
+  background-color: #141f2b !important;
 }
 
-[data-theme="dark"] .table-striped > tbody > tr:nth-of-type(odd) > * {
-  background-color: rgba(255, 255, 255, 0.03);
+/* Ensure ALL cells inside dark mode tables default to dark background */
+[data-theme="dark"] .table > :not(caption) > * > * {
+  background-color: #141f2b;
   color: #CBD5E1;
+  border-color: #273646 !important;
+  box-shadow: none !important;
 }
 
-[data-theme="dark"] .table-warning {
-  background-color: rgba(240, 120, 36, 0.2) !important;
+/* Table Headers in Dark Mode */
+[data-theme="dark"] .table thead,
+[data-theme="dark"] .table thead th,
+[data-theme="dark"] .table thead tr,
+[data-theme="dark"] .table-dark,
+[data-theme="dark"] thead.table-dark,
+[data-theme="dark"] thead.table-dark th,
+[data-theme="dark"] .table thead.table-dark > tr > th,
+[data-theme="dark"] .article-prose thead,
+[data-theme="dark"] .article-prose thead th {
+  background-color: #0d151d !important;
   color: #F8FAFC !important;
+  border-color: #273646 !important;
+}
+
+/* Alternating Striped Rows - Resolves White Row Glitch */
+[data-theme="dark"] .table-striped > tbody > tr:nth-of-type(odd) > * {
+  background-color: #141f2b !important;
+  color: #CBD5E1 !important;
+  box-shadow: none !important;
+}
+
+[data-theme="dark"] .table-striped > tbody > tr:nth-of-type(even) > * {
+  background-color: #192533 !important;
+  color: #E2E8F0 !important;
+  box-shadow: none !important;
+}
+
+/* Row Hover State in Dark Mode */
+[data-theme="dark"] .table-hover > tbody > tr:hover > * {
+  background-color: #223244 !important;
+  color: #FFFFFF !important;
+}
+
+/* Table Borders in Dark Mode */
+[data-theme="dark"] .table-bordered,
+[data-theme="dark"] .table-bordered th,
+[data-theme="dark"] .table-bordered td,
+[data-theme="dark"] .table-bordered > :not(caption) > * > * {
+  border-color: #273646 !important;
+}
+
+/* Specification Titles / First Column in Dark Mode */
+[data-theme="dark"] .table td strong,
+[data-theme="dark"] .table th strong,
+[data-theme="dark"] .table .text-dark,
+[data-theme="dark"] .table td .text-dark,
+[data-theme="dark"] .table .spec-title,
+[data-theme="dark"] #serviceSpecsBody td strong {
+  color: #F8FAFC !important;
+}
+
+/* Industrial Orange Specification Highlights - Protected against generic .fw-bold overrides */
+[data-theme="dark"] .table .text-orange,
+[data-theme="dark"] .table td .text-orange,
+[data-theme="dark"] .table .spec-value,
+[data-theme="dark"] .table td .spec-value,
+[data-theme="dark"] .table .table-spec-val,
+[data-theme="dark"] .table td .table-spec-val,
+[data-theme="dark"] #serviceSpecsBody td .table-spec-val,
+[data-theme="dark"] #serviceSpecsBody td .spec-value,
+[data-theme="dark"] #serviceSpecsBody td span[style*="--industrial-orange"],
+[data-theme="dark"] #serviceSpecsBody td [style*="color: var(--industrial-orange)"],
+[data-theme="dark"] #serviceSpecsBody td .fw-bold[style*="color: var(--industrial-orange)"],
+[data-theme="dark"] .table [style*="--industrial-orange"],
+[data-theme="dark"] .table td [style*="--industrial-orange"],
+[data-theme="dark"] .table .fw-bold[style*="--industrial-orange"],
+[data-theme="dark"] .table td .fw-bold[style*="--industrial-orange"],
+[data-theme="dark"] .table [style*="color: #F07824"],
+[data-theme="dark"] .table [style*="color:#F07824"],
+[data-theme="dark"] .table [style*="color: #f07824"],
+[data-theme="dark"] .table [style*="color:#f07824"],
+[data-theme="dark"] .table [style*="color: #D95D08"],
+[data-theme="dark"] .table [style*="color:#D95D08"],
+[data-theme="dark"] .table [style*="color: #d95d08"],
+[data-theme="dark"] .table [style*="color:#d95d08"] {
+  color: #FF8A3D !important;
+  text-shadow: 0 0 1px rgba(255, 138, 61, 0.35);
+}
+
+/* Secondary & Muted Spec Benchmarks (Column 3) */
+[data-theme="dark"] .table .text-secondary,
+[data-theme="dark"] .table td .text-secondary,
+[data-theme="dark"] .table .text-muted,
+[data-theme="dark"] .table td .text-muted,
+[data-theme="dark"] .table .spec-material,
+[data-theme="dark"] #serviceSpecsBody td .text-secondary {
+  color: #94A3B8 !important;
+}
+
+/* Contextual Rows in Dark Mode (e.g. Hardox 450 .table-warning) */
+[data-theme="dark"] .table-warning,
+[data-theme="dark"] .table-warning > th,
+[data-theme="dark"] .table-warning > td,
+[data-theme="dark"] .table > tbody > tr.table-warning > *,
+[data-theme="dark"] .article-prose .table-warning > td {
+  background-color: rgba(240, 120, 36, 0.16) !important;
+  color: #F8FAFC !important;
+  border-color: rgba(240, 120, 36, 0.35) !important;
+  box-shadow: none !important;
+}
+
+[data-theme="dark"] .table-warning strong,
+[data-theme="dark"] .table-warning b,
+[data-theme="dark"] .table > tbody > tr.table-warning strong,
+[data-theme="dark"] .article-prose .table-warning strong {
+  color: #FFA559 !important;
+}
+
+[data-theme="dark"] .table-info,
+[data-theme="dark"] .table-info > th,
+[data-theme="dark"] .table-info > td,
+[data-theme="dark"] .table > tbody > tr.table-info > * {
+  background-color: rgba(14, 165, 233, 0.16) !important;
+  color: #F8FAFC !important;
+  border-color: rgba(14, 165, 233, 0.35) !important;
+  box-shadow: none !important;
+}
+
+[data-theme="dark"] .table-success,
+[data-theme="dark"] .table-success > th,
+[data-theme="dark"] .table-success > td,
+[data-theme="dark"] .table > tbody > tr.table-success > * {
+  background-color: rgba(34, 197, 94, 0.16) !important;
+  color: #F8FAFC !important;
+  border-color: rgba(34, 197, 94, 0.35) !important;
+  box-shadow: none !important;
 }
 
 /* Stat Boxes & Technical Metrics in Dark Mode */
@@ -1069,7 +1242,22 @@ footer h5,
   color: #FFFFFF !important;
 }
 
-/* 6. Blog Details Dynamic Article Prose in Dark Mode */
+/* 6. Blog Details Dynamic Article Prose & Layout in Dark Mode */
+[data-theme="dark"] .article-main-card {
+  background-color: #18222d !important;
+  border-color: #273646 !important;
+  color: var(--body-text);
+}
+
+[data-theme="dark"] .article-author-box {
+  background-color: #121921 !important;
+  border-color: #273646 !important;
+}
+
+[data-theme="dark"] .article-footer-row {
+  border-top-color: #273646 !important;
+}
+
 [data-theme="dark"] #articleBody,
 [data-theme="dark"] .article-prose {
   color: #CBD5E1 !important;
@@ -1095,16 +1283,29 @@ footer h5,
 [data-theme="dark"] .article-prose table {
   color: #CBD5E1 !important;
   border-color: #27374a !important;
+  background-color: #141f2b !important;
 }
 
-[data-theme="dark"] .article-prose thead {
-  background-color: #111a24 !important;
+[data-theme="dark"] .article-prose thead,
+[data-theme="dark"] .article-prose thead th {
+  background-color: #0d151d !important;
   color: #FFFFFF !important;
+  border-color: #27374a !important;
 }
 
 [data-theme="dark"] .article-prose td,
 [data-theme="dark"] .article-prose th {
   border-color: #27374a !important;
+}
+
+[data-theme="dark"] .article-prose tbody tr:nth-of-type(odd) > * {
+  background-color: #141f2b !important;
+  color: #CBD5E1 !important;
+}
+
+[data-theme="dark"] .article-prose tbody tr:nth-of-type(even) > * {
+  background-color: #192533 !important;
+  color: #E2E8F0 !important;
 }
 
 [data-theme="dark"] #articleMetaRow span {
